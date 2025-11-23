@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-16P4WVCLRM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-16P4WVCLRM');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noai, noimageai">
+    <meta name="copyright" content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited.">
+    <title>Xiao Zhan HD Gallery - 2</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; color: #333;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 10px; }
+        header { text-align: center; padding: 10px 0; color: white; }
+        h1 { font-size: 1.2rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .subtitle { font-size: 0.75rem; opacity: 1; }
+        .nav-buttons { display: flex; justify-content: center; gap: 15px; margin: 5px 0 10px; }
+        .nav-btn, .btn {
+            padding: 15px 15px; border: none; border-radius: 25px; cursor: pointer;
+            font-size: 13px; font-weight: 600; transition: all 0.3s ease;
+            text-decoration: none; display: inline-block;
+        }
+        .nav-btn.active, .btn.primary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white; transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(238, 90, 36, 0.3);
+        }
+        .nav-btn:not(.active) { background: rgba(255,255,255,0.2); color: white; backdrop-filter: blur(10px); }
+        .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .content-section {
+            background: rgba(255,255,255,0.95); border-radius: 20px; padding: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); backdrop-filter: blur(10px);
+        }
+        .hidden { display: none !important; }
+        
+        /* Source Filter Chips */
+	.source-filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 145px); 
+            gap: 6px;
+            margin: 5px auto;
+            max-width: 900px;
+            justify-content: center; 
+        }
+        .source-chip {
+            padding: 8px 8px;
+            background: #f8f9fa;
+            color: #555;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+	    text-align: center; 
+        }
+        .source-chip:hover {
+            background: #e9ecef;
+            transform: scale(1.05);
+	    border-color: #aaa;
+        }
+        .source-chip.active {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border-color: #ee5a24;
+        }
+        
+        /* Search and Filter Styles */
+        .search-bar {
+            width: 100%; max-width: 500px; padding: 15px; border: 2px solid #e0e0e0;
+            border-radius: 25px; font-size: 13px; margin: 0 auto 15px; display: block;
+            transition: border-color 0.3s ease;
+        }
+        .search-bar:focus { outline: none; border-color: #667eea; }
+	#clearSearchBtn {
+            display: none; /* Hidden by default */
+            margin: 0 auto 15px;
+            background: linear-gradient(45deg, #6c757d, #495057); /* Grey gradient */
+            color: white;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        #clearSearchBtn:hover {
+            background: linear-gradient(45deg, #5a6268, #343a40);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Grid */
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(50px, 100px));  
+            justify-content: center; 
+            gap: 10px; 
+            max-width: 600px; 
+            margin: 0 auto 15px; 
+        }
+        .stat-card { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 8px 8px; 
+            border-radius: 15px; 
+            text-align: center; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+        }
+        .stat-number { font-size: 0.75rem; font-weight: bold; margin-bottom: 0px; }
+        .stat-label { font-size: 9px; opacity: 0.9; }
+
+        /* Timeline Styles */
+        .timeline-container, #sourcesContainer { max-width: 1000px; margin: 0 auto; }
+        .timeline-year { 
+            margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 15px; 
+            overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: white;
+        }
+        .timeline-year-header { 
+            background: linear-gradient(45deg, #667eea, #764ba2); color: white; 
+            padding: 15px 20px; font-size: 16px; font-weight: bold; cursor: pointer; 
+            transition: all 0.3s ease; user-select: none; position: relative;
+        }
+
+        .timeline-year-header::after {
+            content: "Click thumbnails for high-res photos • 点击缩略图打开高清图";
+            position: absolute; bottom: 5px; left: 20px; font-size: 10px;
+            opacity: 0.8; font-weight: normal; font-style: italic; white-space: nowrap; 
+        }
+
+        .timeline-year-header:hover { 
+            background: linear-gradient(45deg, #5a6fd8, #6a42a0); 
+            transform: translateY(-1px); 
+        }
+        .year-header-content { width: 100%; }
+        .year-header-top {
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
+        }
+        .year-title { font-size: 16px; font-weight: bold; }
+        .year-preview {
+            display: flex; gap: 6px; align-items: center; margin-top: 8px; opacity: 0.9;
+        }
+        .timeline-year.expanded .year-preview { display: none; }
+        .preview-thumb {
+            width: 32px; height: 32px; object-fit: cover; border-radius: 6px;
+            border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;
+        }
+        .preview-thumb:hover { transform: scale(1.1); border-color: rgba(255,255,255,0.6); }
+        .preview-more {
+            background: rgba(255,255,255,0.2); color: white; padding: 6px 10px;
+            border-radius: 12px; font-size: 11px; font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .timeline-year-count { 
+            font-size: 14px; opacity: 0.9; background: rgba(255,255,255,0.2); 
+            padding: 5px 12px; border-radius: 20px; 
+        }
+        .expand-icon { font-size: 12px; transition: transform 0.3s ease; margin-left: 10px; }
+        .timeline-year.expanded .expand-icon { transform: rotate(180deg); }
+        .timeline-year-content { padding: 20px; background: white; display: none; }
+        .timeline-year.expanded .timeline-year-content { display: block; }
+        
+        /* Photo Grid */
+        .year-photos-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+            gap: 12px; margin-bottom: 15px;
+        }
+
+
+	.timeline-photo { 
+            border-radius: 10px; overflow: hidden; cursor: pointer; 
+            transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: relative; background: #f0f0f0;
+            aspect-ratio: 1 / 1; /* <-- ADD THIS */
+        }
+        .timeline-photo:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .timeline-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+       .timeline-photo:hover img { transform: scale(1.05); }
+        .photo-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;
+            padding: 12px 8px 8px; font-size: 11px; font-weight: 600;
+        }
+        .photo-date {
+            display: block;
+            margin-bottom: 3px;
+        }
+        .photo-source {
+            display: block;
+            font-size: 10px;
+            opacity: 0.9;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        /* Pagination Styles */
+        .year-controls {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 10px;
+            padding: 0 0px;
+        }
+        .year-controls label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #555;
+        }
+        .year-controls select {
+            padding: 6px 6px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #f8f9fa;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .pagination-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .pagination-nav .btn {
+            min-width: 40px;
+            padding: 10px;
+            font-size: 13px;
+            background: rgba(255,255,255,0.2);
+            color: #ff6b6b;
+            border: 1px solid #ff6b6b;
+        }
+        .pagination-nav .btn:hover {
+            background: #ffe4e4;
+            transform: translateY(-2px);
+        }
+        .pagination-nav .btn.primary, .pagination-nav .btn[disabled] {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            transform: none;
+            cursor: default;
+            border: none;
+            opacity: 1;
+        }
+        .pagination-nav span {
+            color: #555;
+            padding: 0 5px;
+            font-weight: 600;
+        }
+	.pagination-jump {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 10px;
+        }
+        .pagination-jump input[type="number"] {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 13px;
+            text-align: center;
+            /* Remove spinner arrows */
+            -moz-appearance: textfield;
+        }
+
+        .pagination-jump input[type="number"]::-webkit-outer-spin-button,
+        .pagination-jump input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* Loading States */
+        .loading-placeholder {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%; animation: loading 1.5s infinite;
+        }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Empty State */
+        .timeline-empty { 
+            text-align: center; padding: 60px 20px; color: #666; background: white; 
+            border-radius: 15px; border: 2px dashed #e0e0e0; 
+        }
+        .timeline-empty h3 { color: #ff6b6b; margin-bottom: 10px; }
+
+        /* Enhanced Modal Styles */
+        .modal { 
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9);
+            display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 5px; 
+            overflow: hidden;
+        }
+        
+.modal-content { 
+    background: white; border-radius: 15px; 
+    max-width: 90vw; max-height: 90vh;  /* Changed from 700px to 90vw */
+    width: 100%; 
+    position: relative; 
+    display: flex; flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+        /* Modal Header */
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            border-bottom: 1px solid #e0e0e0;
+            background: #f8f9fa;
+            border-radius: 15px 15px 0 0;
+            flex-shrink: 0;
+        }
+
+        .photo-counter {
+            font-weight: 600;
+            color: #ff6b6b;
+            font-size: 12px;
+            min-width: 60px;
+        }
+
+        .group-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 13px;
+            flex: 1;
+            text-align: center;
+            margin: 0 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .close-modal { 
+            background: none; border: none; 
+            font-size: 40px; cursor: pointer; 
+            color: #333; padding: 0px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        /* Main Photo Display */
+        .modal-photo-container {
+            flex: 1;
+            display: grid;
+	    place-items: center;
+            position: relative;
+            overflow: hidden;
+            background: #000; 
+	    min-height: 0; 	          
+        }
+
+.modal-photo {
+    width: auto;
+    height: auto%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+    min-height: 0;
+}
+
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .nav-arrow.prev {
+            left: 20px;
+        }
+
+        .nav-arrow.next {
+            right: 20px;
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: translateY(-50%);
+        }
+
+        /* Thumbnail Strip */
+        .thumbnail-strip {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            overflow-x: auto;
+            white-space: nowrap;
+            border-radius: 0 0 15px 15px;
+            min-height: 80px;
+            flex-shrink: 0;
+        }
+
+        .thumbnail-container {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .thumbnail {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            border-color: #ff6b6b;
+        }
+
+        .thumbnail.active {
+            border-color: #ff6b6b;
+            box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Photo Actions Panel */
+        .photo-info-panel {
+            padding: 8px 10px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            max-height: 250px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .close-bottom-btn {
+            font-size: 20px !important;
+            color: #000000 !important;
+            width: 30px;
+            height: 30px;
+            background: none !important;
+            border: 2px solid #e0e0e0 !important;
+            border-radius: 50%;
+            padding: 0;
+            margin-left: 10px;
+            line-height: 1;
+        }
+
+        /* Enhanced Download Section */
+        .download-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 8px;
+            margin-top: 0px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .download-section h4 {
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .download-actions-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        
+        .action-btn {
+            flex: 1;
+            min-width: 160px;
+            max-width: 200px;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        /* Download and Action Buttons */
+        .action-btn.download-btn {
+            background: linear-gradient(45deg, #4CAF50, #45a049); 
+            color: white;
+        }
+        
+        .action-btn.quark-btn {
+            background: linear-gradient(45deg, #FF6B35, #F7931E); 
+            color: white;
+        }
+        
+        .action-btn.weibo-btn {
+            background: linear-gradient(45deg, #fa2a55, #e91e63); 
+            color: white;
+        }
+	
+	#terms-content {
+            background-color: rgba(255,255,255,0.1); border-radius: 10px; margin: 15px auto 0;
+            text-align: left; max-width: 700px; padding: 15px 20px; display: none;
+        }
+        #terms-content ul { list-style: disc; padding-left: 20px; margin: 10px 0; }
+        #terms-content li { margin: 5px 0; }
+
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed; bottom: 20px; right: 20px; 
+            background: white;
+            color: #ff6b6b; width: 80px; height: 90px; border-radius: 30px; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            opacity: 0; visibility: hidden; 
+            transition: all 0.3s ease; z-index: 9999;
+            border: 2px solid #ff6b6b;
+            font-size: 40px; font-weight: 600;
+        }
+
+        #back-to-top.visible { 
+            opacity: 0.85; visibility: visible; 
+        }
+
+
+        #back-to-top .arrow {
+            line-height: 1;
+        }
+        #back-to-top .text {
+            font-size: 12px; font-weight: 600; margin-top: 0px;
+            text-align: center; line-height: 1;
+            color: #e53e3e;
+            -webkit-text-stroke: 0;
+            text-stroke: 0;
+            -webkit-text-fill-color: #e53e3e;
+            position: relative;
+            z-index: 1;
+        }
+
+/* Desktop photo modal fix */
+@media screen and (min-width: 768px) {
+    .modal-content {
+        max-width: min(90vw, 1200px); /* Allow up to 1200px on desktop */
+    }
+  }  
+    
+
+
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .nav-btn { padding: 12px 12px; font-size: 13px; }
+            .year-photos-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .stats-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+            .source-filters { padding: 0 10px; }
+            .source-chip { padding: 8px 8px; font-size: 12px; }
+             #back-to-top { bottom: 30px; right: 10px; width: 63px; height: 63px; line-height: 50px; font-size: 23px; }
+            /* Mobile Modal Optimizations */
+            .modal {
+                padding: 5px;
+                align-items: flex-start;
+                padding-top: 5px;
+            }
+            
+            .modal-content {
+                max-width: 95vw;
+                max-height: 98vh;
+                margin-top: 0;
+		height: auto;
+                overflow-y: auto;
+            }
+            
+            .modal-header {
+                padding: 12px 15px;
+                flex-shrink: 0;
+            }
+            
+            .group-title {
+                font-size: 13px;
+                margin: 0 5px;
+            }
+            
+            .photo-counter {
+                font-size: 12px;
+                min-width: 50px;
+            }
+            
+            /* Key change: Limit photo container height on mobile */
+            .modal-photo-container {
+                flex: none;
+                height: 35vh;
+                min-height: 200px;
+                max-height: 300px;
+                flex-shrink: 0;
+            }
+            
+            .modal-photo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            
+            .nav-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .nav-arrow.prev {
+                left: 10px;
+            }
+            
+            .nav-arrow.next {
+                right: 10px;
+            }
+            
+            .thumbnail-strip {
+                padding: 8px 10px;
+                min-height: 50px;
+                flex-shrink: 0;
+            }
+            
+            .thumbnail {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .photo-info-panel {
+                padding: 12px 15px;
+                flex-shrink: 0;
+                max-height: none;
+                overflow-y: visible;
+            }
+            
+            .download-section {
+                padding: 8px;
+                margin-top: 0px;
+            }
+            
+            .download-section h4 {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            
+            .action-btn {
+                padding: 5px 8px;
+                font-size: 12px;
+                min-width: 170px;
+            }
+            
+            .download-hint {
+                font-size: 10px;
+                margin: 6px 0 8px;
+            }
+            
+            .weibo-section {
+                padding: 10px;
+                margin-top: 10px;
+            }
+            
+            .weibo-photo-info {
+                font-size: 11px;
+                margin-bottom: 6px;
+            }
+            
+            .weibo-link-btn {
+                padding: 8px 16px !important;
+                font-size: 12px !important;
+            }
+            
+            .close-modal {
+                font-size: 40px;
+            }
+        }
+
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .modal {
+                padding: 2px;
+                padding-top: 5px;
+            }
+            
+            .modal-content {
+                padding: 5px;
+                border-radius: 10px;
+                max-height: 95vh;
+            }
+            
+            .download-section h4 {
+                font-size: 13px;
+            }
+            
+            .weibo-photo-info {
+                font-size: 10px;
+            }
+        }
+
+        /* Very short screens (Nest Hub, landscape phones, etc.) */
+        @media (max-height: 600px) {
+            .modal {
+                align-items: flex-start;
+                padding: 5px;
+                padding-top: 5px;
+            }
+            
+            .modal-content {
+                max-height: 98vh;
+                overflow-y: auto;
+                height: auto;
+            }
+            
+            /* Make photo container smaller on very short screens */
+            .modal-photo-container {
+                height: 25vh !important;
+                min-height: 150px !important;
+                max-height: 200px !important;
+                flex: none;
+            }
+            
+            .modal-header {
+                padding: 8px 12px;
+                flex-shrink: 0;
+            }
+            
+            .thumbnail-strip {
+                padding: 8px 8px;
+                min-height: 50px;
+            }
+            
+            .thumbnail {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .photo-info-panel {
+                padding: 10px 12px;
+                flex-shrink: 0;
+            }
+            
+            .download-section {
+                padding: 10px;
+            }
+            
+            .download-section h4 {
+                font-size: 13px;
+                margin-bottom: 8px;
+            }
+            
+            .action-btn {
+                padding: 8px 10px;
+                font-size: 12px;
+                line-height: 1.1;
+            }
+        }
+
+        /* Extremely short screens (like Nest Hub) */
+        @media (max-height: 480px) {
+            .modal-photo-container {
+                height: 20vh !important;
+                min-height: 120px !important;
+                max-height: 150px !important;
+            }
+            
+            .modal-header {
+                padding: 6px 10px;
+            }
+            
+            .group-title {
+                font-size: 12px;
+            }
+            
+            .photo-counter {
+                font-size: 11px;
+            }
+            
+            .thumbnail-strip {
+                padding: 6px 10px;
+                min-height: 40px;
+            }
+            
+            .thumbnail {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .photo-info-panel {
+                padding: 8px 10px;
+            }
+            
+            .download-section h4 {
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
+            
+            .action-btn {
+                padding: 6px 6px;
+                font-size: 12px;
+                min-width: 120px;
+            }
+            
+            .nav-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+        }
+
+
+
+        /* Footer Styles */
+        .site-footer {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white; padding: 10px 0; margin-top: 50px; text-align: center; font-size: 0.8rem;
+        }
+        .footer-content { margin-bottom: 10px; }
+        .footer-link {
+            color: white; text-decoration: underline; font-weight: 600; display: inline-block;
+            padding: 8px 12px; border-radius: 8px; transition: all 0.3s ease; margin: 0 8px;
+        }
+        .footer-link:hover { opacity: 0.9; transform: translateY(-1px); background: rgba(255,255,255,0.1); }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Xiao Zhan HD Gallery-2<br>肖战高清图库-2 - 影视&代言&活动</h1>
+        <p class="subtitle" style="font-weight: 600; color: white; font-size: clamp(11px, 2.5vw, 16px);">
+            * HD photos from various sources (NOT including XZ Studio)<br>
+            * Single photo and photo sets download available<br>
+            * <a href="https://canadaxfx.github.io/XZ-photo-gallery/" target="_blank" style="color: white; text-decoration: underline;">Click here for XZ Studio Gallery 肖战(工作室)高清图库-1</a><br>
+            * 中国区访客需VPN
+        </p>
+    </header>
+
+
+
+        <nav class="nav-buttons">
+            <button class="nav-btn active" data-section="gallery">Photo Timeline<br>时间线相册</button>
+            <button class="nav-btn" data-section="sources">By Source<br>按来源分类</button>
+        </nav>
+
+        <!-- Source Filter Chips -->
+
+        <div id="gallery-section" class="content-section">
+
+        <div class="source-filters">
+            <div class="source-chip active" data-filter="all">All Sources 全部</div>
+            <div class="source-chip" data-filter="drama">Dramas_Movies 影视</div>
+            <div class="source-chip" data-filter="endorsement">Endorsements 代言</div>
+            <div class="source-chip" data-filter="magazine">Magazines 杂志</div>
+            <div class="source-chip" data-filter="event">Events 活动</div>
+            <div class="source-chip" data-filter="other">Others 其他非官方</div>
+        </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalPhotosDisplay">0</div>
+                    <div class="stat-label">Total Photos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalSourcesDisplay">0</div>
+                    <div class="stat-label">Sources</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="yearsSpanDisplay">0</div>
+                    <div class="stat-label">Years Covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="expandedYearsDisplay">0</div>
+                    <div class="stat-label">Years Expanded</div>
+                </div>
+            </div>
+
+	<input type="text" class="search-bar" placeholder="Search by keywords 搜索关键词" id="searchInput">
+            <button id="clearSearchBtn" class="btn">Clear Search / 返回</button>
+
+            <div class="timeline-container" id="timelineContainer">
+                <div class="timeline-empty">
+                    <h3>Loading Photo Timeline...</h3>
+                    <p>Please wait while we organize your photos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="sources-section" class="content-section hidden">
+            <div id="sourcesContainer">
+                <!-- Sources will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Photo Modal -->
+    <div id="photoModal" class="modal hidden">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="photo-counter" id="photoCounter">1 of 5</div>
+                <div class="group-title" id="groupTitle">Photo Collection</div>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Main Photo Display -->
+            <div class="modal-photo-container">
+                <button class="nav-arrow prev" id="prevBtn" onclick="navigatePhoto(-1)">‹</button>
+                <img id="modalPhoto" class="modal-photo" alt="Current photo">
+                <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
+            </div>
+
+            <!-- Thumbnail Strip -->
+            <div class="thumbnail-strip">
+                <div class="thumbnail-container" id="thumbnailContainer">
+                    <!-- Thumbnails will be generated here -->
+                </div>
+            </div>
+
+            <div class="photo-info-panel">
+                
+                <div class="download-section">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <h4 style="margin: 0; flex-grow: 1; text-align: center;">🔥Download Options & Links</h4>
+                        <button class="close-modal close-bottom-btn" onclick="closeModal()">×</button>
+                    </div>
+                    
+                    <div class="download-actions-row" id="actionButtonsRow">
+                        <button class="action-btn download-btn" id="downloadBtn" onclick="downloadPhoto()">
+                            🔥Download Single Image<br>
+			    <small style="opacity: 1;">Slightly Compressed</small><br>
+                            <small style="opacity: 1;">下载单图(轻压缩)</small>
+                        </button>
+                        
+                        <a class="action-btn quark-btn" id="quarkDownloadBtn" target="_blank">
+                            🌟Full Collection on Quark<br>
+			    <small style="opacity: 1;">Uncompressed photo set</small><br>
+                            <small style="opacity: 1;">下载夸克合集(无压缩)</small>
+                        </a>
+                        
+                        <a class="action-btn weibo-btn" id="weiboLinkBtn" target="_blank">
+                            📱 View on Weibo<br>
+                            <small style="opacity: 1;">Original Post</small><br>
+                            <small style="opacity: 1;">微博原帖</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Report Issue Modal -->
+    <div id="reportModal" class="modal hidden">
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="close-modal" onclick="closeReportModal()">&times;</button>
+          <div class="report-form-container" style="padding: 10px;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3 style="color: #667eea; margin-bottom: 10px;">🔧 Report an Issue</h3>
+                    <p style="color: #666; font-size: 14px;">Help us by reporting bugs or broken links<br>
+                    <span style="font-size: 12px; color: #888;">帮助我们改进网站，报告错误或失效链接</span></p>
+                </div>
+                
+                <form id="reportForm" class="report-form" action="https://formsubmit.co/canadaxfx1005@gmail.com" method="POST">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_next" value="https://canadaxfx.github.io/XZ-HD-Gallery-2/report-success.html">
+                    <input type="hidden" name="_subject" value="XZ Gallery Issue Report">
+                    
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportType" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Issue Type 问题类型</label>
+                        <select id="reportType" name="issue_type" required style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                            <option value="">Select issue type...</option>
+                            <option value="broken-link">Broken Link 链接失效</option>
+                            <option value="missing-photo">Missing Photo 图片丢失</option>
+                            <option value="download-issue">Download Problem 下载问题</option>
+                            <option value="page-error">Page Error 页面错误</option>
+                            <option value="feature-request">Feature Request 功能建议</option>
+                            <option value="other">Other 其他</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportPage" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Page/Section 页面/部分</label>
+                        <input type="text" id="reportPage" name="page_section" placeholder="e.g., 2024 photos, Game section, etc." required style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportDevice" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Device & Browser 设备和浏览器</label>
+                        <input type="text" id="reportDevice" name="device_browser" placeholder="e.g., iPhone Safari, Chrome Windows, etc." style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportDescription" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Description 详细描述</label>
+                        <textarea id="reportDescription" name="description" rows="4" placeholder="Please describe the issue in detail..." required style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;"></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportEmail" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Your Email (Optional) 邮箱（可选）</label>
+                        <input type="email" id="reportEmail" name="user_email" placeholder="your@email.com (for follow-up)" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                    </div>
+
+                    <div class="form-actions" style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+                        <button type="button" class="nav-btn" style="background: #f8f8f8; color: #666; border: 1px solid #ddd;" onclick="closeReportModal()">Cancel 取消</button>
+                        <button type="submit" class="btn primary">Send Report 发送报告</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div id="back-to-top">
+        <div class="arrow">▲</div>
+        <div class="text">TOP<br>回顶部</div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div style="margin-bottom:10px;font-weight:700;">Explore more</div>
+            <a class="footer-link" href="https://canadaxfx.github.io/XZworks/" target="_blank" rel="noopener">Screen Arts of Xiao Zhan</a>
+            <a class="footer-link" href="https://www.youtube.com/@CanadaXFX" target="_blank" rel="noopener">CanadaXFX YouTube Channel</a>
+        </div>
+
+        <div class="footer-content" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.2);">
+            <a class="footer-link" href="#" onclick="openReportModal(); return false;">
+                🔧 Report Broken Links or Bugs<br>
+                <small style="font-size:11px; opacity:0.8; font-weight:normal;">报告错误链接或功能问题</small>
+            </a>
+        </div>
+
+        <div class="copyright-notice">&copy; 2025 CanadaXFX. All rights reserved.</div>
+
+        <a href="#" id="terms-toggle" class="footer-link">Terms of Use</a>
+
+        <div id="terms-content">
+            <ul>
+                <li>All images and content related to Xiao Zhan belong to their respective copyright owners.</li>
+                <li>All content on this site is curated and organized © 2025 CanadaXFX.</li>
+                <li>AI training is strictly prohibited.</li>
+                <li>The original content, design, and code of this website may not be reproduced, distributed, or used without explicit permission.</li>
+                <li>Personal and non-commercial use only.</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        /* ---------- Core Variables ---------- */
+        let photoData = [];
+        let expandedYears = new Set();
+        let currentFilter = 'all';
+	let currentSearchQuery = '';
+        let yearPaginationSettings = {};
+	let imageObserver = null;
+        let sourcePaginationSettings = {}; 
+        let expandedSources = new Set(); 
+        
+        /* ---------- Enhanced Modal Variables ---------- */
+        let currentPhotoGroup = [];
+        let currentPhotoIndex = 0;
+        
+        /* ---------- Utility Functions ---------- */
+        function generateImgurThumbnail(originalUrl, size = 'm') {
+            const match = originalUrl.match(/https:\/\/i\.imgur\.com\/([^.]+)\.(\w+)/);
+            if (match) {
+                const [, imageId, extension] = match;
+                return `https://i.imgur.com/${imageId}${size}.${extension}`;
+            }
+            return originalUrl;
+        }
+
+        /* ---------- Photo Group Management ---------- */
+        function getPhotoGroup(photo) {
+            if (photo.groupName) {
+                // Group photos by groupName only, regardless of date
+                return photoData.filter(p => p.groupName === photo.groupName)
+                                .sort((a, b) => (a.id - b.id));
+            }
+            return [photo];
+        }
+        
+        /* ---------- Enhanced Modal Functions ---------- */
+        function openPhotoModal(photoId) {
+            const photo = photoData.find(p => p.id === photoId);
+            if (!photo) return;
+            
+            currentPhotoGroup = getPhotoGroup(photo);
+            currentPhotoIndex = currentPhotoGroup.findIndex(p => p.id === photoId);
+            
+            const modal = document.getElementById('photoModal');
+            modal.classList.remove('hidden');
+            
+            updateModalContent();
+            generateThumbnails();
+            updateNavigationButtons();
+            
+            document.addEventListener('keydown', handleKeyboardNavigation);
+        }
+
+        function updateModalContent() {
+            const photo = currentPhotoGroup[currentPhotoIndex];
+            
+            document.getElementById('modalPhoto').src = photo.url;
+            document.getElementById('photoCounter').textContent = 
+                `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
+            
+	    const mainSourceType = Array.isArray(photo.sourceType) ? photo.sourceType[0] : photo.sourceType;
+	    const category = mainSourceType ? 
+    	    	mainSourceType.charAt(0).toUpperCase() + mainSourceType.slice(1) : 
+    		'';            
+            // Get group name, fall back to source name if no group
+	    const mainSource = Array.isArray(photo.source) ? photo.source[0] : photo.source;
+	    const groupName = photo.groupName || mainSource || 'Photo Collection';            
+            // Combine them, checking if category exists
+            document.getElementById('groupTitle').textContent = category ? 
+                `${category} - ${groupName}` : 
+                groupName;
+            
+            window.currentPhotoForDownload = photo;
+            
+            // Update action buttons
+            const quarkBtn = document.getElementById('quarkDownloadBtn');
+            const weiboBtn = document.getElementById('weiboLinkBtn');
+            
+            if (photo.quarkLink) {
+                quarkBtn.href = photo.quarkLink;
+                quarkBtn.style.display = 'inline-block';
+            } else {
+                quarkBtn.style.display = 'none';
+            }
+            
+            if (photo.weibo) {
+                const w = photo.weibo.trim();
+                weiboBtn.href = /^https?:\/\//i.test(w) ? w : `https://${w}`;
+                weiboBtn.style.display = 'inline-block';
+            } else {
+                weiboBtn.style.display = 'none';
+            }
+        }
+
+        function generateThumbnails() {
+            const container = document.getElementById('thumbnailContainer');
+            container.innerHTML = currentPhotoGroup.map((photo, index) => `
+                <img src="${generateImgurThumbnail(photo.url, 's')}" 
+                     class="thumbnail ${index === currentPhotoIndex ? 'active' : ''}" 
+                     onclick="goToPhoto(${index})" 
+                     alt="Thumbnail ${index + 1}"
+                     loading="lazy">
+            `).join('');
+        }
+
+        function goToPhoto(index) {
+            if (index >= 0 && index < currentPhotoGroup.length) {
+                currentPhotoIndex = index;
+                updateModalContent();
+                updateThumbnailsActive();
+                updateNavigationButtons();
+            }
+        }
+
+        function navigatePhoto(direction) {
+            const newIndex = currentPhotoIndex + direction;
+            goToPhoto(newIndex);
+        }
+
+        function updateThumbnailsActive() {
+            document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentPhotoIndex);
+            });
+        }
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            if (prevBtn && nextBtn) {
+                prevBtn.disabled = currentPhotoIndex === 0;
+                nextBtn.disabled = currentPhotoIndex === currentPhotoGroup.length - 1;
+                
+                if (currentPhotoGroup.length <= 1) {
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
+                } else {
+                    prevBtn.style.display = 'flex';
+                    nextBtn.style.display = 'flex';
+                }
+            }
+        }
+
+        function handleKeyboardNavigation(e) {
+            if (document.getElementById('photoModal').classList.contains('hidden')) {
+                return;
+            }
+            
+            switch(e.key) {
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    if (currentPhotoIndex > 0) navigatePhoto(-1);
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    if (currentPhotoIndex < currentPhotoGroup.length - 1) navigatePhoto(1);
+                    break;
+                case 'Escape':
+                    e.preventDefault();
+                    closeModal();
+                    break;
+            }
+        }
+
+        function closeModal() { 
+            document.getElementById('photoModal').classList.add('hidden');
+            document.removeEventListener('keydown', handleKeyboardNavigation);
+        }
+
+        /* ---------- Source Filter Functions ---------- */
+	function setupSourceFilters() {
+            document.querySelectorAll('.source-chip').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    document.querySelectorAll('.source-chip').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.dataset.filter;
+                   // Clear the search query and input box
+		    currentSearchQuery = ''; 
+                    document.getElementById('searchInput').value = ''; 
+                    document.getElementById('clearSearchBtn').style.display = 'none'; /* <-- ADD THIS */
+                    applyFilter();
+                });
+            });
+        }
+
+	function applyFilter() {
+            let filteredPhotos = [];
+
+            // 1. Filter by source type (drama, event, etc.)
+	   if (currentFilter === 'all') {
+                filteredPhotos = photoData;
+            } else {
+                // Check if the sourceType array *includes* the current filter
+filteredPhotos = photoData.filter(p => 
+    (p.sourceType === currentFilter) || 
+    (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter))
+);
+            }
+
+            // 2. Filter by search query (if one exists)
+            if (currentSearchQuery) {
+                const query = currentSearchQuery;
+                filteredPhotos = filteredPhotos.filter(p => {
+                    const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
+                
+                    return p.year.includes(query) || 
+                           p.month.toLowerCase().includes(query) || 
+                           p.date.includes(query) ||
+	    		   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
+			   (p.note && p.note.toLowerCase().includes(query)) ||
+			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
+                           (tagsString.includes(query));
+                });
+            }
+            
+            // 3. Render the timeline with the results
+            if (filteredPhotos.length > 0) {
+                const photosByYear = filteredPhotos.reduce((acc, photo) => {
+                    if (!acc[photo.year]) acc[photo.year] = [];
+                    acc[photo.year].push(photo);
+                    return acc;
+                }, {});
+                createTimelineHTML(photosByYear);
+            } else {
+                const emptyMessage = currentSearchQuery ? 
+                    `<h3>No photos found</h3><p>No results for "${currentSearchQuery}".</p>` :
+                    `<h3>No photos found</h3><p>No photos for this source type.</p>`;
+                document.getElementById('timelineContainer').innerHTML = `<div class="timeline-empty">${emptyMessage}</div>`;
+            }
+            
+            updateStats();
+        }
+
+/* ---------- Helper for Source Tab ---------- */
+        function getSourceSafeId(sourceName) {
+            if (!sourceName) return 'unknown';
+            
+            // Use a simple hash function to create a unique ID
+            let hash = 5381;
+            for (let i = 0; i < sourceName.length; i++) {
+                hash = ((hash << 5) + hash) + sourceName.charCodeAt(i); /* hash * 33 + c */
+            }
+            // Return a safe, positive ID string
+            return 'source-id-' + (hash & 0x7FFFFFFF);
+        }
+
+        /* ---------- Initialization ---------- */
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavigation();
+            setupSearch();
+	    setupClearSearch();
+            setupSourceFilters();
+            setupIntersectionObserver();
+            setupBackToTop();
+            loadPhotoData();
+	    setupFooterToggle();
+        });
+
+        /* ---------- Data Loading ---------- */
+async function loadPhotoData() {
+            try {
+                const yearFiles = [2025, 2024, 2023, 2022, 2021, 2020, 2019];
+                
+                // --- MODIFICATION 1 ---
+                // Add the suffixes of your custom files here.
+                // Note that "Endorsements" and "Dramas_Movies" are case-sensitive and must match your filenames.
+                const customFiles = ["Endorsements", "Dramas_Movies", "Events", "Others", "Magazines"];
+                
+                let allPhotos = [];
+                
+                // Try loading year-based files (This loop is correct)
+                for (const year of yearFiles) {
+                    try {
+                        const res = await fetch(`sources_${year}.json?v=${Date.now()}`, { cache: 'no-store' });
+                        if (res.ok) {
+                            const yearData = await res.json();
+                            if (Array.isArray(yearData)) allPhotos.push(...yearData);
+                        }
+                    } catch (err) {
+                        console.log(`No sources_${year}.json found`);
+                    }
+                }
+                
+                // Try loading custom category files
+                for (const customFile of customFiles) {
+                    try {
+                        // --- MODIFICATION 2 ---
+                        // Added 'sources_' prefix to the fetch URL to match your file naming pattern
+                        const res = await fetch(`sources_${customFile}.json?v=${Date.now()}`, { cache: 'no-store' });
+                        if (res.ok) {
+                            const customData = await res.json();
+                            if (Array.isArray(customData)) allPhotos.push(...customData);
+                        }
+                    } catch (err) {
+                        // Updated this log message to be more accurate
+                        console.log(`No sources_${customFile}.json found`);
+                    }
+                }
+                
+                // Fallback to sourcesData.json (This is fine as a fallback)
+                if (allPhotos.length === 0) {
+                    const res = await fetch(`sourcesData.json?v=${Date.now()}`, { cache: 'no-store' });
+                    if (res.ok) allPhotos = await res.json();
+                }
+                
+                if (!Array.isArray(allPhotos) || allPhotos.length === 0) {
+                    // Use sample data for demonstration
+                    allPhotos = [
+                        {
+                            id: 1,
+                            url: "https://via.placeholder.com/400x600/ff6b6b/ffffff?text=Sample+1",
+                            date: "2025-01-15",
+                            year: "2025",
+                            month: "January",
+                            source: "Gucci Spring Campaign",
+                            sourceType: "endorsement",
+                            note: "Spring/Summer 2025 Collection",
+                            tags: ["gucci", "fashion", "campaign"],
+                            weibo: "https://weibo.com/",
+                            quarkLink: null,
+                            groupName: "Gucci2025"
+                        },
+                        {
+                            id: 2,
+                            url: "https://via.placeholder.com/400x600/667eea/ffffff?text=Sample+2",
+                            date: "2024-12-20",
+                            year: "2024",
+                            month: "December",
+                            source: "GQ Awards",
+                            sourceType: "event",
+                            note: "Red carpet appearance",
+                            tags: ["awards", "gq", "redcarpet"],
+                            weibo: null,
+                            quarkLink: "https://pan.quark.cn/",
+                            groupName: "GQ2024"
+                        }
+                    ];
+                }
+                
+                allPhotos.sort((a, b) => new Date(b.date) - new Date(a.date));
+                allPhotos.forEach((photo, index) => { photo.id = index + 1; });
+                
+                photoData = allPhotos;
+                initializeTimeline();
+                
+            } catch (err) {
+                console.error('Failed to load photo data:', err);
+                document.getElementById('timelineContainer').innerHTML = `
+                    <div class="timeline-empty"><h3>Could not load photo data</h3><p>Please check your connection and refresh.</p></div>`;
+            }
+        } 
+
+
+       /* ---------- Timeline Functions ---------- */
+        function initializeTimeline() {
+            if (photoData.length === 0) {
+                document.getElementById('timelineContainer').innerHTML = `
+                    <div class="timeline-empty"><h3>No photos found</h3><p>Add photos to display.</p></div>`;
+                return;
+            }
+
+            const displayPhotos = currentFilter === 'all' ? 
+                photoData : 
+                photoData.filter(p => (p.sourceType === currentFilter) || (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter)));
+
+            const photosByYear = displayPhotos.reduce((acc, photo) => {
+                if (!acc[photo.year]) acc[photo.year] = [];
+                acc[photo.year].push(photo);
+                return acc;
+            }, {});
+
+            Object.values(photosByYear).forEach(yearPhotos => 
+                yearPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)));
+
+            createTimelineHTML(photosByYear);
+            updateStats();
+            
+            const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
+            if (sortedYears.length > 0) setTimeout(() => toggleYear(sortedYears[0]), 100);
+        }
+
+        function createTimelineHTML(photosByYear) {
+            const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
+            const timelineHTML = sortedYears.map(year => {
+                const photos = photosByYear[year];
+                const previewPhotos = photos.slice(0, 4);
+                const previewHTML = `
+                    <div class="year-preview">
+                        ${previewPhotos.map(p => `<img src="${generateImgurThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
+                    </div>`;
+                
+                return `
+                    <div class="timeline-year" data-year="${year}">
+                        <div class="timeline-year-header" onclick="toggleYear('${year}')">
+                            <div class="year-header-content">
+                                <div class="year-header-top">
+                                    <span class="year-title">${year}</span>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span class="timeline-year-count">${photos.length} photos</span>
+                                        <span class="expand-icon">▼</span>
+                                    </div>
+                                </div>
+                                ${previewHTML}
+                            </div>
+                        </div>
+                        <div class="timeline-year-content">
+                            <div class="year-controls">
+                                <label for="per-page-${year}">Photos per page:</label>
+                                <select id="per-page-${year}" onchange="changePhotosPerPage('${year}', this.value)">
+                                    <option value="21">21</option>
+                                    <option value="42">42</option>
+                                    <option value="84">84</option>
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                            <div class="year-photos-grid" id="photos-${year}"></div>
+                            <div class="pagination-nav" id="pagination-nav-${year}"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('timelineContainer').innerHTML = timelineHTML;
+        }
+
+	function generatePhotosHTML(photos) {
+            return photos.map(photo => {
+                let displayDate = photo.date; // Default to full date
+                if (photo.datePrecision === 'month') {
+                    // If precision is 'month', show 'YYYY-MM'
+                    displayDate = photo.date.substring(0, 7); 
+                }
+                return `
+                <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
+                    <img data-src="${generateImgurThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
+                    <div class="photo-overlay">
+                        <span class="photo-date">${displayDate}</span>
+                        <span class="photo-source">${(Array.isArray(photo.source) ? photo.source.join(', ') : photo.source) || photo.note || ''}</span>
+                    </div>
+		</div>
+            `}).join('');
+        }
+
+        function toggleYear(year) {
+            const yearElement = document.querySelector(`[data-year="${year}"]`);
+            if (!yearElement) return;
+
+            const isExpanded = yearElement.classList.toggle('expanded');
+            
+            if (isExpanded) {
+                expandedYears.add(year);
+                if (!yearPaginationSettings[year]) {
+                    yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
+                }
+                document.getElementById(`per-page-${year}`).value = 
+                    yearPaginationSettings[year].perPage === Infinity ? 'all' : yearPaginationSettings[year].perPage;
+                renderYearPage(year);
+            } else {
+                expandedYears.delete(year);
+                unloadYearImages(year);
+            }
+            updateStats();
+        }
+
+        function changePhotosPerPage(year, perPageValue) {
+            const perPage = perPageValue === 'all' ? Infinity : parseInt(perPageValue, 10);
+            yearPaginationSettings[year] = { perPage, currentPage: 1 };
+            renderYearPage(year);
+        }
+
+        function renderYearPage(year) {
+            if (!yearPaginationSettings[year]) {
+                yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
+            }
+            const { perPage, currentPage } = yearPaginationSettings[year];
+	   // 1. Filter by year
+            let yearPhotos = photoData.filter(p => p.year === year);
+            
+// 2. Filter by source type
+        if (currentFilter !== 'all') {
+            yearPhotos = yearPhotos.filter(p => 
+                (p.sourceType === currentFilter) || 
+                (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter))
+            );
+        }
+
+            // 3. Filter by search query
+            if (currentSearchQuery) {
+                const query = currentSearchQuery;
+                yearPhotos = yearPhotos.filter(p => {
+                    const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
+                
+                    return p.year.includes(query) || 
+                           p.month.toLowerCase().includes(query) || 
+                           p.date.includes(query) ||
+			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
+			   (p.note && p.note.toLowerCase().includes(query)) ||
+			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
+                           (tagsString.includes(query));
+                });
+            } 
+            const totalPhotos = yearPhotos.length;
+            const photosGrid = document.getElementById(`photos-${year}`);
+            const paginationNav = document.getElementById(`pagination-nav-${year}`);
+
+            if (!photosGrid || !paginationNav) return;
+
+            let startIndex, endIndex;
+
+            if (perPage === Infinity) {
+                startIndex = 0;
+                endIndex = totalPhotos;
+            } else {
+                startIndex = (currentPage - 1) * perPage;
+                endIndex = Math.min(startIndex + perPage, totalPhotos);
+            }
+
+            photosGrid.innerHTML = generatePhotosHTML(yearPhotos.slice(startIndex, endIndex));
+
+            paginationNav.innerHTML = '';
+            if (perPage !== Infinity && totalPhotos > perPage) {
+                const totalPages = Math.ceil(totalPhotos / perPage);
+                paginationNav.innerHTML = createPaginationButtons(year, currentPage, totalPages);
+            }
+            setupLazyLoadingForYear(year);
+        }
+
+function createPaginationButtons(year, currentPage, totalPages) {
+            let html = '';
+            const maxPagesToShow = 5;
+            let startPage, endPage;
+
+            if (totalPages <= maxPagesToShow) {
+                startPage = 1;
+                endPage = totalPages;
+            } else {
+                const maxBefore = Math.floor(maxPagesToShow / 2);
+                const maxAfter = Math.ceil(maxPagesToShow / 2) - 1;
+                if (currentPage <= maxBefore) {
+                    startPage = 1; endPage = maxPagesToShow;
+                } else if (currentPage + maxAfter >= totalPages) {
+                    startPage = totalPages - maxPagesToShow + 1; endPage = totalPages;
+                } else {
+                    startPage = currentPage - maxBefore; endPage = currentPage + maxAfter;
+                }
+            }
+
+            if (currentPage > 1) html += `<button class="btn" onclick="goToPage('${year}', ${currentPage - 1})">‹ Prev</button>`;
+            if (startPage > 1) {
+                html += `<button class="btn" onclick="goToPage('${year}', 1)">1</button>`;
+                if (startPage > 2) html += `<span>...</span>`;
+            }
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button class="btn ${i === currentPage ? 'primary' : ''}" ${i === currentPage ? 'disabled' : `onclick="goToPage('${year}', ${i})"`}>${i}</button>`;
+            }
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) html += `<span>...</span>`;
+                html += `<button class="btn" onclick="goToPage('${year}', ${totalPages})">${totalPages}</button>`;
+            }
+            if (currentPage < totalPages) html += `<button class="btn" onclick="goToPage('${year}', ${currentPage + 1})">Next ›</button>`;
+
+            // --- ADD THIS NEW PART ---
+            html += `
+                <span class="pagination-jump">
+                    Go to:
+                    <input type="number" id="page-input-${year}" min="1" max="${totalPages}" placeholder="Page" onkeydown="if(event.key==='Enter') jumpToPage('${year}', ${totalPages});">
+                    <button class="btn" onclick="jumpToPage('${year}', ${totalPages})">Go</button>
+                </span>
+            `;
+            // --- END NEW PART ---
+
+            return html;
+        }
+
+
+        function goToPage(year, page) {
+            if (!yearPaginationSettings[year]) return;
+            yearPaginationSettings[year].currentPage = parseInt(page, 10);
+            renderYearPage(year);
+            document.getElementById(`photos-${year}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+	function jumpToPage(year, totalPages) {
+            const input = document.getElementById(`page-input-${year}`);
+            if (!input) return;
+            const page = parseInt(input.value, 10);
+            
+            if (page >= 1 && page <= totalPages) {
+                goToPage(year, page);
+            } else {
+                alert(`Please enter a page number between 1 and ${totalPages}.`);
+                input.value = ''; // Clear invalid input
+            }
+        }
+
+        /* ---------- Lazy Loading ---------- */
+        function setupIntersectionObserver() {
+            imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src && !img.src) {
+                            img.src = img.dataset.src;
+                            img.onload = () => img.classList.remove('loading-placeholder');
+                            img.onerror = () => img.classList.remove('loading-placeholder');
+                        }
+                        imageObserver.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '50px' });
+        }
+
+        function setupLazyLoadingForYear(year) {
+            document.querySelectorAll(`#photos-${year} .lazy-image[data-src]`).forEach(img => {
+                img.classList.add('loading-placeholder');
+                if (imageObserver) imageObserver.observe(img);
+            });
+        }
+
+        function unloadYearImages(year) {
+            document.querySelectorAll(`#photos-${year} img`).forEach(img => {
+                img.src = '';
+                img.classList.add('loading-placeholder');
+            });
+        }
+
+        /* ---------- Search Functions ---------- */
+	function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            let searchTimeout;
+            searchInput.addEventListener('input', () => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    // Update the global query and re-filter the entire page
+		currentSearchQuery = searchInput.value.toLowerCase().trim();
+                    applyFilter(); 
+                    // Show/hide the clear button
+                    document.getElementById('clearSearchBtn').style.display = currentSearchQuery ? 'block' : 'none';
+                }, 300);
+            });
+        }
+
+	function setupClearSearch() {
+            document.getElementById('clearSearchBtn').addEventListener('click', () => {
+                currentSearchQuery = '';
+                document.getElementById('searchInput').value = '';
+                document.getElementById('clearSearchBtn').style.display = 'none';
+                applyFilter();
+            });
+        }
+
+
+        /* ---------- Statistics ---------- */
+	function updateStats() {
+            // 1. Filter by source type
+            let displayPhotos = [];
+            if (currentFilter === 'all') {
+                displayPhotos = photoData;
+            } else {
+                displayPhotos = photoData.filter(p => (p.sourceType === currentFilter) || (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter)));
+            }
+
+            // 2. Filter by search query
+            if (currentSearchQuery) {
+                const query = currentSearchQuery;
+                displayPhotos = displayPhotos.filter(p => {
+                    const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
+                
+                    return p.year.includes(query) || 
+                           p.month.toLowerCase().includes(query) || 
+                           p.date.includes(query) ||
+			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
+			   (p.note && p.note.toLowerCase().includes(query)) ||
+			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
+                           (tagsString.includes(query));
+                });
+            }
+            
+            // 3. Now update the stats
+            document.getElementById('totalPhotosDisplay').textContent = displayPhotos.length.toLocaleString();
+            
+            const uniqueSources = new Set(displayPhotos.flatMap(p => 
+    Array.isArray(p.source) ? p.source : [p.source]
+));
+            document.getElementById('totalSourcesDisplay').textContent = uniqueSources.size;
+            
+            document.getElementById('yearsSpanDisplay').textContent = new Set(displayPhotos.map(p => p.year)).size;
+            document.getElementById('expandedYearsDisplay').textContent = expandedYears.size;
+        }
+
+        /* ---------- Navigation ---------- */
+        function setupNavigation() {
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    showSection(this.dataset.section);
+                    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        }
+        
+        function showSection(section) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden'));
+            document.getElementById(section + '-section').classList.remove('hidden');
+            if (section === 'sources') loadSourcesView();
+        }
+
+function loadSourcesView() {
+            const sourceGroups = photoData.reduce((acc, photo) => {
+                // Ensure photo.source is an array; handle old data that might still be a string
+                const sources = Array.isArray(photo.source) 
+                    ? photo.source 
+                    : [photo.source || 'Unknown'];
+
+                // Loop through *each* source in the photo's source array
+                sources.forEach(sourceName => {
+                    if (!sourceName) return; // Skip empty/null sources
+
+                    // Create the group if it doesn't exist
+                    if (!acc[sourceName]) {
+                        acc[sourceName] = { photos: [], name: sourceName };
+                    }
+                    // Add the photo to this group's list
+                    acc[sourceName].photos.push(photo);
+                });
+                return acc;
+            }, {});
+
+            const container = document.getElementById('sourcesContainer');            
+            // Sort sources by photo count (most first)
+            const sortedSources = Object.values(sourceGroups)
+                                        .sort((a, b) => b.photos.length - a.photos.length);
+
+            container.innerHTML = sortedSources.map(group => {
+                const sourceName = group.name;
+                const photos = group.photos;
+                const safeId = getSourceSafeId(sourceName); // Create a safe ID
+                
+                // --- FIX: Escape single quotes in the name ---
+                const escapedSourceName = sourceName.replace(/'/g, "\\'");
+
+                // Get 4 preview thumbnails
+                const previewPhotos = photos.slice(0, 4);
+                const previewHTML = `
+                    <div class="year-preview">
+                        ${previewPhotos.map(p => `<img src="${generateImgurThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
+                    </div>`;
+
+                // This structure mimics the .timeline-year structure
+                return `
+                    <div class="timeline-year" data-source="${safeId}">
+                        <div class="timeline-year-header" onclick="toggleSource('${escapedSourceName}')">
+                            <div class="year-header-content">
+                                <div class="year-header-top">
+                                    <span class="year-title">${sourceName}</span>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span class="timeline-year-count">${photos.length} photos</span>
+                                        <span class="expand-icon">▼</span>
+                                    </div>
+                                </div>
+                                ${previewHTML}
+                            </div>
+                        </div>
+                        <div class="timeline-year-content">
+                            <div class="year-controls">
+                                <label for="per-page-source-${safeId}">Photos per page:</label>
+                                <select id="per-page-source-${safeId}" onchange="changeSourcePhotosPerPage('${escapedSourceName}', this.value)">
+                                    <option value="21">21</option>
+                                    <option value="42">42</option>
+                                    <option value="84">84</option>
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                            <div class="year-photos-grid" id="photos-source-${safeId}"></div>
+                            <div class="pagination-nav" id="pagination-nav-source-${safeId}"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+
+/* ---------- "By Source" Tab Functions (New) ---------- */
+        
+        function toggleSource(sourceName) {
+            const safeId = getSourceSafeId(sourceName);
+            const sourceElement = document.querySelector(`[data-source="${safeId}"]`);
+            if (!sourceElement) return;
+
+            const isExpanded = sourceElement.classList.toggle('expanded');
+            
+            if (isExpanded) {
+                expandedSources.add(sourceName);
+                if (!sourcePaginationSettings[sourceName]) {
+                    sourcePaginationSettings[sourceName] = { perPage: 21, currentPage: 1 };
+                }
+                document.getElementById(`per-page-source-${safeId}`).value = 
+                    sourcePaginationSettings[sourceName].perPage === Infinity ? 'all' : sourcePaginationSettings[sourceName].perPage;
+                
+                renderSourcePage(sourceName);
+            } else {
+                expandedSources.delete(sourceName);
+                unloadSourceImages(sourceName);
+            }
+        }
+
+        function changeSourcePhotosPerPage(sourceName, perPageValue) {
+            const perPage = perPageValue === 'all' ? Infinity : parseInt(perPageValue, 10);
+            sourcePaginationSettings[sourceName] = { perPage, currentPage: 1 };
+            renderSourcePage(sourceName);
+        }
+
+        function renderSourcePage(sourceName) {
+            if (!sourcePaginationSettings[sourceName]) {
+                sourcePaginationSettings[sourceName] = { perPage: 21, currentPage: 1 };
+            }
+            
+            const { perPage, currentPage } = sourcePaginationSettings[sourceName];
+            // Filter photos for this specific source
+            const sourcePhotos = photoData.filter(p => 
+    (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName)
+);            
+            const totalPhotos = sourcePhotos.length;
+            const safeId = getSourceSafeId(sourceName);
+            const photosGrid = document.getElementById(`photos-source-${safeId}`);
+            const paginationNav = document.getElementById(`pagination-nav-source-${safeId}`);
+
+            if (!photosGrid || !paginationNav) return;
+
+            let startIndex, endIndex;
+            if (perPage === Infinity) {
+                startIndex = 0;
+                endIndex = totalPhotos;
+            } else {
+                startIndex = (currentPage - 1) * perPage;
+                endIndex = Math.min(startIndex + perPage, totalPhotos);
+            }
+            
+            // Use the existing generatePhotosHTML function
+            photosGrid.innerHTML = generatePhotosHTML(sourcePhotos.slice(startIndex, endIndex));
+
+            paginationNav.innerHTML = '';
+            if (perPage !== Infinity && totalPhotos > perPage) {
+                const totalPages = Math.ceil(totalPhotos / perPage);
+                paginationNav.innerHTML = createSourcePaginationButtons(sourceName, currentPage, totalPages);
+            }
+            
+            // Re-use the existing lazy-loading logic for the new images
+            setupLazyLoadingForSource(sourceName);
+        }
+
+function createSourcePaginationButtons(sourceName, currentPage, totalPages) {
+            let html = '';
+            const maxPagesToShow = 5;
+            let startPage, endPage;
+
+            // --- FIX: Escape single quotes in the name ---
+            const escapedSourceName = sourceName.replace(/'/g, "\\'");
+
+            if (totalPages <= maxPagesToShow) {
+                startPage = 1; endPage = totalPages;
+            } else {
+                const maxBefore = Math.floor(maxPagesToShow / 2);
+                const maxAfter = Math.ceil(maxPagesToShow / 2) - 1;
+                if (currentPage <= maxBefore) {
+                    startPage = 1; endPage = maxPagesToShow;
+                } else if (currentPage + maxAfter >= totalPages) {
+                    startPage = totalPages - maxPagesToShow + 1; endPage = totalPages;
+                } else {
+                    startPage = currentPage - maxBefore; endPage = currentPage + maxAfter;
+                }
+            }
+
+            if (currentPage > 1) html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', ${currentPage - 1})">‹ Prev</button>`;
+            if (startPage > 1) {
+                html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', 1)">1</button>`;
+                if (startPage > 2) html += `<span>...</span>`;
+            }
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button class="btn ${i === currentPage ? 'primary' : ''}" ${i === currentPage ? 'disabled' : `onclick="goToSourcePage('${escapedSourceName}', ${i})"`}>${i}</button>`;
+            }
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) html += `<span>...</span>`;
+                html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', ${totalPages})">${totalPages}</button>`;
+            }
+            if (currentPage < totalPages) html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', ${currentPage + 1})">Next ›</button>`;
+
+            // --- END NEW PART ---
+            const safeId = getSourceSafeId(sourceName);
+            html += `
+                <span class="pagination-jump">
+                    Go to:
+                    <input type="number" id="page-input-source-${safeId}" min="1" max="${totalPages}" placeholder="Page" onkeydown="if(event.key==='Enter') jumpToSourcePage('${escapedSourceName}', ${totalPages});">
+                    <button class="btn" onclick="jumpToSourcePage('${escapedSourceName}', ${totalPages})">Go</button>
+                </span>
+            `;
+            // --- END NEW PART ---
+
+            return html;
+        }
+
+
+        function goToSourcePage(sourceName, page) {
+            if (!sourcePaginationSettings[sourceName]) return;
+            sourcePaginationSettings[sourceName].currentPage = parseInt(page, 10);
+            renderSourcePage(sourceName);
+            
+            const safeId = getSourceSafeId(sourceName);
+            document.getElementById(`photos-source-${safeId}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+	function jumpToSourcePage(sourceName, totalPages) {
+            const safeId = getSourceSafeId(sourceName);
+            const input = document.getElementById(`page-input-source-${safeId}`);
+            if (!input) return;
+            const page = parseInt(input.value, 10);
+            
+            if (page >= 1 && page <= totalPages) {
+                goToSourcePage(sourceName, page);
+            } else {
+                alert(`Please enter a page number between 1 and ${totalPages}.`);
+                input.value = ''; // Clear invalid input
+            }
+        }
+
+
+        function setupLazyLoadingForSource(sourceName) {
+            const safeId = getSourceSafeId(sourceName);
+            document.querySelectorAll(`#photos-source-${safeId} .lazy-image[data-src]`).forEach(img => {
+                img.classList.add('loading-placeholder');
+                if (imageObserver) imageObserver.observe(img);
+            });
+        }
+        
+        function unloadSourceImages(sourceName) {
+            const safeId = getSourceSafeId(sourceName);
+            document.querySelectorAll(`#photos-source-${safeId} img`).forEach(img => {
+                img.src = '';
+                img.classList.add('loading-placeholder');
+            });
+        }
+
+        /* ---------- Download Function ---------- */
+        async function downloadPhoto() {
+            if (!window.currentPhotoForDownload) return;
+            const photo = window.currentPhotoForDownload;
+            const btn = document.getElementById('downloadBtn');
+            
+            const urlParts = photo.url.split('?')[0];
+            const ext = urlParts.split('.').pop().toLowerCase();
+            const name = `XZ_${photo.source ? photo.source.replace(/\s+/g, '_') : 'Photo'}_${photo.date}.${ext}`;
+            
+            try {
+                btn.textContent = 'Preparing...';
+                btn.disabled = true;
+
+                if (window.showSaveFilePicker) {
+                    const res = await fetch(photo.url);
+                    const blob = await res.blob();
+                    const handle = await window.showSaveFilePicker({ suggestedName: name });
+                    const writable = await handle.createWritable();
+                    await writable.write(blob);
+                    await writable.close();
+                    btn.innerHTML = 'Downloaded! ✓';
+                } else {
+                    const tempA = document.createElement('a');
+                    tempA.href = photo.url;
+                    tempA.target = '_blank';
+                    tempA.download = name;
+                    document.body.appendChild(tempA);
+                    tempA.click();
+                    document.body.removeChild(tempA);
+                    btn.innerHTML = 'Opening...';
+                }
+            } catch (error) {
+                window.open(photo.url, '_blank');
+                btn.innerHTML = 'Opened in new tab';
+            } finally {
+                setTimeout(() => {
+                    btn.innerHTML = '🔥Download HD Image<br><small style="opacity: 1;">下载高清图</small>';
+                    btn.disabled = false;
+                }, 2000);
+            }
+        }
+
+
+
+        /* ---------- Report Form Functions ---------- */
+        function openReportModal() {
+            document.getElementById('reportModal').classList.remove('hidden');
+            // Auto-detect user's device/browser info
+            const deviceInfo = `${navigator.platform} - ${navigator.userAgent.split(' ').slice(-2).join(' ')}`;
+            document.getElementById('reportDevice').value = deviceInfo;
+        }
+
+        function closeReportModal() {
+            document.getElementById('reportModal').classList.add('hidden');
+            document.getElementById('reportForm').reset();
+        }
+
+        // Rate limiting variables
+        let lastSubmissionTime = 0;
+        const SUBMISSION_COOLDOWN = 30000; // 30 seconds
+
+
+        /* ---------- Modal Event Listeners ---------- */
+        document.getElementById('photoModal').addEventListener('click', e => { 
+            if (e.target === e.currentTarget) closeModal(); 
+        });
+        document.getElementById('reportModal').addEventListener('click', e => { 
+            if (e.target === e.currentTarget) closeReportModal(); 
+        });
+        document.addEventListener('keydown', e => { 
+            if (e.key === 'Escape') {
+                closeModal(); 
+                closeReportModal();
+            }
+        });
+
+/* ---------- Form Rate Limiting ---------- */
+        document.getElementById('reportForm').addEventListener('submit', function(e) {
+            const now = Date.now();
+            if (now - lastSubmissionTime < SUBMISSION_COOLDOWN) {
+                e.preventDefault();
+                alert('Please wait 30 seconds between submissions. / 请等待30秒后再次提交。');
+                return false;
+            }
+            lastSubmissionTime = now;
+        });
+/* ---------- Form Submission Feedback ---------- */
+        document.getElementById('reportForm').addEventListener('submit', function() {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.innerHTML = '⏳ Sending... 发送中...';
+            submitBtn.disabled = true;
+            // Don't re-enable - let FormSubmit.co handle the redirect
+        });
+
+
+function setupFooterToggle() {
+    const termsToggle = document.getElementById('terms-toggle');
+    if (!termsToggle) return;
+    termsToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const termsContent = document.getElementById('terms-content');
+        const isHidden = termsContent.style.display === 'none' || !termsContent.style.display;
+        termsContent.style.display = isHidden ? 'block' : 'none';
+        if (isHidden) termsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+}
+
+        /* ---------- Back to Top Button ---------- */
+        function setupBackToTop() {
+            const btn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                btn.classList.toggle('visible', window.scrollY > 300);
+            }, { passive: true });
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+
+    </script>
+</body>
+</html>
