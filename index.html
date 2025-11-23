@@ -867,10 +867,10 @@
 <body>
     <div class="container">
     <header>
-        <h1>Xiao Zhan HD Gallery-2<br>肖战高清图库 - 影视&代言&活动</h1>
+        <h1>Xiao Zhan HD Gallery Misc<br>肖战高清图库 - 影视&代言&活动</h1>
         <p class="subtitle" style="font-weight: 600; color: white; font-size: clamp(11px, 2.5vw, 16px);">
             * HD photos from various sources (NOT including XZ Studio)<br>
-            * 此站不包括工作室图库内容，工作室图库请点击下方链接<br>
+            * 此站不包括工作室图库内容，请点击下方工作室图库链接<br>
             * <a href="https://xz-studio-gallery.com/" target="_blank" style="color: white; text-decoration: underline;">Click here for XZ Studio Gallery 肖战工作室高清图库</a><br>
         </p>
     </header>
@@ -1135,46 +1135,56 @@
             document.addEventListener('keydown', handleKeyboardNavigation);
         }
 
-        function updateModalContent() {
+function updateModalContent() {
             const photo = currentPhotoGroup[currentPhotoIndex];
             
+            // 1. Update Main Image
             document.getElementById('modalPhoto').src = photo.url;
             document.getElementById('photoCounter').textContent = 
                 `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
             
-	    const mainSourceType = Array.isArray(photo.sourceType) ? photo.sourceType[0] : photo.sourceType;
-	    const category = mainSourceType ? 
-    	    	mainSourceType.charAt(0).toUpperCase() + mainSourceType.slice(1) : 
-    		'';            
-            // Get group name, fall back to source name if no group
-	    const mainSource = Array.isArray(photo.source) ? photo.source[0] : photo.source;
-	    const groupName = photo.groupName || mainSource || 'Photo Collection';            
-            // Combine them, checking if category exists
+            // 2. Update Title Logic
+            const mainSourceType = Array.isArray(photo.sourceType) ? photo.sourceType[0] : photo.sourceType;
+            const category = mainSourceType ? 
+                mainSourceType.charAt(0).toUpperCase() + mainSourceType.slice(1) : 
+                '';            
+            const mainSource = Array.isArray(photo.source) ? photo.source[0] : photo.source;
+            const groupName = photo.groupName || mainSource || 'Photo Collection';            
             document.getElementById('groupTitle').textContent = category ? 
                 `${category} - ${groupName}` : 
                 groupName;
             
-            window.currentPhotoForDownload = photo;
-            
-            // Update action buttons
-            const quarkBtn = document.getElementById('quarkDownloadBtn');
-            const weiboBtn = document.getElementById('weiboLinkBtn');
-            
-            if (photo.quarkLink) {
-                quarkBtn.href = photo.quarkLink;
-                quarkBtn.style.display = 'inline-block';
-            } else {
-                quarkBtn.style.display = 'none';
+            // 3. Update Download Button (CRITICAL FIX)
+            const downloadBtn = document.getElementById('downloadBtn');
+            if (downloadBtn) {
+                downloadBtn.href = photo.url; // Set the link to the Cloudflare URL
             }
             
-            if (photo.weibo) {
-                const w = photo.weibo.trim();
-                weiboBtn.href = /^https?:\/\//i.test(w) ? w : `https://${w}`;
-                weiboBtn.style.display = 'inline-block';
-            } else {
-                weiboBtn.style.display = 'none';
+            // 4. Update Quark Button (Safety Check added)
+            const quarkBtn = document.getElementById('quarkDownloadBtn');
+            if (quarkBtn) { // Only run if button exists
+                if (photo.quarkLink) {
+                    quarkBtn.href = photo.quarkLink;
+                    quarkBtn.style.display = 'inline-block';
+                } else {
+                    quarkBtn.style.display = 'none';
+                }
+            }
+            
+            // 5. Update Weibo Button
+            const weiboBtn = document.getElementById('weiboLinkBtn');
+            if (weiboBtn) {
+                if (photo.weibo) {
+                    const w = photo.weibo.trim();
+                    // Ensure protocol (https://) exists
+                    weiboBtn.href = /^https?:\/\//i.test(w) ? w : `https://${w}`;
+                    weiboBtn.style.display = 'inline-block';
+                } else {
+                    weiboBtn.style.display = 'none';
+                }
             }
         }
+
 
         function generateThumbnails() {
             const container = document.getElementById('thumbnailContainer');
@@ -2025,47 +2035,6 @@ function createSourcePaginationButtons(sourceName, currentPage, totalPages) {
             });
         }
 
-        /* ---------- Download Function ---------- */
-        async function downloadPhoto() {
-            if (!window.currentPhotoForDownload) return;
-            const photo = window.currentPhotoForDownload;
-            const btn = document.getElementById('downloadBtn');
-            
-            const urlParts = photo.url.split('?')[0];
-            const ext = urlParts.split('.').pop().toLowerCase();
-            const name = `XZ_${photo.source ? photo.source.replace(/\s+/g, '_') : 'Photo'}_${photo.date}.${ext}`;
-            
-            try {
-                btn.textContent = 'Preparing...';
-                btn.disabled = true;
-
-                if (window.showSaveFilePicker) {
-                    const res = await fetch(photo.url);
-                    const blob = await res.blob();
-                    const handle = await window.showSaveFilePicker({ suggestedName: name });
-                    const writable = await handle.createWritable();
-                    await writable.write(blob);
-                    await writable.close();
-                    btn.innerHTML = 'Downloaded! ✓';
-                } else {
-                    const tempA = document.createElement('a');
-                    tempA.href = photo.url;
-                    tempA.target = '_blank';
-                    tempA.download = name;
-                    document.body.appendChild(tempA);
-                    tempA.click();
-                    document.body.removeChild(tempA);
-                    btn.innerHTML = 'Opening...';
-                }
-            } catch (error) {
-                window.open(photo.url, '_blank');
-                btn.innerHTML = 'Opened in new tab';
-            } finally {
-                setTimeout(() => {
-                    btn.innerHTML = '🔥Download HD Image<br><small style="opacity: 1;">下载高清图</small>';
-                    btn.disabled = false;
-                }, 2000);
-            }
         }
 
 
