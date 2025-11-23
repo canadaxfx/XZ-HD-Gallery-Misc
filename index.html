@@ -1097,15 +1097,6 @@
         let currentPhotoGroup = [];
         let currentPhotoIndex = 0;
         
-        /* ---------- Utility Functions ---------- */
-        function generateImgurThumbnail(originalUrl, size = 'm') {
-            const match = originalUrl.match(/https:\/\/i\.imgur\.com\/([^.]+)\.(\w+)/);
-            if (match) {
-                const [, imageId, extension] = match;
-                return `https://i.imgur.com/${imageId}${size}.${extension}`;
-            }
-            return originalUrl;
-        }
 
         /* ---------- Photo Group Management ---------- */
         function getPhotoGroup(photo) {
@@ -1186,16 +1177,32 @@ function updateModalContent() {
         }
 
 
-        function generateThumbnails() {
-            const container = document.getElementById('thumbnailContainer');
-            container.innerHTML = currentPhotoGroup.map((photo, index) => `
-                <img src="${generateImgurThumbnail(photo.url, 's')}" 
-                     class="thumbnail ${index === currentPhotoIndex ? 'active' : ''}" 
-                     onclick="goToPhoto(${index})" 
-                     alt="Thumbnail ${index + 1}"
-                     loading="lazy">
-            `).join('');
+function generateThumbnail(originalUrl, size = 'm') {
+            // 1. Handle New Cloudflare R2 Links (e.g. .../full/image.jpeg -> .../thumbs/image_m.jpg)
+            if (originalUrl.includes('/full/')) {
+                let thumbUrl = originalUrl.replace('/full/', '/thumbs/');
+                
+                // Remove the original extension (e.g. .jpeg, .png)
+                const lastDotIndex = thumbUrl.lastIndexOf('.');
+                if (lastDotIndex !== -1) {
+                    thumbUrl = thumbUrl.substring(0, lastDotIndex);
+                }
+                
+                // Force append _m.jpg (matches your Python script's output)
+                return `${thumbUrl}_${size}.jpg`; 
+            }
+        
+            // 2. Handle Old Imgur Links (Backward Compatibility)
+            const match = originalUrl.match(/https:\/\/i\.imgur\.com\/([^.]+)\.(\w+)/);
+            if (match) {
+                const [, imageId, extension] = match;
+                return `https://i.imgur.com/${imageId}${size}.${extension}`;
+            }
+        
+            // 3. Fallback: If neither, return original (slow but works)
+            return originalUrl;
         }
+
 
         function goToPhoto(index) {
             if (index >= 0 && index < currentPhotoGroup.length) {
@@ -1480,7 +1487,7 @@ async function loadPhotoData() {
                 const previewPhotos = photos.slice(0, 4);
                 const previewHTML = `
                     <div class="year-preview">
-                        ${previewPhotos.map(p => `<img src="${generateImgurThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
                 
@@ -1526,7 +1533,7 @@ async function loadPhotoData() {
                 }
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
-                    <img data-src="${generateImgurThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
+                    <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
                         <span class="photo-source">${(Array.isArray(photo.source) ? photo.source.join(', ') : photo.source) || photo.note || ''}</span>
@@ -1837,7 +1844,7 @@ function loadSourcesView() {
                 const previewPhotos = photos.slice(0, 4);
                 const previewHTML = `
                     <div class="year-preview">
-                        ${previewPhotos.map(p => `<img src="${generateImgurThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
 
