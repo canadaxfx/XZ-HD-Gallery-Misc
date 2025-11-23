@@ -1487,7 +1487,7 @@ async function loadPhotoData() {
                 const previewPhotos = photos.slice(0, 4);
                 const previewHTML = `
                     <div class="year-preview">
-                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 'm')}" alt="Preview" class="preview-thumb">`).join('')}
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
                 
@@ -2042,7 +2042,7 @@ function createSourcePaginationButtons(sourceName, currentPage, totalPages) {
             });
         }
 
-        }
+        
 
 
 
