@@ -1178,30 +1178,34 @@ function updateModalContent() {
 
 
 function generateThumbnail(originalUrl, size = 'm') {
-            // 1. Handle New Cloudflare R2 Links (e.g. .../full/image.jpeg -> .../thumbs/image_m.jpg)
-            if (originalUrl.includes('/full/')) {
-                let thumbUrl = originalUrl.replace('/full/', '/thumbs/');
-                
-                // Remove the original extension (e.g. .jpeg, .png)
-                const lastDotIndex = thumbUrl.lastIndexOf('.');
-                if (lastDotIndex !== -1) {
-                    thumbUrl = thumbUrl.substring(0, lastDotIndex);
-                }
-                
-                // Force append _m.jpg (matches your Python script's output)
-                return `${thumbUrl}_${size}.jpg`; 
-            }
+    // 1. Handle Cloudflare R2 Links
+    if (originalUrl.includes('/full/')) {
+        let thumbUrl = originalUrl.replace('/full/', '/thumbs/');
         
-            // 2. Handle Old Imgur Links (Backward Compatibility)
-            const match = originalUrl.match(/https:\/\/i\.imgur\.com\/([^.]+)\.(\w+)/);
-            if (match) {
-                const [, imageId, extension] = match;
-                return `https://i.imgur.com/${imageId}${size}.${extension}`;
-            }
-        
-            // 3. Fallback: If neither, return original (slow but works)
-            return originalUrl;
+        // Strip extension
+        const lastDotIndex = thumbUrl.lastIndexOf('.');
+        if (lastDotIndex !== -1) {
+            thumbUrl = thumbUrl.substring(0, lastDotIndex);
         }
+        
+        // SMART LOGIC: If 's' is requested for R2, swap to 'm' 
+        // because we know we only generated 'm' thumbnails.
+        let targetSize = size;
+        if (size === 's') targetSize = 'm';
+        
+        return `${thumbUrl}_${targetSize}.jpg`; 
+    }
+
+    // 2. Handle Imgur Links (Keep existing logic)
+    const match = originalUrl.match(/https:\/\/i\.imgur\.com\/([^.]+)\.(\w+)/);
+    if (match) {
+        const [, imageId, extension] = match;
+        return `https://i.imgur.com/${imageId}${size}.${extension}`;
+    }
+
+    // 3. Fallback
+    return originalUrl;
+}
 
 
         function goToPhoto(index) {
