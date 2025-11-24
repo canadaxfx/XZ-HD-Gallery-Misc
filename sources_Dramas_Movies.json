@@ -382,7 +382,7 @@
     {
         "id": 21,
         "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/6KcXtR5.jpeg",
-        "date": "2025-07-13",
+        "date": "2023-07-13",
         "month": "July",
         "year": "2023",
         "sourceType": "drama",
@@ -395,7 +395,7 @@
         ],
         "weibo": "https://weibo.com/7776659400/N9IBeoQmY",
         "datePrecision": "day",
-        "groupName": "玉骨遥_2025-07-13-J",
+        "groupName": "玉骨遥_2023-07-13-J",
         "quarkLink": "https://pan.quark.cn/s/55a1d2c06798"
     },
     {
@@ -3925,12 +3925,8 @@
         "date": "2025-02-02",
         "month": "February",
         "year": "2025",
-        "sourceType": [
-            "drama"
-        ],
-        "source": [
-            "射雕英雄传"
-        ],
+        "sourceType": "drama",
+        "source": "射雕英雄传",
         "note": null,
         "tags": [
             "射雕英雄传",
@@ -6567,9 +6563,9 @@
     {
         "id": 354,
         "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/wiJfy15.jpeg",
-        "date": "2023-07-23",
+        "date": "2019-07-23",
         "month": "July",
-        "year": "2023",
+        "year": "2019",
         "sourceType": "drama",
         "source": "陈情令",
         "note": null,
