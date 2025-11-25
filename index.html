@@ -1217,6 +1217,29 @@ function updateModalContent() {
 }
 
 
+function generateThumbnails() {
+    const container = document.getElementById('thumbnailContainer');
+    if (!container) return;
+
+    container.innerHTML = currentPhotoGroup.map((photo, index) => `
+        <img src="${generateThumbnail(photo.url, 'm')}" 
+             class="thumbnail ${index === currentPhotoIndex ? 'active' : ''}" 
+             onclick="goToPhoto(${index})" 
+             alt="Thumbnail ${index + 1}"
+             loading="lazy">
+    `).join('');
+    
+    // Auto-scroll to the active photo in the strip
+    setTimeout(() => {
+        const activeThumb = container.querySelector('.thumbnail.active');
+        if (activeThumb) {
+            activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+    }, 100);
+}
+
+
+
 function generateThumbnail(originalUrl, size = 'm') {
     // 1. Handle Cloudflare R2 Links
     if (originalUrl.includes('/full/')) {
