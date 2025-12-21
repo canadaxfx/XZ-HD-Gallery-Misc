@@ -365,14 +365,28 @@
             white-space: nowrap;
         }
 
-        .close-modal { 
-            background: none; border: none; 
-            font-size: 40px; cursor: pointer; 
+        .fullscreen-btn {
+            background: none; border: none;
+            font-size: 24px; cursor: pointer;
+            color: #333; padding: 8px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .fullscreen-btn:hover {
+            background: #e9ecef;
+            color: #667eea;
+        }
+
+        .close-modal {
+            background: none; border: none;
+            font-size: 40px; cursor: pointer;
             color: #333; padding: 0px;
             border-radius: 50%;
             transition: all 0.3s ease;
         }
-        
+
         .close-modal:hover {
             background: #e9ecef;
             color: #333;
@@ -477,6 +491,31 @@
         .thumbnail.active {
             border-color: #ff6b6b;
             box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Fullscreen Mode Styles */
+        .modal-content:fullscreen {
+            max-width: 100vw;
+            max-height: 100vh;
+            border-radius: 0;
+        }
+
+        .modal-content:-webkit-full-screen {
+            max-width: 100vw;
+            max-height: 100vh;
+            border-radius: 0;
+        }
+
+        .modal-content:-moz-full-screen {
+            max-width: 100vw;
+            max-height: 100vh;
+            border-radius: 0;
+        }
+
+        .modal-content:-ms-fullscreen {
+            max-width: 100vw;
+            max-height: 100vh;
+            border-radius: 0;
         }
 
         /* Photo Actions Panel */
@@ -961,6 +1000,7 @@
             <div class="modal-header">
                 <div class="photo-counter" id="photoCounter">1 of 5</div>
                 <div class="group-title" id="groupTitle">Photo Collection</div>
+                <button class="fullscreen-btn" id="fullscreenBtn" onclick="toggleFullscreen()" title="Fullscreen (F)">⛶</button>
                 <button class="close-modal" onclick="closeModal()">&times;</button>
             </div>
 
@@ -1313,7 +1353,7 @@ function generateThumbnail(originalUrl, size = 'm') {
             if (document.getElementById('photoModal').classList.contains('hidden')) {
                 return;
             }
-            
+
             switch(e.key) {
                 case 'ArrowLeft':
                     e.preventDefault();
@@ -1327,12 +1367,75 @@ function generateThumbnail(originalUrl, size = 'm') {
                     e.preventDefault();
                     closeModal();
                     break;
+                case 'f':
+                case 'F':
+                    e.preventDefault();
+                    toggleFullscreen();
+                    break;
             }
         }
 
-        function closeModal() { 
+        function closeModal() {
+            // Exit fullscreen if active
+            if (document.fullscreenElement || document.webkitFullscreenElement ||
+                document.mozFullScreenElement || document.msFullscreenElement) {
+                exitFullscreen();
+            }
             document.getElementById('photoModal').classList.add('hidden');
             document.removeEventListener('keydown', handleKeyboardNavigation);
+        }
+
+        /* ---------- Fullscreen Functions ---------- */
+        function toggleFullscreen() {
+            const modalContent = document.querySelector('.modal-content');
+
+            if (!document.fullscreenElement && !document.webkitFullscreenElement &&
+                !document.mozFullScreenElement && !document.msFullscreenElement) {
+                enterFullscreen(modalContent);
+            } else {
+                exitFullscreen();
+            }
+        }
+
+        function enterFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+
+        // Update fullscreen button icon when fullscreen state changes
+        document.addEventListener('fullscreenchange', updateFullscreenButton);
+        document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
+        document.addEventListener('mozfullscreenchange', updateFullscreenButton);
+        document.addEventListener('MSFullscreenChange', updateFullscreenButton);
+
+        function updateFullscreenButton() {
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            if (!fullscreenBtn) return;
+
+            const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement ||
+                                document.mozFullScreenElement || document.msFullscreenElement;
+
+            fullscreenBtn.innerHTML = isFullscreen ? '⛶' : '⛶';
+            fullscreenBtn.title = isFullscreen ? 'Exit Fullscreen (F)' : 'Fullscreen (F)';
         }
 
         /* ---------- Source Filter Functions ---------- */
