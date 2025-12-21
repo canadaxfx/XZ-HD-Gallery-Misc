@@ -19,7 +19,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1F2937 0%, #2D3748 100%);
             min-height: 100vh; color: #333;
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 10px; }
@@ -33,11 +33,11 @@
             text-decoration: none; display: inline-block;
         }
         .nav-btn.active, .btn.primary {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(45deg, #5E9FD8, #4A8BC8);
             color: white; transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(238, 90, 36, 0.3);
+            box-shadow: 0 8px 20px rgba(94, 159, 216, 0.3);
         }
-        .nav-btn:not(.active) { background: rgba(255,255,255,0.2); color: white; backdrop-filter: blur(10px); }
+        .nav-btn:not(.active) { background: rgba(94, 159, 216, 0.15); color: white; backdrop-filter: blur(10px); }
         .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
         .content-section {
             background: rgba(255,255,255,0.95); border-radius: 20px; padding: 10px;
@@ -72,9 +72,9 @@
 	    border-color: #aaa;
         }
         .source-chip.active {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(45deg, #5E9FD8, #4A8BC8);
             color: white;
-            border-color: #ee5a24;
+            border-color: #4A8BC8;
         }
         
 .modal-tags-container {
@@ -104,7 +104,7 @@
             border-radius: 25px; font-size: 13px; margin: 0 auto 15px; display: block;
             transition: border-color 0.3s ease;
         }
-        .search-bar:focus { outline: none; border-color: #667eea; }
+        .search-bar:focus { outline: none; border-color: #5E9FD8; }
 	#clearSearchBtn {
             display: none; /* Hidden by default */
             margin: 0 auto 15px;
@@ -129,7 +129,7 @@
             margin: 0 auto 15px; 
         }
         .stat-card { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            background: linear-gradient(135deg, #1F2937 0%, #2D3748 100%); 
             color: white; 
             padding: 8px 8px; 
             border-radius: 15px; 
@@ -146,7 +146,7 @@
             overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: white;
         }
         .timeline-year-header { 
-            background: linear-gradient(45deg, #667eea, #764ba2); color: white; 
+            background: linear-gradient(45deg, #1F2937, #2D3748); color: white; 
             padding: 15px 20px; font-size: 16px; font-weight: bold; cursor: pointer; 
             transition: all 0.3s ease; user-select: none; position: relative;
         }
@@ -158,7 +158,7 @@
         }
 
         .timeline-year-header:hover { 
-            background: linear-gradient(45deg, #5a6fd8, #6a42a0); 
+            background: linear-gradient(45deg, #2D3748, #374151); 
             transform: translateY(-1px); 
         }
         .year-header-content { width: 100%; }
@@ -257,16 +257,16 @@
             min-width: 40px;
             padding: 10px;
             font-size: 13px;
-            background: rgba(255,255,255,0.2);
-            color: #ff6b6b;
-            border: 1px solid #ff6b6b;
+            background: rgba(94, 159, 216, 0.1);
+            color: #5E9FD8;
+            border: 1px solid #5E9FD8;
         }
         .pagination-nav .btn:hover {
-            background: #ffe4e4;
+            background: rgba(94, 159, 216, 0.2);
             transform: translateY(-2px);
         }
         .pagination-nav .btn.primary, .pagination-nav .btn[disabled] {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(45deg, #5E9FD8, #4A8BC8);
             color: white;
             transform: none;
             cursor: default;
@@ -315,7 +315,7 @@
             text-align: center; padding: 60px 20px; color: #666; background: white; 
             border-radius: 15px; border: 2px dashed #e0e0e0; 
         }
-        .timeline-empty h3 { color: #ff6b6b; margin-bottom: 10px; }
+        .timeline-empty h3 { color: #5E9FD8; margin-bottom: 10px; }
 
         /* Enhanced Modal Styles */
         .modal { 
@@ -348,7 +348,7 @@
 
         .photo-counter {
             font-weight: 600;
-            color: #ff6b6b;
+            color: #5E9FD8;
             font-size: 12px;
             min-width: 60px;
         }
@@ -471,12 +471,12 @@
 
         .thumbnail:hover {
             transform: scale(1.1);
-            border-color: #ff6b6b;
+            border-color: #5E9FD8;
         }
 
         .thumbnail.active {
-            border-color: #ff6b6b;
-            box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+            border-color: #5E9FD8;
+            box-shadow: 0 0 0 2px rgba(94, 159, 216, 0.3);
         }
 
         /* Photo Actions Panel */
@@ -571,12 +571,12 @@
         #back-to-top {
             position: fixed; bottom: 20px; right: 20px; 
             background: white;
-            color: #ff6b6b; width: 80px; height: 90px; border-radius: 30px; 
+            color: #5E9FD8; width: 80px; height: 90px; border-radius: 30px; 
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             cursor: pointer; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             opacity: 0; visibility: hidden; 
             transition: all 0.3s ease; z-index: 9999;
-            border: 2px solid #ff6b6b;
+            border: 2px solid #5E9FD8;
             font-size: 40px; font-weight: 600;
         }
 
@@ -591,10 +591,10 @@
         #back-to-top .text {
             font-size: 12px; font-weight: 600; margin-top: 0px;
             text-align: center; line-height: 1;
-            color: #e53e3e;
+            color: #4A8BC8;
             -webkit-text-stroke: 0;
             text-stroke: 0;
-            -webkit-text-fill-color: #e53e3e;
+            -webkit-text-fill-color: #4A8BC8;
             position: relative;
             z-index: 1;
         }
@@ -873,7 +873,7 @@
 
         /* Footer Styles */
         .site-footer {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            background: linear-gradient(135deg, #1F2937 0%, #2D3748 100%);
             color: white; padding: 10px 0; margin-top: 50px; text-align: center; font-size: 0.8rem;
         }
         .footer-content { margin-bottom: 10px; }
@@ -1016,7 +1016,7 @@
             <button class="close-modal" onclick="closeReportModal()">&times;</button>
           <div class="report-form-container" style="padding: 10px;">
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <h3 style="color: #667eea; margin-bottom: 10px;">🔧 Report an Issue</h3>
+                    <h3 style="color: #5E9FD8; margin-bottom: 10px;">🔧 Report an Issue</h3>
                     <p style="color: #666; font-size: 14px;">Help us by reporting bugs or broken links<br>
                     <span style="font-size: 12px; color: #888;">帮助我们改进网站，报告错误或失效链接</span></p>
                 </div>
