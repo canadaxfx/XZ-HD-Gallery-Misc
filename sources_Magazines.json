@@ -540,6 +540,52 @@
         "weibo": "https://weibo.com/1273610165/Qka190M2g"
     },
     {
+        "id": 340,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20251226-4_ELLE_XZ-2.jpg",
+        "date": "2025-12-26",
+        "month": "December",
+        "year": "2025",
+        "sourceType": [
+            "magazine"
+        ],
+        "source": [
+            "ELLE"
+        ],
+        "tags": [
+            "ELLE",
+            "杂志",
+            "开年刊",
+            "封面",
+            "穿越四季"
+        ],
+        "groupName": "ELLE_2025-12-26-4",
+        "datePrecision": "day",
+        "weibo": "https://weibo.com/1273610165/Qk9QEkdJs"
+    },
+    {
+        "id": 341,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20251226-4_ELLE_XZ-1.jpg",
+        "date": "2025-12-26",
+        "month": "December",
+        "year": "2025",
+        "sourceType": [
+            "magazine"
+        ],
+        "source": [
+            "ELLE"
+        ],
+        "tags": [
+            "ELLE",
+            "杂志",
+            "开年刊",
+            "封面",
+            "穿越四季"
+        ],
+        "groupName": "ELLE_2025-12-26-4",
+        "datePrecision": "day",
+        "weibo": "https://weibo.com/1273610165/Qk9QEkdJs"
+    },
+    {
         "id": 306,
         "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20251222_ELLE_XZ-2.jpg",
         "date": "2025-12-22",
