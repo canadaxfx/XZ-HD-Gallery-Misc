@@ -965,11 +965,15 @@
             </div>
 
             <!-- Main Photo Display -->
-            <div class="modal-photo-container">
-                <button class="nav-arrow prev" id="prevBtn" onclick="navigatePhoto(-1)">‹</button>
-                <img id="modalPhoto" class="modal-photo" alt="Current photo">
-                <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
-            </div>
+<div class="modal-photo-container">
+    <button class="nav-arrow prev" id="prevBtn" onclick="navigatePhoto(-1)">‹</button>
+    
+    <img id="modalPhoto" class="modal-photo" alt="Current photo">
+    
+    <video id="modalVideo" class="modal-photo hidden" controls playsinline loop></video>
+    
+    <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
+</div>
 
             <!-- Thumbnail Strip -->
             <div class="thumbnail-strip">
@@ -1135,6 +1139,23 @@
             return [photo];
         }
         
+function generatePhotosHTML(photos) {
+    return photos.map(photo => {
+        const isVideo = /\.(mp4|mov)$/i.test(photo.url);
+        const videoIcon = isVideo ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>' : '';
+        
+        return `
+        <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
+            ${videoIcon}
+            <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
+            <div class="photo-overlay">
+                <span class="photo-date">${photo.date}</span>
+            </div>
+        </div>
+    `}).join('');
+}
+
+
         /* ---------- Enhanced Modal Functions ---------- */
         function openPhotoModal(photoId) {
             const photo = photoData.find(p => p.id === photoId);
@@ -1155,42 +1176,40 @@
 
 function updateModalContent() {
     const photo = currentPhotoGroup[currentPhotoIndex];
-    
-    // 1. Update Main Image
-    document.getElementById('modalPhoto').src = photo.url;
-    document.getElementById('photoCounter').textContent = 
-        `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
-    
-    // 2. Update Title Logic
-    const mainSourceType = Array.isArray(photo.sourceType) ? photo.sourceType[0] : photo.sourceType;
-    const category = mainSourceType ? 
-        mainSourceType.charAt(0).toUpperCase() + mainSourceType.slice(1) : 
-        '';            
-    const mainSource = Array.isArray(photo.source) ? photo.source[0] : photo.source;
-    const groupName = photo.groupName || mainSource || 'Photo Collection';            
-    document.getElementById('groupTitle').textContent = category ? 
-        `${category} - ${groupName}` : 
-        groupName;
-    
-    // 3. Update Download Button
+    const imgElement = document.getElementById('modalPhoto');
+    const videoElement = document.getElementById('modalVideo');
     const downloadBtn = document.getElementById('downloadBtn');
-    if (downloadBtn) {
-        downloadBtn.href = photo.url; 
-    }
-    
-    // 4. Update Quark Button
-    const quarkBtn = document.getElementById('quarkDownloadBtn');
-    if (quarkBtn) {
-        if (photo.quarkLink) {
-            quarkBtn.href = photo.quarkLink;
-            quarkBtn.style.display = 'inline-block';
-        } else {
-            quarkBtn.style.display = 'none';
-        }
-    }
-    
-    // 5. Update Weibo Button
     const weiboBtn = document.getElementById('weiboLinkBtn');
+    const counter = document.getElementById('photoCounter');
+    const title = document.getElementById('groupTitle');
+    const tagsContainer = document.getElementById('modalTags');
+
+    // --- 1. MEDIA TYPE CHECK (Support for mp4, mov) ---
+    const isVideo = /\.(mp4|mov|webm)$/i.test(photo.url);
+
+    if (isVideo) {
+        imgElement.classList.add('hidden');
+        videoElement.classList.remove('hidden');
+        videoElement.src = photo.url;
+        videoElement.play().catch(e => console.log("Video autoplay prevented"));
+    } else {
+        if (videoElement) {
+            videoElement.pause();
+            videoElement.src = ""; 
+            videoElement.classList.add('hidden');
+        }
+        imgElement.classList.remove('hidden');
+        imgElement.src = photo.url;
+    }
+
+    // --- 2. UPDATE TEXT & COUNTERS ---
+    counter.textContent = `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
+    
+    const mainSource = Array.isArray(photo.source) ? photo.source[0] : photo.source;
+    title.textContent = photo.groupName || mainSource || 'Photo Collection';            
+    
+    // --- 3. DOWNLOAD & WEIBO LINKS ---
+    downloadBtn.href = photo.url;
     if (weiboBtn) {
         if (photo.weibo) {
             const w = photo.weibo.trim();
@@ -1201,17 +1220,15 @@ function updateModalContent() {
         }
     }
 
-    // --- NEW: 6. Update Tags ---
-    const tagsContainer = document.getElementById('modalTags');
+    // --- 4. UPDATE TAGS ---
     if (tagsContainer) {
-        // Check if tags exist and are not empty
         if (photo.tags && Array.isArray(photo.tags) && photo.tags.length > 0) {
             tagsContainer.innerHTML = photo.tags.map(tag => 
                 `<span class="modal-tag-pill">#${tag}</span>`
             ).join('');
             tagsContainer.style.display = 'flex';
         } else {
-            tagsContainer.style.display = 'none'; // Hide if no tags
+            tagsContainer.style.display = 'none';
         }
     }
 }
@@ -1330,10 +1347,15 @@ function generateThumbnail(originalUrl, size = 'm') {
             }
         }
 
-        function closeModal() { 
-            document.getElementById('photoModal').classList.add('hidden');
-            document.removeEventListener('keydown', handleKeyboardNavigation);
-        }
+function closeModal() { 
+    const videoElement = document.getElementById('modalVideo');
+    if (videoElement) {
+        videoElement.pause();
+        videoElement.src = ""; // Stop buffering the file
+    }
+    document.getElementById('photoModal').classList.add('hidden');
+    document.removeEventListener('keydown', handleKeyboardNavigation);
+}
 
         /* ---------- Source Filter Functions ---------- */
 	function setupSourceFilters() {
