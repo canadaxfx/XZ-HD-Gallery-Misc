@@ -1,5 +1,27 @@
 [
     {
+        "id": 21,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20260102_IDG_XZ-1.jpg",
+        "date": "2026-01-02",
+        "month": "January",
+        "year": "2026",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "日常"
+        ],
+        "tags": [
+            "天舞IDG",
+            "合影",
+            "东方",
+            "跨年"
+        ],
+        "groupName": "日常_2026-01-02",
+        "datePrecision": "day",
+        "weibo": "https://weibo.com/2964336303/QlghvDP28"
+    },
+    {
         "id": 19,
         "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/1HBnqnP.jpeg",
         "date": "2025-09-30",
