@@ -489,5 +489,24 @@
         "datePrecision": "day",
         "groupName": "Celebrity名人_2019-10-19",
         "quarkLink": "https://pan.quark.cn/s/d359dae18f03"
+    },
+    {
+        "id": 22,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20190730_Other_XZ.jpg",
+        "date": "2019-07-30",
+        "month": "July",
+        "year": "2019",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "日常"
+        ],
+        "tags": [
+            "九号摩登"
+        ],
+        "groupName": "日常_2019-07-30",
+        "datePrecision": "day",
+        "weibo": "https://weibo.com/1793642461/HFSxjehqe"
     }
 ]
