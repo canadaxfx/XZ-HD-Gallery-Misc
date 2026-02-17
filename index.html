@@ -1449,41 +1449,20 @@ filteredPhotos = photoData.filter(p =>
         /* ---------- Data Loading ---------- */
 async function loadPhotoData() {
             try {
-                const yearFiles = [2025, 2024, 2023, 2022, 2021, 2020, 2019];
-                
-                // --- MODIFICATION 1 ---
-                // Add the suffixes of your custom files here.
-                // Note that "Endorsements" and "Dramas_Movies" are case-sensitive and must match your filenames.
-                const customFiles = ["Endorsements", "Dramas_Movies", "Events", "Others", "Magazines"];
-                
+                const yearFiles = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016];
+
                 let allPhotos = [];
-                
-                // Try loading year-based files (This loop is correct)
+
+                // Load year-based Misc files
                 for (const year of yearFiles) {
                     try {
-                        const res = await fetch(`sources_${year}.json?v=${Date.now()}`, { cache: 'no-store' });
+                        const res = await fetch(`Misc_${year}.json?v=${Date.now()}`, { cache: 'no-store' });
                         if (res.ok) {
                             const yearData = await res.json();
                             if (Array.isArray(yearData)) allPhotos.push(...yearData);
                         }
                     } catch (err) {
-                        console.log(`No sources_${year}.json found`);
-                    }
-                }
-                
-                // Try loading custom category files
-                for (const customFile of customFiles) {
-                    try {
-                        // --- MODIFICATION 2 ---
-                        // Added 'sources_' prefix to the fetch URL to match your file naming pattern
-                        const res = await fetch(`sources_${customFile}.json?v=${Date.now()}`, { cache: 'no-store' });
-                        if (res.ok) {
-                            const customData = await res.json();
-                            if (Array.isArray(customData)) allPhotos.push(...customData);
-                        }
-                    } catch (err) {
-                        // Updated this log message to be more accurate
-                        console.log(`No sources_${customFile}.json found`);
+                        console.log(`No Misc_${year}.json found`);
                     }
                 }
                 
