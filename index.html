@@ -1142,7 +1142,10 @@
 function generatePhotosHTML(photos) {
     return photos.map(photo => {
         const isVideo = /\.(mp4|mov)$/i.test(photo.url);
-        const videoIcon = isVideo ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>' : '';
+        const isGif = /\.gif$/i.test(photo.url);
+        const videoIcon = isVideo ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
+                        : isGif   ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:4px;padding:0 5px;height:20px;line-height:20px;font-size:10px;font-weight:bold;z-index:2;">GIF</div>'
+                        : '';
         
         return `
         <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
@@ -1393,16 +1396,17 @@ filteredPhotos = photoData.filter(p =>
                 filteredPhotos = filteredPhotos.filter(p => {
                     const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
                 
-                    return p.year.includes(query) || 
-                           p.month.toLowerCase().includes(query) || 
+                    return p.year.includes(query) ||
+                           p.month.toLowerCase().includes(query) ||
                            p.date.includes(query) ||
 	    		   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
 			   (p.note && p.note.toLowerCase().includes(query)) ||
+			   (p.description && p.description.toLowerCase().includes(query)) ||
 			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
                            (tagsString.includes(query));
                 });
             }
-            
+
             // 3. Render the timeline with the results
             if (filteredPhotos.length > 0) {
                 const photosByYear = filteredPhotos.reduce((acc, photo) => {
@@ -1659,15 +1663,16 @@ async function loadPhotoData() {
                 yearPhotos = yearPhotos.filter(p => {
                     const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
                 
-                    return p.year.includes(query) || 
-                           p.month.toLowerCase().includes(query) || 
+                    return p.year.includes(query) ||
+                           p.month.toLowerCase().includes(query) ||
                            p.date.includes(query) ||
 			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
 			   (p.note && p.note.toLowerCase().includes(query)) ||
+			   (p.description && p.description.toLowerCase().includes(query)) ||
 			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
                            (tagsString.includes(query));
                 });
-            } 
+            }
             const totalPhotos = yearPhotos.length;
             const photosGrid = document.getElementById(`photos-${year}`);
             const paginationNav = document.getElementById(`pagination-nav-${year}`);
@@ -1835,16 +1840,17 @@ function createPaginationButtons(year, currentPage, totalPages) {
                 displayPhotos = displayPhotos.filter(p => {
                     const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
                 
-                    return p.year.includes(query) || 
-                           p.month.toLowerCase().includes(query) || 
+                    return p.year.includes(query) ||
+                           p.month.toLowerCase().includes(query) ||
                            p.date.includes(query) ||
 			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
 			   (p.note && p.note.toLowerCase().includes(query)) ||
+			   (p.description && p.description.toLowerCase().includes(query)) ||
 			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
                            (tagsString.includes(query));
                 });
             }
-            
+
             // 3. Now update the stats
             document.getElementById('totalPhotosDisplay').textContent = displayPhotos.length.toLocaleString();
             
