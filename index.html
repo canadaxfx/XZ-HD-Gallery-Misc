@@ -1603,8 +1603,14 @@ async function loadPhotoData() {
                     // If precision is 'month', show 'YYYY-MM'
                     displayDate = photo.date.substring(0, 7); 
                 }
+                const isVideo = /\.(mp4|mov)$/i.test(photo.url);
+                const isGif = /\.gif$/i.test(photo.url);
+                const videoIcon = isVideo ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
+                                : isGif   ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:4px;padding:0 5px;height:20px;line-height:20px;font-size:10px;font-weight:bold;z-index:2;">GIF</div>'
+                                : '';
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
+                    ${videoIcon}
                     <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
