@@ -1689,13 +1689,20 @@ async function loadPhotoData() {
             
 // 2. Filter by source type
         if (currentFilter !== 'all') {
-            yearPhotos = yearPhotos.filter(p => 
-                (p.sourceType === currentFilter) || 
+            yearPhotos = yearPhotos.filter(p =>
+                (p.sourceType === currentFilter) ||
                 (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter))
             );
         }
 
-            // 3. Filter by search query
+        // 3. Filter by media type
+        if (currentMediaFilter === 'video') {
+            yearPhotos = yearPhotos.filter(p => isVideoUrl(p.url));
+        } else if (currentMediaFilter === 'photo') {
+            yearPhotos = yearPhotos.filter(p => !isVideoUrl(p.url));
+        }
+
+            // 4. Filter by search query
             if (currentSearchQuery) {
                 const query = currentSearchQuery;
                 yearPhotos = yearPhotos.filter(p => {
