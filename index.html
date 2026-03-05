@@ -27,6 +27,10 @@
         h1 { font-size: 1.4rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
         .subtitle { font-size: 0.8rem; opacity: 1; }
         .nav-buttons { display: flex; justify-content: center; gap: 15px; margin: 5px 0 10px; }
+        .media-filter-tabs { display: flex; justify-content: center; gap: 8px; margin: 0 0 10px; }
+        .media-tab { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 16px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
+        .media-tab:hover { background: rgba(255,255,255,0.22); color: white; }
+        .media-tab.active { background: rgba(255,255,255,0.9); color: #2c5f8a; font-weight: 600; border-color: transparent; }
         .nav-btn, .btn {
             padding: 15px 15px; border: none; border-radius: 25px; cursor: pointer;
             font-size: 13px; font-weight: 600; transition: all 0.3s ease;
@@ -903,6 +907,11 @@
             <button class="nav-btn active" data-section="gallery">Photo Timeline<br>时间线相册</button>
             <button class="nav-btn" data-section="sources">By Source<br>按来源分类</button>
         </nav>
+        <div class="media-filter-tabs">
+            <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
+            <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
+            <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
+        </div>
 
         <!-- Source Filter Chips -->
 
@@ -1119,6 +1128,7 @@
         let expandedYears = new Set();
         let currentFilter = 'all';
 	let currentSearchQuery = '';
+        let currentMediaFilter = 'all';
         let yearPaginationSettings = {};
 	let imageObserver = null;
         let sourcePaginationSettings = {}; 
@@ -1376,6 +1386,21 @@ function closeModal() {
             });
         }
 
+        function setMediaFilter(type) {
+            currentMediaFilter = type;
+            document.querySelectorAll('.media-tab').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.media === type);
+            });
+            applyFilter();
+            // Also re-render the By Source tab if it's currently visible
+            const sourcesSection = document.getElementById('sources-section');
+            if (sourcesSection && !sourcesSection.classList.contains('hidden')) {
+                loadSourcesView();
+            }
+        }
+
+        function isVideoUrl(url) { return /\.(mp4|mov)$/i.test(url); }
+
 	function applyFilter() {
             let filteredPhotos = [];
 
@@ -1384,13 +1409,20 @@ function closeModal() {
                 filteredPhotos = photoData;
             } else {
                 // Check if the sourceType array *includes* the current filter
-filteredPhotos = photoData.filter(p => 
-    (p.sourceType === currentFilter) || 
+filteredPhotos = photoData.filter(p =>
+    (p.sourceType === currentFilter) ||
     (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter))
 );
             }
 
-            // 2. Filter by search query (if one exists)
+            // 2. Filter by media type
+            if (currentMediaFilter === 'video') {
+                filteredPhotos = filteredPhotos.filter(p => isVideoUrl(p.url));
+            } else if (currentMediaFilter === 'photo') {
+                filteredPhotos = filteredPhotos.filter(p => !isVideoUrl(p.url));
+            }
+
+            // 3. Filter by search query (if one exists)
             if (currentSearchQuery) {
                 const query = currentSearchQuery;
                 filteredPhotos = filteredPhotos.filter(p => {
@@ -1840,7 +1872,14 @@ function createPaginationButtons(year, currentPage, totalPages) {
                 displayPhotos = photoData.filter(p => (p.sourceType === currentFilter) || (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter)));
             }
 
-            // 2. Filter by search query
+            // 2. Filter by media type
+            if (currentMediaFilter === 'video') {
+                displayPhotos = displayPhotos.filter(p => isVideoUrl(p.url));
+            } else if (currentMediaFilter === 'photo') {
+                displayPhotos = displayPhotos.filter(p => !isVideoUrl(p.url));
+            }
+
+            // 3. Filter by search query
             if (currentSearchQuery) {
                 const query = currentSearchQuery;
                 displayPhotos = displayPhotos.filter(p => {
@@ -1887,10 +1926,18 @@ function createPaginationButtons(year, currentPage, totalPages) {
         }
 
 function loadSourcesView() {
-            const sourceGroups = photoData.reduce((acc, photo) => {
+            // Apply media filter before grouping by source
+            let filteredForSources = photoData;
+            if (currentMediaFilter === 'video') {
+                filteredForSources = photoData.filter(p => isVideoUrl(p.url));
+            } else if (currentMediaFilter === 'photo') {
+                filteredForSources = photoData.filter(p => !isVideoUrl(p.url));
+            }
+
+            const sourceGroups = filteredForSources.reduce((acc, photo) => {
                 // Ensure photo.source is an array; handle old data that might still be a string
-                const sources = Array.isArray(photo.source) 
-                    ? photo.source 
+                const sources = Array.isArray(photo.source)
+                    ? photo.source
                     : [photo.source || 'Unknown'];
 
                 // Loop through *each* source in the photo's source array
@@ -1998,10 +2045,15 @@ function loadSourcesView() {
             }
             
             const { perPage, currentPage } = sourcePaginationSettings[sourceName];
-            // Filter photos for this specific source
-            const sourcePhotos = photoData.filter(p => 
+            // Filter photos for this specific source, then apply media filter
+            let sourcePhotos = photoData.filter(p =>
     (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName)
-);            
+);
+            if (currentMediaFilter === 'video') {
+                sourcePhotos = sourcePhotos.filter(p => isVideoUrl(p.url));
+            } else if (currentMediaFilter === 'photo') {
+                sourcePhotos = sourcePhotos.filter(p => !isVideoUrl(p.url));
+            }            
             const totalPhotos = sourcePhotos.length;
             const safeId = getSourceSafeId(sourceName);
             const photosGrid = document.getElementById(`photos-source-${safeId}`);
