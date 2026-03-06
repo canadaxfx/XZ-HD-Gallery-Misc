@@ -1389,6 +1389,15 @@ function closeModal() {
             });
         }
 
+        function mediaCountLabel(photos) {
+            const videoCount = photos.filter(p => isVideoUrl(p.url)).length;
+            const photoCount = photos.length - videoCount;
+            const parts = [];
+            if (photoCount > 0) parts.push(`${photoCount} 📷`);
+            if (videoCount > 0) parts.push(`${videoCount} 🎬`);
+            return parts.join(' ') || '0 items';
+        }
+
         function setMediaFilter(type) {
             currentMediaFilter = type;
             document.querySelectorAll('.media-tab').forEach(btn => {
@@ -1605,7 +1614,7 @@ async function loadPhotoData() {
                                 <div class="year-header-top">
                                     <span class="year-title">${year}</span>
                                     <div style="display: flex; align-items: center; gap: 10px;">
-                                        <span class="timeline-year-count">${photos.length} photos</span>
+                                        <span class="timeline-year-count">${mediaCountLabel(photos)}</span>
                                         <span class="expand-icon">▼</span>
                                     </div>
                                 </div>
@@ -1993,7 +2002,7 @@ function loadSourcesView() {
                                 <div class="year-header-top">
                                     <span class="year-title">${sourceName}</span>
                                     <div style="display: flex; align-items: center; gap: 10px;">
-                                        <span class="timeline-year-count">${photos.length} photos</span>
+                                        <span class="timeline-year-count">${mediaCountLabel(photos)}</span>
                                         <span class="expand-icon">▼</span>
                                     </div>
                                 </div>
