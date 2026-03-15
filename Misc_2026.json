@@ -2216,6 +2216,29 @@
         "weibo": "https://weibo.com/1934738161/QqsR6q9zi"
     },
     {
+        "id": 138,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20260204_得闲谨制_XZ-1.jpg",
+        "date": "2026-02-04",
+        "month": "February",
+        "year": "2026",
+        "tags": [
+            "得闲谨制",
+            "秘钥延期",
+            "全球上映"
+        ],
+        "groupName": "得闲谨制_2026-02-04",
+        "weibo": "https://weibo.com/7988698146/QqfiNEAZH",
+        "sourceType": [
+            "drama"
+        ],
+        "source": [
+            "得闲谨制"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": ""
+    },
+    {
         "id": 37,
         "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20260128_BOUCHERON_XZ-1.jpg",
         "date": "2026-01-28",
