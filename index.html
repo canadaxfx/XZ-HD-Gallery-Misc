@@ -1152,25 +1152,6 @@
             return [photo];
         }
         
-function generatePhotosHTML(photos) {
-    return photos.map(photo => {
-        const isVideo = /\.(mp4|mov)$/i.test(photo.url);
-        const isGif = /\.gif$/i.test(photo.url);
-        const videoIcon = isVideo ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
-                        : isGif   ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:4px;padding:0 5px;height:20px;line-height:20px;font-size:10px;font-weight:bold;z-index:2;">GIF</div>'
-                        : '';
-        
-        return `
-        <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
-            ${videoIcon}
-            <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
-            <div class="photo-overlay">
-                <span class="photo-date">${photo.date}</span>
-            </div>
-        </div>
-    `}).join('');
-}
-
 
         /* ---------- Enhanced Modal Functions ---------- */
         function openPhotoModal(photoId) {
@@ -1640,27 +1621,26 @@ async function loadPhotoData() {
             document.getElementById('timelineContainer').innerHTML = timelineHTML;
         }
 
-	function generatePhotosHTML(photos) {
+        function getMediaIcon(url) {
+            if (/\.(mp4|mov)$/i.test(url))
+                return '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>';
+            if (/\.gif$/i.test(url))
+                return '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:4px;padding:0 5px;height:20px;line-height:20px;font-size:10px;font-weight:bold;z-index:2;">GIF</div>';
+            return '';
+        }
+
+        function generatePhotosHTML(photos) {
             return photos.map(photo => {
-                let displayDate = photo.date; // Default to full date
-                if (photo.datePrecision === 'month') {
-                    // If precision is 'month', show 'YYYY-MM'
-                    displayDate = photo.date.substring(0, 7); 
-                }
-                const isVideo = /\.(mp4|mov)$/i.test(photo.url);
-                const isGif = /\.gif$/i.test(photo.url);
-                const videoIcon = isVideo ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
-                                : isGif   ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:4px;padding:0 5px;height:20px;line-height:20px;font-size:10px;font-weight:bold;z-index:2;">GIF</div>'
-                                : '';
+                const displayDate = photo.datePrecision === 'month' ? photo.date.substring(0, 7) : photo.date;
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
-                    ${videoIcon}
+                    ${getMediaIcon(photo.url)}
                     <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
                         <span class="photo-source">${(Array.isArray(photo.source) ? photo.source.join(', ') : photo.source) || photo.note || ''}</span>
                     </div>
-		</div>
+                </div>
             `}).join('');
         }
 
@@ -1680,7 +1660,7 @@ async function loadPhotoData() {
                 renderYearPage(year);
             } else {
                 expandedYears.delete(year);
-                unloadYearImages(year);
+                unloadImages(`photos-${year}`);
             }
             updateStats();
         }
@@ -1751,19 +1731,18 @@ async function loadPhotoData() {
             paginationNav.innerHTML = '';
             if (perPage !== Infinity && totalPhotos > perPage) {
                 const totalPages = Math.ceil(totalPhotos / perPage);
-                paginationNav.innerHTML = createPaginationButtons(year, currentPage, totalPages);
+                paginationNav.innerHTML = createPaginationButtons(year, currentPage, totalPages, 'goToPage', 'jumpToPage', `page-input-${year}`);
             }
-            setupLazyLoadingForYear(year);
+            setupLazyLoading(`photos-${year}`);
         }
 
-function createPaginationButtons(year, currentPage, totalPages) {
+function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, inputId) {
             let html = '';
             const maxPagesToShow = 5;
             let startPage, endPage;
 
             if (totalPages <= maxPagesToShow) {
-                startPage = 1;
-                endPage = totalPages;
+                startPage = 1; endPage = totalPages;
             } else {
                 const maxBefore = Math.floor(maxPagesToShow / 2);
                 const maxAfter = Math.ceil(maxPagesToShow / 2) - 1;
@@ -1776,29 +1755,27 @@ function createPaginationButtons(year, currentPage, totalPages) {
                 }
             }
 
-            if (currentPage > 1) html += `<button class="btn" onclick="goToPage('${year}', ${currentPage - 1})">‹ Prev</button>`;
+            if (currentPage > 1) html += `<button class="btn" onclick="${gotoFn}('${key}', ${currentPage - 1})">‹ Prev</button>`;
             if (startPage > 1) {
-                html += `<button class="btn" onclick="goToPage('${year}', 1)">1</button>`;
+                html += `<button class="btn" onclick="${gotoFn}('${key}', 1)">1</button>`;
                 if (startPage > 2) html += `<span>...</span>`;
             }
             for (let i = startPage; i <= endPage; i++) {
-                html += `<button class="btn ${i === currentPage ? 'primary' : ''}" ${i === currentPage ? 'disabled' : `onclick="goToPage('${year}', ${i})"`}>${i}</button>`;
+                html += `<button class="btn ${i === currentPage ? 'primary' : ''}" ${i === currentPage ? 'disabled' : `onclick="${gotoFn}('${key}', ${i})"`}>${i}</button>`;
             }
             if (endPage < totalPages) {
                 if (endPage < totalPages - 1) html += `<span>...</span>`;
-                html += `<button class="btn" onclick="goToPage('${year}', ${totalPages})">${totalPages}</button>`;
+                html += `<button class="btn" onclick="${gotoFn}('${key}', ${totalPages})">${totalPages}</button>`;
             }
-            if (currentPage < totalPages) html += `<button class="btn" onclick="goToPage('${year}', ${currentPage + 1})">Next ›</button>`;
+            if (currentPage < totalPages) html += `<button class="btn" onclick="${gotoFn}('${key}', ${currentPage + 1})">Next ›</button>`;
 
-            // --- ADD THIS NEW PART ---
             html += `
                 <span class="pagination-jump">
                     Go to:
-                    <input type="number" id="page-input-${year}" min="1" max="${totalPages}" placeholder="Page" onkeydown="if(event.key==='Enter') jumpToPage('${year}', ${totalPages});">
-                    <button class="btn" onclick="jumpToPage('${year}', ${totalPages})">Go</button>
+                    <input type="number" id="${inputId}" min="1" max="${totalPages}" placeholder="Page" onkeydown="if(event.key==='Enter') ${jumpFn}('${key}', ${totalPages});">
+                    <button class="btn" onclick="${jumpFn}('${key}', ${totalPages})">Go</button>
                 </span>
             `;
-            // --- END NEW PART ---
 
             return html;
         }
@@ -1811,17 +1788,20 @@ function createPaginationButtons(year, currentPage, totalPages) {
             document.getElementById(`photos-${year}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-	function jumpToPage(year, totalPages) {
-            const input = document.getElementById(`page-input-${year}`);
+        function _validateAndJump(inputId, totalPages, gotoFn, key) {
+            const input = document.getElementById(inputId);
             if (!input) return;
             const page = parseInt(input.value, 10);
-            
             if (page >= 1 && page <= totalPages) {
-                goToPage(year, page);
+                gotoFn(key, page);
             } else {
                 alert(`Please enter a page number between 1 and ${totalPages}.`);
-                input.value = ''; // Clear invalid input
+                input.value = '';
             }
+        }
+
+        function jumpToPage(year, totalPages) {
+            _validateAndJump(`page-input-${year}`, totalPages, goToPage, year);
         }
 
         /* ---------- Lazy Loading ---------- */
@@ -1841,15 +1821,15 @@ function createPaginationButtons(year, currentPage, totalPages) {
             }, { rootMargin: '50px' });
         }
 
-        function setupLazyLoadingForYear(year) {
-            document.querySelectorAll(`#photos-${year} .lazy-image[data-src]`).forEach(img => {
+        function setupLazyLoading(containerId) {
+            document.querySelectorAll(`#${containerId} .lazy-image[data-src]`).forEach(img => {
                 img.classList.add('loading-placeholder');
                 if (imageObserver) imageObserver.observe(img);
             });
         }
 
-        function unloadYearImages(year) {
-            document.querySelectorAll(`#photos-${year} img`).forEach(img => {
+        function unloadImages(containerId) {
+            document.querySelectorAll(`#${containerId} img`).forEach(img => {
                 img.src = '';
                 img.classList.add('loading-placeholder');
             });
@@ -2048,7 +2028,7 @@ function loadSourcesView() {
                 renderSourcePage(sourceName);
             } else {
                 expandedSources.delete(sourceName);
-                unloadSourceImages(sourceName);
+                unloadImages(`photos-source-${getSourceSafeId(sourceName)}`);
             }
         }
 
@@ -2095,62 +2075,15 @@ function loadSourcesView() {
             paginationNav.innerHTML = '';
             if (perPage !== Infinity && totalPhotos > perPage) {
                 const totalPages = Math.ceil(totalPhotos / perPage);
-                paginationNav.innerHTML = createSourcePaginationButtons(sourceName, currentPage, totalPages);
+                const escapedKey = sourceName.replace(/'/g, "\\'");
+                const safeId = getSourceSafeId(sourceName);
+                paginationNav.innerHTML = createPaginationButtons(escapedKey, currentPage, totalPages, 'goToSourcePage', 'jumpToSourcePage', `page-input-source-${safeId}`);
             }
             
             // Re-use the existing lazy-loading logic for the new images
-            setupLazyLoadingForSource(sourceName);
+            setupLazyLoading(`photos-source-${getSourceSafeId(sourceName)}`);
         }
 
-function createSourcePaginationButtons(sourceName, currentPage, totalPages) {
-            let html = '';
-            const maxPagesToShow = 5;
-            let startPage, endPage;
-
-            // --- FIX: Escape single quotes in the name ---
-            const escapedSourceName = sourceName.replace(/'/g, "\\'");
-
-            if (totalPages <= maxPagesToShow) {
-                startPage = 1; endPage = totalPages;
-            } else {
-                const maxBefore = Math.floor(maxPagesToShow / 2);
-                const maxAfter = Math.ceil(maxPagesToShow / 2) - 1;
-                if (currentPage <= maxBefore) {
-                    startPage = 1; endPage = maxPagesToShow;
-                } else if (currentPage + maxAfter >= totalPages) {
-                    startPage = totalPages - maxPagesToShow + 1; endPage = totalPages;
-                } else {
-                    startPage = currentPage - maxBefore; endPage = currentPage + maxAfter;
-                }
-            }
-
-            if (currentPage > 1) html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', ${currentPage - 1})">‹ Prev</button>`;
-            if (startPage > 1) {
-                html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', 1)">1</button>`;
-                if (startPage > 2) html += `<span>...</span>`;
-            }
-            for (let i = startPage; i <= endPage; i++) {
-                html += `<button class="btn ${i === currentPage ? 'primary' : ''}" ${i === currentPage ? 'disabled' : `onclick="goToSourcePage('${escapedSourceName}', ${i})"`}>${i}</button>`;
-            }
-            if (endPage < totalPages) {
-                if (endPage < totalPages - 1) html += `<span>...</span>`;
-                html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', ${totalPages})">${totalPages}</button>`;
-            }
-            if (currentPage < totalPages) html += `<button class="btn" onclick="goToSourcePage('${escapedSourceName}', ${currentPage + 1})">Next ›</button>`;
-
-            // --- END NEW PART ---
-            const safeId = getSourceSafeId(sourceName);
-            html += `
-                <span class="pagination-jump">
-                    Go to:
-                    <input type="number" id="page-input-source-${safeId}" min="1" max="${totalPages}" placeholder="Page" onkeydown="if(event.key==='Enter') jumpToSourcePage('${escapedSourceName}', ${totalPages});">
-                    <button class="btn" onclick="jumpToSourcePage('${escapedSourceName}', ${totalPages})">Go</button>
-                </span>
-            `;
-            // --- END NEW PART ---
-
-            return html;
-        }
 
 
         function goToSourcePage(sourceName, page) {
@@ -2162,36 +2095,11 @@ function createSourcePaginationButtons(sourceName, currentPage, totalPages) {
             document.getElementById(`photos-source-${safeId}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-	function jumpToSourcePage(sourceName, totalPages) {
-            const safeId = getSourceSafeId(sourceName);
-            const input = document.getElementById(`page-input-source-${safeId}`);
-            if (!input) return;
-            const page = parseInt(input.value, 10);
-            
-            if (page >= 1 && page <= totalPages) {
-                goToSourcePage(sourceName, page);
-            } else {
-                alert(`Please enter a page number between 1 and ${totalPages}.`);
-                input.value = ''; // Clear invalid input
-            }
+        function jumpToSourcePage(sourceName, totalPages) {
+            _validateAndJump(`page-input-source-${getSourceSafeId(sourceName)}`, totalPages, goToSourcePage, sourceName);
         }
 
 
-        function setupLazyLoadingForSource(sourceName) {
-            const safeId = getSourceSafeId(sourceName);
-            document.querySelectorAll(`#photos-source-${safeId} .lazy-image[data-src]`).forEach(img => {
-                img.classList.add('loading-placeholder');
-                if (imageObserver) imageObserver.observe(img);
-            });
-        }
-        
-        function unloadSourceImages(sourceName) {
-            const safeId = getSourceSafeId(sourceName);
-            document.querySelectorAll(`#photos-source-${safeId} img`).forEach(img => {
-                img.src = '';
-                img.classList.add('loading-placeholder');
-            });
-        }
 
         
 
