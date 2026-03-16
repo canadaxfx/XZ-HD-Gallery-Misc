@@ -1006,6 +1006,29 @@
         "weibo": "https://weibo.com/1273610165/Qk9UV4SEJ"
     },
     {
+        "id": 640,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20251224_藏海传_XZ-1.jpg",
+        "date": "2025-12-24",
+        "month": "December",
+        "year": "2025",
+        "tags": [
+            "藏海传",
+            "“金莲花”最佳电视剧奖",
+            "海报"
+        ],
+        "groupName": "藏海传_2025-12-24",
+        "weibo": "https://weibo.com/6400913994/QjQXZbSVe",
+        "sourceType": [
+            "drama"
+        ],
+        "source": [
+            "藏海传"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": ""
+    },
+    {
         "id": 589,
         "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20251224-1_DXJZ_XZ-1.jpg",
         "date": "2025-12-24",
