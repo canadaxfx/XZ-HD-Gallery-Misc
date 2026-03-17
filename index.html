@@ -1233,8 +1233,7 @@ function updateModalContent() {
     // --- 2. UPDATE TEXT & COUNTERS ---
     counter.textContent = `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
     
-    const mainSource = Array.isArray(photo.source) ? photo.source[0] : photo.source;
-    title.textContent = photo.groupName || mainSource || 'Photo Collection';            
+    title.textContent = photo.date || photo.groupName || 'Photo Collection';
     
     // --- 3. DOWNLOAD & WEIBO LINKS ---
     downloadBtn.href = photo.url;
