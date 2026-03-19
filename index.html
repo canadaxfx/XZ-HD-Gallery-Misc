@@ -1444,7 +1444,9 @@ function closeModal() {
             }
         }
 
-        function isVideoUrl(url) { return /\.(mp4|mov)$/i.test(url); }
+        function isVideoUrl(url) { return /\.mp4$/i.test(url); }
+        function isMotionUrl(url) { return /\.(mov|gif)$/i.test(url); }
+        function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
 
 	function applyFilter() {
             let filteredPhotos = [];
@@ -1673,11 +1675,15 @@ async function loadPhotoData() {
         }
 
         function getMediaIcon(url) {
-            if (/\.(mp4|mov)$/i.test(url))
+            if (/\.mp4$/i.test(url))
                 return '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>';
-            if (/\.gif$/i.test(url))
-                return '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:4px;padding:0 5px;height:20px;line-height:20px;font-size:10px;font-weight:bold;z-index:2;">GIF</div>';
             return '';
+        }
+        function getMotionBadge(url) {
+            const m = url.match(/\.(mov|gif)$/i);
+            if (!m) return '';
+            const ext = m[1].toUpperCase();
+            return '<span style="position:absolute;right:4px;bottom:15px;background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>';
         }
 
         function generatePhotosHTML(photos) {
@@ -1686,6 +1692,7 @@ async function loadPhotoData() {
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
                     ${getMediaIcon(photo.url)}
+                    ${getMotionBadge(photo.url)}
                     <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
