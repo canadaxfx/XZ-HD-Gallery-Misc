@@ -1031,7 +1031,7 @@
     <img id="modalPhoto" class="modal-photo" alt="Current photo">
     
     <video id="modalVideo" class="modal-photo hidden" controls playsinline loop></video>
-    <a id="badge4K" class="badge-4k hidden" href="#" target="_blank">点击下载 ↓ 4K版本</a>
+    <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
     
     <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
 </div>
@@ -1255,13 +1255,18 @@ function updateModalContent() {
     
     // --- 3. DOWNLOAD & WEIBO LINKS ---
     downloadBtn.href = photo.url;
-    const badge4K = document.getElementById('badge4K');
-    if (badge4K) {
+    const badgeAlt = document.getElementById('badgeAlt');
+    if (badgeAlt) {
         if (isVideo && photo.url_4k) {
-            badge4K.href = photo.url_4k;
-            badge4K.classList.remove('hidden');
+            badgeAlt.href = photo.url_4k;
+            badgeAlt.textContent = '点击下载 ↓ 4K版本';
+            badgeAlt.classList.remove('hidden');
+        } else if (isVideo && photo.url_hd) {
+            badgeAlt.href = photo.url_hd;
+            badgeAlt.textContent = '点击下载 ↓ 1080p版本';
+            badgeAlt.classList.remove('hidden');
         } else {
-            badge4K.classList.add('hidden');
+            badgeAlt.classList.add('hidden');
         }
     }
     if (weiboBtn) {
