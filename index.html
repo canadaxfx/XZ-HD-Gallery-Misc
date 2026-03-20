@@ -594,7 +594,7 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            background: rgba(0,0,0,0.65);
+            background: transparent;
             color: #fff;
             padding: 3px 9px;
             border-radius: 4px;
@@ -603,9 +603,9 @@
             text-decoration: none;
             z-index: 11;
             letter-spacing: 0.03em;
-            border: 1px solid rgba(255,255,255,0.25);
+            border: 1px solid rgba(255,255,255,0.6);
         }
-        .badge-4k:hover { background: rgba(0,0,0,0.88); }
+        .badge-4k:hover { background: rgba(255,255,255,0.15); }
 	
 	#terms-content {
             background-color: rgba(255,255,255,0.1); border-radius: 10px; margin: 15px auto 0;
@@ -1031,7 +1031,7 @@
     <img id="modalPhoto" class="modal-photo" alt="Current photo">
     
     <video id="modalVideo" class="modal-photo hidden" controls playsinline loop></video>
-    <a id="badge4K" class="badge-4k hidden" href="#" target="_blank">4K ↗</a>
+    <a id="badge4K" class="badge-4k hidden" href="#" target="_blank">↓ 4K版本</a>
     
     <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
 </div>
