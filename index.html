@@ -1423,7 +1423,7 @@ function closeModal() {
         }
 
         function mediaCountLabel(photos) {
-            const videoCount = photos.filter(p => isVideoUrl(p.url)).length;
+            const videoCount = photos.filter(p => isRealVideo(p)).length;
             const photoCount = photos.length - videoCount;
             const parts = [];
             if (photoCount > 0) parts.push(`${photoCount} 📷`);
@@ -1447,6 +1447,8 @@ function closeModal() {
         function isVideoUrl(url) { return /\.mp4$/i.test(url); }
         function isMotionUrl(url) { return /\.(mov|gif)$/i.test(url); }
         function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
+        function isClip(photo) { return photo.clip === true && isRealVideo(photo); }
+        function isRealVideo(photo) { return isRealVideo(photo) && !photo.clip; }
 
 	function applyFilter() {
             let filteredPhotos = [];
@@ -1464,9 +1466,9 @@ filteredPhotos = photoData.filter(p =>
 
             // 2. Filter by media type
             if (currentMediaFilter === 'video') {
-                filteredPhotos = filteredPhotos.filter(p => isVideoUrl(p.url));
+                filteredPhotos = filteredPhotos.filter(p => isRealVideo(p));
             } else if (currentMediaFilter === 'photo') {
-                filteredPhotos = filteredPhotos.filter(p => !isVideoUrl(p.url));
+                filteredPhotos = filteredPhotos.filter(p => !isRealVideo(p));
             }
 
             // 3. Filter by search query (if one exists)
@@ -1679,10 +1681,11 @@ async function loadPhotoData() {
                 return '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>';
             return '';
         }
-        function getMotionBadge(url) {
-            const m = url.match(/\.(mov|gif)$/i);
-            if (!m) return '';
-            const ext = m[1].toUpperCase();
+        function getMotionBadge(photo) {
+            const m = photo.url.match(/\.(mov|gif)$/i);
+            const isClipMp4 = isClip(photo);
+            if (!m && !isClipMp4) return '';
+            const ext = isClipMp4 ? 'MP4' : m[1].toUpperCase();
             return '<span style="position:absolute;right:4px;bottom:8px;background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>';
         }
 
@@ -1691,8 +1694,8 @@ async function loadPhotoData() {
                 const displayDate = photo.datePrecision === 'month' ? photo.date.substring(0, 7) : photo.date;
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
-                    ${getMediaIcon(photo.url)}
-                    ${getMotionBadge(photo.url)}
+                    ${isRealVideo(photo) ? getMediaIcon(photo.url) : ''}
+                    ${getMotionBadge(photo)}
                     <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
@@ -1747,9 +1750,9 @@ async function loadPhotoData() {
 
         // 3. Filter by media type
         if (currentMediaFilter === 'video') {
-            yearPhotos = yearPhotos.filter(p => isVideoUrl(p.url));
+            yearPhotos = yearPhotos.filter(p => isRealVideo(p));
         } else if (currentMediaFilter === 'photo') {
-            yearPhotos = yearPhotos.filter(p => !isVideoUrl(p.url));
+            yearPhotos = yearPhotos.filter(p => !isRealVideo(p));
         }
 
             // 4. Filter by search query
@@ -1930,9 +1933,9 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
 
             // 2. Filter by media type
             if (currentMediaFilter === 'video') {
-                displayPhotos = displayPhotos.filter(p => isVideoUrl(p.url));
+                displayPhotos = displayPhotos.filter(p => isRealVideo(p));
             } else if (currentMediaFilter === 'photo') {
-                displayPhotos = displayPhotos.filter(p => !isVideoUrl(p.url));
+                displayPhotos = displayPhotos.filter(p => !isRealVideo(p));
             }
 
             // 3. Filter by search query
@@ -1984,9 +1987,9 @@ function loadSourcesView() {
             // Apply media filter before grouping by source
             let filteredForSources = photoData;
             if (currentMediaFilter === 'video') {
-                filteredForSources = photoData.filter(p => isVideoUrl(p.url));
+                filteredForSources = photoData.filter(p => isRealVideo(p));
             } else if (currentMediaFilter === 'photo') {
-                filteredForSources = photoData.filter(p => !isVideoUrl(p.url));
+                filteredForSources = photoData.filter(p => !isRealVideo(p));
             }
 
             const sourceGroups = filteredForSources.reduce((acc, photo) => {
@@ -2105,9 +2108,9 @@ function loadSourcesView() {
     (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName)
 );
             if (currentMediaFilter === 'video') {
-                sourcePhotos = sourcePhotos.filter(p => isVideoUrl(p.url));
+                sourcePhotos = sourcePhotos.filter(p => isRealVideo(p));
             } else if (currentMediaFilter === 'photo') {
-                sourcePhotos = sourcePhotos.filter(p => !isVideoUrl(p.url));
+                sourcePhotos = sourcePhotos.filter(p => !isRealVideo(p));
             }            
             const totalPhotos = sourcePhotos.length;
             const safeId = getSourceSafeId(sourceName);
