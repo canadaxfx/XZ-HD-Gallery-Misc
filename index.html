@@ -968,29 +968,14 @@
             <button class="nav-btn active" data-section="gallery">Photo Timeline<br>时间线相册</button>
             <button class="nav-btn" data-section="sources">By Source<br>按来源分类</button>
         </nav>
-        <div class="media-filter-tabs">
-            <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
-            <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
-            <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
-        </div>
-
         <!-- Source Filter Chips -->
 
         <div id="gallery-section" class="content-section">
 
-        <div class="source-filters">
-            <div class="source-chip active" data-filter="all">All Sources 全部</div>
-            <div class="source-chip" data-filter="drama">Dramas_Movies 影视</div>
-            <div class="source-chip" data-filter="endorsement">Endorsements 代言</div>
-            <div class="source-chip" data-filter="magazine">Magazines 杂志</div>
-            <div class="source-chip" data-filter="event">Events 活动</div>
-            <div class="source-chip" data-filter="other">Others 其他非官方</div>
-        </div>
-
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number" id="totalPhotosDisplay">0</div>
-                    <div class="stat-label">Total Photos</div>
+                    <div class="stat-label">Total Items</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="totalSourcesDisplay">0</div>
@@ -1005,6 +990,21 @@
                     <div class="stat-label">Years Expanded</div>
                 </div>
             </div>
+
+        <div class="source-filters">
+            <div class="source-chip active" data-filter="all">All Sources 全部</div>
+            <div class="source-chip" data-filter="drama">Dramas_Movies 影视</div>
+            <div class="source-chip" data-filter="endorsement">Endorsements 代言</div>
+            <div class="source-chip" data-filter="magazine">Magazines 杂志</div>
+            <div class="source-chip" data-filter="event">Events 活动</div>
+            <div class="source-chip" data-filter="other">Others 其他非官方</div>
+        </div>
+
+        <div class="media-filter-tabs">
+            <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
+            <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
+            <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
+        </div>
 
 	<input type="text" class="search-bar" placeholder="Search by keywords 搜索关键词" id="searchInput">
             <button id="clearSearchBtn" class="btn">Clear Search / 返回</button>
