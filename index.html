@@ -31,6 +31,9 @@
         .media-tab { background: #f0f4f8; color: #111; border: 1px solid #d0d8e0; border-radius: 20px; padding: 4px 16px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
         .media-tab:hover { background: #e0eaf4; color: #2c5f8a; border-color: #5E9FD8; }
         .media-tab.active { background: linear-gradient(45deg, #5E9FD8, #4A8BC8); color: white; font-weight: 600; border-color: transparent; }
+        .filter-divider { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+        .filter-divider::before, .filter-divider::after { content: ''; flex: 1; height: 1px; background: #e0e8f0; }
+        .filter-divider span { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa5b4; white-space: nowrap; }
         .nav-btn, .btn {
             padding: 15px 15px; border: none; border-radius: 25px; cursor: pointer;
             font-size: 13px; font-weight: 600; transition: all 0.3s ease;
@@ -1000,6 +1003,7 @@
             <div class="source-chip" data-filter="other">Others 其他非官方</div>
         </div>
 
+        <div class="filter-divider"><span>Media Type 媒体类型</span></div>
         <div class="media-filter-tabs">
             <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
             <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
