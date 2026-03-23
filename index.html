@@ -1023,6 +1023,11 @@
         </div>
 
         <div id="sources-section" class="content-section hidden">
+            <div class="media-filter-tabs" id="sourcesMediaFilterTabs">
+                <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
+                <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
+                <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
+            </div>
             <div id="sourcesContainer">
                 <!-- Sources will be dynamically loaded here -->
             </div>
