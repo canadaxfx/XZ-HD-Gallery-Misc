@@ -216,7 +216,7 @@
         .photo-overlay {
             position: absolute; bottom: 0; left: 0; right: 0;
             background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;
-            padding: 12px 8px 8px; font-size: 11px; font-weight: 600;
+            padding: 6px 4px 4px; font-size: 11px; font-weight: 600;
         }
         .photo-date {
             display: block;
@@ -1749,7 +1749,7 @@ async function loadPhotoData() {
 
         function getMediaIcon(url) {
             if (/\.mp4$/i.test(url))
-                return '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>';
+                return '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>';
             return '';
         }
         function getMotionBadge(photo) {
@@ -1761,7 +1761,7 @@ async function loadPhotoData() {
         }
         function getDurBadge(photo) {
             if (!isRealVideo(photo) || !photo.duration) return '';
-            return '<div style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>';
+            return '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>';
         }
 
         function generatePhotosHTML(photos) {
