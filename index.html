@@ -1761,7 +1761,7 @@ async function loadPhotoData() {
         }
         function getDurBadge(photo) {
             if (!isRealVideo(photo) || !photo.duration) return '';
-            return '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>';
+            return '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>';
         }
 
         function generatePhotosHTML(photos) {
