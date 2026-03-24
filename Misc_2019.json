@@ -47,6 +47,31 @@
         "duration": 22
     },
     {
+        "id": 271,
+        "url": "https://assets.xz-studio-gallery.com/full/20191211_ELLE_XZ-MISC-1.mp4",
+        "date": "2019-12-11",
+        "month": "December",
+        "year": "2019",
+        "tags": [
+            "ELLE",
+            "专访"
+        ],
+        "groupName": "ELLE_2019-12-11",
+        "quality": "1080p",
+        "duration": 81,
+        "weibo": "https://weibo.com/1273610165/IkhjR3Kg7",
+        "sourceType": [
+            "magazine"
+        ],
+        "source": [
+            "ELLE"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#ELLE星探[超话]# ELLE最近约会了工装酷盖@X玖少年团肖战DAYTOY ，专访视频送上！想知道他最近常哼的歌是哪一首？网上冲浪印象最深的是哪个表情包？戳视频找答案！ELLE官方秒拍账号的秒拍视频"
+    },
+    {
         "id": 258,
         "url": "https://assets.xz-studio-gallery.com/full/8HK4aAc.jpeg",
         "date": "2019-12-06",
