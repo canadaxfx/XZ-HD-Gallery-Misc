@@ -1559,7 +1559,8 @@ filteredPhotos = photoData.filter(p =>
 	    		   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
 			   (p.note && p.note.toLowerCase().includes(query)) ||
 			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
-                           (tagsString.includes(query));
+                           (tagsString.includes(query)) ||
+                           (p.postText && p.postText.toLowerCase().includes(query));
                 });
             }
 
@@ -1848,7 +1849,8 @@ async function loadPhotoData() {
 			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
 			   (p.note && p.note.toLowerCase().includes(query)) ||
 			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
-                           (tagsString.includes(query));
+                           (tagsString.includes(query)) ||
+                           (p.postText && p.postText.toLowerCase().includes(query));
                 });
             }
             const totalPhotos = yearPhotos.length;
@@ -2031,7 +2033,8 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
 			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
 			   (p.note && p.note.toLowerCase().includes(query)) ||
 			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
-                           (tagsString.includes(query));
+                           (tagsString.includes(query)) ||
+                           (p.postText && p.postText.toLowerCase().includes(query));
                 });
             }
 
