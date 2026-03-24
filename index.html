@@ -1574,8 +1574,8 @@ filteredPhotos = photoData.filter(p =>
                 createTimelineHTML(photosByYear);
             } else {
                 const emptyMessage = currentSearchQuery ? 
-                    `<h3>No photos found</h3><p>No results for "${currentSearchQuery}".</p>` :
-                    `<h3>No photos found</h3><p>No photos for this source type.</p>`;
+                    `<h3>No items found</h3><p>No results for "${currentSearchQuery}".</p>` :
+                    `<h3>No items found</h3><p>No items for this source type.</p>`;
                 document.getElementById('timelineContainer').innerHTML = `<div class="timeline-empty">${emptyMessage}</div>`;
             }
             
@@ -1685,7 +1685,7 @@ async function loadPhotoData() {
         function initializeTimeline() {
             if (photoData.length === 0) {
                 document.getElementById('timelineContainer').innerHTML = `
-                    <div class="timeline-empty"><h3>No photos found</h3><p>Add photos to display.</p></div>`;
+                    <div class="timeline-empty"><h3>No items found</h3><p>Add items to display.</p></div>`;
                 return;
             }
 
