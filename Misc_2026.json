@@ -1,5 +1,33 @@
 [
     {
+        "id": 236,
+        "url": "https://assets.xz-studio-gallery.com/full/20260324_NARS_XZ-MISC-1.mp4",
+        "date": "2026-03-24",
+        "month": "March",
+        "year": "2026",
+        "tags": [
+            "NARS",
+            "ELLE",
+            "采访"
+        ],
+        "groupName": "NARS_2026-03-24",
+        "quality": "4k",
+        "duration": 57,
+        "weibo": "https://weibo.com/1273610165/Qxz76hWyR",
+        "sourceType": [
+            "endorsement",
+            "magazine"
+        ],
+        "source": [
+            "ELLE",
+            "NARS"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "接受采访前一分钟，@肖战 内心的OS是什么？🤔 ELLE的微博视频"
+    },
+    {
         "id": 233,
         "url": "https://assets.xz-studio-gallery.com/full/20260322_NARS_XZ-MISC-1.mp4",
         "date": "2026-03-22",
@@ -13,7 +41,8 @@
         "quality": "1080p",
         "weibo": "https://weibo.com/6188026492/Qxg8IaUcC",
         "sourceType": [
-            "endorsement"
+            "endorsement",
+            "magazine"
         ],
         "source": [
             "NARS"
@@ -2480,6 +2509,64 @@
         "datePrecision": "day",
         "weibo": "https://weibo.com/6188026492/QultT4E4C",
         "postText": "超越持妆，毛孔级柔焦无瑕¹\n全新 #NARS超雾瓶粉底# 颠覆上市\n\n👉 一键三磨，打造底妆平整画布\n根源「磨毛孔」，毛孔级柔焦，24H持妆²\n细节「磨瑕疵」，又薄又遮，24H隐瑕²\n持久「磨油光」，匀净柔雾，24H控油²\n\n与 #肖战NARS全球品牌代言人# 一起\n突破油皮妆效想象！ ​​​"
+    },
+    {
+        "id": 237,
+        "url": "https://assets.xz-studio-gallery.com/full/20260302_GUCCI_XZ-MISC-1.mp4",
+        "date": "2026-03-02",
+        "month": "March",
+        "year": "2026",
+        "tags": [
+            "GUCCI",
+            "ELLE",
+            "米兰",
+            "采访"
+        ],
+        "groupName": "GUCCI_2026-03-02",
+        "quality": "1080p",
+        "duration": 60,
+        "weibo": "https://weibo.com/1273610165/Qud501RB8",
+        "sourceType": [
+            "endorsement",
+            "magazine"
+        ],
+        "source": [
+            "GUCCI",
+            "ELLE"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "“都来了吗？采访要开始了😄” 米兰Gucci Primavera时装秀后，@肖战 友情催场🎙️#ELLE带你看时装周##时装周##米兰时装周# ELLE的微博视频"
+    },
+    {
+        "id": 238,
+        "url": "https://assets.xz-studio-gallery.com/full/20260302_TODS_XZ-MISC-1.mp4",
+        "date": "2026-03-02",
+        "month": "March",
+        "year": "2026",
+        "tags": [
+            "TODS",
+            "ELLE",
+            "米兰",
+            "采访"
+        ],
+        "groupName": "TODS_2026-03-02",
+        "quality": "1080p",
+        "duration": 89,
+        "weibo": "https://weibo.com/1273610165/QubS0BwFQ",
+        "sourceType": [
+            "endorsement",
+            "magazine"
+        ],
+        "source": [
+            "TODS",
+            "ELLE"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#ELLE带你看时装周# 喜欢轻装上阵的@肖战 看TOD'S秀专注度100%，种草了超多单品。#时装周##米兰时装周# ELLE的微博视频"
     },
     {
         "id": 105,
