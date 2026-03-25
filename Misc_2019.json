@@ -47,6 +47,31 @@
         "duration": 22
     },
     {
+        "id": 300,
+        "url": "https://assets.xz-studio-gallery.com/full/20191226_中国电影报道_XZ-MISC-1.mp4",
+        "date": "2019-12-26",
+        "month": "December",
+        "year": "2019",
+        "tags": [
+            "中国电影报道",
+            "独家专访"
+        ],
+        "groupName": "中国电影报道_2019-12-26",
+        "quality": "1080p",
+        "duration": 112,
+        "weibo": "https://weibo.com/1261788454/ImB34mJXp",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "其他Other"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "【独家专访肖战：用一个词形容自己的2019】#肖战一个词形容2019#2019年对于@X玖少年团肖战DAYTOY 来说是丰收的一年，《陈情令》《诛仙I》《庆余年》等作品的相继问世，让他名声大噪。日前，他接受我们的专访，跟我们一起回忆了自己一年来的收获。用一个词形容自己的2019年，肖战 说是“感谢”。无论是张小凡、魏无羡还是言冰云，肖战的每一次亮相都让我们看到了成长，当被问及自己最满意的角色时，肖战谦虚了起来：“最满意的角色可能会是下一个”。 中国电影报道的微博视频"
+    },
+    {
         "id": 272,
         "url": "https://assets.xz-studio-gallery.com/full/20191225_VOGUEplus_XZ-MISC-1.mp4",
         "date": "2019-12-25",
@@ -594,6 +619,31 @@
         "note": "",
         "description": "",
         "postText": "2019#BAZAAR明星慈善夜# 爱是铠甲，感谢@X玖少年团肖战DAYTOY ，为爱凝聚。#美育未来，慈善同行#@小荔BAZAAR 时尚芭莎的微博视频"
+    },
+    {
+        "id": 299,
+        "url": "https://assets.xz-studio-gallery.com/full/20191107_两只老虎_XZ-MISC-1.mp4",
+        "date": "2019-11-07",
+        "month": "November",
+        "year": "2019",
+        "tags": [
+            "两只老虎",
+            "电影同名推广曲MV"
+        ],
+        "groupName": "两只老虎_2019-11-07",
+        "quality": "1080p",
+        "duration": 220,
+        "weibo": "https://weibo.com/7126344605/If4Oawbxn?refer_flag=1001030103_",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "其他Other"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战唱两只老虎#一只迷路的老虎一只孤独的老虎也是一只想你的老虎 #电影两只老虎#发布同名推广曲《两只老虎》MV，由@X玖少年团肖战DAYTOY 演唱。摇头晃脑，挣脱束缚，都是给天真的你的礼物。11月29日，电影院见。电影两只老虎的微博视频"
     },
     {
         "id": 243,
