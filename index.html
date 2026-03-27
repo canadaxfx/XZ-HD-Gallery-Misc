@@ -1277,7 +1277,10 @@ function updateModalContent() {
     title.textContent = photo.date || photo.groupName || 'Photo Collection';
     
     // --- 3. DOWNLOAD & WEIBO LINKS ---
-    downloadBtn.href = photo.url;
+    // Default download to best available quality: 4K → HD → regular
+    downloadBtn.href = (isVideo && photo.url_4k) ? photo.url_4k
+                     : (isVideo && photo.url_hd) ? photo.url_hd
+                     : photo.url;
     const badgeAlt = document.getElementById('badgeAlt');
     if (badgeAlt) {
         if (isVideo && photo.url_4k) {
