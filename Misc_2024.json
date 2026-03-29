@@ -4548,6 +4548,31 @@
         "duration": 15
     },
     {
+        "id": 323,
+        "url": "https://assets.xz-studio-gallery.com/full/20240206_中国电视剧年度盛典_XZ-MISC-1.mp4",
+        "date": "2024-02-06",
+        "month": "February",
+        "year": "2024",
+        "tags": [
+            "中国电视剧年度盛典",
+            "采访"
+        ],
+        "groupName": "中国电视剧年度盛典_2024-02-06",
+        "quality": "1080p",
+        "duration": 93,
+        "weibo": "https://weibo.com/2030112487/NFh7MFktN",
+        "sourceType": [
+            "event"
+        ],
+        "source": [
+            "中国电视剧年度盛典"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "【#肖战思考演员与角色的关系# 】镜子内外，既是角色，也是自己。@X玖少年团肖战DAYTOY 说，每个角色多多少少都会融入他本人的性格。在相似与反差中，他探索着人物特质，和角色相互给予、相互成就。2024年，肖战希望拿到一个充满惊喜的“人生剧本”：“挑战、新鲜感、丰富”！戳↓更多精彩！#中国电视剧年度盛典# CCTV电视剧的微博视频"
+    },
+    {
         "id": 91,
         "url": "https://assets.xz-studio-gallery.com/full/9qtf0XY.jpeg",
         "date": "2024-02-05",
@@ -6033,6 +6058,30 @@
         "note": "",
         "description": "",
         "postText": "#2024网络视听盛典宣传片#【第一篇章《不负韶华》导览片正式发布 】演员肖战@X玖少年团肖战DAYTOY 邀您共享#2024网络视听盛典#青春荣光！2月3日全网播出，17:00盛典预热，19:30盛典开启，20+网络平台联手，为您呈现最热精彩！唱响新时代，同心向未来。 视听中国的微博视频"
+    },
+    {
+        "id": 324,
+        "url": "https://assets.xz-studio-gallery.com/full/20240126_GQ_XZ-MISC-1.mp4",
+        "date": "2024-01-26",
+        "month": "January",
+        "year": "2024",
+        "tags": [
+            "GQ"
+        ],
+        "groupName": "GQ_2024-01-26",
+        "quality": "1080p",
+        "duration": 44,
+        "weibo": "https://weibo.com/1667999147/NDB4onIID",
+        "sourceType": [
+            "magazine"
+        ],
+        "source": [
+            "GQ"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "Who Are You？Who Am I？你是谁？我是谁？@X玖少年团肖战DAYTOY 智族GQ的微博视频"
     },
     {
         "id": 29,
