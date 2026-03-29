@@ -398,6 +398,31 @@
         "duration": 45
     },
     {
+        "id": 105,
+        "url": "https://assets.xz-studio-gallery.com/full/20200710_新浪娱乐_XZ-MISC-1.mp4",
+        "date": "2020-07-10",
+        "month": "July",
+        "year": "2020",
+        "tags": [
+            "新浪娱乐",
+            "阿乐的早读刻",
+            "萤火虫"
+        ],
+        "groupName": "新浪娱乐_2020-07-10",
+        "duration": 89,
+        "weibo": "https://weibo.com/1642591402/JavDx6ArI",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "Ent. Hub"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "大家好，今天是7月10日，欢迎收听FM1642591402《#阿乐的早读刻#》，接下来请欣赏今日“刻代表”DJ@X玖少年团肖战DAYTOY 带来的《萤火虫》。 新浪娱乐的微博视频"
+    },
+    {
         "id": 52,
         "url": "https://assets.xz-studio-gallery.com/full/Fp9WV8k.jpeg",
         "date": "2020-05-12",
@@ -2034,6 +2059,32 @@
         "datePrecision": "day",
         "groupName": "时尚芭莎_2020-01-12",
         "postText": "#肖战精灵造型# 双眸清烔，窗幔绮靡，光影勾勒出他的清冽轮廓。是现实世界里的“精灵”，亦是古老神话中的祥瑞神兽。@芭莎电影 以龙三子嘲风为创作灵感，让二次元造型和中国风元素破壁同框，通过@X玖少年团肖战DAYTOY 的演绎，提前祈愿各位庚子年喜乐、平安。【肖战芭莎二月刊杂志（无海报版）】正式上线，预售链接：http://t.cn/AisD3aZ9   亦古亦今任“肖”遥，这趟”穿越“之旅才刚刚开始！@小荔BAZAAR\n\n总策划/@宋斐BAZAAR (芭莎电影组)\n摄影/@陈漫ChenMan\n视觉统筹/@细路任\n化妆/@琪琪liu776\n发型/@张哲纶ONTIME\n服装造型/@Fil小白\n采访、撰文/@李冰清LilyLee\n新媒体/Timmy\n制片/OXY\n服装统筹/张夏晴\n制片助理/孙秦岚\n服装助理/伏馨逸、李硕菲\n特别鸣谢/卡地亚、GUCCI"
+    },
+    {
+        "id": 106,
+        "url": "https://assets.xz-studio-gallery.com/full/20200111_微博之夜_XZ-MISC-1.mp4",
+        "date": "2020-01-11",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "微博之夜",
+            "微博KING",
+            "专访"
+        ],
+        "groupName": "微博之夜_2020-01-11",
+        "quality": "1080p",
+        "duration": 304,
+        "weibo": "https://weibo.com/1642591402/Ip2IAm6J5",
+        "sourceType": [
+            "event"
+        ],
+        "source": [
+            "微博之夜"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "【2019#微博之夜#专访】微博KING@X玖少年团肖战DAYTOY 爆料#肖战印象深刻的灯牌应援#是“澳龙”和“虾与竹鼠孰美”；相对现代剧而言现在更想演古装，但表示买不起横店的房；给演过的角色组男团，战哥直言张小凡是C位，阿羡是门面担当；透露将会有新单曲跟大家见面；至于“居中梗”，他说了这些...如果肖战角色团出道？ 娱乐日爆社的微博视频"
     },
     {
         "id": 6,
