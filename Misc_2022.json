@@ -4558,6 +4558,33 @@
         "duration": 34
     },
     {
+        "id": 305,
+        "url": "https://assets.xz-studio-gallery.com/full/20220201_中国新闻网_XZ-MISC-1.mp4",
+        "date": "2022-02-01",
+        "month": "February",
+        "year": "2022",
+        "tags": [
+            "中国新闻网",
+            "中新社",
+            "虎年",
+            "春节"
+        ],
+        "groupName": "中国新闻网_2022-02-01",
+        "quality": "1080p",
+        "duration": 14,
+        "weibo": "https://weibo.com/1784473157/LdqUjaiII",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "其他Other"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#2022能量满满# 【#肖战祝大家幸福一整年# 】春节快乐，虎年大吉！今天小鱼妹儿@中新文娱 邀请到了@X玖少年团肖战DAYTOY 为大家送出满满的祝福，希望大家在2022年能量满满，幸福一整年！ 中新文娱的微博视频"
+    },
+    {
         "id": 292,
         "url": "https://assets.xz-studio-gallery.com/full/20220131_冬奥_XZ-STU-1.mp4",
         "date": "2022-01-31",
