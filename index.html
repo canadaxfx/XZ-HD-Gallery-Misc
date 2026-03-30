@@ -50,13 +50,6 @@
 .pl-fs-nav-btn:hover{background:#4b5563}
 .pl-fs-nav-btn:disabled{opacity:.3;cursor:default}
 .pl-fs-nav-counter{color:#d1d5db;font-size:13px;min-width:60px;text-align:center}
-/* Fullscreen modal layout */
-.pl-fs-mode{padding:0!important;align-items:stretch!important;justify-content:flex-start!important}
-.pl-fs-mode .modal-content{display:flex!important;flex-direction:column!important;height:100%!important;max-height:100%!important;background:#000!important;border-radius:0!important;max-width:100%!important;overflow:hidden!important}
-.pl-fs-mode .modal-photo-container{flex:1!important;min-height:0!important;background:#000!important}
-.pl-fs-mode #modalVideo{width:100%!important;height:100%!important;max-height:none!important;object-fit:contain!important}
-.pl-fs-mode .thumbnail-strip,.pl-fs-mode .photo-info-panel{display:none!important}
-.pl-fs-mode .nav-arrow{display:none!important}
 </style>
     <meta name="copyright" content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited.">
     <title>XZ HD Gallery Misc</title>
@@ -1119,7 +1112,7 @@
     
     <img id="modalPhoto" class="modal-photo" alt="Current photo">
     
-    <video id="modalVideo" class="modal-photo hidden" controls playsinline controlsList="nofullscreen"></video>
+    <video id="modalVideo" class="modal-photo hidden" controls playsinline></video>
     <span id="badgeQuality" class="badge-quality hidden"></span>
     <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
     
@@ -1138,9 +1131,6 @@
                 <button class="pl-fs-nav-btn" id="plFsPrev" onclick="navigatePhoto(-1)">‹</button>
                 <span class="pl-fs-nav-counter" id="plFsCounter">1 / 1</span>
                 <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)">›</button>
-                <div style="flex:1"></div>
-                <button id="plFsEnterBtn" onclick="plToggleFullscreen()" title="Fullscreen" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer">⛶ Fullscreen</button>
-                <button id="plFsEscBtn" onclick="plExitFullscreen()" title="Exit Fullscreen" style="display:none;background:#4b5563;color:#fff;border:none;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer">ESC</button>
             </div>
 
 	    <div class="photo-info-panel">
@@ -1415,40 +1405,6 @@
             btn.textContent = inList ? '✓ 在播放列表中 In Playlist' : '+ 加入播放列表 Add to Playlist';
         }
 
-
-        function plToggleFullscreen() {
-            const modal = document.getElementById('photoModal');
-            modal.classList.add('pl-fs-mode');
-            document.getElementById('plFsEnterBtn').style.display = 'none';
-            document.getElementById('plFsEscBtn').style.display = 'inline-block';
-            const req = modal.requestFullscreen || modal.webkitRequestFullscreen || modal.mozRequestFullScreen;
-            if (req) req.call(modal).catch(() => {});
-        }
-
-        function plExitFullscreen() {
-            const modal = document.getElementById('photoModal');
-            modal.classList.remove('pl-fs-mode');
-            document.getElementById('plFsEnterBtn').style.display = 'inline-block';
-            document.getElementById('plFsEscBtn').style.display = 'none';
-            if (document.fullscreenElement || document.webkitFullscreenElement) {
-                (document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen).call(document).catch(() => {});
-            }
-        }
-
-        ['fullscreenchange', 'webkitfullscreenchange'].forEach(evt => {
-            document.addEventListener(evt, function() {
-                if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-                    const modal = document.getElementById('photoModal');
-                    if (modal && modal.classList.contains('pl-fs-mode')) {
-                        modal.classList.remove('pl-fs-mode');
-                        const enter = document.getElementById('plFsEnterBtn');
-                        const esc = document.getElementById('plFsEscBtn');
-                        if (enter) enter.style.display = 'inline-block';
-                        if (esc) esc.style.display = 'none';
-                    }
-                }
-            });
-        });
 
         function plToast(msg) {
             const t = document.getElementById('plToast');
@@ -1740,11 +1696,7 @@ function generateThumbnail(originalUrl, size = 'm') {
                     break;
                 case 'Escape':
                     e.preventDefault();
-                    if (document.getElementById('photoModal').classList.contains('pl-fs-mode')) {
-                        plExitFullscreen();
-                    } else {
-                        closeModal();
-                    }
+                    closeModal();
                     break;
             }
         }
@@ -1756,7 +1708,6 @@ function closeModal() {
         videoElement.onended = null;
         videoElement.src = "";
     }
-    plExitFullscreen();
     document.getElementById('photoModal').classList.add('hidden');
     document.removeEventListener('keydown', handleKeyboardNavigation);
     if (playlistMode) { playlistMode = false; plRender(); }
