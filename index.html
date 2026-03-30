@@ -1316,7 +1316,7 @@
 
         function plSyncCardBtn(btn, inList) {
             btn.classList.toggle('pl-added', inList);
-            btn.textContent = inList ? '✓ Playlist' : '＋ Playlist';
+            btn.innerHTML = inList ? '<b>✓</b> Playlist' : '<b>＋</b> Playlist';
         }
 
         function addAllFilteredVideos() {
@@ -2091,7 +2091,7 @@ async function loadPhotoData() {
                     ${isRealVideo(photo) ? getMediaIcon(photo.url) : ''}
                     ${getDurBadge(photo)}
                     ${getMotionBadge(photo)}
-                    ${isRealVideo(photo) ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})">＋ Playlist</button>` : ''}
+                    ${isRealVideo(photo) ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})"><b>＋</b> Playlist</button>` : ''}
                     <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
