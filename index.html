@@ -132,15 +132,15 @@
 .modal-tags-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 15px; /* Space between tags and download buttons */
-    padding: 0 5px;
+    gap: 5px;
+    justify-content: flex-start;
+    padding: 0 2px;
+    min-height: 0;
 }
 
 .modal-tag-pill {
-    font-size: 11px;
-    padding: 4px 12px;
+    font-size: 10px;
+    padding: 2px 8px;
     background-color: #f0f2f5;
     color: #555;
     border-radius: 15px;
@@ -1104,13 +1104,16 @@
     <div id="photoModal" class="modal hidden">
         <div class="modal-content">
             <!-- Modal Header -->
-            <div class="modal-header">
-                <div class="photo-counter" id="photoCounter">1 of 5</div>
-                <div class="group-title" id="groupTitle">Photo Collection</div>
-                <div class="modal-header-actions">
-                    <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
-                    <button class="close-modal" onclick="closeModal()" style="margin-right:-6px;">&times;</button>
+            <div class="modal-header" style="flex-direction:column;align-items:stretch;gap:4px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div class="photo-counter" id="photoCounter">1 of 5</div>
+                    <div class="group-title" id="groupTitle">Photo Collection</div>
+                    <div class="modal-header-actions">
+                        <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
+                        <button class="close-modal" onclick="closeModal()" style="margin-right:-6px;">&times;</button>
+                    </div>
                 </div>
+                <div id="modalTags" class="modal-tags-container"></div>
             </div>
             <div id="postTextPanel" style="display:none;">
                 <p id="postTextContent" style="margin:0;"></p>
@@ -1153,9 +1156,6 @@
             </div>
 
 	    <div class="photo-info-panel">
-                <div id="modalTags" class="modal-tags-container"></div>
-
-                
                 <div class="download-section">
                     <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;position:relative;">
                         <button class="pl-modal-add-btn" id="plModalAddBtn2" onclick="plModalToggle()" style="display:none;font-size:13px;padding:5px 16px;">+ 加入播放列表 Add to Playlist</button>
