@@ -15,8 +15,7 @@
     <meta name="robots" content="noai, noimageai">
 <style>
 /* ===== PLAYLIST ===== */
-.playlist-panel{position:fixed;bottom:20px;right:20px;width:300px;max-height:420px;background:#fff;border-radius:12px;box-shadow:0 6px 28px rgba(0,0,0,.22);z-index:1100;display:flex;flex-direction:column;transition:max-height .3s ease}
-.playlist-panel.collapsed{max-height:52px;overflow:hidden}
+.playlist-panel{position:fixed;width:300px;max-height:420px;background:#fff;border-radius:12px;box-shadow:0 6px 28px rgba(0,0,0,.22);z-index:7999;display:flex;flex-direction:column;overflow:hidden}
 .playlist-header{display:flex;align-items:center;gap:8px;padding:12px 14px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:12px 12px 0 0;color:#fff;cursor:pointer;font-size:14px;font-weight:700;flex-shrink:0;user-select:none;letter-spacing:0.2px}
 .playlist-panel.collapsed .playlist-header{border-radius:12px}
 .playlist-count-badge{background:rgba(255,255,255,.25);border-radius:10px;padding:2px 8px;font-size:12px;font-weight:700}
@@ -38,21 +37,25 @@
 .pl-add-all-btn{display:none;padding:6px 11px;background:#1f2937;color:#fff;border:none;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;margin-top:6px}
 .pl-modal-add-btn{padding:3px 10px;background:rgba(37,99,235,.12);color:#2563eb;border:1px solid #bfdbfe;border-radius:12px;font-size:12px;cursor:pointer;display:none;white-space:nowrap}
 .pl-modal-add-btn:hover{background:#dbeafe}
-.pl-modal-add-btn.pl-in-list{background:rgba(34,197,94,.1);color:#16a34a;border-color:#bbf7d0}
+.pl-modal-add-btn.pl-in-list{background:rgba(124,58,237,.12);color:#7c3aed;border-color:#ddd6fe}
 .pl-counter-badge{background:#1f2937;color:#fff;padding:2px 9px;border-radius:10px;font-size:11px;margin-left:5px;display:none}
 #plToast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);background:#1f2937;color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;z-index:9999;pointer-events:none;opacity:0;transition:opacity .3s}
-@media(max-width:600px){.playlist-panel{width:calc(100vw - 16px);right:8px;bottom:8px}}
-@media(max-height:500px){.pl-fs-controls{padding:5px 16px}.pl-fs-nav-btn{padding:5px 16px;font-size:16px}}
-.pl-fs-controls{display:none;align-items:center;gap:12px;padding:8px 16px;background:#111;flex-shrink:0}
-.pl-fs-nav-btn{background:#2d2d2d;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:20px;cursor:pointer;transition:background .2s;line-height:1}
-.pl-fs-nav-btn:hover{background:#4b5563}
-.pl-fs-nav-btn:disabled{opacity:.3;cursor:default}
-.pl-fs-nav-counter{color:#d1d5db;font-size:13px;min-width:60px;text-align:center}
-.vc-btn{background:#2d2d2d;color:#fff;border:none;border-radius:8px;padding:6px 12px;font-size:15px;cursor:pointer;line-height:1;flex-shrink:0;transition:background .2s}
-.vc-btn:hover{background:#4b5563}
-.vc-seek{flex:1;min-width:0;height:4px;accent-color:#3b82f6;cursor:pointer}
-.vc-time{color:#9ca3af;font-size:11px;white-space:nowrap;flex-shrink:0}
-.vc-middle{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;justify-content:center}
+@media(max-width:600px){.playlist-panel{width:calc(100vw - 90px)}}
+@media(max-height:500px){.pl-fs-controls{padding:6px 12px}.pl-fs-nav-btn,.vc-btn{width:34px!important;height:34px!important}#vcPlayBtn{width:38px!important;height:38px!important}}
+.pl-fs-controls{display:none;align-items:center;gap:10px;padding:10px 18px;background:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);flex-shrink:0;border-top:1px solid #334155}
+.pl-fs-nav-btn{background:#334155;color:#e2e8f0;border:1px solid #475569;border-radius:50%;width:48px;height:48px;font-size:26px;cursor:pointer;transition:all .18s;line-height:1;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700}
+.pl-fs-nav-btn:hover{background:#475569;color:#fff;border-color:#64748b}
+.pl-fs-nav-btn:disabled{opacity:.25;cursor:default}
+.pl-fs-nav-counter{color:#64748b;font-size:12px;min-width:50px;text-align:center}
+.vc-btn{background:#1e293b;color:#cbd5e1;border:1px solid #334155;border-radius:10px;width:40px;height:40px;font-size:16px;cursor:pointer;line-height:1;flex-shrink:0;transition:all .18s;display:inline-flex;align-items:center;justify-content:center}
+.vc-btn:hover{background:#334155;color:#f1f5f9;border-color:#475569}
+#vcPlayBtn{background:#2563eb;border-color:#3b82f6;border-radius:50%;width:48px;height:48px;font-size:19px;color:#fff}
+#vcPlayBtn:hover{background:#1d4ed8;border-color:#2563eb}
+#vcFsBtn{background:#0e7490;border-color:#0891b2;color:#e0f2fe;font-size:18px}
+#vcFsBtn:hover{background:#0891b2;border-color:#06b6d4;color:#fff}
+.vc-seek{flex:1;min-width:0;height:5px;accent-color:#3b82f6;cursor:pointer;border-radius:4px}
+.vc-time{color:#64748b;font-size:12px;white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums}
+.vc-middle{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px;justify-content:center}
 </style>
     <meta name="copyright" content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited.">
     <title>XZ HD Gallery Misc</title>
@@ -638,19 +641,24 @@
 
         /* Download and Action Buttons */
         .action-btn.download-btn {
-            background: linear-gradient(45deg, #4CAF50, #45a049); 
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
         }
-        
+        .action-btn.download-btn:hover { background: linear-gradient(135deg, #1d4ed8, #1e40af); }
+
         .action-btn.quark-btn {
-            background: linear-gradient(45deg, #FF6B35, #F7931E); 
-            color: white;
+            background: transparent;
+            color: #2563eb;
+            border: 1.5px solid #2563eb;
         }
-        
+        .action-btn.quark-btn:hover { background: #eff6ff; }
+
         .action-btn.weibo-btn {
-            background: linear-gradient(45deg, #fa2a55, #e91e63);
-            color: white;
+            background: transparent;
+            color: #2563eb;
+            border: 1.5px solid #2563eb;
         }
+        .action-btn.weibo-btn:hover { background: #eff6ff; }
 
         .badge-4k {
             position: absolute;
@@ -672,7 +680,7 @@
             position: absolute;
             bottom: 0px;
             left: 10px;
-            background: rgba(0, 180, 80, 0.85);
+            background: rgba(37, 99, 235, 0.85);
             color: #fff;
             padding: 2px 7px;
             border-radius: 4px;
@@ -682,6 +690,7 @@
             letter-spacing: 0.05em;
             pointer-events: none;
         }
+        .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
 	
 	#terms-content {
             background-color: rgba(255,255,255,0.1); border-radius: 10px; margin: 15px auto 0;
@@ -691,37 +700,32 @@
         #terms-content li { margin: 5px 0; }
 
 
-        /* Back to Top Button */
-        #back-to-top {
-            position: fixed; bottom: 50px; right: 20px;
-            background: white;
-            color: #5E9FD8; width: 80px; height: 90px; border-radius: 30px; 
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            cursor: pointer; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            opacity: 0; visibility: hidden; 
-            transition: all 0.3s ease; z-index: 9999;
-            border: 2px solid #5E9FD8;
-            font-size: 40px; font-weight: 600;
+        /* Floating Button Group */
+        #floatBtnGroup {
+            position: fixed; right: 16px; bottom: 80px;
+            display: flex; flex-direction: column;
+            align-items: center; gap: 8px;
+            z-index: 8000; touch-action: none; cursor: grab;
         }
-
-        #back-to-top.visible { 
-            opacity: 0.85; visibility: visible; 
+        .float-btn {
+            width: 58px; height: 58px; border-radius: 50%;
+            border: 2px solid rgba(94,159,216,0.4);
+            background: #fff; color: #5E9FD8;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            font-size: 22px; font-weight: 600;
+            transition: transform .18s, box-shadow .18s;
+            position: relative; flex-shrink: 0; user-select: none;
+            overflow: hidden;
         }
-
-
-        #back-to-top .arrow {
-            line-height: 1;
-        }
-        #back-to-top .text {
-            font-size: 12px; font-weight: 600; margin-top: 0px;
-            text-align: center; line-height: 1;
-            color: #4A8BC8;
-            -webkit-text-stroke: 0;
-            text-stroke: 0;
-            -webkit-text-fill-color: #4A8BC8;
-            position: relative;
-            z-index: 1;
-        }
+        .float-btn:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.22); }
+        #plFloatBtn { background: linear-gradient(135deg,#2563eb,#7c3aed); color:#fff; border-color:rgba(255,255,255,0.3); font-size:20px; width:68px; height:68px; overflow:visible; }
+        #plFloatBadge { position:absolute; top:-3px; right:-3px; background:#ef4444; color:#fff; border-radius:10px; font-size:10px; font-weight:700; padding:1px 5px; min-width:18px; text-align:center; display:none; line-height:1.6; }
+        #backToTopFloat { opacity:0; visibility:hidden; transition:opacity .3s,visibility .3s; }
+        #backToTopFloat.visible { opacity:0.88; visibility:visible; }
+        .float-top-text { font-size:9px; font-weight:700; line-height:1.3; margin-top:1px; text-align:center; }
+        #backToTopFloat .float-top-text { color:#4A8BC8; }
 
 /* Desktop photo modal fix */
 @media screen and (min-width: 768px) {
@@ -741,7 +745,7 @@
             .stats-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
             .source-filters { padding: 0 10px; }
             .source-chip { padding: 8px 8px; font-size: 12px; }
-             #back-to-top { bottom: 50px; right: 10px; width: 63px; height: 63px; line-height: 50px; font-size: 23px; }
+             #floatBtnGroup { right: 8px; } .float-btn { width:50px; height:50px; font-size:18px; }
             /* Mobile Modal Optimizations */
             .modal {
                 padding: 5px;
@@ -1071,7 +1075,9 @@
 
 	<input type="text" class="search-bar" placeholder="Search by keywords 搜索关键词" id="searchInput">
             <button id="clearSearchBtn" class="btn">Clear Search / 返回</button>
-            <button id="plAddAllBtn" class="pl-add-all-btn" onclick="addAllFilteredVideos()">▶ 加入 <span id="plAddAllCount">0</span> 个视频到播放列表</button>
+            <div style="max-width:1000px;margin:4px auto 0;display:flex;justify-content:flex-end;padding-right:20px">
+                <button id="plAddAllBtn" class="pl-add-all-btn" onclick="addAllFilteredVideos()">▶ Add <span id="plAddAllCount">0</span> videos to Playlist</button>
+            </div>
 
             <div class="timeline-container" id="timelineContainer">
                 <div class="timeline-empty">
@@ -1236,9 +1242,16 @@
 
 
 
-    <div id="back-to-top">
-        <div class="arrow">▲</div>
-        <div class="text">TOP<br>回顶部</div>
+    <div id="floatBtnGroup">
+        <button id="plFloatBtn" class="float-btn" onclick="plTogglePanel()">
+            <span>🎬</span>
+            <span class="float-top-text" style="-webkit-text-fill-color:#fff;color:#fff;">Play<br>播放</span>
+            <span id="plFloatBadge">0</span>
+        </button>
+        <button id="backToTopFloat" class="float-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <span>▲</span>
+            <span class="float-top-text">TOP<br>回顶部</span>
+        </button>
     </div>
 
 
@@ -1346,12 +1359,13 @@
         }
 
         function plRender() {
-            const panel = document.getElementById('playlistPanel');
-            const list  = document.getElementById('plList');
+            const panel   = document.getElementById('playlistPanel');
+            const list    = document.getElementById('plList');
             const countEl = document.getElementById('plPanelCount');
+            const badge   = document.getElementById('plFloatBadge');
             countEl.textContent = playlist.length;
+            if (badge) { badge.textContent = playlist.length; badge.style.display = playlist.length ? 'block' : 'none'; }
             if (!playlist.length) { panel.style.display = 'none'; return; }
-            panel.style.display = 'flex';
             const activeId = playlistMode ? (currentPhotoGroup[currentPhotoIndex] || {}).id : null;
             list.innerHTML = playlist.map((p, i) => `
                 <div class="playlist-item ${p.id === activeId ? 'pl-active' : ''}" onclick="plPlayItem(${i})">
@@ -1371,15 +1385,19 @@
 
         function plTogglePanel() {
             const panel = document.getElementById('playlistPanel');
-            const icon  = document.getElementById('plCollapseIcon');
-            panel.classList.toggle('collapsed');
-            icon.textContent = panel.classList.contains('collapsed') ? '▲' : '▼';
+            if (panel.style.display === 'none') {
+                panel.style.display = 'flex';
+                setTimeout(plPositionPanel, 0);
+            } else {
+                panel.style.display = 'none';
+            }
         }
 
         function plPlayFromStart() {
             if (!playlist.length) return;
-            document.getElementById('playlistPanel').classList.remove('collapsed');
-            document.getElementById('plCollapseIcon').textContent = '▼';
+            const panel = document.getElementById('playlistPanel');
+            panel.style.display = 'flex';
+            setTimeout(plPositionPanel, 0);
             plPlayItem(0);
         }
 
@@ -1603,11 +1621,14 @@ function updateModalContent() {
         if (isVideo && photo.quality === '4k') {
             badgeQuality.textContent = '4K';
             badgeQuality.classList.remove('hidden');
+            badgeQuality.classList.add('is-4k');
         } else if (isVideo && photo.quality === '1080p') {
             badgeQuality.textContent = '1080P';
             badgeQuality.classList.remove('hidden');
+            badgeQuality.classList.remove('is-4k');
         } else {
             badgeQuality.classList.add('hidden');
+            badgeQuality.classList.remove('is-4k');
         }
     }
     if (weiboBtn) {
@@ -1738,7 +1759,8 @@ function generateThumbnail(originalUrl, size = 'm') {
                 prevBtn.disabled = currentPhotoIndex === 0;
                 nextBtn.disabled = currentPhotoIndex === currentPhotoGroup.length - 1;
                 
-                if (currentPhotoGroup.length <= 1) {
+                const videoVisible = !document.getElementById('modalVideo').classList.contains('hidden');
+                if (currentPhotoGroup.length <= 1 || videoVisible) {
                     prevBtn.style.display = 'none';
                     nextBtn.style.display = 'none';
                 } else {
@@ -1914,7 +1936,7 @@ filteredPhotos = photoData.filter(p =>
 	    setupClearSearch();
             setupSourceFilters();
             setupIntersectionObserver();
-            setupBackToTop();
+            setupFloatGroup();
             loadPhotoData();
 	    setupFooterToggle();
             plLoad();
@@ -2625,87 +2647,106 @@ function setupFooterToggle() {
     });
 }
 
-        /* ---------- Back to Top Button ---------- */
-        function setupBackToTop() {
-            const btn = document.getElementById('back-to-top');
-            btn.style.cursor = 'grab';
-            btn.style.userSelect = 'none';
+        /* ---------- Floating Button Group ---------- */
+        function setupFloatGroup() {
+            const group  = document.getElementById('floatBtnGroup');
+            const topBtn = document.getElementById('backToTopFloat');
+            const margin = 10;
 
+            // Scroll: show/hide back-to-top button
             window.addEventListener('scroll', () => {
-                btn.classList.toggle('visible', window.scrollY > 300);
+                topBtn.classList.toggle('visible', window.scrollY > 300);
             }, { passive: true });
 
-            // Restore saved position
-            const saved = localStorage.getItem('backToTopPos');
+            // Restore saved vertical position
+            const saved = localStorage.getItem('floatGroupTop');
             if (saved) {
                 try {
-                    const {left, top} = JSON.parse(saved);
-                    btn.style.right = 'auto';
-                    btn.style.bottom = 'auto';
-                    btn.style.left = left + 'px';
-                    btn.style.top = top + 'px';
-                } catch(e) {}
+                    const top = parseFloat(saved);
+                    const h = group.offsetHeight || 130;
+                    const safeTop = Math.max(margin, Math.min(top, window.innerHeight - h - margin));
+                    group.style.top = safeTop + 'px';
+                    group.style.bottom = 'auto';
+                    group.style.transform = 'none';
+                } catch(e) { localStorage.removeItem('floatGroupTop'); }
             }
 
-            let dragging = false, startX, startY, startLeft, startTop, moved;
-            const margin = 10;
+            // Vertical-only drag
+            let dragging = false, startY, startTop, moved;
 
             function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
+            function convertToPixelTop() {
+                if (!group.style.top || group.style.top === '' || group.style.top === '50%') {
+                    const rect = group.getBoundingClientRect();
+                    group.style.top = rect.top + 'px';
+                    group.style.bottom = 'auto';
+                    group.style.transform = 'none';
+                }
+            }
+
+            // Suppress click after drag
+            group.addEventListener('click', function(e) {
+                if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; }
+            }, true);
+
             function pointerStart(e) {
                 const p = e.touches ? e.touches[0] : e;
-                // Convert bottom/right to top/left if not yet converted
-                if (btn.style.left === '') {
-                    const r = btn.getBoundingClientRect();
-                    btn.style.right = 'auto'; btn.style.bottom = 'auto';
-                    btn.style.left = r.left + 'px'; btn.style.top = r.top + 'px';
-                }
-                startX = p.clientX; startY = p.clientY;
-                startLeft = parseFloat(btn.style.left);
-                startTop = parseFloat(btn.style.top);
+                convertToPixelTop();
+                startY = p.clientY;
+                startTop = parseFloat(group.style.top);
                 dragging = true; moved = false;
-                e.preventDefault();
             }
 
             function pointerMove(e) {
                 if (!dragging) return;
                 const p = e.touches ? e.touches[0] : e;
-                const dx = p.clientX - startX, dy = p.clientY - startY;
-                if (Math.abs(dx) > 4 || Math.abs(dy) > 4) moved = true;
-                btn.style.left = clamp(startLeft + dx, margin, window.innerWidth  - btn.offsetWidth  - margin) + 'px';
-                btn.style.top  = clamp(startTop  + dy, margin, window.innerHeight - btn.offsetHeight - margin) + 'px';
+                const dy = p.clientY - startY;
+                if (Math.abs(dy) > 4) moved = true;
+                group.style.top = clamp(startTop + dy, margin, window.innerHeight - group.offsetHeight - margin) + 'px';
                 e.preventDefault();
             }
 
             function pointerEnd() {
                 if (!dragging) return;
                 dragging = false;
-                btn.style.cursor = 'grab';
                 if (moved) {
-                    localStorage.setItem('backToTopPos', JSON.stringify({
-                        left: parseFloat(btn.style.left), top: parseFloat(btn.style.top)
-                    }));
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    localStorage.setItem('floatGroupTop', parseFloat(group.style.top));
+                    plPositionPanel(); // reposition panel if open
                 }
             }
 
-            btn.addEventListener('mousedown',  pointerStart);
-            btn.addEventListener('touchstart', pointerStart, { passive: false });
+            group.addEventListener('mousedown',  pointerStart);
+            group.addEventListener('touchstart', pointerStart, { passive: false });
             document.addEventListener('mousemove',  pointerMove);
             document.addEventListener('touchmove',  pointerMove, { passive: false });
             document.addEventListener('mouseup',  pointerEnd);
             document.addEventListener('touchend', pointerEnd);
         }
 
+        function plPositionPanel() {
+            const group = document.getElementById('floatBtnGroup');
+            const panel = document.getElementById('playlistPanel');
+            if (!panel || panel.style.display === 'none') return;
+            const rect  = group.getBoundingClientRect();
+            const gap   = 10;
+            // Always reset conflicting properties first
+            panel.style.left   = 'auto';
+            panel.style.bottom = 'auto';
+            panel.style.right  = (window.innerWidth - rect.left + gap) + 'px';
+            // Clamp top so panel stays within viewport
+            const panelH = panel.offsetHeight || 420;
+            panel.style.top = Math.max(10, Math.min(rect.top, window.innerHeight - panelH - 10)) + 'px';
+        }
+
     </script>
 
 <!-- Playlist Panel -->
-<div id="playlistPanel" class="playlist-panel collapsed" style="display:none">
-    <div class="playlist-header" onclick="plTogglePanel()">
+<div id="playlistPanel" class="playlist-panel" style="display:none">
+    <div class="playlist-header">
         <span>🎬 Playlist 播放列表</span>
         <span class="playlist-count-badge" id="plPanelCount">0</span>
-        <span id="plCollapseIcon" style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:20px;padding:3px 12px;font-size:14px;font-weight:700;letter-spacing:1px;line-height:1.4">▲</span>
+        <button onclick="plTogglePanel()" style="margin-left:auto;background:rgba(255,255,255,0.2);color:#fff;border:none;border-radius:50%;width:26px;height:26px;font-size:15px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center">&times;</button>
     </div>
     <div class="playlist-list" id="plList"></div>
     <div class="playlist-footer">
