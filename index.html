@@ -44,10 +44,15 @@
 @media(max-width:600px){.playlist-panel{width:calc(100vw - 16px);right:8px;bottom:8px}}
 @media(max-height:500px){.pl-fs-controls{padding:5px 16px}.pl-fs-nav-btn{padding:5px 16px;font-size:16px}}
 .pl-fs-controls{display:none;align-items:center;gap:12px;padding:8px 16px;background:#111;flex-shrink:0}
-.pl-fs-nav-btn{background:#2d2d2d;color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:20px;cursor:pointer;transition:background .2s;line-height:1}
+.pl-fs-nav-btn{background:#2d2d2d;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:20px;cursor:pointer;transition:background .2s;line-height:1}
 .pl-fs-nav-btn:hover{background:#4b5563}
 .pl-fs-nav-btn:disabled{opacity:.3;cursor:default}
 .pl-fs-nav-counter{color:#d1d5db;font-size:13px;min-width:60px;text-align:center}
+.vc-btn{background:#2d2d2d;color:#fff;border:none;border-radius:8px;padding:6px 12px;font-size:15px;cursor:pointer;line-height:1;flex-shrink:0;transition:background .2s}
+.vc-btn:hover{background:#4b5563}
+.vc-seek{flex:1;min-width:0;height:4px;accent-color:#3b82f6;cursor:pointer}
+.vc-time{color:#9ca3af;font-size:11px;white-space:nowrap;flex-shrink:0}
+.vc-middle{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;justify-content:center}
 </style>
     <meta name="copyright" content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited.">
     <title>XZ HD Gallery Misc</title>
@@ -1110,7 +1115,7 @@
     
     <img id="modalPhoto" class="modal-photo" alt="Current photo">
     
-    <video id="modalVideo" class="modal-photo hidden" controls playsinline></video>
+    <video id="modalVideo" class="modal-photo hidden" playsinline></video>
     <span id="badgeQuality" class="badge-quality hidden"></span>
     <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
     
@@ -1126,9 +1131,18 @@
 
             <!-- Video control bar (shown when a video is open) -->
             <div class="pl-fs-controls" id="plNavBar">
-                <button class="pl-fs-nav-btn" id="plFsPrev" onclick="navigatePhoto(-1)">‹</button>
-                <span class="pl-fs-nav-counter" id="plFsCounter">1 / 1</span>
-                <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)">›</button>
+                <button class="pl-fs-nav-btn" id="plFsPrev" onclick="navigatePhoto(-1)" title="Previous">‹</button>
+                <button class="vc-btn" id="vcPlayBtn" onclick="vcTogglePlay()">▶</button>
+                <div class="vc-middle">
+                    <input type="range" class="vc-seek" id="vcSeek" value="0" min="0" step="0.1">
+                    <div style="display:flex;justify-content:space-between">
+                        <span class="vc-time" id="vcCurrent">0:00</span>
+                        <span class="vc-time" id="vcDuration">0:00</span>
+                    </div>
+                </div>
+                <button class="vc-btn" id="vcMuteBtn" onclick="vcToggleMute()" title="Mute">🔊</button>
+                <button class="vc-btn" id="vcFsBtn" onclick="vcFullscreen()" title="Fullscreen">⛶</button>
+                <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="Next">›</button>
             </div>
 
 	    <div class="photo-info-panel">
@@ -1404,6 +1418,61 @@
         }
 
 
+        /* ---------- Custom Video Controls ---------- */
+        function vcFmt(s) {
+            if (isNaN(s)) return '0:00';
+            const m = Math.floor(s / 60);
+            return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+        }
+
+        function vcSetup(v) {
+            const seek    = document.getElementById('vcSeek');
+            const playBtn = document.getElementById('vcPlayBtn');
+            const cur     = document.getElementById('vcCurrent');
+            const dur     = document.getElementById('vcDuration');
+            const muteBtn = document.getElementById('vcMuteBtn');
+            if (!seek) return;
+
+            // Reset
+            seek.value = 0; seek._seeking = false;
+            cur.textContent = '0:00'; dur.textContent = '0:00';
+            playBtn.textContent = v.paused ? '▶' : '⏸';
+            muteBtn.textContent = v.muted ? '🔇' : '🔊';
+
+            v.ontimeupdate = () => {
+                if (!seek._seeking) {
+                    seek.value = v.currentTime;
+                    cur.textContent = vcFmt(v.currentTime);
+                }
+            };
+            v.onloadedmetadata = () => {
+                seek.max = v.duration;
+                dur.textContent = vcFmt(v.duration);
+            };
+            v.onplay  = () => { playBtn.textContent = '⏸'; };
+            v.onpause = () => { playBtn.textContent = '▶'; };
+            v.onvolumechange = () => { muteBtn.textContent = v.muted ? '🔇' : '🔊'; };
+
+            seek.oninput  = () => { seek._seeking = true; cur.textContent = vcFmt(parseFloat(seek.value)); };
+            seek.onchange = () => { v.currentTime = parseFloat(seek.value); seek._seeking = false; };
+        }
+
+        function vcTogglePlay() {
+            const v = document.getElementById('modalVideo');
+            v.paused ? v.play() : v.pause();
+        }
+
+        function vcToggleMute() {
+            const v = document.getElementById('modalVideo');
+            v.muted = !v.muted;
+        }
+
+        function vcFullscreen() {
+            const v = document.getElementById('modalVideo');
+            const req = v.requestFullscreen || v.webkitRequestFullscreen || v.webkitEnterFullscreen;
+            if (req) req.call(v).catch(() => {});
+        }
+
         function plToast(msg) {
             const t = document.getElementById('plToast');
             t.textContent = msg; t.style.opacity = '1';
@@ -1470,6 +1539,7 @@ function updateModalContent() {
         videoElement.src = photo.url;
         videoElement.loop = !playlistMode;
         videoElement.onended = playlistMode ? () => navigatePhoto(1) : null;
+        vcSetup(videoElement);
         videoElement.play().catch(e => console.log("Video autoplay prevented"));
     } else {
         if (videoElement) {
@@ -2635,7 +2705,7 @@ function setupFooterToggle() {
     <div class="playlist-header" onclick="plTogglePanel()">
         <span>🎬 Playlist 播放列表</span>
         <span class="playlist-count-badge" id="plPanelCount">0</span>
-        <span style="margin-left:auto;font-size:10px" id="plCollapseIcon">▲</span>
+        <span id="plCollapseIcon" style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:20px;padding:3px 12px;font-size:14px;font-weight:700;letter-spacing:1px;line-height:1.4">▲</span>
     </div>
     <div class="playlist-list" id="plList"></div>
     <div class="playlist-footer">
