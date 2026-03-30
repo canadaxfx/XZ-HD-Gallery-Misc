@@ -13,6 +13,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noai, noimageai">
+<style>
+/* ===== PLAYLIST ===== */
+.playlist-panel{position:fixed;bottom:20px;right:20px;width:300px;max-height:420px;background:#fff;border-radius:12px;box-shadow:0 6px 28px rgba(0,0,0,.22);z-index:1100;display:flex;flex-direction:column;transition:max-height .3s ease}
+.playlist-panel.collapsed{max-height:52px;overflow:hidden}
+.playlist-header{display:flex;align-items:center;gap:8px;padding:12px 14px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:12px 12px 0 0;color:#fff;cursor:pointer;font-size:14px;font-weight:700;flex-shrink:0;user-select:none;letter-spacing:0.2px}
+.playlist-panel.collapsed .playlist-header{border-radius:12px}
+.playlist-count-badge{background:rgba(255,255,255,.25);border-radius:10px;padding:2px 8px;font-size:12px;font-weight:700}
+.playlist-list{overflow-y:auto;flex:1;min-height:0}
+.playlist-item{display:flex;align-items:center;gap:8px;padding:7px 10px;cursor:pointer;border-bottom:1px solid #f3f4f6;font-size:12px}
+.playlist-item:hover{background:#f9fafb}
+.playlist-item.pl-active{background:#eff6ff;border-left:3px solid #2563eb}
+.playlist-item img{width:52px;height:36px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#e5e7eb}
+.playlist-item-info{flex:1;min-width:0}
+.playlist-item-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#374151;font-weight:500}
+.playlist-item-meta{color:#9ca3af;font-size:11px;margin-top:1px}
+.playlist-remove-btn{flex-shrink:0;background:#e5e7eb;border:none;cursor:pointer;color:#6b7280;font-size:14px;font-weight:700;line-height:1;padding:0;width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px}
+.playlist-remove-btn:hover{background:#fecaca;color:#dc2626}
+.playlist-footer{display:flex;gap:6px;padding:8px 10px;border-top:1px solid #e5e7eb;flex-shrink:0}
+.pl-play-btn{flex:1;padding:6px;background:#2563eb;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+.pl-clear-btn{padding:6px 10px;background:#fee2e2;color:#dc2626;border:none;border-radius:6px;cursor:pointer;font-size:12px}
+.pl-card-add{position:absolute;bottom:32px;right:4px;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:4px;padding:2px 6px;font-size:11px;cursor:pointer;opacity:0;transition:opacity .15s;z-index:3;white-space:nowrap}
+.timeline-photo:hover .pl-card-add{opacity:1}
+.pl-card-add.pl-added{background:rgba(37,99,235,.8)}
+@media(hover:none){.pl-card-add{opacity:1}}
+.pl-add-all-btn{display:none;padding:6px 11px;background:#1f2937;color:#fff;border:none;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;margin-top:6px}
+.pl-modal-add-btn{padding:3px 10px;background:rgba(37,99,235,.12);color:#2563eb;border:1px solid #bfdbfe;border-radius:12px;font-size:12px;cursor:pointer;display:none;white-space:nowrap}
+.pl-modal-add-btn:hover{background:#dbeafe}
+.pl-modal-add-btn.pl-in-list{background:rgba(34,197,94,.1);color:#16a34a;border-color:#bbf7d0}
+.pl-fs-btn{padding:3px 10px;background:#374151;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;display:none;transition:background .2s}.pl-fs-btn:hover{background:#1f2937}
+.pl-counter-badge{background:#1f2937;color:#fff;padding:2px 9px;border-radius:10px;font-size:11px;margin-left:5px;display:none}
+#plToast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);background:#1f2937;color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;z-index:9999;pointer-events:none;opacity:0;transition:opacity .3s}
+@media(max-width:600px){.playlist-panel{width:calc(100vw - 16px);right:8px;bottom:8px}}
+@media(max-height:500px){.pl-fs-controls{padding:5px 16px}.pl-fs-nav-btn{padding:5px 16px;font-size:16px}.pl-fs-mode .modal-header{padding:4px 10px}}
+/* Custom fullscreen mode */
+.pl-fs-mode{position:fixed!important;top:0!important;left:0!important;width:100vw!important;height:100vh!important;z-index:9000!important;background:#000!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important}
+.pl-fs-mode .modal-content{width:100vw;max-width:100vw;height:100vh;border-radius:0;background:#000;display:flex;flex-direction:column;box-shadow:none}
+.pl-fs-mode .modal-header{background:#111;border-bottom:1px solid #333;color:#fff}
+.pl-fs-mode .modal-header .photo-counter{color:#93c5fd}
+.pl-fs-mode .modal-header .group-title{color:#f3f4f6}
+.pl-fs-mode .modal-photo-container{flex:1;min-height:0;background:#000}
+.pl-fs-mode #modalVideo{width:100%!important;height:100%!important;max-height:none!important;object-fit:contain;background:#000}
+.pl-fs-mode .thumbnail-strip,.pl-fs-mode .photo-info-panel{display:none!important}
+.pl-fs-mode .nav-arrow{display:none!important}
+.pl-fs-controls{display:none;align-items:center;justify-content:center;gap:16px;padding:10px 16px;background:#111;flex-shrink:0}
+.pl-fs-mode .pl-fs-controls{display:flex}
+.pl-fs-nav-btn{background:#2d2d2d;color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:20px;cursor:pointer;transition:background .2s;line-height:1}
+.pl-fs-nav-btn:hover{background:#4b5563}
+.pl-fs-nav-btn:disabled{opacity:.3;cursor:default}
+.pl-fs-nav-counter{color:#d1d5db;font-size:13px;min-width:60px;text-align:center}
+</style>
     <meta name="copyright" content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited.">
     <title>XZ HD Gallery Misc</title>
     <style>
@@ -216,11 +266,11 @@
         .photo-overlay {
             position: absolute; bottom: 0; left: 0; right: 0;
             background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;
-            padding: 6px 4px 4px; font-size: 11px; font-weight: 600;
+            padding: 2px 4px 4px; font-size: 11px; font-weight: 600;
         }
         .photo-date {
             display: block;
-            margin-bottom: 3px;
+            margin-bottom: 0;
         }
         .photo-source {
             display: block;
@@ -373,23 +423,33 @@
             white-space: nowrap;
         }
 
-        .close-modal { 
-            background: none; border: none; 
-            font-size: 40px; cursor: pointer; 
-            color: #333; padding: 0px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
+        .modal-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
         }
-        
+
+        .close-modal {
+            background: #e5e7eb; border: none;
+            font-size: 18px; font-weight: 700; cursor: pointer;
+            color: #374151; padding: 0;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            line-height: 28px; text-align: center;
+            transition: background 0.2s, color 0.2s;
+            flex-shrink: 0;
+        }
+
         .close-modal:hover {
-            background: #e9ecef;
-            color: #333;
+            background: #d1d5db;
+            color: #000;
         }
 
         .post-text-pill {
             font-size: 11px;
             padding: 3px 10px;
-            margin-right: 20px;
+            margin-right: 0;
             background: #e0e7ff;
             color: #4338ca;
             border-radius: 12px;
@@ -525,16 +585,23 @@
         }
 
         .close-bottom-btn {
-            font-size: 20px !important;
-            color: #000000 !important;
-            width: 30px;
-            height: 30px;
-            background: none !important;
-            border: 2px solid #e0e0e0 !important;
-            border-radius: 50%;
-            padding: 0;
-            margin-left: 10px;
-            line-height: 1;
+            font-size: 22px !important;
+            font-weight: 700 !important;
+            color: #374151 !important;
+            background: #e5e7eb !important;
+            border: none !important;
+            border-radius: 50% !important;
+            padding: 0 !important;
+            width: 36px !important;
+            height: 36px !important;
+            line-height: 36px !important;
+            text-align: center !important;
+            margin-left: 0;
+            flex-shrink: 0;
+        }
+        .close-bottom-btn:hover {
+            background: #d1d5db !important;
+            color: #000 !important;
         }
 
         /* Enhanced Download Section */
@@ -1013,6 +1080,7 @@
 
 	<input type="text" class="search-bar" placeholder="Search by keywords 搜索关键词" id="searchInput">
             <button id="clearSearchBtn" class="btn">Clear Search / 返回</button>
+            <button id="plAddAllBtn" class="pl-add-all-btn" onclick="addAllFilteredVideos()">▶ 加入 <span id="plAddAllCount">0</span> 个视频到播放列表</button>
 
             <div class="timeline-container" id="timelineContainer">
                 <div class="timeline-empty">
@@ -1041,8 +1109,11 @@
             <div class="modal-header">
                 <div class="photo-counter" id="photoCounter">1 of 5</div>
                 <div class="group-title" id="groupTitle">Photo Collection</div>
-                <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
-                <button class="close-modal" onclick="closeModal()">&times;</button>
+                <div class="modal-header-actions">
+                    <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
+                    <button class="pl-fs-btn" id="plFsBtn" onclick="plToggleFullscreen()">⛶ 全屏</button>
+                    <button class="close-modal" onclick="closeModal()" style="margin-right:-6px;">&times;</button>
+                </div>
             </div>
             <div id="postTextPanel" style="display:none;">
                 <p id="postTextContent" style="margin:0;"></p>
@@ -1054,7 +1125,7 @@
     
     <img id="modalPhoto" class="modal-photo" alt="Current photo">
     
-    <video id="modalVideo" class="modal-photo hidden" controls playsinline loop></video>
+    <video id="modalVideo" class="modal-photo hidden" controls playsinline></video>
     <span id="badgeQuality" class="badge-quality hidden"></span>
     <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
     
@@ -1068,25 +1139,32 @@
                 </div>
             </div>
 
+            <!-- Fullscreen bottom controls (hidden normally, shown in fullscreen mode) -->
+            <div class="pl-fs-controls">
+                <button class="pl-fs-nav-btn" id="plFsPrev" onclick="navigatePhoto(-1)">‹</button>
+                <span class="pl-fs-nav-counter" id="plFsCounter">1 / 1</span>
+                <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)">›</button>
+                <div style="flex:1"></div>
+                <button id="plFsRotateInBar" onclick="plToggleOrientation()" title="切换横/竖屏 Rotate" style="display:none;background:#2d2d2d;color:#fff;border:none;border-radius:50%;width:36px;height:36px;font-size:18px;cursor:pointer;line-height:1">⟳</button>
+                <button onclick="plExitFullscreen()" title="退出全屏 Exit Fullscreen" style="background:#4b5563;color:#fff;border:none;border-radius:8px;width:44px;height:36px;font-size:11px;font-weight:700;cursor:pointer;line-height:1;letter-spacing:0.5px">ESC</button>
+            </div>
 
 	    <div class="photo-info-panel">
                 <div id="modalTags" class="modal-tags-container"></div>
 
                 
                 <div class="download-section">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <h4 style="margin: 0; flex-grow: 1; text-align: center;">🔥Download Options & Links</h4>
-                        <button class="close-modal close-bottom-btn" onclick="closeModal()">×</button>
-                 </div>
- 
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;position:relative;">
+                        <button class="pl-modal-add-btn" id="plModalAddBtn2" onclick="plModalToggle()" style="display:none;font-size:13px;padding:5px 16px;">+ 加入播放列表 Add to Playlist</button>
+                        <button class="close-modal close-bottom-btn" onclick="closeModal()" style="position:absolute;right:0;">×</button>
+                    </div>
 
-                  
 <div class="download-actions-row" id="actionButtonsRow">
     <a class="action-btn download-btn" id="downloadBtn" href="#" target="_blank" download>
         ⬇️ Download HD<br>
         <small style="opacity: 1;">下载高清</small>
     </a>
-    
+
     <a class="action-btn weibo-btn" id="weiboLinkBtn" target="_blank">
         📱 View on Platform<br>
         <small style="opacity: 1;">查看原帖</small>
@@ -1212,7 +1290,183 @@
         /* ---------- Enhanced Modal Variables ---------- */
         let currentPhotoGroup = [];
         let currentPhotoIndex = 0;
-        
+
+        /* ---------- Playlist State ---------- */
+        let playlist = [];
+        let playlistMode = false;
+        let filteredVideosCache = [];
+        const PL_KEY = 'xzMiscPlaylist';
+
+        function plLoad() {
+            try { playlist = JSON.parse(localStorage.getItem(PL_KEY) || '[]'); } catch(e) { playlist = []; }
+            plRender();
+        }
+        function plSave() { localStorage.setItem(PL_KEY, JSON.stringify(playlist)); }
+
+        function plCardAdd(id) {
+            const photo = photoData.find(p => p.id === id);
+            if (!photo) return;
+            const already = playlist.some(p => p.id === id);
+            if (already) {
+                playlist = playlist.filter(p => p.id !== id);
+                plSave(); plRender(); plToast('已从播放列表移除');
+            } else {
+                playlist.push(photo);
+                plSave(); plRender(); plToast('已加入播放列表');
+            }
+            const btn = document.getElementById('plcadd-' + id);
+            if (btn) plSyncCardBtn(btn, !already);
+        }
+
+        function plSyncCardBtn(btn, inList) {
+            btn.classList.toggle('pl-added', inList);
+            btn.textContent = inList ? '✓ Playlist' : '＋ Playlist';
+        }
+
+        function addAllFilteredVideos() {
+            let added = 0;
+            filteredVideosCache.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+            plSave(); plRender();
+            plToast(added ? `已加入 ${added} 个视频` : '视频已全在播放列表中');
+        }
+
+        function plRemove(id, e) {
+            e.stopPropagation();
+            playlist = playlist.filter(p => p.id !== id);
+            plSave(); plRender();
+            if (playlistMode) {
+                if (!playlist.length) { closeModal(); return; }
+                currentPhotoGroup = [...playlist];
+                if (currentPhotoIndex >= playlist.length) currentPhotoIndex = playlist.length - 1;
+                updateModalContent(); updateThumbnailsActive(); updateNavigationButtons();
+            }
+        }
+
+        function plClear() {
+            if (!playlist.length) return;
+            if (!confirm('清空播放列表？')) return;
+            playlist = []; plSave(); plRender();
+            if (playlistMode) closeModal();
+        }
+
+        function plRender() {
+            const panel = document.getElementById('playlistPanel');
+            const list  = document.getElementById('plList');
+            const countEl = document.getElementById('plPanelCount');
+            countEl.textContent = playlist.length;
+            if (!playlist.length) { panel.style.display = 'none'; return; }
+            panel.style.display = 'flex';
+            const activeId = playlistMode ? (currentPhotoGroup[currentPhotoIndex] || {}).id : null;
+            list.innerHTML = playlist.map((p, i) => `
+                <div class="playlist-item ${p.id === activeId ? 'pl-active' : ''}" onclick="plPlayItem(${i})">
+                    <img src="${generateThumbnail(p.url, 'm')}" onerror="this.style.display='none'" alt="">
+                    <div class="playlist-item-info">
+                        <div class="playlist-item-title">${p.groupName || p.date}</div>
+                        <div class="playlist-item-meta">${p.date}${p.duration ? ' · ' + fmtDuration(p.duration) : ''}</div>
+                    </div>
+                    <button class="playlist-remove-btn" onclick="plRemove(${p.id}, event)">×</button>
+                </div>`).join('');
+            // sync card "+" buttons
+            document.querySelectorAll('[id^="plcadd-"]').forEach(btn => {
+                const id = parseInt(btn.id.replace('plcadd-', ''));
+                plSyncCardBtn(btn, playlist.some(p => p.id === id));
+            });
+        }
+
+        function plTogglePanel() {
+            const panel = document.getElementById('playlistPanel');
+            const icon  = document.getElementById('plCollapseIcon');
+            panel.classList.toggle('collapsed');
+            icon.textContent = panel.classList.contains('collapsed') ? '▲' : '▼';
+        }
+
+        function plPlayFromStart() {
+            if (!playlist.length) return;
+            document.getElementById('playlistPanel').classList.remove('collapsed');
+            document.getElementById('plCollapseIcon').textContent = '▼';
+            plPlayItem(0);
+        }
+
+        function plPlayItem(index) {
+            playlistMode = true;
+            currentPhotoGroup = [...playlist];
+            currentPhotoIndex = index;
+            document.getElementById('photoModal').classList.remove('hidden');
+            updateModalContent();
+            generateThumbnails();
+            updateNavigationButtons();
+            document.addEventListener('keydown', handleKeyboardNavigation);
+            plRender();
+        }
+
+        function plModalToggle() {
+            const photo = currentPhotoGroup[currentPhotoIndex];
+            if (!photo) return;
+            const inList = playlist.some(p => p.id === photo.id);
+            if (inList) {
+                playlist = playlist.filter(p => p.id !== photo.id);
+                plToast('已从播放列表移除');
+            } else {
+                playlist.push(photo);
+                plToast('已加入播放列表');
+            }
+            plSave(); plRender(); plSyncModalAddBtn(photo);
+        }
+
+        function plSyncModalAddBtn(photo) {
+            const btn = document.getElementById('plModalAddBtn2');
+            if (!btn) return;
+            const inList = playlist.some(p => p.id === photo.id);
+            btn.classList.toggle('pl-in-list', inList);
+            btn.textContent = inList ? '✓ 在播放列表中 In Playlist' : '+ 加入播放列表 Add to Playlist';
+        }
+
+        function plToggleFullscreen() {
+            const modal = document.getElementById('photoModal');
+            modal.classList.add('pl-fs-mode');
+            document.getElementById('plFsBtn').style.display = 'none';
+            if ('ontouchstart' in window) {
+                document.getElementById('plFsRotateInBar').style.display = 'inline-block';
+            }
+        }
+
+        function plExitFullscreen() {
+            const modal = document.getElementById('photoModal');
+            modal.classList.remove('pl-fs-mode');
+            document.getElementById('plFsBtn').style.display = 'inline-block';
+            document.getElementById('plFsRotateInBar').style.display = 'none';
+            try { screen.orientation && screen.orientation.unlock(); } catch(e) {}
+        }
+
+        function plToggleOrientation() {
+            if (!screen.orientation) return;
+            const current = screen.orientation.type;
+            try {
+                if (current.startsWith('portrait')) {
+                    screen.orientation.lock('landscape').catch(() => {});
+                } else {
+                    screen.orientation.lock('portrait').catch(() => {});
+                }
+            } catch(e) {}
+        }
+
+        function plToast(msg) {
+            const t = document.getElementById('plToast');
+            t.textContent = msg; t.style.opacity = '1';
+            clearTimeout(t._tid);
+            t._tid = setTimeout(() => t.style.opacity = '0', 2000);
+        }
+
+        function plUpdateAddAllBtn() {
+            const btn = document.getElementById('plAddAllBtn');
+            const countEl = document.getElementById('plAddAllCount');
+            if (filteredVideosCache.length > 0) {
+                countEl.textContent = filteredVideosCache.length;
+                btn.style.display = 'inline-block';
+            } else {
+                btn.style.display = 'none';
+            }
+        }
 
         /* ---------- Photo Group Management ---------- */
         function getPhotoGroup(photo) {
@@ -1260,11 +1514,14 @@ function updateModalContent() {
         imgElement.classList.add('hidden');
         videoElement.classList.remove('hidden');
         videoElement.src = photo.url;
+        videoElement.loop = !playlistMode;
+        videoElement.onended = playlistMode ? () => navigatePhoto(1) : null;
         videoElement.play().catch(e => console.log("Video autoplay prevented"));
     } else {
         if (videoElement) {
             videoElement.pause();
-            videoElement.src = ""; 
+            videoElement.onended = null;
+            videoElement.src = "";
             videoElement.classList.add('hidden');
         }
         imgElement.classList.remove('hidden');
@@ -1272,7 +1529,29 @@ function updateModalContent() {
     }
 
     // --- 2. UPDATE TEXT & COUNTERS ---
-    counter.textContent = `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
+    const counterText = playlistMode
+        ? `${currentPhotoIndex + 1} / ${currentPhotoGroup.length}`
+        : `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
+    counter.textContent = counterText;
+    const fsCounter = document.getElementById('plFsCounter');
+    if (fsCounter) fsCounter.textContent = counterText;
+    const fsPrev = document.getElementById('plFsPrev');
+    const fsNext = document.getElementById('plFsNext');
+    if (fsPrev) fsPrev.disabled = currentPhotoIndex === 0;
+    if (fsNext) fsNext.disabled = currentPhotoIndex === currentPhotoGroup.length - 1;
+
+    // --- playlist modal button & fullscreen ---
+    const fsBtn = document.getElementById('plFsBtn');
+    if (isVideo) {
+        const b2 = document.getElementById('plModalAddBtn2');
+        if (b2) b2.style.display = 'inline-block';
+        plSyncModalAddBtn(photo);
+        fsBtn.style.display = 'inline-block';
+    } else {
+        const b2 = document.getElementById('plModalAddBtn2');
+        if (b2) b2.style.display = 'none';
+        fsBtn.style.display = 'none';
+    }
     
     title.textContent = photo.date || photo.groupName || 'Photo Collection';
     
@@ -1461,19 +1740,26 @@ function generateThumbnail(originalUrl, size = 'm') {
                     break;
                 case 'Escape':
                     e.preventDefault();
-                    closeModal();
+                    if (document.getElementById('photoModal').classList.contains('pl-fs-mode')) {
+                        plExitFullscreen();
+                    } else {
+                        closeModal();
+                    }
                     break;
             }
         }
 
-function closeModal() { 
+function closeModal() {
     const videoElement = document.getElementById('modalVideo');
     if (videoElement) {
         videoElement.pause();
-        videoElement.src = ""; // Stop buffering the file
+        videoElement.onended = null;
+        videoElement.src = "";
     }
+    plExitFullscreen();
     document.getElementById('photoModal').classList.add('hidden');
     document.removeEventListener('keydown', handleKeyboardNavigation);
+    if (playlistMode) { playlistMode = false; plRender(); }
 }
 
         /* ---------- Source Filter Functions ---------- */
@@ -1567,6 +1853,10 @@ filteredPhotos = photoData.filter(p =>
                 });
             }
 
+            // Track filtered videos for playlist "add all"
+            filteredVideosCache = filteredPhotos.filter(p => isRealVideo(p));
+            plUpdateAddAllBtn();
+
             // 3. Render the timeline with the results
             if (filteredPhotos.length > 0) {
                 const photosByYear = filteredPhotos.reduce((acc, photo) => {
@@ -1608,6 +1898,7 @@ filteredPhotos = photoData.filter(p =>
             setupBackToTop();
             loadPhotoData();
 	    setupFooterToggle();
+            plLoad();
         });
 
         /* ---------- Data Loading ---------- */
@@ -1781,6 +2072,7 @@ async function loadPhotoData() {
                     ${isRealVideo(photo) ? getMediaIcon(photo.url) : ''}
                     ${getDurBadge(photo)}
                     ${getMotionBadge(photo)}
+                    ${isRealVideo(photo) ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})">＋ Playlist</button>` : ''}
                     <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
@@ -2324,5 +2616,21 @@ function setupFooterToggle() {
         }
 
     </script>
+
+<!-- Playlist Panel -->
+<div id="playlistPanel" class="playlist-panel collapsed" style="display:none">
+    <div class="playlist-header" onclick="plTogglePanel()">
+        <span>🎬 Playlist 播放列表</span>
+        <span class="playlist-count-badge" id="plPanelCount">0</span>
+        <span style="margin-left:auto;font-size:10px" id="plCollapseIcon">▲</span>
+    </div>
+    <div class="playlist-list" id="plList"></div>
+    <div class="playlist-footer">
+        <button class="pl-play-btn" onclick="plPlayFromStart()">▶ 播放全部</button>
+        <button class="pl-clear-btn" onclick="plClear()">清空</button>
+    </div>
+</div>
+<div id="plToast"></div>
+
 </body>
 </html>
