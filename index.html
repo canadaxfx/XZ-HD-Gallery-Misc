@@ -268,7 +268,7 @@
             display: block;
             margin-bottom: 0;
         }
-        .photo-source {
+        .photo-tag {
             display: block;
             font-size: 9px;
             opacity: 0.9;
@@ -2127,7 +2127,7 @@ async function loadPhotoData() {
                     <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
-                        <span class="photo-source">${(Array.isArray(photo.source) ? photo.source.join(', ') : photo.source) || photo.note || ''}</span>
+                        <span class="photo-tag">${(Array.isArray(photo.tags) && photo.tags[0]) || ''}</span>
                     </div>
                 </div>
             `}).join('');
