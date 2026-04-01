@@ -1,5 +1,30 @@
 [
     {
+        "id": 257,
+        "url": "https://assets.xz-studio-gallery.com/full/20260326_李宁_XZ-MISC-1.mp4",
+        "date": "2026-03-26",
+        "month": "March",
+        "year": "2026",
+        "tags": [
+            "李宁",
+            "五周年"
+        ],
+        "groupName": "李宁_2026-03-26",
+        "quality": "4k",
+        "duration": 23,
+        "weibo": "https://weibo.com/1716244511/QxQFDbiVq",
+        "sourceType": [
+            "endorsement"
+        ],
+        "source": [
+            "李宁"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "五周年，一起庆祝！拍摄收工，和#李宁品牌全球代言人肖战#@肖战 聊聊下一程——在运动中完成自我的突破在镜头前传递真实的能量五年，是见证，也是新的起点未来，#那就看我的##共赴一切皆有可能的未来# 李宁官方微博的微博视频"
+    },
+    {
         "id": 236,
         "url": "https://assets.xz-studio-gallery.com/full/20260324_NARS_XZ-MISC-1.mp4",
         "date": "2026-03-24",
@@ -5324,7 +5349,8 @@
             "magazine"
         ],
         "source": [
-            "ELLE"
+            "ELLE",
+            "李宁"
         ],
         "datePrecision": "day",
         "note": "",
