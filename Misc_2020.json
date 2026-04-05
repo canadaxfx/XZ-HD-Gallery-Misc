@@ -113,6 +113,31 @@
         "postText": "#剧然还没睡# 听首歌，好好睡一觉，明天依旧光芒万丈哦晚安咯 CCTV电视剧的微博视频"
     },
     {
+        "id": 119,
+        "url": "https://assets.xz-studio-gallery.com/full/20201223_百度娱乐_XZ-MISC-1.mp4",
+        "date": "2020-12-23",
+        "month": "December",
+        "year": "2020",
+        "tags": [
+            "百度娱乐",
+            "明星请回答"
+        ],
+        "groupName": "百度娱乐_2020-12-23",
+        "quality": "1080p",
+        "duration": 68,
+        "weibo": "https://weibo.com/5909962605/JzHsKfk62",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "Ent. Hub"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战2020最大的变化剪了短发#  @X玖少年团肖战DAYTOY 的百度娱乐年度终极问答出炉啦，听说大家想看小赞手机里的最新照片？迎风奔跑，冲进2021，今年肖战也连续称霸百度娱乐榜，蝉联冠军🏆明年大家也要顺顺利利，一起进步更多哦！加油💪#明星请回答2020# 百度娱乐人物的微博视频"
+    },
+    {
         "id": 67,
         "url": "https://assets.xz-studio-gallery.com/full/NdFOtBG.jpeg",
         "date": "2020-12-16",
@@ -666,6 +691,31 @@
         "datePrecision": "day",
         "groupName": "博客天下_2020-05-12",
         "postText": "#肖战[超话]# 【肖战：学会与不同的声音相处】面对网络争议，@X玖少年团肖战DAYTOY  接受《博客天下》杂志专访，谈到自己是如何看待这起事件，经历了什么样的心理过程，以及公众人物该如何承担社会责任等问题。他说：“我们应该学会与不同的声音相处，也尊重每个人正当发言的权利。在成长时接受批评，在困境中释放善意。”对于接下来的工作规划，他更希望能够在事业上深耕，尝试更多样的角色、不同题材的剧作，“认真生活，好好工作”。"
+    },
+    {
+        "id": 120,
+        "url": "https://assets.xz-studio-gallery.com/full/20200510_公益直播_XZ-MISC-1.mp4",
+        "date": "2020-05-10",
+        "month": "May",
+        "year": "2020",
+        "tags": [
+            "公益直播",
+            "人民网",
+            "百度娱乐"
+        ],
+        "groupName": "公益直播_2020-05-10",
+        "duration": 117,
+        "weibo": "https://weibo.com/5909962605/J1k91r9jV",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "其他Other"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战公益直播# @X玖少年团肖战DAYTOY 来人民网直播啦！母亲节当晚，首次尝试直播带货的重庆人肖战为“热干面兄弟”带货，推荐鸭脖，小龙虾，伦晚脐橙，“食“力带货，助力湖北。 百度娱乐人物的微博视频"
     },
     {
         "id": 99,
