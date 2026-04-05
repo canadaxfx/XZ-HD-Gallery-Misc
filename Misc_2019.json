@@ -5524,7 +5524,10 @@
         "date": "2019-08-11",
         "month": "August",
         "year": "2019",
-        "tags": "B站，娱乐圈圈儿",
+        "tags": [
+            "B站",
+            "娱乐圈圈儿"
+        ],
         "groupName": "B站_2019-08-11",
         "duration": 183,
         "weibo": "https://www.bilibili.com/video/av63253971/?share_source=copy_link&ts=1565525669&share_medium=iphone&bbid=857b846520889a650e2ef8ed8ac1e9f0&vd_source=feb8e033e2242387ae13586d99acb2ec",
