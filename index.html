@@ -2059,9 +2059,12 @@ async function loadPhotoData() {
                 return;
             }
 
-            const displayPhotos = currentFilter === 'all' ? 
-                photoData : 
+            const displayPhotos = currentFilter === 'all' ?
+                photoData :
                 photoData.filter(p => (p.sourceType === currentFilter) || (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter)));
+
+            filteredVideosCache = displayPhotos.filter(p => isRealVideo(p));
+            plUpdateAddAllBtn();
 
             const photosByYear = displayPhotos.reduce((acc, photo) => {
                 if (!acc[photo.year]) acc[photo.year] = [];
