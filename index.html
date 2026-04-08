@@ -1888,7 +1888,7 @@ function closeModal() {
         }
 
         function mediaCountLabel(photos) {
-            const videoCount = photos.filter(p => isRealVideo(p)).length;
+            const videoCount = photos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url)).length;
             const photoCount = photos.length - videoCount;
             const parts = [];
             if (photoCount > 0) parts.push(`${photoCount} 📷`);
@@ -1942,9 +1942,9 @@ filteredPhotos = photoData.filter(p =>
 
             // 2. Filter by media type
             if (currentMediaFilter === 'video') {
-                filteredPhotos = filteredPhotos.filter(p => isRealVideo(p));
+                filteredPhotos = filteredPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
             } else if (currentMediaFilter === 'photo') {
-                filteredPhotos = filteredPhotos.filter(p => !isRealVideo(p));
+                filteredPhotos = filteredPhotos.filter(p => !isRealVideo(p) && !isYouTubeUrl(p.url));
             }
 
             // 3. Filter by search query (if one exists)
@@ -1965,7 +1965,7 @@ filteredPhotos = photoData.filter(p =>
             }
 
             // Track filtered videos for playlist "add all"
-            filteredVideosCache = filteredPhotos.filter(p => isRealVideo(p));
+            filteredVideosCache = filteredPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
             plUpdateAddAllBtn();
 
             // 3. Render the timeline with the results
@@ -2103,7 +2103,7 @@ async function loadPhotoData() {
                 photoData :
                 photoData.filter(p => (p.sourceType === currentFilter) || (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter)));
 
-            filteredVideosCache = displayPhotos.filter(p => isRealVideo(p));
+            filteredVideosCache = displayPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
             plUpdateAddAllBtn();
 
             const photosByYear = displayPhotos.reduce((acc, photo) => {
@@ -2179,7 +2179,7 @@ async function loadPhotoData() {
             return '<span style="position:absolute;right:4px;top:4px;background:rgba(0,0,0,0.65);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>';
         }
         function getDurBadge(photo) {
-            if ((!isRealVideo(photo) && !isClip(photo)) || !photo.duration) return '';
+            if ((!isRealVideo(photo) && !isClip(photo) && !isYouTubeUrl(photo.url)) || !photo.duration) return '';
             return '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>';
         }
 
