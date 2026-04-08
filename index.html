@@ -2104,7 +2104,7 @@ async function loadPhotoData() {
                                     </div>
                                 </div>
                                 ${previewHTML}
-                                ${yearVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addYearToPlaylist('${year}')">＋ Add ${yearVideos.length} video${yearVideos.length > 1 ? 's' : ''} to playlist</button>` : ''}
+                                ${yearVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addYearToPlaylist('${year}')">＋ Add ${yearVideos.length} video${yearVideos.length > 1 ? 's' : ''} to playlist · 加入播放列表</button>` : ''}
                             </div>
                         </div>
                         <div class="timeline-year-content">
@@ -2506,7 +2506,7 @@ function loadSourcesView() {
                                     </div>
                                 </div>
                                 ${previewHTML}
-                                ${sourceVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addSourceGroupToPlaylist('${escapedSourceName}')">＋ Add ${sourceVideos.length} video${sourceVideos.length > 1 ? 's' : ''} to playlist</button>` : ''}
+                                ${sourceVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addSourceGroupToPlaylist('${escapedSourceName}')">＋ Add ${sourceVideos.length} video${sourceVideos.length > 1 ? 's' : ''} to playlist · 加入播放列表</button>` : ''}
                             </div>
                         </div>
                         <div class="timeline-year-content">
