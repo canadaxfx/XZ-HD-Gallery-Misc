@@ -697,6 +697,7 @@
             pointer-events: none;
         }
         .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
+        .badge-youtube { position: absolute; bottom: 0px; left: 10px; background: rgba(204, 0, 0, 0.85); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 11; letter-spacing: 0.05em; text-decoration: none; cursor: pointer; }
 	
 	#terms-content {
             background-color: rgba(255,255,255,0.1); border-radius: 10px; margin: 15px auto 0;
@@ -1131,6 +1132,7 @@
     
     <video id="modalVideo" class="modal-photo hidden" playsinline></video>
     <span id="badgeQuality" class="badge-quality hidden"></span>
+    <a id="badgeYT" class="badge-youtube hidden" target="_blank" rel="noopener">YouTube ↗</a>
     <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
     
     <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
@@ -1692,6 +1694,8 @@ function updateModalContent() {
             badgeQuality.classList.remove('is-4k');
         }
     }
+    const badgeYT = document.getElementById('badgeYT');
+    if (badgeYT) { badgeYT.classList.toggle('hidden', !isYT); if (isYT) badgeYT.href = photo.url; }
     if (weiboBtn) {
         if (photo.weibo) {
             const w = photo.weibo.trim();
@@ -1888,7 +1892,7 @@ function closeModal() {
         }
 
         function mediaCountLabel(photos) {
-            const videoCount = photos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url)).length;
+            const videoCount = photos.filter(p => isVideoEntry(p)).length;
             const photoCount = photos.length - videoCount;
             const parts = [];
             if (photoCount > 0) parts.push(`${photoCount} 📷`);
@@ -1916,6 +1920,7 @@ function closeModal() {
         function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
         function isClip(photo) { return photo.clip === true && isVideoUrl(photo.url); }
         function isRealVideo(photo) { return isVideoUrl(photo.url) && !photo.clip; }
+        function isVideoEntry(p) { return isVideoEntry(p); }
         function fmtDuration(secs) {
             if (!secs) return '';
             secs = Math.round(secs);
@@ -1942,9 +1947,9 @@ filteredPhotos = photoData.filter(p =>
 
             // 2. Filter by media type
             if (currentMediaFilter === 'video') {
-                filteredPhotos = filteredPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+                filteredPhotos = filteredPhotos.filter(p => isVideoEntry(p));
             } else if (currentMediaFilter === 'photo') {
-                filteredPhotos = filteredPhotos.filter(p => !isRealVideo(p) && !isYouTubeUrl(p.url));
+                filteredPhotos = filteredPhotos.filter(p => !isVideoEntry(p));
             }
 
             // 3. Filter by search query (if one exists)
@@ -1965,7 +1970,7 @@ filteredPhotos = photoData.filter(p =>
             }
 
             // Track filtered videos for playlist "add all"
-            filteredVideosCache = filteredPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+            filteredVideosCache = filteredPhotos.filter(p => isVideoEntry(p));
             plUpdateAddAllBtn();
 
             // 3. Render the timeline with the results
@@ -2103,7 +2108,7 @@ async function loadPhotoData() {
                 photoData :
                 photoData.filter(p => (p.sourceType === currentFilter) || (Array.isArray(p.sourceType) && p.sourceType.includes(currentFilter)));
 
-            filteredVideosCache = displayPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+            filteredVideosCache = displayPhotos.filter(p => isVideoEntry(p));
             plUpdateAddAllBtn();
 
             const photosByYear = displayPhotos.reduce((acc, photo) => {
@@ -2179,7 +2184,7 @@ async function loadPhotoData() {
             return '<span style="position:absolute;right:4px;top:4px;background:rgba(0,0,0,0.65);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>';
         }
         function getDurBadge(photo) {
-            if ((!isRealVideo(photo) && !isClip(photo) && !isYouTubeUrl(photo.url)) || !photo.duration) return '';
+            if ((!isVideoEntry(photo) && !isClip(photo)) || !photo.duration) return '';
             return '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>';
         }
 
@@ -2188,7 +2193,7 @@ async function loadPhotoData() {
                 const displayDate = photo.datePrecision === 'month' ? photo.date.substring(0, 7) : photo.date;
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
-                    ${(isRealVideo(photo) || isYouTubeUrl(photo.url)) ? getMediaIcon(photo.url) : ''}
+                    ${(isVideoEntry(photo)) ? getMediaIcon(photo.url) : ''}
                     ${getDurBadge(photo)}
                     ${getMotionBadge(photo)}
                     ${isRealVideo(photo) ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})"><b>＋</b> Playlist</button>` : ''}
@@ -2246,9 +2251,9 @@ async function loadPhotoData() {
 
         // 3. Filter by media type
         if (currentMediaFilter === 'video') {
-            yearPhotos = yearPhotos.filter(p => isRealVideo(p));
+            yearPhotos = yearPhotos.filter(p => isVideoEntry(p));
         } else if (currentMediaFilter === 'photo') {
-            yearPhotos = yearPhotos.filter(p => !isRealVideo(p));
+            yearPhotos = yearPhotos.filter(p => !isVideoEntry(p));
         }
 
             // 4. Filter by search query
