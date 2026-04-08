@@ -2188,7 +2188,7 @@ async function loadPhotoData() {
                 const displayDate = photo.datePrecision === 'month' ? photo.date.substring(0, 7) : photo.date;
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
-                    ${isRealVideo(photo) ? getMediaIcon(photo.url) : ''}
+                    ${(isRealVideo(photo) || isYouTubeUrl(photo.url)) ? getMediaIcon(photo.url) : ''}
                     ${getDurBadge(photo)}
                     ${getMotionBadge(photo)}
                     ${isRealVideo(photo) ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})"><b>＋</b> Playlist</button>` : ''}
