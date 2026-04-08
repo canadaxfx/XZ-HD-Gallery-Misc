@@ -59,6 +59,8 @@
 .vc-seek{flex:1;min-width:0;height:5px;accent-color:#fff;cursor:pointer;border-radius:3px}
 .vc-time{color:rgba(255,255,255,0.9);font-size:12px;white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums;font-weight:500}
 .vc-middle{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px;justify-content:center}
+.yr-pl-btn{background:none;border:none;color:rgba(255,255,255,0.75);font-size:10px;cursor:pointer;padding:6px 0 0;font-style:italic;display:block;width:100%;text-align:left}
+.yr-pl-btn:hover{color:#fff;text-decoration:underline}
 </style>
     <meta name="copyright" content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited.">
     <title>XZ HD Gallery Misc</title>
@@ -199,9 +201,9 @@
             margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 15px; 
             overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: white;
         }
-        .timeline-year-header { 
-            background: linear-gradient(45deg, #1F2937, #2D3748); color: white; 
-            padding: 15px 20px; font-size: 16px; font-weight: bold; cursor: pointer; 
+        .timeline-year-header {
+            background: linear-gradient(45deg, #1F2937, #2D3748); color: white;
+            padding: 15px 20px 28px; font-size: 16px; font-weight: bold; cursor: pointer;
             transition: all 0.3s ease; user-select: none; position: relative;
         }
 
@@ -1345,15 +1347,26 @@
         }
 
         function addAllFilteredVideos() {
-            const MAX_VIDEOS = 50;
-            if (filteredVideosCache.length > MAX_VIDEOS) {
-                plToast(`最多只能添加 ${MAX_VIDEOS} 个视频到播放列表 / Max ${MAX_VIDEOS} videos allowed`);
-                return;
-            }
             let added = 0;
             filteredVideosCache.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
             plSave(); plRender();
             plToast(added ? `已加入 ${added} 个视频` : '视频已全在播放列表中');
+        }
+
+        function addYearToPlaylist(year) {
+            const videos = filteredVideosCache.filter(p => String(p.year) === String(year));
+            let added = 0;
+            videos.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+            plSave(); plRender();
+            plToast(added ? `已加入 ${year} 年 ${added} 个视频` : `${year} 年视频已全在播放列表中`);
+        }
+
+        function addSourceGroupToPlaylist(sourceName) {
+            const videos = photoData.filter(p => isRealVideo(p) && (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName));
+            let added = 0;
+            videos.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+            plSave(); plRender();
+            plToast(added ? `已加入 ${added} 个视频` : '该来源视频已全在播放列表中');
         }
 
         function plRemove(id, e) {
@@ -1927,9 +1940,6 @@ filteredPhotos = photoData.filter(p =>
                 if (currentSearchQuery) {
                     const matchedYears = Object.keys(photosByYear).sort((a, b) => b - a);
                     matchedYears.forEach((yr, i) => setTimeout(() => toggleYear(yr), 120 + i * 50));
-                } else {
-                    const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
-                    if (sortedYears.length > 0) setTimeout(() => toggleYear(sortedYears[0]), 120);
                 }
             } else {
                 const emptyMessage = currentSearchQuery ? 
@@ -2065,8 +2075,6 @@ async function loadPhotoData() {
             createTimelineHTML(photosByYear);
             updateStats();
             
-            const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
-            if (sortedYears.length > 0) setTimeout(() => toggleYear(sortedYears[0]), 100);
         }
 
         function createTimelineHTML(photosByYear) {
@@ -2080,6 +2088,7 @@ async function loadPhotoData() {
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
                 
+                const yearVideos = photos.filter(p => isRealVideo(p));
                 return `
                     <div class="timeline-year" data-year="${year}">
                         <div class="timeline-year-header" onclick="toggleYear('${year}')">
@@ -2092,6 +2101,7 @@ async function loadPhotoData() {
                                     </div>
                                 </div>
                                 ${previewHTML}
+                                ${yearVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addYearToPlaylist('${year}')">＋ Add ${yearVideos.length} video${yearVideos.length > 1 ? 's' : ''} to playlist</button>` : ''}
                             </div>
                         </div>
                         <div class="timeline-year-content">
@@ -2479,6 +2489,7 @@ function loadSourcesView() {
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
 
+                const sourceVideos = photos.filter(p => isRealVideo(p));
                 // This structure mimics the .timeline-year structure
                 return `
                     <div class="timeline-year" data-source="${safeId}">
@@ -2492,6 +2503,7 @@ function loadSourcesView() {
                                     </div>
                                 </div>
                                 ${previewHTML}
+                                ${sourceVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addSourceGroupToPlaylist('${escapedSourceName}')">＋ Add ${sourceVideos.length} video${sourceVideos.length > 1 ? 's' : ''} to playlist</button>` : ''}
                             </div>
                         </div>
                         <div class="timeline-year-content">
