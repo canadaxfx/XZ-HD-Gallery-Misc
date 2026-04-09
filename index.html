@@ -2481,9 +2481,9 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
 
             // 2. Filter by media type
             if (currentMediaFilter === 'video') {
-                displayPhotos = displayPhotos.filter(p => isRealVideo(p));
+                displayPhotos = displayPhotos.filter(p => isVideoEntry(p));
             } else if (currentMediaFilter === 'photo') {
-                displayPhotos = displayPhotos.filter(p => !isRealVideo(p));
+                displayPhotos = displayPhotos.filter(p => !isVideoEntry(p));
             }
 
             // 3. Filter by search query
@@ -2536,9 +2536,9 @@ function loadSourcesView() {
             // Apply media filter before grouping by source
             let filteredForSources = photoData;
             if (currentMediaFilter === 'video') {
-                filteredForSources = photoData.filter(p => isRealVideo(p));
+                filteredForSources = photoData.filter(p => isVideoEntry(p));
             } else if (currentMediaFilter === 'photo') {
-                filteredForSources = photoData.filter(p => !isRealVideo(p));
+                filteredForSources = photoData.filter(p => !isVideoEntry(p));
             }
 
             const sourceGroups = filteredForSources.reduce((acc, photo) => {
@@ -2659,9 +2659,9 @@ function loadSourcesView() {
     (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName)
 );
             if (currentMediaFilter === 'video') {
-                sourcePhotos = sourcePhotos.filter(p => isRealVideo(p));
+                sourcePhotos = sourcePhotos.filter(p => isVideoEntry(p));
             } else if (currentMediaFilter === 'photo') {
-                sourcePhotos = sourcePhotos.filter(p => !isRealVideo(p));
+                sourcePhotos = sourcePhotos.filter(p => !isVideoEntry(p));
             }            
             const totalPhotos = sourcePhotos.length;
             const safeId = getSourceSafeId(sourceName);
