@@ -5357,16 +5357,20 @@
     {
         "id": 287,
         "url": "https://www.youtube.com/watch?v=Xpz7jfSKU-s",
-        "date": "2021-02-06",
+        "date": "2021-02-05",
         "month": "February",
         "year": "2021",
-        "tags": [],
-        "groupName": "斗罗大陆_2021-02-06",
-        "weibo": "",
-        "sourceType": [],
-        "source": [],
+        "tags": [
+            "斗罗大陆",
+            "唐三",
+            "发布会"
+        ],
+        "groupName": "斗罗大陆_2021-02-05",
+        "weibo": "https://v.qq.com/x/cover/mzc00200js3mdvw/p0035nypt0c.html?_referrer=https%3A%2F%2Fwww.google.com%2F&ptag=mzhan",
+        "sourceType": [drama],
+        "source": [斗罗大陆],
         "datePrecision": "day",
-        "note": "",
+        "note": null,
         "description": "",
         "postText": "【斗罗大陆 Douluo Continent】发布会全程回顾：肖战吴宣仪热血集结",
         "download_url": "https://canadaxfx.synology.me:8443/20210206-斗罗大陆发布会全程回顾-XZ-MISC-1.mp4"
