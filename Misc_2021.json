@@ -5355,27 +5355,6 @@
         "postText": "【斗罗剧苑】#唐三第一魂技是缠绕# #唐三大战曼陀罗蛇# 唐三和曼陀罗蛇殊死一战，获得百年魂环！蓝银草强化缠绕技能[赞] 今天也是唐三努力变强的一天[打call]@X玖少年团肖战DAYTOY ​​​"
     },
     {
-        "id": 287,
-        "url": "https://www.youtube.com/watch?v=Xpz7jfSKU-s",
-        "date": "2021-02-05",
-        "month": "February",
-        "year": "2021",
-        "tags": [
-            "斗罗大陆",
-            "唐三",
-            "发布会"
-        ],
-        "groupName": "斗罗大陆_2021-02-05",
-        "weibo": "https://v.qq.com/x/cover/mzc00200js3mdvw/p0035nypt0c.html?_referrer=https%3A%2F%2Fwww.google.com%2F&ptag=mzhan",
-        "sourceType": ["drama"],
-        "source": ["斗罗大陆"],
-        "datePrecision": "day",
-        "note": null,
-        "description": "",
-        "postText": "【斗罗大陆 Douluo Continent】发布会全程回顾：肖战吴宣仪热血集结",
-        "download_url": "https://canadaxfx.synology.me:8443/20210206-斗罗大陆发布会全程回顾-XZ-MISC-1.mp4"
-    },
-    {
         "id": 5,
         "url": "https://assets.xz-studio-gallery.com/full/LzmUCBj.jpeg",
         "date": "2021-02-05",
@@ -5513,6 +5492,54 @@
         "description": "",
         "postText": "#电视剧斗罗大陆开播# #斗罗大陆青春无畏预告# 青春学苑，天才集结，热血逍遥游！斗罗全员已登陆，快来和小伙伴们一起来周游武魂世界吧～2月5日起，腾讯视频同步CCTV-8播出，@CCTV电视剧 @腾讯视频 敬请期待 领衔主演：@X玖少年团肖战DAYTOY @吴宣仪_Betty特邀主演：@辰亦儒 @演員邱心志 @钟镇涛 特邀出演：@朱珠ZhuZhu @高泰宇GTY 联合主演：@黄灿灿acan @刘美彤 @Liurn刘润南 @丁笑滢 @敖子逸原著：@唐家三少 编剧：@王倦 导演：杨振宇@杨子1008 艺术总监：孙立 造型指导：陈同勋 由@企鹅影视 @新丽电视 @炫世唐门 @北京大神圈文化科技有限公司 出品《斗罗大陆》青春无畏版预告 肖战吴宣仪天才集结冒险启程",
         "duration": 101
+    },
+    {
+        "id": 287,
+        "url": "https://www.youtube.com/watch?v=Xpz7jfSKU-s",
+        "date": "2021-02-05",
+        "month": "February",
+        "year": "2021",
+        "tags": [
+            "斗罗大陆",
+            "唐三",
+            "发布会"
+        ],
+        "groupName": "斗罗大陆_2021-02-05",
+        "weibo": "https://v.qq.com/x/cover/mzc00200js3mdvw/p0035nypt0c.html?_referrer=https%3A%2F%2Fwww.google.com%2F&ptag=mzhan",
+        "sourceType": [
+            "drama"
+        ],
+        "source": [
+            "斗罗大陆"
+        ],
+        "datePrecision": "day",
+        "note": null,
+        "description": "",
+        "postText": "【斗罗大陆 Douluo Continent】发布会全程回顾：肖战吴宣仪热血集结",
+        "download_url": "https://canadaxfx.synology.me:8443/20210206-斗罗大陆发布会全程回顾-XZ-MISC-1.mp4"
+    },
+    {
+        "id": 288,
+        "url": "https://assets.xz-studio-gallery.com/full/20210205_斗罗大陆_XZ-MISC-1.mp4",
+        "date": "2021-02-05",
+        "month": "February",
+        "year": "2021",
+        "tags": [
+            "斗罗大陆",
+            "入戏",
+            "专访"
+        ],
+        "groupName": "斗罗大陆_2021-02-05",
+        "duration": 425,
+        "weibo": "https://v.qq.com/x/cover/6q6xn0f30eicfg6/r0036a22qxr.html",
+        "sourceType": [
+            "drama"
+        ],
+        "source": [],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "【入戏】 肖战：拍《斗罗大陆》压力特别大，各种声音我都愿意接受"
     },
     {
         "id": 4,
