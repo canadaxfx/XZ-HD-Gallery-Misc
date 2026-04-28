@@ -108,7 +108,7 @@
             font-size: 0.72em;
             font-weight: 700;
             font-style: normal;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(220, 170, 20, 0.9);
         }
         .subtitle { font-size: 0.8rem; opacity: 1; }
         .header-links-section {
@@ -244,6 +244,12 @@
             color: rgba(255,255,255,0.9); border-bottom-color: rgba(220,170,20,0.45);
             transform: none; box-shadow: none;
         }
+        nav.nav-buttons .tab-en { display: block; color: rgba(255,255,255,0.9); font-weight: 600; font-size: 13px; }
+        nav.nav-buttons .tab-zh { display: block; color: rgba(220,170,20,0.75); font-weight: 500; font-size: 11px; }
+        nav.nav-buttons .nav-btn:not(.active) .tab-en { color: rgba(255,255,255,0.45); }
+        nav.nav-buttons .nav-btn:not(.active) .tab-zh { color: rgba(220,170,20,0.3); }
+        nav.nav-buttons .nav-btn:hover .tab-en { color: rgba(255,255,255,0.9); }
+        nav.nav-buttons .nav-btn:hover .tab-zh { color: rgba(220,170,20,0.65); }
         .content-section {
             background: rgba(253, 245, 240, 0.98); border-radius: 20px; padding: 10px;
             box-shadow: 0 1px 2px rgba(48, 8, 16, 0.1), 0 12px 32px -8px rgba(48, 8, 16, 0.28); backdrop-filter: blur(10px);
@@ -1232,8 +1238,8 @@
 
 
         <nav class="nav-buttons">
-            <button class="nav-btn active" data-section="gallery">Photo Timeline<br>时间线相册</button>
-            <button class="nav-btn" data-section="sources">By Source<br>按来源分类</button>
+            <button class="nav-btn active" data-section="gallery"><span class="tab-en">Photo Timeline</span><span class="tab-zh">时间线相册</span></button>
+            <button class="nav-btn" data-section="sources"><span class="tab-en">By Source</span><span class="tab-zh">按来源分类</span></button>
         </nav>
         <!-- Source Filter Chips -->
 
