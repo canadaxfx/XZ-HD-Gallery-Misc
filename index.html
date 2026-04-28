@@ -127,7 +127,7 @@
         --surface-m: #f2ebfc; --surface-d: #ece0f5; --border: #d0c0e8;
       }
       #themeSwitcher {
-        position: fixed; top: 14px; right: 16px; z-index: 9000;
+        position: fixed; top: 6px; right: 8px; z-index: 9000;
         display: flex; gap: 6px; align-items: center;
         padding: 5px 8px; border-radius: 20px;
         background: rgba(0,0,0,0.35); backdrop-filter: blur(8px);
@@ -422,7 +422,7 @@
             margin: 0 auto 15px; 
         }
         .stat-card {
-            background: linear-gradient(135deg, #420d18 0%, #300810 100%);
+            background: linear-gradient(135deg, var(--bg-mid) 0%, var(--bg-dark) 100%);
             color: white;
             padding: 8px 8px;
             border-radius: 15px;
@@ -996,7 +996,7 @@
         .float-btn {
             width: 58px; height: 58px; border-radius: 50%;
             border: 2px solid rgba(var(--red-rgb), 0.6);
-            background: #380a14; color: var(--gold);
+            background: var(--bg-float); color: var(--gold);
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
             cursor: pointer; box-shadow: 0 4px 18px rgba(0,0,0,0.15);
