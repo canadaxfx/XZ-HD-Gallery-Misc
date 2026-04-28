@@ -180,7 +180,7 @@
             .header-link-card { padding: 6px 11px 6px 10px; }
             .card-en { font-size: 11px; }
         }
-        .nav-buttons { display: flex; justify-content: center; gap: 15px; margin: 5px 0 10px; }
+        .nav-buttons { display: flex; justify-content: center; gap: 0; margin: 5px 0 12px; border-bottom: 1px solid rgba(220,170,20,0.18); }
         .media-filter-tabs {
             display: flex;
             justify-content: center;
@@ -217,7 +217,7 @@
         .filter-divider::before, .filter-divider::after { content: ''; flex: 1; height: 1px; background: #e0e8f0; }
         .filter-divider span { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa5b4; white-space: nowrap; }
         .nav-btn, .btn {
-            padding: 15px 15px; border: none; border-radius: 25px; cursor: pointer;
+            padding: 10px 15px; border: none; border-radius: 25px; cursor: pointer;
             font-size: 13px; font-weight: 600; transition: all 0.3s ease;
             text-decoration: none; display: inline-block;
         }
@@ -229,6 +229,21 @@
         }
         .nav-btn:not(.active) { background: transparent; color: rgba(255, 255, 255, 0.65); border-color: transparent; }
         .nav-btn:hover { color: white; transform: translateY(-1px); border-color: rgba(255, 255, 255, 0.5); box-shadow: none; }
+        /* Underline tab style — scoped to main nav only */
+        nav.nav-buttons .nav-btn {
+            border-radius: 0; border: none; border-bottom: 2px solid transparent;
+            margin-bottom: -1px; padding: 10px 32px 12px;
+            color: rgba(255,255,255,0.55); text-align: center; line-height: 1.35;
+            transition: color 0.25s ease, border-color 0.25s ease; background: transparent;
+        }
+        nav.nav-buttons .nav-btn.active {
+            color: white; border-bottom: 2px solid rgba(220,170,20,1);
+            background: transparent; box-shadow: none; transform: none;
+        }
+        nav.nav-buttons .nav-btn:hover {
+            color: rgba(255,255,255,0.9); border-bottom-color: rgba(220,170,20,0.45);
+            transform: none; box-shadow: none;
+        }
         .content-section {
             background: rgba(253, 245, 240, 0.98); border-radius: 20px; padding: 10px;
             box-shadow: 0 1px 2px rgba(48, 8, 16, 0.1), 0 12px 32px -8px rgba(48, 8, 16, 0.28); backdrop-filter: blur(10px);
@@ -910,7 +925,7 @@
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .container { padding: 10px; }
-            .nav-btn { padding: 12px 12px; font-size: 11px; }
+            nav.nav-buttons .nav-btn { padding: 8px 18px 10px; font-size: 11px; }
             .year-photos-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
             .stats-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
             .source-filters { padding: 0 10px; }
