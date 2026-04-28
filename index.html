@@ -424,6 +424,19 @@
         }
         #sources-section .year-title {
             font-size: 16px;
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+        }
+        #sources-section .year-header-top > div {
+            gap: 5px;
+            flex-shrink: 0;
+        }
+        #sources-section .timeline-year-count {
+            padding: 4px 8px;
         }
         .gallery-id-badge {
             font-size: 9px;
