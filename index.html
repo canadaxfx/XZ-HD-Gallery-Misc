@@ -2494,11 +2494,9 @@ filteredPhotos = photoData.filter(p =>
                     return acc;
                 }, {});
                 createTimelineHTML(photosByYear);
-                // When searching, auto-expand all matched years so results are visible
-                if (currentSearchQuery) {
-                    const matchedYears = Object.keys(photosByYear).sort((a, b) => b - a);
-                    matchedYears.forEach((yr, i) => setTimeout(() => toggleYear(yr), 120 + i * 50));
-                }
+                // Auto-expand the latest year so results are visible immediately
+                const firstYear = Object.keys(photosByYear).sort((a, b) => b - a)[0];
+                if (firstYear && !expandedYears.has(firstYear)) toggleYear(firstYear);
             } else {
                 const emptyMessage = currentSearchQuery ? 
                     `<h3>No items found</h3><p>No results for "${currentSearchQuery}".</p>` :
