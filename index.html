@@ -2378,6 +2378,8 @@ function closeModal() {
 
         function setMediaFilter(type) {
             currentMediaFilter = type;
+            expandedYears.clear();
+            yearPaginationSettings = {};
             document.querySelectorAll('.media-tab').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.media === type);
             });
@@ -2494,9 +2496,6 @@ filteredPhotos = photoData.filter(p =>
                     return acc;
                 }, {});
                 createTimelineHTML(photosByYear);
-                // Auto-expand the latest year so results are visible immediately
-                const firstYear = Object.keys(photosByYear).sort((a, b) => b - a)[0];
-                if (firstYear && !expandedYears.has(firstYear)) toggleYear(firstYear);
             } else {
                 const emptyMessage = currentSearchQuery ? 
                     `<h3>No items found</h3><p>No results for "${currentSearchQuery}".</p>` :
@@ -2730,7 +2729,8 @@ async function loadPhotoData() {
                 if (!yearPaginationSettings[year]) {
                     yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
                 }
-                document.getElementById(`per-page-${year}`).value = 
+                const perPageSelect = document.getElementById(`per-page-${year}`);
+                if (perPageSelect) perPageSelect.value =
                     yearPaginationSettings[year].perPage === Infinity ? 'all' : yearPaginationSettings[year].perPage;
                 renderYearPage(year);
             } else {
