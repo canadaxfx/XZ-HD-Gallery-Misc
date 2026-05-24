@@ -2644,7 +2644,6 @@
             "小问答"
         ],
         "groupName": "618沸腾之夜小问答_2021-05-31",
-        "quality": "1080p",
         "duration": 51,
         "weibo": "https://weibo.com/1779837945/Ki0sRFmZc",
         "sourceType": [
@@ -6199,7 +6198,6 @@
             "斗罗大陆"
         ],
         "groupName": "斗罗大陆_2021-02-20",
-        "quality": "1080p",
         "duration": 81,
         "weibo": "https://weibo.com/6479255096/K2PI9F6KV",
         "sourceType": [
@@ -6721,7 +6719,6 @@
             "快问快答"
         ],
         "groupName": "斗罗大陆_2021-02-16",
-        "quality": "1080p",
         "duration": 48,
         "weibo": "https://weibo.com/6479255096/K2embqAM8",
         "sourceType": [
@@ -8567,7 +8564,8 @@
             "drama",
             "fantasy drama",
             "soul land"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 287,
