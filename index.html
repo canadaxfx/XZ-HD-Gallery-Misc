@@ -2480,6 +2480,7 @@ filteredPhotos = photoData.filter(p =>
 			   (Array.isArray(p.sourceType) && p.sourceType.some(t => t.toLowerCase().includes(query))) ||
                            (tagsString.includes(query)) ||
                            (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
+                           (p.description && p.description.toLowerCase().includes(query)) ||
                            (p.postText && p.postText.toLowerCase().includes(query));
                 });
             }
