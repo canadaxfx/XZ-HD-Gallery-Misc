@@ -295,7 +295,7 @@
             "新年祝福"
         ],
         "groupName": "百度娱乐_2025-12-31",
-        "quality": "4k",
+        "quality": "1080p",
         "duration": 15,
         "weibo": "https://weibo.com/5909962605/QkVqTz41g",
         "sourceType": [
@@ -428,7 +428,6 @@
             "互动"
         ],
         "groupName": "狐厂大拷问_2025-12-27",
-        "quality": "1080p",
         "duration": 179,
         "weibo": "https://weibo.com/6525010965/QkkOw2qbr",
         "sourceType": [
@@ -10109,7 +10108,6 @@
         "datePrecision": "day",
         "weibo": "https://weibo.com/1767910704/PFV0BmlVn",
         "postText": "#偶遇肖战看舞台剧#昨晚，@肖战 现身上海文化广场观看舞台剧《千与千寻》。戴黑色口罩、帽子，穿休闲服，虽然低调入场，但“手长腿长”掩盖不了一点。 ​​​",
-        "quality": "1080p",
         "duration": 14,
         "englishTags": [
             "spirited away",
@@ -17789,7 +17787,7 @@
         "datePrecision": "day",
         "weibo": "https://weibo.com/6188026492/PrUU8zh25",
         "postText": "和#肖战NARS全球品牌代言人#@X玖少年团肖战DAYTOY 一起收藏浪漫极光！ \n#NARS大白饼#「欧若拉」¹限定版，定格光和色彩的浪漫流动，予你独一无二的灵动美学。 http://t.cn/A6g5jUOQ ​​​",
-        "quality": "4k",
+        "quality": "1080p",
         "duration": 14,
         "englishTags": [
             "nars",
@@ -19526,7 +19524,7 @@
             "采访"
         ],
         "groupName": "包先生_2025-03-04",
-        "quality": "4k",
+        "quality": "1080p",
         "duration": 184,
         "weibo": "https://weibo.com/2796274002/PgXW6ED4P",
         "sourceType": [
@@ -21908,7 +21906,8 @@
             "martial arts film",
             "douyin film bureau",
             "xu ke"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 722,
