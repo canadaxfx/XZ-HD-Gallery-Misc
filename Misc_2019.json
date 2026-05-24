@@ -80,7 +80,6 @@
             "一切为了大庆"
         ],
         "groupName": "庆余年_2019-12-26",
-        "quality": "1080p",
         "weibo": "https://weibo.com/6539310882/Imw9l1vgq",
         "sourceType": [
             "drama",
@@ -152,7 +151,6 @@
             "专访"
         ],
         "groupName": "VOGUEplus_2019-12-25",
-        "quality": "1080p",
         "duration": 76,
         "weibo": "https://weibo.com/5861669187/ImmSmvBje",
         "sourceType": [
@@ -186,7 +184,6 @@
             "沙宣"
         ],
         "groupName": "VOGUEplus_2019-12-24",
-        "quality": "1080p",
         "duration": 157,
         "weibo": "https://weibo.com/5861669187/Imf4aiKjM",
         "sourceType": [
@@ -739,7 +736,6 @@
             "采访"
         ],
         "groupName": "VOGUEplus_2019-12-06",
-        "quality": "1080p",
         "duration": 12,
         "weibo": "https://weibo.com/5861669187/Ijykfp2mL",
         "sourceType": [
@@ -1345,7 +1341,6 @@
             "BAZAAR明星慈善夜"
         ],
         "groupName": "时尚芭莎_2019-11-10",
-        "quality": "1080p",
         "duration": 11,
         "weibo": "https://weibo.com/1708288824/Ifyp8vwCs",
         "sourceType": [
@@ -2447,7 +2442,6 @@
             "预告"
         ],
         "groupName": "慢游旅行家_2019-10-11",
-        "quality": "1080p",
         "duration": 15,
         "weibo": "https://weibo.com/6470719555/Ib28xzkNw",
         "sourceType": [
@@ -2514,7 +2508,6 @@
             "MadameFigaro"
         ],
         "groupName": "MadameFigaro_2019-10-08",
-        "quality": "1080p",
         "duration": 13,
         "weibo": "https://weibo.com/5747209783/Iavxa1EYT",
         "sourceType": [
@@ -5084,7 +5077,8 @@
             "jade dynasty behind the scenes",
             "xiao zhan weight gain",
             "xiao zhan diet"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 354,
@@ -8123,7 +8117,8 @@
             "xiao zhan b zhan",
             "entertainment circle b station",
             "xiao zhan perspective"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 382,
