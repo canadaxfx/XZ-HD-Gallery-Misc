@@ -2281,6 +2281,37 @@
         ]
     },
     {
+        "id": 401,
+        "url": "https://assets.xz-studio-gallery.com/full/20191010_诛仙_XZ-MISC-1.mp4",
+        "date": "2019-10-10",
+        "month": "September",
+        "year": "2019",
+        "tags": [
+            "诛仙",
+            "抖音",
+            "采访"
+        ],
+        "groupName": "诛仙_2019-09-15",
+        "duration": 266,
+        "weibo": "https://www.douyin.com/video/6746371597852036359",
+        "sourceType": [
+            "drama"
+        ],
+        "source": [
+            "诛仙"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战 小飞侠们要的专访全程来啦～你们最喜欢哪个梗？ #抖音大明星",
+        "englishTags": [
+            "jade dynasty",
+            "douyin",
+            "interview"
+        ],
+        "quality": "1080p"
+    },
+    {
         "id": 305,
         "url": "https://assets.xz-studio-gallery.com/full/20191009_慢游旅行家_XZ-MISC-1.mp4",
         "date": "2019-10-09",
@@ -4696,37 +4727,6 @@
         ]
     },
     {
-        "id": 401,
-        "url": "https://assets.xz-studio-gallery.com/full/20191010_诛仙_XZ-MISC-1.mp4",
-        "date": "2019-10-10",
-        "month": "September",
-        "year": "2019",
-        "tags": [
-            "诛仙",
-            "抖音",
-            "采访"
-        ],
-        "groupName": "诛仙_2019-09-15",
-        "duration": 266,
-        "weibo": "https://www.douyin.com/video/6746371597852036359",
-        "sourceType": [
-            "drama"
-        ],
-        "source": [
-            "诛仙"
-        ],
-        "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "#肖战 小飞侠们要的专访全程来啦～你们最喜欢哪个梗？ #抖音大明星",
-        "englishTags": [
-            "jade dynasty",
-            "douyin",
-            "interview"
-        ],
-        "quality": "1080p"
-    },
-    {
         "id": 354,
         "url": "https://assets.xz-studio-gallery.com/full/20190914_诛仙_XZ-MISC-1.mp4",
         "date": "2019-09-14",
@@ -6408,6 +6408,68 @@
             "endorsement",
             "magazine",
             "body lotion"
+        ]
+    },
+    {
+        "id": 402,
+        "url": "https://assets.xz-studio-gallery.com/full/20190818_新闻当事人_XZ-MISC-1.mp4",
+        "date": "2019-08-18",
+        "month": "August",
+        "year": "2019",
+        "tags": [
+            "新闻当事人",
+            "芒果TV",
+            "采访"
+        ],
+        "groupName": "新闻当事人_2019-08-18",
+        "duration": 928,
+        "weibo": "https://www.mgtv.com/b/327226/6215214.html",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "Ent. Hub"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "新闻当事人20190818期：肖战 少年派的奋斗青春",
+        "englishTags": [
+            "news interview",
+            "mango tv",
+            "the untamed",
+            "youth"
+        ]
+    },
+    {
+        "id": 403,
+        "url": "https://assets.xz-studio-gallery.com/full/20190818_新闻当事人_XZ-MISC-2.mp4",
+        "date": "2019-08-18",
+        "month": "August",
+        "year": "2019",
+        "tags": [
+            "新闻当事人",
+            "芒果TV",
+            "采访"
+        ],
+        "groupName": "新闻当事人_2019-08-18",
+        "duration": 109,
+        "weibo": "https://w.mgtv.com/b/327361/6312141.html",
+        "sourceType": [
+            "other"
+        ],
+        "source": [
+            "Ent. Hub"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "肖战《新闻当事人》未播花絮：当肖战遇见张小凡",
+        "englishTags": [
+            "news interview",
+            "mango tv",
+            "the untamed",
+            "behind the scenes"
         ]
     },
     {
