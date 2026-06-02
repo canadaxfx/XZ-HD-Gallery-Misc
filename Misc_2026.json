@@ -8,6 +8,7 @@
         "tags": [
             "得闲谨制",
             "央视新闻",
+            "新华社",
             "亚洲艺术电影节",
             "澳门",
             "采访"
@@ -30,7 +31,10 @@
             "lan xiaolong",
             "kong sheng"
         ],
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20260530_得闲谨制_XZ-MISC-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20260530_得闲谨制_XZ-MISC-1.mp4",
+        "platform_links": {
+            "weibo": "https://weibo.com/1699432410/R1NR69kiS"
+        }
     },
     {
         "id": 494,
