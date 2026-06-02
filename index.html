@@ -1242,8 +1242,13 @@
             .src-pill { font-size: 10px; padding: 2px 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; max-width: none; color: var(--bg-dark); opacity: 1; }
             .src-pill-more { grid-column: 1 / -1; font-size: 10px; padding: 2px 4px; width: fit-content; }
             .source-chip { padding: 7px 8px; flex-direction: row; gap: 4px; justify-content: center; }
-            .chip-en { font-size: 11px; }
-            .chip-zh { font-size: 10px; margin-top: 0; }
+            .chip-en { font-size: 11px; white-space: nowrap; }
+            .chip-zh { font-size: 10px; margin-top: 0; white-space: nowrap; }
+        }
+        @media (max-width: 380px) {
+            .chip-en { font-size: 9px; }
+            .chip-zh { font-size: 8px; }
+            .source-chip { padding: 6px 4px; gap: 3px; }
              #floatBtnGroup { right: 8px; } .float-btn { width:50px; height:50px; font-size:18px; }
             /* Mobile Modal Optimizations */
             .modal {
