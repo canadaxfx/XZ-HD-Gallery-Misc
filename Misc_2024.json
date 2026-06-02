@@ -540,9 +540,9 @@
     },
     {
         "id": 269,
-        "url": "https://assets.xz-studio-gallery.com/full/20241201_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20241201_欧莱雅PRO_XZ.mp4",
         "date": "2024-12-01",
-        "month": "November",
+        "month": "December",
         "year": "2024",
         "sourceType": [
             "endorsement"
@@ -551,8 +551,8 @@
             "欧莱雅PRO"
         ],
         "tags": [
-            "专辑我们",
-            "欧莱雅PRO"
+            "欧莱雅PRO",
+            "专辑我们"
         ],
         "groupName": "欧莱雅PRO_2024-12-01",
         "datePrecision": "day",
@@ -598,17 +598,18 @@
     },
     {
         "id": 268,
-        "url": "https://assets.xz-studio-gallery.com/full/20241110_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20241110_拉夫劳伦_XZ.mp4",
         "date": "2024-11-10",
         "month": "November",
         "year": "2024",
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "澳洲檀木"
         ],
         "weibo": "https://weibo.com/7545734809/OFCrgEYxv",
         "groupName": "拉夫劳伦香氛RalphLauren_2024-11-10",
-        "note": "",
         "sourceType": [
             "endorsement"
         ],
@@ -1003,11 +1004,11 @@
         "month": "October",
         "year": "2024",
         "tags": [
-            "宝诗龙Boucheron",
+            "宝诗龙",
+            "Boucheron",
             "搜狐时尚"
         ],
         "groupName": "宝诗龙_2024-10-18",
-        "quality": "2k",
         "duration": 86,
         "weibo": "https://weibo.com/3180303821/OC80p3eK3",
         "sourceType": [
@@ -1017,8 +1018,6 @@
             "宝诗龙Boucheron"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "#sohufashion·原创报道# 你们期待的搜狐时尚@X玖少年团肖战DAYTOY 专访视频这不就来了！亮相Boucheron宝诗龙全新高级珠宝发布活动现场的他，对于他所佩戴的这枚胸针也是娓娓道来，原来这枚胸针还可以当作发饰使用，真是太惊艳了！此外，肖战还与我们分享了他工作之余喜欢干什么，原来 #肖战喜欢逛胡同#妥妥的胡同爱好者一枚呀！ 搜狐时尚的微博视频",
         "englishTags": [
             "boucheron",
@@ -1031,7 +1030,7 @@
     },
     {
         "id": 253,
-        "url": "https://assets.xz-studio-gallery.com/full/20241015_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20241015_欧莱雅PRO_XZ.mp4",
         "date": "2024-10-15",
         "month": "October",
         "year": "2024",
@@ -1065,12 +1064,13 @@
         "month": "October",
         "year": "2024",
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "澳洲檀木"
         ],
         "weibo": "https://weibo.com/7545734809/OBkbCaVMv",
         "groupName": "拉夫劳伦香氛RalphLauren_2024-10",
-        "note": "",
         "sourceType": [
             "endorsement"
         ],
@@ -1508,7 +1508,7 @@
     },
     {
         "id": 236,
-        "url": "https://assets.xz-studio-gallery.com/full/20241007_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20241007_欧莱雅PRO_XZ.mp4",
         "date": "2024-10-07",
         "month": "October",
         "year": "2024",
@@ -1600,7 +1600,7 @@
     },
     {
         "id": 235,
-        "url": "https://assets.xz-studio-gallery.com/full/20241005_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20241005_欧莱雅PRO_XZ.mp4",
         "date": "2024-10-05",
         "month": "October",
         "year": "2024",
@@ -2582,7 +2582,7 @@
     },
     {
         "id": 204,
-        "url": "https://assets.xz-studio-gallery.com/full/20240915_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240915_欧莱雅PRO_XZ.mp4",
         "date": "2024-09-15",
         "month": "September",
         "year": "2024",
@@ -2812,7 +2812,7 @@
     },
     {
         "id": 195,
-        "url": "https://assets.xz-studio-gallery.com/full/20240827_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240827_拉夫劳伦_XZ.mp4",
         "date": "2024-08-27",
         "month": "August",
         "year": "2024",
@@ -2823,13 +2823,14 @@
             "拉夫劳伦香氛RalphLauren"
         ],
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "地球普罗旺斯鼠尾草"
         ],
         "groupName": "拉夫劳伦香氛RalphLauren_2024-08",
         "datePrecision": "day",
         "weibo": "https://weibo.com/7545734809/Oub3W4UGj",
-        "note": "",
         "postText": "假日漫想！向往一场南法普罗旺斯之旅？\n跟随镜头，对话拉夫劳伦香氛全球代言人@肖战 呼吸#拉夫劳伦地球普罗旺斯鼠尾草# 的花香草韵，共享悠然闲适的南法假日。\n#拉夫劳伦香氛# #肖战拉夫劳伦香氛全球代言人# http://t.cn/A6RfYUVT  ​​​",
         "quality": "1080p",
         "duration": 15,
@@ -2843,7 +2844,7 @@
     },
     {
         "id": 194,
-        "url": "https://assets.xz-studio-gallery.com/full/20240826_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240826_拉夫劳伦_XZ.mp4",
         "date": "2024-08-26",
         "month": "August",
         "year": "2024",
@@ -2854,7 +2855,9 @@
             "拉夫劳伦香氛RalphLauren"
         ],
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "地球普罗旺斯鼠尾草"
         ],
         "groupName": "拉夫劳伦香氛RalphLauren_2024-08",
@@ -2873,7 +2876,7 @@
     },
     {
         "id": 193,
-        "url": "https://assets.xz-studio-gallery.com/full/20240825_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240825_拉夫劳伦_XZ.mp4",
         "date": "2024-08-25",
         "month": "August",
         "year": "2024",
@@ -2884,7 +2887,9 @@
             "拉夫劳伦香氛RalphLauren"
         ],
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "地球普罗旺斯鼠尾草"
         ],
         "groupName": "拉夫劳伦香氛RalphLauren_2024-08",
@@ -2903,7 +2908,7 @@
     },
     {
         "id": 192,
-        "url": "https://assets.xz-studio-gallery.com/full/20240823_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240823_欧莱雅PRO_XZ.mp4",
         "date": "2024-08-23",
         "month": "August",
         "year": "2024",
@@ -3896,7 +3901,7 @@
     },
     {
         "id": 168,
-        "url": "https://assets.xz-studio-gallery.com/full/20240717_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240717_欧莱雅PRO_XZ.mp4",
         "date": "2024-07-17",
         "month": "July",
         "year": "2024",
@@ -4291,7 +4296,7 @@
     },
     {
         "id": 153,
-        "url": "https://assets.xz-studio-gallery.com/full/20240524_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240524_欧莱雅PRO_XZ.mp4",
         "date": "2024-05-24",
         "month": "May",
         "year": "2024",
@@ -4517,7 +4522,7 @@
     },
     {
         "id": 148,
-        "url": "https://assets.xz-studio-gallery.com/full/20240514_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240514_拉夫劳伦_XZ.mp4",
         "date": "2024-05-14",
         "month": "May",
         "year": "2024",
@@ -4528,7 +4533,9 @@
             "拉夫劳伦香氛RalphLauren"
         ],
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "罗曼女士香水"
         ],
         "groupName": "拉夫劳伦香氛RalphLauren_2024-05",
@@ -4574,7 +4581,7 @@
     },
     {
         "id": 146,
-        "url": "https://assets.xz-studio-gallery.com/full/20240506_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240506_欧莱雅PRO_XZ.mp4",
         "date": "2024-05-06",
         "month": "May",
         "year": "2024",
@@ -4935,7 +4942,7 @@
     },
     {
         "id": 133,
-        "url": "https://assets.xz-studio-gallery.com/full/20240422_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240422_拉夫劳伦_XZ.mp4",
         "date": "2024-04-22",
         "month": "April",
         "year": "2024",
@@ -4946,7 +4953,8 @@
             "拉夫劳伦香氛RalphLauren"
         ],
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "RalphLauren",
             "地球淡香氛"
         ],
         "groupName": "拉夫劳伦香氛RalphLauren_2024-04",
@@ -5313,7 +5321,7 @@
     },
     {
         "id": 119,
-        "url": "https://assets.xz-studio-gallery.com/full/20240319_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240319_欧莱雅PRO_XZ.mp4",
         "date": "2024-03-19",
         "month": "March",
         "year": "2024",
@@ -5341,7 +5349,7 @@
     },
     {
         "id": 118,
-        "url": "https://assets.xz-studio-gallery.com/full/20240313_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240313_拉夫劳伦_XZ.mp4",
         "date": "2024-03-13",
         "month": "March",
         "year": "2024",
@@ -5352,7 +5360,9 @@
             "拉夫劳伦香氛RalphLauren"
         ],
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "罗曼女士香水"
         ],
         "groupName": "拉夫劳伦香氛RalphLauren_2024-03",
@@ -5732,7 +5742,7 @@
     },
     {
         "id": 114,
-        "url": "https://assets.xz-studio-gallery.com/full/20240225_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240225_欧莱雅PRO_XZ.mp4",
         "date": "2024-02-25",
         "month": "February",
         "year": "2024",
@@ -6866,7 +6876,7 @@
     },
     {
         "id": 84,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_RL_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_拉夫劳伦_XZ.mp4",
         "date": "2024-02-02",
         "month": "February",
         "year": "2024",
@@ -6877,7 +6887,9 @@
             "拉夫劳伦香氛RalphLauren"
         ],
         "tags": [
-            "拉夫劳伦香氛RalphLauren",
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
             "俱乐部香水"
         ],
         "groupName": "拉夫劳伦香氛RalphLauren_2024-02",
@@ -8609,7 +8621,7 @@
     },
     {
         "id": 24,
-        "url": "https://assets.xz-studio-gallery.com/full/20240118_OLYPRO_XZ.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20240118_欧莱雅PRO_XZ.mp4",
         "date": "2024-01-18",
         "month": "January",
         "year": "2024",
