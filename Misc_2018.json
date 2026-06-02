@@ -5,7 +5,6 @@
         "date": "2018-12-27",
         "month": "December",
         "year": "2018",
-        "sourceType": "drama",
         "source": "斗罗大陆",
         "note": null,
         "tags": [
@@ -28,7 +27,6 @@
         "date": "2018-12-27",
         "month": "December",
         "year": "2018",
-        "sourceType": "drama",
         "source": "斗罗大陆",
         "note": null,
         "tags": [
@@ -51,7 +49,6 @@
         "date": "2018-12-27",
         "month": "December",
         "year": "2018",
-        "sourceType": "drama",
         "source": "斗罗大陆",
         "note": null,
         "tags": [
@@ -74,9 +71,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -101,9 +95,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -128,9 +119,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -155,9 +143,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -182,9 +167,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -209,9 +191,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -236,9 +215,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -263,9 +239,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -290,9 +263,6 @@
         "date": "2018-12-07",
         "month": "December",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -324,9 +294,6 @@
         "quality": "1080p",
         "duration": 10,
         "weibo": "https://weibo.com/1518966617/H4LN2oofR",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "COSMO"
         ],
@@ -347,9 +314,6 @@
         "date": "2018-11-28",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "COSMO"
         ],
@@ -375,9 +339,6 @@
         "date": "2018-11-28",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "COSMO"
         ],
@@ -403,9 +364,6 @@
         "date": "2018-11-28",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "COSMO"
         ],
@@ -431,9 +389,6 @@
         "date": "2018-11-28",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -458,9 +413,6 @@
         "date": "2018-11-28",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -485,9 +437,6 @@
         "date": "2018-11-28",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -512,9 +461,6 @@
         "date": "2018-11-28",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -539,9 +485,6 @@
         "date": "2018-11-23",
         "month": "November",
         "year": "2018",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "ELLEMEN"
         ],
@@ -573,9 +516,6 @@
         "quality": "1080p",
         "duration": 10,
         "weibo": "https://weibo.com/1518966617/H2CBbro1V",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "COSMO"
         ],
@@ -601,9 +541,6 @@
         ],
         "groupName": "时尚COSMO_2018-11-14",
         "weibo": "https://weibo.com/1518966617/H2Cp6Can4",
-        "sourceType": [
-            "magazine"
-        ],
         "source": [
             "COSMO"
         ],
@@ -629,9 +566,6 @@
         ],
         "groupName": "X玖少年团_2018-10-05",
         "weibo": "https://weibo.com/5996136448/GCu13kbur",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "其他Other"
         ],
@@ -658,9 +592,6 @@
         "groupName": "X玖少年团_2018-10-02",
         "duration": 9,
         "weibo": "https://weibo.com/5996136448/GC1jyhL5c",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "其他Other"
         ],
@@ -681,7 +612,6 @@
         "date": "2018-08-16",
         "month": "August",
         "year": "2018",
-        "sourceType": "drama",
         "source": "狼殿下",
         "note": null,
         "tags": [
@@ -705,7 +635,6 @@
         "date": "2018-08-16",
         "month": "August",
         "year": "2018",
-        "sourceType": "drama",
         "source": "狼殿下",
         "note": null,
         "tags": [
@@ -736,9 +665,6 @@
         "groupName": "为你读诗_2018-07-05",
         "duration": 137,
         "weibo": "https://weibo.com/2158708695/GoyP0mP2s",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "其他Other"
         ],
@@ -759,7 +685,6 @@
         "date": "2018-07-04",
         "month": "July",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -783,7 +708,6 @@
         "date": "2018-06-15",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -807,7 +731,6 @@
         "date": "2018-06-14",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -831,7 +754,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -855,7 +777,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -880,7 +801,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -904,7 +824,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -927,7 +846,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -950,7 +868,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -973,7 +890,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -996,7 +912,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1019,7 +934,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1042,7 +956,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1065,7 +978,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1088,7 +1000,6 @@
         "date": "2018-06-13",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1111,7 +1022,6 @@
         "date": "2018-06-11",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1135,7 +1045,6 @@
         "date": "2018-06-11",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1166,9 +1075,6 @@
         "groupName": "同道大叔_2018-06-09",
         "duration": 455,
         "weibo": "https://weibo.com/3069348215/GkBR4redK",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "访谈 / Interviews"
         ],
@@ -1188,7 +1094,6 @@
         "date": "2018-06-08",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1211,7 +1116,6 @@
         "date": "2018-06-07",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1235,7 +1139,6 @@
         "date": "2018-06-07",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1259,7 +1162,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1283,7 +1185,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1307,7 +1208,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1332,7 +1232,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1357,7 +1256,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1382,7 +1280,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1407,7 +1304,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1435,7 +1331,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1462,7 +1357,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1490,7 +1384,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1518,7 +1411,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1546,7 +1438,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1573,7 +1464,6 @@
         "date": "2018-06-06",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1600,7 +1490,6 @@
         "date": "2018-06-05",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1626,7 +1515,6 @@
         "date": "2018-06-05",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1652,7 +1540,6 @@
         "date": "2018-06-01",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1676,7 +1563,6 @@
         "date": "2018-06-01",
         "month": "June",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1701,7 +1587,6 @@
         "date": "2018-05-31",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1724,7 +1609,6 @@
         "date": "2018-05-31",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -1747,7 +1631,6 @@
         "date": "2018-05-30",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1771,7 +1654,6 @@
         "date": "2018-05-30",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1795,7 +1677,6 @@
         "date": "2018-05-30",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1819,7 +1700,6 @@
         "date": "2018-05-30",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1843,7 +1723,6 @@
         "date": "2018-05-28",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1867,7 +1746,6 @@
         "date": "2018-05-25",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1893,7 +1771,6 @@
         "date": "2018-05-25",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1919,7 +1796,6 @@
         "date": "2018-05-25",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1944,7 +1820,6 @@
         "date": "2018-05-25",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1970,7 +1845,6 @@
         "date": "2018-05-24",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -1994,7 +1868,6 @@
         "date": "2018-05-24",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2018,7 +1891,6 @@
         "date": "2018-05-23",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2042,7 +1914,6 @@
         "date": "2018-05-23",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2066,7 +1937,6 @@
         "date": "2018-05-23",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2090,7 +1960,6 @@
         "date": "2018-05-22",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2120,9 +1989,6 @@
         ],
         "groupName": "X玖少年团_2018-05-20",
         "weibo": "https://weibo.com/5996136448/Ghz0AihfK",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "其他Other"
         ],
@@ -2142,7 +2008,6 @@
         "date": "2018-05-20",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -2166,7 +2031,6 @@
         "date": "2018-05-18",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -2191,7 +2055,6 @@
         "date": "2018-05-17",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2215,7 +2078,6 @@
         "date": "2018-05-16",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2239,7 +2101,6 @@
         "date": "2018-05-16",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2263,7 +2124,6 @@
         "date": "2018-05-16",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2287,7 +2147,6 @@
         "date": "2018-05-16",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2311,7 +2170,6 @@
         "date": "2018-05-12",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -2333,7 +2191,6 @@
         "date": "2018-05-10",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2359,7 +2216,6 @@
         "date": "2018-05-08",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2383,7 +2239,6 @@
         "date": "2018-05-06",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2407,7 +2262,6 @@
         "date": "2018-05-06",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2431,7 +2285,6 @@
         "date": "2018-05-06",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2455,7 +2308,6 @@
         "date": "2018-05-06",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2479,7 +2331,6 @@
         "date": "2018-05-06",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2503,7 +2354,6 @@
         "date": "2018-05-06",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2528,7 +2378,6 @@
         "date": "2018-05-05",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2554,7 +2403,6 @@
         "date": "2018-05-04",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2578,7 +2426,6 @@
         "date": "2018-05-04",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2603,7 +2450,6 @@
         "date": "2018-05-04",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -2628,7 +2474,6 @@
         "date": "2018-05-02",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2653,7 +2498,6 @@
         "date": "2018-05-02",
         "month": "May",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2677,7 +2521,6 @@
         "date": "2018-04-30",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2701,7 +2544,6 @@
         "date": "2018-04-30",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2725,7 +2567,6 @@
         "date": "2018-04-29",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2750,7 +2591,6 @@
         "date": "2018-04-28",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2774,7 +2614,6 @@
         "date": "2018-04-28",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2798,7 +2637,6 @@
         "date": "2018-04-27",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2825,7 +2663,6 @@
         "date": "2018-04-27",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2853,7 +2690,6 @@
         "date": "2018-04-27",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2881,7 +2717,6 @@
         "date": "2018-04-27",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2909,7 +2744,6 @@
         "date": "2018-04-27",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2937,7 +2771,6 @@
         "date": "2018-04-26",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -2961,7 +2794,6 @@
         "date": "2018-04-25",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -2988,7 +2820,6 @@
         "date": "2018-04-25",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "陈情令",
         "note": null,
         "tags": [
@@ -3013,7 +2844,6 @@
         "date": "2018-04-20",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3038,7 +2868,6 @@
         "date": "2018-04-13",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3064,7 +2893,6 @@
         "date": "2018-04-12",
         "month": "April",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3089,7 +2917,6 @@
         "date": "2018-03-29",
         "month": "March",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3113,7 +2940,6 @@
         "date": "2018-03-29",
         "month": "March",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3137,7 +2963,6 @@
         "date": "2018-03-29",
         "month": "March",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3161,7 +2986,6 @@
         "date": "2018-03-28",
         "month": "March",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3185,7 +3009,6 @@
         "date": "2018-03-28",
         "month": "March",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3209,7 +3032,6 @@
         "date": "2018-03-21",
         "month": "March",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3234,7 +3056,6 @@
         "date": "2018-03-15",
         "month": "March",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3266,9 +3087,6 @@
         ],
         "groupName": "腾讯视频doki_2018-03-14",
         "weibo": "https://weibo.com/6218351549/G7lCe2NXW",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "Ent. Hub"
         ],
@@ -3295,9 +3113,6 @@
         ],
         "groupName": "腾讯视频doki_2018-03-14",
         "weibo": "https://weibo.com/6218351549/G7lCe2NXW",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "Ent. Hub"
         ],
@@ -3324,9 +3139,6 @@
         ],
         "groupName": "腾讯视频doki_2018-03-14",
         "weibo": "https://weibo.com/6218351549/G7lCe2NXW",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "Ent. Hub"
         ],
@@ -3353,9 +3165,6 @@
         ],
         "groupName": "腾讯视频doki_2018-03-14",
         "weibo": "https://weibo.com/6218351549/G7lCe2NXW",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "Ent. Hub"
         ],
@@ -3380,9 +3189,6 @@
         ],
         "groupName": "腾讯视频doki_2018-03-14",
         "weibo": "https://weibo.com/6218351549/G7lCe2NXW",
-        "sourceType": [
-            "other"
-        ],
         "source": [
             "Ent. Hub"
         ],
@@ -3403,7 +3209,6 @@
         "date": "2018-02-23",
         "month": "February",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3427,7 +3232,6 @@
         "date": "2018-02-20",
         "month": "February",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3451,7 +3255,6 @@
         "date": "2018-02-16",
         "month": "February",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3477,7 +3280,6 @@
         "date": "2018-02-16",
         "month": "February",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3501,7 +3303,6 @@
         "date": "2018-02-11",
         "month": "February",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3527,7 +3328,6 @@
         "date": "2018-02-01",
         "month": "February",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3551,7 +3351,6 @@
         "date": "2018-02-01",
         "month": "February",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
@@ -3575,7 +3374,6 @@
         "date": "2018-01-24",
         "month": "January",
         "year": "2018",
-        "sourceType": "drama",
         "source": "哦我的皇帝陛下",
         "note": null,
         "tags": [
