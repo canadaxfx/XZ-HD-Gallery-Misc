@@ -1671,8 +1671,8 @@
         <div class="source-filters">
             <div class="source-chip active" data-filter="all"><span class="chip-en">All</span><span class="chip-zh">全部</span></div>
             <div class="source-chip" data-filter="drama"><span class="chip-en">Dramas</span><span class="chip-zh">影视</span></div>
-            <div class="source-chip" data-filter="event"><span class="chip-en">Events</span><span class="chip-zh">活动</span></div>
-            <div class="source-chip" data-filter="variety"><span class="chip-en">Variety & Other</span><span class="chip-zh">综艺/其他</span></div>
+            <div class="source-chip" data-filter="event"><span class="chip-en">Stages/Events</span><span class="chip-zh">舞台/活动</span></div>
+            <div class="source-chip" data-filter="variety"><span class="chip-en">Variety/Other</span><span class="chip-zh">综艺/其他</span></div>
             <div class="source-chip" data-filter="endorsement"><span class="chip-en">Endorsements</span><span class="chip-zh">品牌代言</span></div>
             <div class="source-chip" data-filter="magazine"><span class="chip-en">Magazines</span><span class="chip-zh">杂志</span></div>
         </div>
@@ -1897,6 +1897,61 @@
     </footer>
 
     <script>
+// ============================================================
+// XZ HD Gallery Misc — index.html  JS MAP
+// (search: /* ---------- SECTION ---------- */ to jump to each)
+//
+// CONSTANTS & STATE
+//   Core Variables          ~1900  photoData, filters, pagination sets
+//   Modal Variables         ~1975  currentPhotoGroup, currentPhotoIndex
+//   Playlist State          ~1979  playlist[], filteredVideosCache, PL_KEY
+//
+// PLAYLIST                  ~1985  plLoad/Save, plCardAdd, plSyncAllCards,
+//                                  addAllFilteredVideos, addYearToPlaylist,
+//                                  addSourceGroupToPlaylist, plRemove, plRender,
+//                                  plTogglePanel, plPlayFromStart, plPlayItem
+//
+// VIDEO CONTROLS            ~2140  vcSetup, vcTogglePlay, vcToggleMute,
+//                                  vcFullscreen, vcFmt
+//
+// MODAL                     ~2224  openPhotoModal, updateModalContent, goToPhoto,
+//                                  navigatePhoto, closeModal, setPlatformBtnBehavior,
+//                                  togglePostText, handleKeyboardNavigation
+//
+// SOURCE FILTER             ~2600  setupSourceFilters, applyFilter
+//                                  (getPhotoSection moved to By Source Tab section)
+//
+// MEDIA & URL HELPERS       ~2655  isVideoUrl, isMotionUrl, isRealVideo, isVideoEntry,
+//                                  isClip, isYouTubeUrl, fmtDuration, mediaCountLabel,
+//                                  getMediaIcon, getMotionBadge, getDurBadge
+//                                  dlIsLocked/Unlocked (download lock helpers)
+//
+// INITIALIZATION            ~2780  init(), setupNavigation(), showSection()
+//
+// DATA LOADING              ~2794  loadPhotoData() — fetches Misc_YYYY.json files
+//
+// TIMELINE                  ~2865  initializeTimeline, createTimelineHTML,
+//                                  generatePhotosHTML, toggleYear, renderYearPage,
+//                                  goToPage, jumpToPage, createPaginationButtons
+//
+// LAZY LOADING              ~3137  setupIntersectionObserver, setupLazyLoading,
+//                                  unloadImages
+//                                  BUG NOTE: use removeAttribute('src') not src=''
+//                                  (src='' resolves to page URL, breaks lazy load)
+//
+// SEARCH                    ~3168  setupSearch, setupClearSearch
+//
+// STATS                     ~3194  updateStats
+//
+// BY SOURCE TAB             ~3248  SOURCE_SECTIONS const + getPhotoSection(p)
+//                                  ~3320  loadSourcesView — groups sources into sections
+//                                  toggleSourceSection, toggleSource,
+//                                  renderSourcePage, changeSourcePhotosPerPage
+//
+// THEME & MAGNOLIA          ~3632  applyTheme, mgCombined, mgBuildTiles, mgApply
+//
+// ============================================================
+
         /* ---------- Core Variables ---------- */
         let photoData = [];
         let expandedYears = new Set();
@@ -1909,69 +1964,6 @@
         let expandedSources = new Set();
         let expandedSectionKeys = new Set();
 
-        const SOURCE_SECTIONS = {
-            _sections: ['drama','event','variety','endorsement','magazine'],
-            _section_labels: {
-                drama:       '影视 Dramas',
-                event:       '活动 Events',
-                variety:     '综艺/其他 Variety & Other',
-                endorsement: '品牌代言 Endorsements',
-                magazine:    '杂志 Magazines'
-            },
-            'Celebrity名人':            'variety',
-            'COSMO':                    'magazine',
-            'ELLE':                     'magazine',
-            'ELLEMEN':                  'magazine',
-            'Endorsement Misc':         'endorsement',
-            'Ent. Hub':                 'variety',
-            'Events Misc':              'event',
-            'GQ':                       'magazine',
-            'GUCCI':                    'endorsement',
-            'NARS':                     'endorsement',
-            'Stages Misc':              'event',
-            'TODS':                     'endorsement',
-            'VOGUE':                    'magazine',
-            'YSL圣罗兰美妆':            'endorsement',
-            '宝诗龙Boucheron':          'endorsement',
-            '北京台春晚':               'event',
-            '博客天下':                 'magazine',
-            '藏海传':                   'drama',
-            '超星星学园':               'drama',
-            '陈情令':                   'drama',
-            '得闲谨制':                 'drama',
-            '电视剧品质盛典':           'event',
-            '谍报上不封顶':             'drama',
-            '斗罗大陆':                 'drama',
-            '访谈 / Interviews':        'variety',
-            '官方推广 / Official Promo':'variety',
-            '嘉人':                     'magazine',
-            '骄阳伴我':                 'drama',
-            '拉夫劳伦香氛RalphLauren':  'endorsement',
-            '狼殿下':                   'drama',
-            '李宁':                     'endorsement',
-            '梦中的那片海':             'drama',
-            '哦我的皇帝陛下':           'drama',
-            '欧莱雅PRO':                'endorsement',
-            '欧莱雅男士':               'endorsement',
-            '其他Other':                'variety',
-            '人物':                     'magazine',
-            '日常':                     'variety',
-            '荣耀HONOR':                'endorsement',
-            '射雕英雄传侠之大者':       'drama',
-            '十日终焉':                 'drama',
-            '时尚芭莎':                 'magazine',
-            '湾区升明月':               'event',
-            '王牌部队':                 'drama',
-            '网络视听盛典':             'event',
-            '微博之夜':                 'event',
-            '小城良方':                 'drama',
-            '余生请多指教':             'drama',
-            '羽西':                     'endorsement',
-            '玉骨遥':                   'drama',
-            '中国电视剧年度盛典':       'event',
-            '诛仙':                     'drama'
-        };
-        
         /* ---------- Enhanced Modal Variables ---------- */
         let currentPhotoGroup = [];
         let currentPhotoIndex = 0;
@@ -2602,15 +2594,6 @@ function closeModal() {
 }
 
         /* ---------- Source Filter Functions ---------- */
-        function getPhotoSection(p) {
-            const sources = Array.isArray(p.source) ? p.source : (p.source ? [p.source] : []);
-            for (const s of sources) {
-                const sec = SOURCE_SECTIONS[s];
-                if (sec) return sec;
-            }
-            return '_unassigned';
-        }
-
 	function setupSourceFilters() {
             document.querySelectorAll('.source-chip').forEach(chip => {
                 chip.addEventListener('click', function() {
@@ -3253,6 +3236,82 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
             document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden'));
             document.getElementById(section + '-section').classList.remove('hidden');
             if (section === 'sources') loadSourcesView();
+        }
+
+/* ---------- By Source Tab — Section Config ---------- */
+        // SOURCE_SECTIONS: source name → section key mapping.
+        // Mirrored in source_sections.json. Update via autosync Section Manager UI —
+        // that tool writes both files in one step. Never edit just one.
+        const SOURCE_SECTIONS = {
+            _sections: ['drama','event','variety','endorsement','magazine'],
+            _section_labels: {
+                drama:       '影视 Dramas',
+                event:       '舞台/活动 Stages/Events',
+                variety:     '综艺/其他 Variety/Other',
+                endorsement: '品牌代言 Endorsements',
+                magazine:    '杂志 Magazines'
+            },
+            'Celebrity名人':            'variety',
+            'COSMO':                    'magazine',
+            'ELLE':                     'magazine',
+            'ELLEMEN':                  'magazine',
+            'Endorsement Misc':         'endorsement',
+            'Ent. Hub':                 'variety',
+            'Events Misc':              'event',
+            'GQ':                       'magazine',
+            'GUCCI':                    'endorsement',
+            'NARS':                     'endorsement',
+            'Stages Misc':              'event',
+            'TODS':                     'endorsement',
+            'VOGUE':                    'magazine',
+            'YSL圣罗兰美妆':            'endorsement',
+            '宝诗龙Boucheron':          'endorsement',
+            '北京台春晚':               'event',
+            '博客天下':                 'magazine',
+            '藏海传':                   'drama',
+            '超星星学园':               'drama',
+            '陈情令':                   'drama',
+            '得闲谨制':                 'drama',
+            '电视剧品质盛典':           'event',
+            '谍报上不封顶':             'drama',
+            '斗罗大陆':                 'drama',
+            '访谈 / Interviews':        'variety',
+            '官方推广 / Official Promo':'variety',
+            '嘉人':                     'magazine',
+            '骄阳伴我':                 'drama',
+            '拉夫劳伦香氛RalphLauren':  'endorsement',
+            '狼殿下':                   'drama',
+            '李宁':                     'endorsement',
+            '梦中的那片海':             'drama',
+            '哦我的皇帝陛下':           'drama',
+            '欧莱雅PRO':                'endorsement',
+            '欧莱雅男士':               'endorsement',
+            '其他Other':                'variety',
+            '人物':                     'magazine',
+            '日常':                     'variety',
+            '荣耀HONOR':                'endorsement',
+            '射雕英雄传侠之大者':       'drama',
+            '十日终焉':                 'drama',
+            '时尚芭莎':                 'magazine',
+            '湾区升明月':               'event',
+            '王牌部队':                 'drama',
+            '网络视听盛典':             'event',
+            '微博之夜':                 'event',
+            '小城良方':                 'drama',
+            '余生请多指教':             'drama',
+            '羽西':                     'endorsement',
+            '玉骨遥':                   'drama',
+            '中国电视剧年度盛典':       'event',
+            '诛仙':                     'drama'
+        };
+
+        function getPhotoSection(p) {
+            const sources = Array.isArray(p.source) ? p.source : (p.source ? [p.source] : []);
+            for (const s of sources) {
+                const sec = SOURCE_SECTIONS[s];
+                if (sec) return sec;
+            }
+            return '_unassigned';
         }
 
 function loadSourcesView() {
