@@ -474,38 +474,33 @@
         
         /* Source Filter Chips */
 	.source-filters {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 145px); 
-            gap: 6px;
-            margin: 5px auto;
+            display: flex;
+            border: 1.5px solid #ccc;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 8px auto;
             max-width: 900px;
-            justify-content: center; 
         }
-        .chip-en { display: block; font-size: 12px; font-weight: 600; line-height: 1.2; }
-        .chip-zh { display: block; font-size: 10px; opacity: 0.65; line-height: 1.2; margin-top: 2px; }
+        .chip-en { display: block; font-size: 13px; font-weight: 600; line-height: 1.2; }
+        .chip-zh { display: block; font-size: 11px; opacity: 0.7; line-height: 1.2; margin-top: 3px; }
         .source-chip {
+            flex: 1;
             display: flex; flex-direction: column; align-items: center; text-align: center;
-            padding: 8px 12px;
+            padding: 11px 6px;
             background: #f8f9fa;
             color: var(--bg-dark);
-            border: 1px solid #bbb;
-            border-radius: 20px;
+            border: none;
+            border-right: 1px solid #ddd;
+            border-radius: 0;
             cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-	    text-align: center; 
+            transition: background 0.2s ease, color 0.2s ease;
         }
-        .source-chip:hover {
-            background: #e9ecef;
-            transform: scale(1.05);
-	    border-color: #aaa;
-        }
+        .source-chip:last-child { border-right: none; }
+        .source-chip:hover { background: #e9ecef; }
         .source-chip.active {
             background: var(--grad-gold);
             color: white;
-            border-color: #B89010;
-            box-shadow: 0 1px 3px rgba(var(--gold-dr), 0.4);
+            border-right-color: rgba(255,255,255,0.3);
         }
         
 .modal-tags-container {
@@ -1234,7 +1229,10 @@
             nav.nav-buttons .nav-btn { padding: 8px 18px 10px; font-size: 11px; }
             .year-photos-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
             .stats-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
-            .source-filters { padding: 0 10px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+            .source-filters { display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 10px; margin: 6px 10px; }
+            .source-chip { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 9px 4px; flex-direction: column; gap: 0; }
+            .source-chip:nth-child(3n) { border-right: none; }
+            .source-chip:nth-child(4), .source-chip:nth-child(5), .source-chip:nth-child(6) { border-bottom: none; }
             .source-section-header { position: relative; padding-right: 36px; }
             .source-section-main { width: 100%; }
             .source-section-right { position: absolute; top: 12px; right: 14px; flex-direction: row; gap: 6px; align-items: center; padding-left: 0; }
@@ -1243,14 +1241,13 @@
             .source-section-pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
             .src-pill { font-size: 10px; padding: 2px 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; max-width: none; color: var(--bg-dark); opacity: 1; }
             .src-pill-more { grid-column: 1 / -1; font-size: 10px; padding: 2px 4px; width: fit-content; }
-            .source-chip { padding: 7px 8px; flex-direction: row; gap: 4px; justify-content: center; }
-            .chip-en { font-size: 11px; white-space: nowrap; }
-            .chip-zh { font-size: 10px; margin-top: 0; white-space: nowrap; }
+            .chip-en { font-size: 12px; }
+            .chip-zh { font-size: 10px; margin-top: 2px; }
         }
         @media (max-width: 380px) {
-            .chip-en { font-size: 9px; }
-            .chip-zh { font-size: 8px; }
-            .source-chip { padding: 6px 4px; gap: 3px; }
+            .chip-en { font-size: 11px; }
+            .chip-zh { font-size: 9px; }
+            .source-chip { padding: 8px 3px; }
              #floatBtnGroup { right: 8px; } .float-btn { width:50px; height:50px; font-size:18px; }
             /* Mobile Modal Optimizations */
             .modal {
