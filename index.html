@@ -948,7 +948,7 @@
             background: rgba(40,40,40,0.82);
             color: #fff;
             border-radius: 12px;
-            border: none;
+            border: 1px solid rgba(255,255,255,0.25);
             cursor: pointer;
             transition: all 0.2s ease;
             font-family: inherit;
@@ -1739,7 +1739,7 @@
                     <div class="photo-counter" id="photoCounter">1 of 5</div>
                     <div class="group-title" id="groupTitle">Photo Collection</div>
                     <div class="modal-header-actions">
-                        <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
+                        <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文 ▼</button>
                         <button class="close-modal" onclick="closeModal()" style="margin-right:-6px;">&times;</button>
                     </div>
                 </div>
@@ -2460,7 +2460,7 @@ function updateModalContent() {
         postTextContent.textContent = photo.postText;
         postTextBtn.style.display = '';
         postTextPanel.style.display = 'none';
-        postTextBtn.textContent = '📋 原文';
+        postTextBtn.textContent = '📋 原文 ▼';
     } else {
         postTextBtn.style.display = 'none';
         postTextPanel.style.display = 'none';
@@ -2472,7 +2472,7 @@ function togglePostText() {
     const btn   = document.getElementById('postTextBtn');
     const open  = panel.style.display !== 'none';
     panel.style.display = open ? 'none' : 'block';
-    btn.textContent = open ? '📋 原文' : '📋 收起';
+    btn.textContent = open ? '📋 原文 ▼' : '📋 收起 ▲';
 }
 
 
