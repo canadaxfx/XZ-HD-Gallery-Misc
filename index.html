@@ -3018,6 +3018,7 @@ async function loadPhotoData() {
 			   (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
                            (tagsString.includes(query)) ||
                            (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
+                           (p.description && p.description.toLowerCase().includes(query)) ||
                            (p.postText && p.postText.toLowerCase().includes(query));
                 });
             }
@@ -3134,9 +3135,24 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
         }
 
         function setupLazyLoading(containerId) {
-            document.querySelectorAll(`#${containerId} .lazy-image[data-src]`).forEach(img => {
+            const imgs = Array.from(document.querySelectorAll(`#${containerId} .lazy-image[data-src]`));
+            imgs.forEach(img => {
                 img.classList.add('loading-placeholder');
                 if (imageObserver) imageObserver.observe(img);
+            });
+            // IntersectionObserver fires asynchronously and can miss elements just made
+            // visible via display:none→block (e.g. expanding a year). getBoundingClientRect()
+            // forces a layout flush so we correctly detect already-visible images.
+            const vh = window.innerHeight;
+            imgs.forEach(img => {
+                if (img.src) return;
+                const rect = img.getBoundingClientRect();
+                if (rect.width > 0 && rect.top < vh + 100 && rect.bottom > -100) {
+                    img.src = img.dataset.src;
+                    img.onload  = () => img.classList.remove('loading-placeholder');
+                    img.onerror = () => img.classList.remove('loading-placeholder');
+                    if (imageObserver) imageObserver.unobserve(img);
+                }
             });
         }
 
