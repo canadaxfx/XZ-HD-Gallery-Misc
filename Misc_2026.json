@@ -106,7 +106,7 @@
     },
     {
         "id": 497,
-        "url": "https://assets.xz-studio-gallery.com/full/20260602_%E6%8B%89%E5%A4%AB%E5%8A%B3%E4%BC%A6_XZ-STU-1.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20260602_拉夫劳伦_XZ-STU-1.mp4",
         "date": "2026-06-02",
         "month": "June",
         "year": "2026",
@@ -5594,7 +5594,8 @@
             "endorsement",
             "magazine",
             "interview"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 236,
@@ -5623,7 +5624,8 @@
             "interview",
             "endorsement",
             "magazine"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 233,
@@ -8494,7 +8496,8 @@
             "milan fashion week",
             "endorsement",
             "magazine"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 107,
@@ -8630,7 +8633,8 @@
             "interview",
             "magazine",
             "endorsement"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 104,
@@ -12316,7 +12320,7 @@
     },
     {
         "id": 511,
-        "url": "https://assets.xz-studio-gallery.com/full/20260101_DY_%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86%E8%B7%A8%E5%B9%B4%E4%B8%8D%E8%A6%81%E5%9B%9E%E5%A4%B4_XZ-1.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20260101_DY_东方卫视跨年不要回头_XZ-1.mp4",
         "date": "2026-01-01",
         "month": "January",
         "year": "2026",
@@ -12365,7 +12369,8 @@
             "oriental tv",
             "now what if i don't dance"
         ],
-        "url_hd": "https://assets.xz-studio-gallery.com/hd/20260101_东方卫视跨年现在不跳舞要干嘛_XZ-STU-1.mp4"
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20260101_东方卫视跨年现在不跳舞要干嘛_XZ-STU-1.mp4",
+        "duration": 233
     },
     {
         "id": 13,
