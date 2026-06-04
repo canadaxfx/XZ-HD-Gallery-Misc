@@ -919,7 +919,8 @@
             "interview",
             "jewelry",
             "event"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 253,
@@ -8357,7 +8358,8 @@
             "china movie channel",
             "new year gala",
             "stage performance"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 310,
@@ -8383,7 +8385,8 @@
             "china movie channel",
             "behind the scenes",
             "recording"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 309,
@@ -8409,7 +8412,8 @@
             "recording",
             "cctv6",
             "music video"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 9,
