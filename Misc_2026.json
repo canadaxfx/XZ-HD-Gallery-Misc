@@ -127,7 +127,8 @@
             "fragrance",
             "endorsement",
             "photoshoot"
-        ]
+        ],
+        "duration": 27
     },
     {
         "id": 503,
@@ -12342,7 +12343,8 @@
             "oriental tv",
             "new year gala",
             "stage performance"
-        ]
+        ],
+        "duration": 228
     },
     {
         "id": 510,
