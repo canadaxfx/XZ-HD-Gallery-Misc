@@ -3191,7 +3191,23 @@ async function loadPhotoData() {
             const { perPage, currentPage } = yearPaginationSettings[year];
 	   // 1. Filter by year
             let yearPhotos = photoData.filter(p => p.year === year);
-            
+
+            // 2a. Filter by month/day (date dropdown)
+            const _rMVal = elFilterMonth ? elFilterMonth.value : 'all';
+            const _rDVal = elFilterDay   ? elFilterDay.value   : 'all';
+            if (_rMVal !== 'all' || _rDVal !== 'all') {
+                yearPhotos = yearPhotos.filter(item => {
+                    if (!item.date) return false;
+                    const _parts = String(item.date).split(/[-/.]/);
+                    if (_parts.length < 3) return false;
+                    const _pMonth = _parts[1].padStart(2, "0");
+                    const _pDay   = String(parseInt(_parts[2])).padStart(2, "0");
+                    if (_rMVal !== 'all' && _pMonth !== _rMVal) return false;
+                    if (_rDVal !== 'all' && _pDay   !== _rDVal) return false;
+                    return true;
+                });
+            }
+
 // 2. Filter by section category
         if (currentFilter !== 'all') {
             yearPhotos = yearPhotos.filter(p => getPhotoSection(p) === currentFilter);
