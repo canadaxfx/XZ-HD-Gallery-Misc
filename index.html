@@ -283,9 +283,6 @@
       .mg-pdiv { height:1px; background:rgba(var(--gold-rgb),.15); margin:4px 0; }
       .mg-pgrid { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
 
-      @media (max-width: 768px) {
-        .container { padding-top: 62px; }
-      }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -295,7 +292,7 @@
               linear-gradient(160deg, var(--bg-base) 0%, var(--bg-base-2) 100%);
             min-height: 100vh; color: #333;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         header {
             text-align: center;
             padding: 12px 0 8px;
@@ -404,17 +401,17 @@
         .nav-buttons { display: flex; justify-content: center; gap: 0; margin: 5px 0 12px; border-bottom: 1px solid rgba(var(--gold-rgb), 0.18); }
         .media-filter-tabs {
             display: flex;
-            justify-content: center;
             gap: 4px;
             margin: 0 auto 10px;
             padding: 4px;
             background: var(--surface-w);
             border: 1px solid var(--border);
             border-radius: 12px;
-            width: fit-content;
-            max-width: 100%;
+            width: 100%;
+            max-width: 1000px;
         }
         .media-tab {
+            flex: 1;
             background: transparent;
             color: #5a4f3d;
             border: none;
@@ -425,6 +422,7 @@
             cursor: pointer;
             transition: all 0.18s ease;
             font-family: inherit;
+            text-align: center;
         }
         .media-tab:hover { background: rgba(244, 63, 94, 0.1); color: #f43f5e; }
         .media-tab.active {
@@ -437,6 +435,60 @@
         .filter-divider { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
         .filter-divider::before, .filter-divider::after { content: ''; flex: 1; height: 1px; background: #e0e8f0; }
         .filter-divider span { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa5b4; white-space: nowrap; }
+        .date-filter-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 8px;
+          flex-wrap: wrap;
+        }
+        .date-select-wrapper {
+          display: flex;
+          gap: 5px;
+          background: var(--surface-0);
+          padding: 5px 10px;
+          border-radius: 25px;
+          border: 1.5px solid rgba(var(--gold-dr), 0.35);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+          transition: border-color 0.2s ease;
+        }
+        .date-select-wrapper:focus-within {
+          border-color: rgba(var(--gold-dr), 0.7);
+        }
+        .date-select-wrapper select {
+          border: none;
+          background: transparent;
+          padding: 5px;
+          font-size: 13px;
+          font-weight: 600;
+          color: #555;
+          cursor: pointer;
+          outline: none;
+          text-align: center;
+          text-align-last: center;
+        }
+        .date-select-wrapper select:focus {
+          color: var(--gold);
+        }
+        .reset-date-btn {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: none;
+          background: var(--grad-gold);
+          color: white;
+          cursor: pointer;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          transition: all 0.2s ease;
+        }
+        .reset-date-btn:hover {
+          transform: scale(1.1);
+        }
         .nav-btn, .btn {
             padding: 10px 15px; border: none; border-radius: 25px; cursor: pointer;
             font-size: 13px; font-weight: 600; transition: all 0.3s ease;
@@ -484,7 +536,7 @@
             border-radius: 12px;
             overflow: hidden;
             margin: 8px auto;
-            max-width: 900px;
+            max-width: 1000px;
         }
         .chip-en { display: block; font-size: 13px; font-weight: 600; line-height: 1.2; }
         .chip-zh { display: block; font-size: 11px; opacity: 0.7; line-height: 1.2; margin-top: 3px; }
@@ -531,7 +583,7 @@
 
         /* Search and Filter Styles */
         .search-bar {
-            width: 100%; max-width: 500px;
+            width: 100%; max-width: 1000px;
             padding: 13px 16px 13px 44px;
             border: 1px solid var(--border);
             background-color: var(--surface-m);
@@ -548,7 +600,7 @@
             margin: 0 auto 15px;
             background: linear-gradient(45deg, #6c757d, #495057); /* Grey gradient */
             color: white;
-            max-width: 500px;
+            max-width: 1000px;
             width: 100%;
         }
 
@@ -575,8 +627,8 @@
             border: 1px solid rgba(var(--gold-rgb), 0.25);
             box-shadow: 0 4px 16px rgba(var(--shad-rgb), 0.35), inset 0 1px 0 rgba(var(--gold-rgb), 0.12);
         }
-        .stat-number { font-size: 0.9rem; font-weight: bold; margin-bottom: 0px; color: rgba(255, 255, 255, 0.95); }
-        .stat-label { font-size: 9px; color: rgba(var(--gold-rgb), 0.75); font-weight: 500; }
+        .stat-number { font-size: 0.85rem; font-weight: bold; margin-bottom: 0px; color: rgba(255, 255, 255, 0.95); }
+        .stat-label { font-size: 8px; color: rgba(var(--gold-rgb), 0.75); font-weight: 500; white-space: nowrap; }
 
         /* Source Section Headers */
         .source-section { margin-bottom: 16px; }
@@ -1251,11 +1303,12 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .container { padding: 10px; padding-top: 20px; }
+            .container { padding: 15px; padding-top: 20px; }
+            .nav-buttons { gap: 15px; }
             nav.nav-buttons .nav-btn { padding: 8px 18px 10px; font-size: 11px; }
             .year-photos-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
             .stats-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
-            .source-filters { display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 10px; margin: 6px 10px; }
+            .source-filters { display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 10px; margin: 6px 0; }
             .source-chip { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 9px 4px; flex-direction: column; gap: 0; }
             .source-chip:nth-child(3n) { border-right: none; }
             .source-chip:nth-child(4), .source-chip:nth-child(5), .source-chip:nth-child(6) { border-bottom: none; }
@@ -1398,6 +1451,10 @@
         @media (max-width: 480px) {
             .media-filter-tabs { gap: 2px; padding: 3px; margin-bottom: 8px; }
             .media-tab { font-size: 11px; padding: 4px 10px; }
+            .date-filter-container { flex-wrap: nowrap; gap: 2px; padding: 0 5px; }
+            .date-select-wrapper { padding: 0; gap: 0; flex: 1; min-width: 0; display: flex; justify-content: space-between; }
+            .date-select-wrapper select { font-size: 12px; padding: 6px 0; letter-spacing: -0.5px; flex: 1; background: transparent; }
+            .reset-date-btn { width: 24px; height: 24px; font-size: 12px; flex-shrink: 0; margin-left: 2px; }
 
             .modal {
                 padding: 2px;
@@ -1693,6 +1750,40 @@
                 </div>
             </div>
 
+        <div class="date-filter-container">
+          <div class="date-select-wrapper">
+            <select id="filterYear" onchange="applyDateFilter()">
+              <option value="all">Year</option>
+            </select>
+            <select id="filterMonth" onchange="applyDateFilter()">
+              <option value="all">Month</option>
+              <option value="01">1月 Jan</option>
+              <option value="02">2月 Feb</option>
+              <option value="03">3月 Mar</option>
+              <option value="04">4月 Apr</option>
+              <option value="05">5月 May</option>
+              <option value="06">6月 Jun</option>
+              <option value="07">7月 Jul</option>
+              <option value="08">8月 Aug</option>
+              <option value="09">9月 Sep</option>
+              <option value="10">10月 Oct</option>
+              <option value="11">11月 Nov</option>
+              <option value="12">12月 Dec</option>
+            </select>
+            <select id="filterDay" onchange="applyDateFilter()">
+              <option value="all">Day</option>
+            </select>
+          </div>
+          <button id="resetDateBtn" class="reset-date-btn hidden" onclick="resetDateFilter()">✕</button>
+          <button id="expandAllBtn" onclick="toggleExpandAll()" title="Expand / Collapse all years" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--gold);opacity:0.75;padding:2px 4px;white-space:nowrap">▼ All</button>
+        </div>
+
+        <div class="media-filter-tabs">
+            <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
+            <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
+            <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
+        </div>
+
         <div class="source-filters">
             <div class="source-chip active" data-filter="all"><span class="chip-en">All</span><span class="chip-zh">全部</span></div>
             <div class="source-chip" data-filter="drama"><span class="chip-en">Dramas</span><span class="chip-zh">影视</span></div>
@@ -1700,13 +1791,6 @@
             <div class="source-chip" data-filter="variety"><span class="chip-en">Variety/Other</span><span class="chip-zh">综艺/其他</span></div>
             <div class="source-chip" data-filter="endorsement"><span class="chip-en">Endorsements</span><span class="chip-zh">品牌代言</span></div>
             <div class="source-chip" data-filter="magazine"><span class="chip-en">Magazines</span><span class="chip-zh">杂志</span></div>
-        </div>
-
-        <div class="filter-divider"><span>Media Type 媒体类型</span></div>
-        <div class="media-filter-tabs">
-            <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
-            <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
-            <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
         </div>
 
 	<input type="text" class="search-bar" placeholder="English search supported · 关键词搜索" id="searchInput">
@@ -1928,53 +2012,56 @@
 // (search: /* ---------- SECTION ---------- */ to jump to each)
 //
 // CONSTANTS & STATE
-//   Core Variables          ~1900  photoData, filters, pagination sets
-//   Modal Variables         ~1975  currentPhotoGroup, currentPhotoIndex
-//   Playlist State          ~1979  playlist[], filteredVideosCache, PL_KEY
+//   Core Variables          photoData, filters, pagination sets
+//   Modal Variables         currentPhotoGroup, currentPhotoIndex
+//   Playlist State          playlist[], filteredVideosCache, PL_KEY
 //
-// PLAYLIST                  ~1985  plLoad/Save, plCardAdd, plSyncAllCards,
-//                                  addAllFilteredVideos, addYearToPlaylist,
-//                                  addSourceGroupToPlaylist, plRemove, plRender,
-//                                  plTogglePanel, plPlayFromStart, plPlayItem
+// PLAYLIST                  plLoad/Save, plCardAdd, plSyncAllCards,
+//                           addAllFilteredVideos, addYearToPlaylist,
+//                           addSourceGroupToPlaylist, plRemove, plRender,
+//                           plTogglePanel, plPlayFromStart, plPlayItem
 //
-// VIDEO CONTROLS            ~2140  vcSetup, vcTogglePlay, vcToggleMute,
-//                                  vcFullscreen, vcFmt
+// VIDEO CONTROLS            vcSetup, vcTogglePlay, vcToggleMute,
+//                           vcFullscreen, vcFmt
 //
-// MODAL                     ~2224  openPhotoModal, updateModalContent, goToPhoto,
-//                                  navigatePhoto, closeModal, setPlatformBtnBehavior,
-//                                  togglePostText, handleKeyboardNavigation
+// MODAL                     openPhotoModal, updateModalContent, goToPhoto,
+//                           navigatePhoto, closeModal, setPlatformBtnBehavior,
+//                           togglePostText, handleKeyboardNavigation
 //
-// SOURCE FILTER             ~2600  setupSourceFilters, applyFilter
-//                                  (getPhotoSection moved to By Source Tab section)
+// SOURCE FILTER             setupSourceFilters, setupDateFilters,
+//                           applyDateFilter, setMediaFilter, applyFilter
+//                           (getPhotoSection moved to By Source Tab section)
 //
-// MEDIA & URL HELPERS       ~2655  isVideoUrl, isMotionUrl, isRealVideo, isVideoEntry,
-//                                  isClip, isYouTubeUrl, fmtDuration, mediaCountLabel,
-//                                  getMediaIcon, getMotionBadge, getDurBadge
-//                                  dlIsLocked/Unlocked (download lock helpers)
+// MEDIA & URL HELPERS       isVideoUrl, isMotionUrl, isRealVideo, isVideoEntry,
+//                           isClip, isYouTubeUrl, fmtDuration, mediaCountLabel,
+//                           getMediaIcon, getMotionBadge, getDurBadge
+//                           dlIsLocked/Unlocked (download lock helpers)
 //
-// INITIALIZATION            ~2780  init(), setupNavigation(), showSection()
+// INITIALIZATION            DOMContentLoaded — loadPhotoData, setupNavigation
 //
-// DATA LOADING              ~2794  loadPhotoData() — fetches Misc_YYYY.json files
+// DATA LOADING              loadPhotoData() — fetches Misc_YYYY.json files
 //
-// TIMELINE                  ~2865  initializeTimeline, createTimelineHTML,
-//                                  generatePhotosHTML, toggleYear, renderYearPage,
-//                                  goToPage, jumpToPage, createPaginationButtons
+// TIMELINE                  initializeTimeline, createTimelineHTML,
+//                           generatePhotosHTML, toggleYear, renderYearPage,
+//                           goToPage, jumpToPage, createPaginationButtons
 //
-// LAZY LOADING              ~3137  setupIntersectionObserver, setupLazyLoading,
-//                                  unloadImages
-//                                  BUG NOTE: use removeAttribute('src') not src=''
-//                                  (src='' resolves to page URL, breaks lazy load)
+// LAZY LOADING              setupIntersectionObserver, setupLazyLoading,
+//                           unloadImages
+//                           BUG NOTE: use removeAttribute('src') not src=''
+//                           (src='' resolves to page URL, breaks lazy load)
 //
-// SEARCH                    ~3168  setupSearch, setupClearSearch
+// SEARCH                    setupSearch, setupClearSearch
 //
-// STATS                     ~3194  updateStats
+// STATS                     updateStats
 //
-// BY SOURCE TAB             ~3248  SOURCE_SECTIONS const + getPhotoSection(p)
-//                                  ~3320  loadSourcesView — groups sources into sections
-//                                  toggleSourceSection, toggleSource,
-//                                  renderSourcePage, changeSourcePhotosPerPage
+// NAVIGATION                setupNavigation, showSection
 //
-// THEME & MAGNOLIA          ~3632  applyTheme, mgCombined, mgBuildTiles, mgApply
+// BY SOURCE TAB             SOURCE_SECTIONS const + getPhotoSection(p)
+//                           loadSourcesView — groups sources into sections
+//                           toggleSourceSection, toggleSource,
+//                           renderSourcePage, changeSourcePhotosPerPage
+//
+// THEME & MAGNOLIA          applyTheme, mgCombined, mgBuildTiles, mgApply
 //
 // ============================================================
 
@@ -1990,6 +2077,10 @@
         let expandedSources = new Set();
         let expandedSectionKeys = new Set();
 
+        const elFilterYear  = document.getElementById("filterYear");
+        const elFilterMonth = document.getElementById("filterMonth");
+        const elFilterDay   = document.getElementById("filterDay");
+
         /* ---------- Enhanced Modal Variables ---------- */
         let currentPhotoGroup = [];
         let currentPhotoIndex = 0;
@@ -2000,6 +2091,7 @@
         let filteredVideosCache = [];
         const PL_KEY = 'xzMiscPlaylist';
 
+        /* ---------- Playlist Functions ---------- */
         function plLoad() {
             try { playlist = JSON.parse(localStorage.getItem(PL_KEY) || '[]'); } catch(e) { playlist = []; }
             plRender();
@@ -2628,12 +2720,53 @@ function closeModal() {
                     this.classList.add('active');
                     currentFilter = this.dataset.filter;
                    // Clear the search query and input box
-		    currentSearchQuery = ''; 
-                    document.getElementById('searchInput').value = ''; 
+		    currentSearchQuery = '';
+                    document.getElementById('searchInput').value = '';
                     document.getElementById('clearSearchBtn').style.display = 'none'; /* <-- ADD THIS */
                     applyFilter();
                 });
             });
+        }
+
+        function setupDateFilters() {
+            const daySelect = document.getElementById("filterDay");
+            if (!daySelect) return;
+            for (let i = 1; i <= 31; i++) {
+                const val = i < 10 ? "0" + i : String(i);
+                const opt = document.createElement("option");
+                opt.value = val;
+                opt.innerText = val;
+                daySelect.appendChild(opt);
+            }
+        }
+
+        function applyDateFilter() {
+            currentSearchQuery = '';
+            const si = document.getElementById('searchInput');
+            if (si) si.value = '';
+            const cb = document.getElementById('clearSearchBtn');
+            if (cb) cb.style.display = 'none';
+            applyFilter();
+        }
+
+        function resetDateFilter() {
+            if (elFilterYear)  elFilterYear.value  = 'all';
+            if (elFilterMonth) elFilterMonth.value = 'all';
+            if (elFilterDay)   elFilterDay.value   = 'all';
+            applyFilter();
+        }
+
+        function toggleExpandAll() {
+            const allYears = [...document.querySelectorAll('[data-year]')].map(el => el.dataset.year);
+            const allExpanded = allYears.every(y => expandedYears.has(y));
+            const btn = document.getElementById('expandAllBtn');
+            if (allExpanded) {
+                allYears.forEach(y => { if (expandedYears.has(y)) toggleYear(y); });
+                if (btn) btn.textContent = '▼ All';
+            } else {
+                allYears.forEach(y => { if (!expandedYears.has(y)) toggleYear(y); });
+                if (btn) btn.textContent = '▲ All';
+            }
         }
 
         function mediaCountLabel(photos) {
@@ -2662,6 +2795,7 @@ function closeModal() {
             }
         }
 
+        /* ---------- Media & URL Helpers ---------- */
         function isVideoUrl(url) { return /\.mp4$/i.test(url); }
         function isYouTubeUrl(url) { return /youtube\.com\/watch|youtu\.be\//.test(url); }
 
@@ -2719,6 +2853,13 @@ function closeModal() {
 	function applyFilter() {
             let filteredPhotos = [];
 
+            const yVal = elFilterYear ? elFilterYear.value : 'all';
+            const mVal = elFilterMonth ? elFilterMonth.value : 'all';
+            const dVal = elFilterDay ? elFilterDay.value : 'all';
+            const hasDateFilter = yVal !== 'all' || mVal !== 'all' || dVal !== 'all';
+            const resetBtn = document.getElementById("resetDateBtn");
+            if (resetBtn) resetBtn.classList.toggle("hidden", !hasDateFilter);
+
             // 1. Filter by section category
             if (currentFilter === 'all') {
                 filteredPhotos = photoData;
@@ -2726,14 +2867,30 @@ function closeModal() {
                 filteredPhotos = photoData.filter(p => getPhotoSection(p) === currentFilter);
             }
 
-            // 2. Filter by media type
+            // 2. Filter by date
+            if (hasDateFilter) {
+                filteredPhotos = filteredPhotos.filter(item => {
+                    if (!item.date) return false;
+                    const parts = String(item.date).split(/[-/.]/);
+                    if (parts.length < 3) return false;
+                    const pYear  = parts[0];
+                    const pMonth = parts[1].padStart(2, "0");
+                    const pDay   = String(parseInt(parts[2])).padStart(2, "0");
+                    if (yVal !== 'all' && pYear  !== yVal)  return false;
+                    if (mVal !== 'all' && pMonth !== mVal)  return false;
+                    if (dVal !== 'all' && pDay   !== dVal)  return false;
+                    return true;
+                });
+            }
+
+            // 3. Filter by media type
             if (currentMediaFilter === 'video') {
                 filteredPhotos = filteredPhotos.filter(p => isVideoEntry(p));
             } else if (currentMediaFilter === 'photo') {
                 filteredPhotos = filteredPhotos.filter(p => !isVideoEntry(p));
             }
 
-            // 3. Filter by search query (if one exists)
+            // 4. Filter by search query (if one exists)
             if (currentSearchQuery) {
                 const query = currentSearchQuery;
                 filteredPhotos = filteredPhotos.filter(p => {
@@ -2793,6 +2950,7 @@ function closeModal() {
             setupSearch();
 	    setupClearSearch();
             setupSourceFilters();
+            setupDateFilters();
             setupIntersectionObserver();
             setupFloatGroup();
             loadPhotoData();
@@ -2860,8 +3018,21 @@ async function loadPhotoData() {
                 
                 allPhotos.sort((a, b) => new Date(b.date) - new Date(a.date));
                 allPhotos.forEach((photo, index) => { photo.id = index + 1; });
-                
+
                 photoData = allPhotos;
+
+                const years = [...new Set(photoData.map(p => p.year))].sort().reverse();
+                const yearSelect = document.getElementById("filterYear");
+                if (yearSelect) {
+                    yearSelect.innerHTML = '<option value="all">Year</option>';
+                    years.forEach(y => {
+                        const opt = document.createElement("option");
+                        opt.value = y;
+                        opt.innerText = y;
+                        yearSelect.appendChild(opt);
+                    });
+                }
+
                 initializeTimeline();
                 
             } catch (err) {
@@ -3729,6 +3900,7 @@ function setupFooterToggle() {
             panel.style.top = Math.max(10, Math.min(rect.top, window.innerHeight - panelH - 10)) + 'px';
         }
 
+        /* ---------- Theme & Magnolia ---------- */
         // ── Theme Switcher ──
         (function(){
           const KEY = 'xzTheme';
