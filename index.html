@@ -3256,7 +3256,7 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
             // 3. Now update the stats
             document.getElementById('totalPhotosDisplay').textContent = displayPhotos.length.toLocaleString();
             
-            const uniqueSources = new Set(displayPhotos.flatMap(p => 
+            const uniqueSources = new Set(displayPhotos.flatMap(p =>
     Array.isArray(p.source) ? p.source : [p.source]
 ));
             document.getElementById('totalSourcesDisplay').textContent = uniqueSources.size;
