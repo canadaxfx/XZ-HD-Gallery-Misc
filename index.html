@@ -2361,20 +2361,25 @@ function _getPlatformPop() {
     }
     return pop;
 }
-function setPlatformBtnBehavior(btn, mainLink, extraLinks) {
+function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
     const existingPop = document.getElementById('platformPopover');
     if (existingPop) existingPop.style.display = 'none';
+    const lmap = {weibo:'Weibo 微博', douyin:'Douyin 抖音', youtube:'YouTube', bilibili:'Bilibili', ins:'Instagram', xiaohongshu:'RedNote 小红书', xhs:'RedNote 小红书', rednote:'RedNote 小红书', twitter:'Twitter', instagram:'Instagram'};
     const links = [];
     const w = mainLink ? String(mainLink).trim() : '';
-    if (w) links.push({label: 'Weibo 微博', url: /^https?/i.test(w) ? w : 'https://' + w});
+    if (w) {
+        const firstPlatform = Array.isArray(platforms) && platforms[0] ? String(platforms[0]).toLowerCase() : 'weibo';
+        links.push({label: lmap[firstPlatform] || firstPlatform, url: /^https?/i.test(w) ? w : 'https://' + w});
+    }
     if (extraLinks && typeof extraLinks === 'object') {
-        const lmap = {weibo:'Weibo 微博',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书'};
         Object.entries(extraLinks).forEach(([k, v]) => { if (v) links.push({label: lmap[k] || k, url: String(v)}); });
     }
     if (!links.length) { btn.style.display = 'none'; return; }
     btn.style.display = 'inline-block';
     btn.onclick = null;
     btn.removeAttribute('href');
+    const isMulti = links.length > 1;
+    btn.innerHTML = `📱 View on Platform${isMulti ? ' <span style="font-size:10px;opacity:0.75">🔗</span>' : ''}<br><small style="opacity:1">${isMulti ? '多平台' : '查看原帖'}</small>`;
     if (links.length === 1) {
         btn.setAttribute('href', links[0].url);
         btn.setAttribute('target', '_blank');
@@ -2537,7 +2542,7 @@ function updateModalContent() {
     }
     const badgeYT = document.getElementById('badgeYT');
     if (badgeYT) { badgeYT.classList.toggle('hidden', !isYT); if (isYT) badgeYT.href = photo.url; }
-    if (weiboBtn) setPlatformBtnBehavior(weiboBtn, photo.weibo, photo.platform_links);
+    if (weiboBtn) setPlatformBtnBehavior(weiboBtn, photo.weibo, photo.platform_links, photo.platform);
 
     // --- 4. UPDATE TAGS ---
     if (tagsContainer) {
