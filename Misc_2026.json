@@ -6356,8 +6356,6 @@
             "十日终焉"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "#十日终焉开机# “我叫齐夏，是个骗子，我说的话你只能信一半。”领衔主演：@肖战 #剧集十日终焉# 改编自番茄小说巅峰榜同名原著 @杀虫队队员 ，由@柠萌影视 @腾讯视频 出品，白海龟影视联合出品，柠萌影视、@热血动物联盟 制作，敬请期待！预约：网页链接肖战的微博视频",
         "englishTags": [
             "ten days end",
@@ -6365,7 +6363,11 @@
             "filming start",
             "tencent video"
         ],
-        "duration": 32
+        "duration": 32,
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7626983564587863339"
+        },
+        "platform": []
     },
     {
         "id": 261,
