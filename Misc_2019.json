@@ -1637,6 +1637,34 @@
         ]
     },
     {
+        "id": 467,
+        "url": "https://assets.xz-studio-gallery.com/full/20191117_央视网青年_XZ-MISC-1.mp4",
+        "date": "2019-11-17",
+        "month": "November",
+        "year": "2019",
+        "tags": [
+            "央视网青年"
+        ],
+        "groupName": "央视网青年_2019-11-17",
+        "duration": 128,
+        "weibo": "",
+        "platform": [
+            "央视网CCTV.COM"
+        ],
+        "source": [
+            "访谈 / Interviews"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "20191117 央视网青年采访",
+        "englishTags": [
+            "cctv",
+            "interview"
+        ],
+        "quality": "1080p"
+    },
+    {
         "id": 295,
         "url": "https://assets.xz-studio-gallery.com/full/20191117_时尚芭莎_XZ-MISC-1.mp4",
         "date": "2019-11-17",
