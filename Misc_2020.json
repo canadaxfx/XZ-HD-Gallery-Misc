@@ -2120,7 +2120,6 @@
         "source": [
             "VOGUE"
         ],
-        "note": null,
         "tags": [
             "VOGUE",
             "二月刊"
@@ -2134,6 +2133,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2159,6 +2162,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2184,6 +2191,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2209,6 +2220,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2234,6 +2249,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2259,6 +2278,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2284,6 +2307,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2309,6 +2336,10 @@
             "magazine",
             "vogueme",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
@@ -2335,6 +2366,10 @@
             "vogueme",
             "cover",
             "interview"
+        ],
+        "platform": [
+            "weibo",
+            "WX"
         ]
     },
     {
