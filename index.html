@@ -2496,10 +2496,11 @@ function updateModalContent() {
     title.textContent = photo.date || photo.groupName || 'Photo Collection';
     
     // --- 3. DOWNLOAD & WEIBO LINKS ---
-    // YouTube: show download button only if download_url present. R2: best available quality.
+    // YouTube: show download button if any R2/download link present (url_4k > url_hd > download_url).
     if (isYT) {
-        if (photo.download_url) {
-            dlSetBtn(downloadBtn, photo.download_url);
+        const ytDlUrl = photo.url_4k || photo.url_hd || photo.download_url;
+        if (ytDlUrl) {
+            dlSetBtn(downloadBtn, ytDlUrl);
             downloadBtn.style.display = '';
         } else {
             downloadBtn.style.display = 'none';
@@ -2545,7 +2546,7 @@ function updateModalContent() {
     }
     const badgeYT = document.getElementById('badgeYT');
     if (badgeYT) { badgeYT.classList.toggle('hidden', !isYT); if (isYT) badgeYT.href = photo.url; }
-    if (weiboBtn) setPlatformBtnBehavior(weiboBtn, photo.weibo, photo.platform_links, photo.platform);
+    if (weiboBtn) setPlatformBtnBehavior(weiboBtn, photo.link || photo.weibo, photo.platform_links, photo.platform);
 
     // --- 4. UPDATE TAGS ---
     if (tagsContainer) {
