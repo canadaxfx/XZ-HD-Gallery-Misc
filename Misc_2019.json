@@ -1588,29 +1588,6 @@
         ]
     },
     {
-        "id": 466,
-        "url": "https://www.youtube.com/watch?v=qf-QGkyd57I",
-        "date": "2019-12-02",
-        "month": "December",
-        "year": "2019",
-        "tags": [
-            "头条娱乐",
-            "采访"
-        ],
-        "groupName": "头条娱乐_2019-12-02",
-        "duration": 256,
-        "weibo": "",
-        "platform": [],
-        "source": [],
-        "datePrecision": "day",
-        "postText": "肖战不介意被粉丝“考古”  头条君来了",
-        "englishTags": [
-            "interview",
-            "toutiao entertainment"
-        ],
-        "download_url": "https://assets.xz-studio-gallery.com/full/20191202_头条娱乐_XZ-MISC-1.mp4"
-    },
-    {
         "id": 334,
         "url": "https://assets.xz-studio-gallery.com/full/20191129_绿洲专访_XZ-MISC-1.mp4",
         "date": "2019-11-29",
@@ -1846,6 +1823,29 @@
             "the untamed",
             "you are my glory"
         ]
+    },
+    {
+        "id": 466,
+        "url": "https://www.youtube.com/watch?v=qf-QGkyd57I",
+        "date": "2019-11-10",
+        "month": "November",
+        "year": "2019",
+        "tags": [
+            "头条娱乐",
+            "采访"
+        ],
+        "groupName": "头条娱乐_2019-12-02",
+        "duration": 256,
+        "weibo": "",
+        "platform": [],
+        "source": [],
+        "datePrecision": "day",
+        "postText": "肖战不介意被粉丝“考古”  头条君来了",
+        "englishTags": [
+            "interview",
+            "toutiao entertainment"
+        ],
+        "download_url": "https://assets.xz-studio-gallery.com/full/20191202_头条娱乐_XZ-MISC-1.mp4"
     },
     {
         "id": 294,
