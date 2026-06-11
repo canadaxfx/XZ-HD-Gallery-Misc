@@ -2875,6 +2875,12 @@ function closeModal() {
 	function applyFilter() {
             let filteredPhotos = [];
 
+            // Reset pagination to page 1 when filters change — stale page numbers
+            // cause empty grids when filtered item count drops below startIndex
+            Object.keys(yearPaginationSettings).forEach(y => {
+                yearPaginationSettings[y].currentPage = 1;
+            });
+
             const yVal = elFilterYear ? elFilterYear.value : 'all';
             const mVal = elFilterMonth ? elFilterMonth.value : 'all';
             const dVal = elFilterDay ? elFilterDay.value : 'all';
