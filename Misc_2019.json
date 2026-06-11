@@ -2777,7 +2777,10 @@
         "date": "2019-10-19",
         "month": "October",
         "year": "2019",
-        "tags": [],
+        "tags": [
+            "快乐大本营",
+            "花絮"
+        ],
         "groupName": "快乐大本营_2019-10-19",
         "duration": 26,
         "weibo": "https://www.mgtv.com/b/327224/6701654.html",
@@ -2788,8 +2791,6 @@
             "MGTV"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "快乐大本营未播花絮：肖战土味情话太苏了 这声老婆叫的真甜啊",
         "englishTags": [
             "happy camp",
