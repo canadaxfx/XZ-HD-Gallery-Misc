@@ -2546,7 +2546,9 @@ function updateModalContent() {
     }
     const badgeYT = document.getElementById('badgeYT');
     if (badgeYT) { badgeYT.classList.toggle('hidden', !isYT); if (isYT) badgeYT.href = photo.url; }
-    if (weiboBtn) setPlatformBtnBehavior(weiboBtn, photo.link || photo.weibo, photo.platform_links, photo.platform);
+    const _platformLink = photo.link || photo.weibo || (isYT ? photo.url : '');
+    const _platformTypes = (photo.platform && photo.platform.length) ? photo.platform : (isYT ? ['youtube'] : []);
+    if (weiboBtn) setPlatformBtnBehavior(weiboBtn, _platformLink, photo.platform_links, _platformTypes);
 
     // --- 4. UPDATE TAGS ---
     if (tagsContainer) {
