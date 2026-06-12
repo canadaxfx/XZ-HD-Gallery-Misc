@@ -4456,6 +4456,64 @@
         "englishTags": []
     },
     {
+        "id": 560,
+        "url": "https://assets.xz-studio-gallery.com/full/20260511_大学生电影节_XZ-MISC-3.jpg",
+        "date": "2026-05-11",
+        "month": "May",
+        "year": "2026",
+        "tags": [
+            "大学生电影节",
+            "主持人"
+        ],
+        "groupName": "大学生电影节_2026-05-11",
+        "weibo": "https://www.xiaohongshu.com/user/profile/5a8ed1d411be1024a37514aa",
+        "source": [
+            "活动 / Events"
+        ],
+        "platform": [
+            "rednote"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "周怡zoey 小红书号：277195962\r\n肖战镜头签🎥回到校园时代会做什么呢？🔥\r\n感谢采访嘉宾们的用心回复\r\n整个红毯环节非常顺利✨\r\n\t\r\n分享当天的采访问题:\r\n如果时光回到校园时代会去做什么？\r\n那时候屏幕前的大家会怎么回答呢～\r\n\t\r\n#肖战#影帝#得闲谨制 #马丽 #北京国际电影节 #大学生电影节#明星 #明星不止AB面  #主持人日常 #随手记录美好",
+        "englishTags": [
+            "college student film festival",
+            "host",
+            "red carpet",
+            "interview"
+        ]
+    },
+    {
+        "id": 559,
+        "url": "https://assets.xz-studio-gallery.com/full/20260511_大学生电影节_XZ-MISC-2.jpg",
+        "date": "2026-05-11",
+        "month": "May",
+        "year": "2026",
+        "tags": [
+            "大学生电影节",
+            "主持人"
+        ],
+        "groupName": "大学生电影节_2026-05-11",
+        "weibo": "https://www.xiaohongshu.com/user/profile/5a8ed1d411be1024a37514aa",
+        "source": [
+            "活动 / Events"
+        ],
+        "platform": [
+            "rednote"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "周怡zoey 小红书号：277195962\r\n肖战镜头签🎥回到校园时代会做什么呢？🔥\r\n感谢采访嘉宾们的用心回复\r\n整个红毯环节非常顺利✨\r\n\t\r\n分享当天的采访问题:\r\n如果时光回到校园时代会去做什么？\r\n那时候屏幕前的大家会怎么回答呢～\r\n\t\r\n#肖战#影帝#得闲谨制 #马丽 #北京国际电影节 #大学生电影节#明星 #明星不止AB面  #主持人日常 #随手记录美好",
+        "englishTags": [
+            "college student film festival",
+            "host",
+            "red carpet",
+            "interview"
+        ]
+    },
+    {
         "id": 556,
         "url": "https://assets.xz-studio-gallery.com/full/20260511_大学生电影节_XZ-MISC-1.jpg",
         "date": "2026-05-11",
@@ -10096,8 +10154,6 @@
             "GUCCI"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "#摘墨镜的肖战##肖战墨镜下是更权威的脸# 戴墨镜的肖战犹如黑客帝国般冷酷，摘墨镜后又是另一种温柔的风格。#嘉人##嘉人现场##肖战米兰看秀造型##肖战##时装周##米兰时装周##大秀直击##头排云看秀# 嘉人的微博视频",
         "englishTags": [
             "marie claire",
@@ -10105,7 +10161,11 @@
             "milan fashion week",
             "sunglasses",
             "photoshoot"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7611538362894643429"
+        },
+        "platform": []
     },
     {
         "id": 247,
