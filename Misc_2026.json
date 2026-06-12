@@ -9874,7 +9874,11 @@
             "milan fashion week",
             "magazine",
             "endorsement"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7611865806154564963"
+        },
+        "platform": []
     },
     {
         "id": 242,
