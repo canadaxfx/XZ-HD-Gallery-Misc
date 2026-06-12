@@ -129,14 +129,16 @@
             "嘉人"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "「新绽放」沉吟，思索，决定无拘。不重复，不设限，迎接属于@X玖少年团肖战DAYTOY 的新绽放。#肖战嘉人开年刊封面##肖战崭新启航大片# 嘉人的微博视频",
         "englishTags": [
             "marie claire",
             "magazine",
             "photoshoot"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7317854179102428468"
+        },
+        "platform": []
     },
     {
         "id": 604,
@@ -155,15 +157,17 @@
             "嘉人"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "「新乐园」远航的飞机和旋转的风筝带来关于自由和远方的想象，停止仰望，加速飞驰，追随@X玖少年团肖战DAYTOY 的脚步来到新乐园。#肖战嘉人开年刊封面##肖战崭新启航大片# 嘉人的微博视频",
         "englishTags": [
             "marie claire",
             "magazine",
             "photoshoot",
             "cover"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7317854971217644840"
+        },
+        "platform": []
     },
     {
         "id": 603,
