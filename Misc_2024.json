@@ -4159,6 +4159,38 @@
         ]
     },
     {
+        "id": 356,
+        "url": "https://assets.xz-studio-gallery.com/full/20240430_DY_XZ-MISC-1.mp4",
+        "date": "2024-04-30",
+        "month": "April",
+        "year": "2024",
+        "tags": [
+            "Gucci",
+            "1955",
+            "马衔扣"
+        ],
+        "groupName": "Sohu_2024-04-30",
+        "quality": "1080p",
+        "duration": 16,
+        "weibo": "https://www.douyin.com/video/7363216978183507210",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "重游米兰独家花絮放出，演员、歌手及品牌代言人@肖战 和#Gucci1955包 的故事，未完待续……#我与马衔扣",
+        "englishTags": [
+            "gucci",
+            "douyin",
+            "bag",
+            "milan"
+        ]
+    },
+    {
         "id": 145,
         "url": "https://assets.xz-studio-gallery.com/full/20240430-1_GUCCI_XZ.mp4",
         "date": "2024-04-30",
@@ -4171,7 +4203,6 @@
         ],
         "weibo": "https://weibo.com/1934738161/Oc78AD6Jf",
         "groupName": "GUCCI_2024-04-30",
-        "note": "",
         "source": [
             "GUCCI"
         ],
@@ -4183,7 +4214,11 @@
             "endorsement",
             "gucci 1955",
             "horsebit"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7363107207589776691"
+        },
+        "platform": []
     },
     {
         "id": 144,
@@ -4292,7 +4327,6 @@
         ],
         "weibo": "https://weibo.com/1934738161/ObYuNz1xj",
         "groupName": "GUCCI_2024-04-29",
-        "note": "",
         "source": [
             "GUCCI"
         ],
@@ -4305,7 +4339,11 @@
             "horsebit 1955",
             "milan",
             "coat"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7363106043804650779"
+        },
+        "platform": []
     },
     {
         "id": 139,
