@@ -1759,6 +1759,15 @@
 
         <div class="date-filter-container">
           <div class="date-select-wrapper">
+            <select id="filterSource" onchange="applyDateFilter()">
+              <option value="all">Platform</option>
+              <option value="weibo">Weibo</option>
+              <option value="douyin">Douyin</option>
+              <option value="rednote">RedNote</option>
+              <option value="wx">WX</option>
+              <option value="mgtv">MGTV</option>
+              <option value="ua">U/A</option>
+            </select>
             <select id="filterYear" onchange="applyDateFilter()">
               <option value="all">Year</option>
             </select>
@@ -2084,9 +2093,10 @@
         let expandedSources = new Set();
         let expandedSectionKeys = new Set();
 
-        const elFilterYear  = document.getElementById("filterYear");
-        const elFilterMonth = document.getElementById("filterMonth");
-        const elFilterDay   = document.getElementById("filterDay");
+        const elFilterYear   = document.getElementById("filterYear");
+        const elFilterMonth  = document.getElementById("filterMonth");
+        const elFilterDay    = document.getElementById("filterDay");
+        const elFilterSource = document.getElementById("filterSource");
 
         /* ---------- Enhanced Modal Variables ---------- */
         let currentPhotoGroup = [];
@@ -2393,7 +2403,7 @@ function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
     btn.onclick = null;
     btn.removeAttribute('href');
     const isMulti = links.length > 1;
-    btn.innerHTML = `📱 View on Platform${isMulti ? ' <span style="font-size:10px;opacity:0.75">🔗</span>' : ''}<br><small style="opacity:1">${isMulti ? '多平台' : '查看原帖'}</small>`;
+    btn.innerHTML = `📱 View on Platform${isMulti ? ' <span style="font-size:10px;opacity:0.75">🔗</span>' : ''}<br><small style="opacity:1">${isMulti ? '多链接' : '查看原帖'}</small>`;
     if (links.length === 1) {
         btn.setAttribute('href', links[0].url);
         btn.setAttribute('target', '_blank');
@@ -2772,9 +2782,10 @@ function closeModal() {
         }
 
         function resetDateFilter() {
-            if (elFilterYear)  elFilterYear.value  = 'all';
-            if (elFilterMonth) elFilterMonth.value = 'all';
-            if (elFilterDay)   elFilterDay.value   = 'all';
+            if (elFilterYear)   elFilterYear.value   = 'all';
+            if (elFilterMonth)  elFilterMonth.value  = 'all';
+            if (elFilterDay)    elFilterDay.value    = 'all';
+            if (elFilterSource) elFilterSource.value = 'all';
             applyFilter();
         }
 
@@ -2884,7 +2895,8 @@ function closeModal() {
             const yVal = elFilterYear ? elFilterYear.value : 'all';
             const mVal = elFilterMonth ? elFilterMonth.value : 'all';
             const dVal = elFilterDay ? elFilterDay.value : 'all';
-            const hasDateFilter = yVal !== 'all' || mVal !== 'all' || dVal !== 'all';
+            const sVal = elFilterSource ? elFilterSource.value : 'all';
+            const hasDateFilter = yVal !== 'all' || mVal !== 'all' || dVal !== 'all' || sVal !== 'all';
             const resetBtn = document.getElementById("resetDateBtn");
             if (resetBtn) resetBtn.classList.toggle("hidden", !hasDateFilter);
 
@@ -2911,14 +2923,28 @@ function closeModal() {
                 });
             }
 
-            // 3. Filter by media type
+            // 3. Filter by platform
+            if (sVal !== 'all') {
+                filteredPhotos = filteredPhotos.filter(item => {
+                    const platforms = new Set();
+                    if (item.platform) {
+                        const arr = Array.isArray(item.platform) ? item.platform : [item.platform];
+                        arr.forEach(t => platforms.add(String(t).toLowerCase()));
+                    }
+                    if (!platforms.size) platforms.add('weibo');
+                    if (platforms.has('xiaohongshu')) platforms.add('rednote');
+                    return platforms.has(sVal);
+                });
+            }
+
+            // 4. Filter by media type
             if (currentMediaFilter === 'video') {
                 filteredPhotos = filteredPhotos.filter(p => isVideoEntry(p));
             } else if (currentMediaFilter === 'photo') {
                 filteredPhotos = filteredPhotos.filter(p => !isVideoEntry(p));
             }
 
-            // 4. Filter by search query (if one exists)
+            // 5. Filter by search query (if one exists)
             if (currentSearchQuery) {
                 const query = currentSearchQuery;
                 filteredPhotos = filteredPhotos.filter(p => {
@@ -3236,6 +3262,21 @@ async function loadPhotoData() {
                 });
             }
 
+// 2b. Filter by platform
+        const _rSVal = elFilterSource ? elFilterSource.value : 'all';
+        if (_rSVal !== 'all') {
+            yearPhotos = yearPhotos.filter(item => {
+                const platforms = new Set();
+                if (item.platform) {
+                    const arr = Array.isArray(item.platform) ? item.platform : [item.platform];
+                    arr.forEach(t => platforms.add(String(t).toLowerCase()));
+                }
+                if (!platforms.size) platforms.add('weibo');
+                if (platforms.has('xiaohongshu')) platforms.add('rednote');
+                return platforms.has(_rSVal);
+            });
+        }
+
 // 2. Filter by section category
         if (currentFilter !== 'all') {
             yearPhotos = yearPhotos.filter(p => getPhotoSection(p) === currentFilter);
@@ -3502,66 +3543,67 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
         // Mirrored in source_sections.json. Update via autosync Section Manager UI —
         // that tool writes both files in one step. Never edit just one.
         const SOURCE_SECTIONS = {
-            _sections: ['drama','event','variety','endorsement','magazine'],
+            _sections: ["drama", "event", "variety", "endorsement", "magazine"],
             _section_labels: {
                 drama:       '影视 Dramas',
                 event:       '舞台/活动 Stages/Events',
-                variety:     '综艺/其他 Variety/Other',
-                endorsement: '品牌代言 Endorsements',
-                magazine:    '杂志 Magazines'
+                variety:       '综艺/其他 Variety/Other',
+                endorsement:       '品牌代言 Endorsements',
+                magazine:       '杂志 Magazines'
             },
-            '名人 / Celebrity':            'variety',
-            'COSMO':                    'magazine',
-            'ELLE':                     'magazine',
-            'ELLEMEN':                  'magazine',
-            'Endorsement Misc':         'endorsement',
-            '媒体 / Ent. Hub':                 'variety',
-            '活动 / Events':              'event',
-            'GQ':                       'magazine',
-            'GUCCI':                    'endorsement',
-            'NARS':                     'endorsement',
-            '舞台 / Stages':              'event',
-            'TODS':                     'endorsement',
-            'VOGUE':                    'magazine',
-            'YSL圣罗兰美妆':            'endorsement',
-            '宝诗龙Boucheron':          'endorsement',
-            '北京台春晚':               'event',
-            '博客天下':                 'magazine',
-            '藏海传':                   'drama',
-            '超星星学园':               'drama',
-            '陈情令':                   'drama',
-            '得闲谨制':                 'drama',
-            '电视剧品质盛典':           'event',
-            '谍报上不封顶':             'drama',
-            '斗罗大陆':                 'drama',
-            '访谈 / Interviews':        'variety',
-            '官方推广 / Official Promo':'variety',
-            '嘉人':                     'magazine',
-            '骄阳伴我':                 'drama',
+            'COSMO':  'magazine',
+            'ELLE':  'magazine',
+            'ELLEMEN':  'magazine',
+            'Endorsement Misc':  'endorsement',
+            'GQ':  'magazine',
+            'GUCCI':  'endorsement',
+            'NARS':  'endorsement',
+            'TODS':  'endorsement',
+            'VOGUE':  'magazine',
+            'YSL圣罗兰美妆':  'endorsement',
+            '中国电视剧年度盛典':  'event',
+            '人物':  'magazine',
+            '余生请多指教':  'drama',
+            '其他 / Other':  'variety',
+            '北京台春晚':  'event',
+            '十日终焉':  'drama',
+            '博客天下':  'magazine',
+            '名人 / Celebrity':  'variety',
+            '哦我的皇帝陛下':  'drama',
+            '嘉人':  'magazine',
+            '央视舞台':  'event',
+            '媒体 / Ent. Hub':  'variety',
+            '官方推广 / Official Promo':  'variety',
+            '宝诗龙Boucheron':  'endorsement',
+            '射雕英雄传侠之大者':  'drama',
+            '小城良方':  'drama',
+            '得闲谨制':  'drama',
+            '微博之夜':  'event',
             '拉夫劳伦香氛RalphLauren':  'endorsement',
-            '狼殿下':                   'drama',
-            '李宁':                     'endorsement',
-            '梦中的那片海':             'drama',
-            '哦我的皇帝陛下':           'drama',
-            '欧莱雅PRO':                'endorsement',
-            '欧莱雅男士':               'endorsement',
-            '其他 / Other':                'variety',
-            '人物':                     'magazine',
-            '日常':                     'variety',
-            '荣耀HONOR':                'endorsement',
-            '射雕英雄传侠之大者':       'drama',
-            '十日终焉':                 'drama',
-            '时尚芭莎':                 'magazine',
-            '湾区升明月':               'event',
-            '王牌部队':                 'drama',
-            '网络视听盛典':             'event',
-            '微博之夜':                 'event',
-            '小城良方':                 'drama',
-            '余生请多指教':             'drama',
-            '羽西':                     'endorsement',
-            '玉骨遥':                   'drama',
-            '中国电视剧年度盛典':       'event',
-            '诛仙':                     'drama'
+            '斗罗大陆':  'drama',
+            '日常':  'variety',
+            '时尚芭莎':  'magazine',
+            '李宁':  'endorsement',
+            '梦中的那片海':  'drama',
+            '欧莱雅PRO':  'endorsement',
+            '欧莱雅男士':  'endorsement',
+            '活动 / Events':  'event',
+            '湾区升明月':  'event',
+            '狼殿下':  'drama',
+            '玉骨遥':  'drama',
+            '王牌部队':  'drama',
+            '电视剧品质盛典':  'event',
+            '网络视听盛典':  'event',
+            '羽西':  'endorsement',
+            '舞台 / Stages':  'event',
+            '荣耀HONOR':  'endorsement',
+            '藏海传':  'drama',
+            '访谈 / Interviews':  'variety',
+            '诛仙':  'drama',
+            '谍报上不封顶':  'drama',
+            '超星星学园':  'drama',
+            '陈情令':  'drama',
+            '骄阳伴我':  'drama'
         };
 
         function getPhotoSection(p) {
