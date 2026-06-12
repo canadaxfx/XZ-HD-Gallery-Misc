@@ -1657,14 +1657,12 @@
         "duration": 128,
         "weibo": "",
         "platform": [
-            "央视网CCTV.COM"
+            "ua"
         ],
         "source": [
             "访谈 / Interviews"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "20191117 央视网青年采访",
         "englishTags": [
             "cctv",
