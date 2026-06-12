@@ -459,7 +459,10 @@
             "winter",
             "behind the scenes"
         ],
-        "duration": 88
+        "duration": 88,
+        "platform": [
+            "ua"
+        ]
     },
     {
         "id": 271,
