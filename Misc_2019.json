@@ -4543,6 +4543,69 @@
         ]
     },
     {
+        "id": 495,
+        "url": "https://assets.xz-studio-gallery.com/full/20190923_COSMO米兰_XZ-MISC-2.mp4",
+        "date": "2019-09-23",
+        "month": "September",
+        "year": "2019",
+        "tags": [
+            "COSMO",
+            "米兰时装周",
+            "采访"
+        ],
+        "groupName": "COSMO米兰_2019-09-23",
+        "duration": 59,
+        "weibo": "",
+        "source": [
+            "GUCCI",
+            "COSMO",
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "UA"
+        ],
+        "datePrecision": "day",
+        "postText": "【肖战采访】20190923  时尚cosmo/米兰时装周",
+        "englishTags": [
+            "cosmo",
+            "milan fashion week",
+            "gucci",
+            "interview"
+        ]
+    },
+    {
+        "id": 494,
+        "url": "https://assets.xz-studio-gallery.com/full/20190923_嘉人米兰_XZ-MISC-1.mp4",
+        "date": "2019-09-23",
+        "month": "September",
+        "year": "2019",
+        "tags": [
+            "嘉人",
+            "米兰",
+            "GUCCI",
+            "采访"
+        ],
+        "groupName": "嘉人米兰_2019-09-23",
+        "duration": 49,
+        "weibo": "",
+        "source": [
+            "嘉人",
+            "GUCCI"
+        ],
+        "platform": [
+            "UA"
+        ],
+        "datePrecision": "day",
+        "postText": "【肖战采访】20190923 嘉人/米兰时装周",
+        "englishTags": [
+            "marie claire",
+            "gucci",
+            "milan fashion week",
+            "interview",
+            "plaid suit"
+        ]
+    },
+    {
         "id": 480,
         "url": "https://assets.xz-studio-gallery.com/full/20190923_COSMO_XZ-MISC-11.mp4",
         "date": "2019-09-23",
