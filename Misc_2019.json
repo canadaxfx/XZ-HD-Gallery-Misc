@@ -5760,6 +5760,40 @@
         ]
     },
     {
+        "id": 500,
+        "url": "https://assets.xz-studio-gallery.com/full/20190915_诛仙_XZ-MISC-5.mp4",
+        "date": "2019-09-15",
+        "month": "September",
+        "year": "2019",
+        "tags": [
+            "诛仙",
+            "M视频News",
+            "采访"
+        ],
+        "groupName": "诛仙_2019-09-15",
+        "quality": "1080p",
+        "duration": 77,
+        "weibo": "https://weibo.com/6619263525/I7165D25U",
+        "source": [
+            "访谈 / Interviews",
+            "诛仙"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "专访#肖战[超话]# ，拍摄电影《诛仙1》遇到的挑战是什么？肖战称是天气，在零下二十度的深山中拍戏，冷到说不出话，这样恶劣的环境下，他还要在三、四十米的悬崖上倒挂速降，对于这场NG最多的戏，肖战“云淡风轻”的说：“我还蛮喜欢吊威亚的，能让我在空中翱翔。” http://t.cn/AiETFVdv ​​​",
+        "englishTags": [
+            "jade dynasty",
+            "interview",
+            "movie",
+            "filming",
+            "behind the scenes"
+        ]
+    },
+    {
         "id": 394,
         "url": "https://assets.xz-studio-gallery.com/full/20190915_诛仙_XZ-MISC-4.mp4",
         "date": "2019-09-15",
@@ -5870,13 +5904,46 @@
         ]
     },
     {
+        "id": 499,
+        "url": "https://assets.xz-studio-gallery.com/full/20190914_诛仙_XZ-MISC-3.mp4",
+        "date": "2019-09-14",
+        "month": "September",
+        "year": "2019",
+        "tags": [
+            "诛仙",
+            "M视频News",
+            "采访"
+        ],
+        "groupName": "诛仙_2019-09-14",
+        "quality": "1080p",
+        "duration": 44,
+        "weibo": "https://weibo.com/6619263525/I6VgwoDfh",
+        "source": [
+            "访谈 / Interviews",
+            "诛仙"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "专访#肖战[超话]# ，他坦言接拍电影《诛仙1》时内心非常忐忑，“每个人心中都有一个张小凡，那我演出来的张小凡能被大家接受吗？”尽管有不少顾虑，肖战还是勇敢接受了这个挑战。电影大家看了吗？接受肖战版张小凡吗？ http://t.cn/AiEYS079 ​​​",
+        "englishTags": [
+            "jade dynasty",
+            "interview"
+        ]
+    },
+    {
         "id": 420,
         "url": "https://assets.xz-studio-gallery.com/full/20190914_腾讯新闻贵圈官方微博_XZ-MISC-1.mp4",
         "date": "2019-09-14",
         "month": "September",
         "year": "2019",
         "tags": [
-            "腾讯新闻贵圈官方微博"
+            "诛仙",
+            "腾讯新闻贵圈",
+            "采访"
         ],
         "groupName": "腾讯新闻贵圈官方微博_2019-09-14",
         "duration": 430,
@@ -5886,15 +5953,14 @@
             "诛仙"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "【#肖战[超话]#接到张小凡角色后惊讶三连问 并不care番位之争】当《#电影诛仙#》找上门的时候，肖战惊讶得疑问三连：真的吗？找我吗？电影吗？他陷入自己能否演好#肖战张小凡# 的质疑中，导演却称赞肖战让他眼前一亮。那些疑问也在和导演见面时迎刃而解，“小凡对待每个人都非常真诚，演时候我把自己回",
         "englishTags": [
             "tencent news",
             "interview",
             "jade dynasty",
             "zhang xiaofan"
-        ]
+        ],
+        "platform": []
     },
     {
         "id": 396,
