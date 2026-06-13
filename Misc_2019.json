@@ -6021,6 +6021,42 @@
         "platform": []
     },
     {
+        "id": 501,
+        "url": "https://assets.xz-studio-gallery.com/full/20190913_诛仙_XZ-MISC-4.mp4",
+        "date": "2019-09-13",
+        "month": "September",
+        "year": "2019",
+        "tags": [
+            "诛仙",
+            "猫眼大明星",
+            "采访",
+            "中秋",
+            "有只小婉"
+        ],
+        "groupName": "诛仙_2019-09-13",
+        "quality": "1080p",
+        "duration": 27,
+        "weibo": "https://weibo.com/6368347314/I6I9sCULa",
+        "source": [
+            "访谈 / Interviews",
+            "诛仙"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "postText": "#肖战[超话]# 独家中秋祝福来啦！！原来小赞最喜欢奶黄月饼 吃过最奇怪的是麻辣牛肉月饼？#肖战 我在吃馅饼吗# [doge] \n今天你看电影诛仙了嘛～\n9.15#猫眼大明星#@X玖少年团肖战DAYTOY 完整版专访上线！不见不散喔[米奇比心] #追爱豆的心动爆棚现场# http://t.cn/AiE0YOzU ​​​",
+        "englishTags": [
+            "jade dynasty",
+            "interview",
+            "mid-autumn festival",
+            "maoyan"
+        ],
+        "platform_links": {
+            "weibo": "https://weibo.com/6534198024/I6IDjl2wC"
+        }
+    },
+    {
         "id": 498,
         "url": "https://assets.xz-studio-gallery.com/full/20190913_诛仙_XZ-MISC-3.mp4",
         "date": "2019-09-13",
