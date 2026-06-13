@@ -14119,5 +14119,33 @@
             "cat",
             "behind the scenes"
         ]
+    },
+    {
+        "id": 562,
+        "url": "https://assets.xz-studio-gallery.com/full/20190808_企鹅FM_XZ-MISC-1.mp4",
+        "date": "2019-08-08",
+        "month": "August",
+        "year": "2019",
+        "tags": [
+            "企鹅FM",
+            "采访",
+            "音频"
+        ],
+        "groupName": "企鹅FM_2019-08-08",
+        "quality": "1080p",
+        "duration": 560,
+        "weibo": "",
+        "source": [
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "ua"
+        ],
+        "datePrecision": "day",
+        "postText": "【肖战采访】20190808 企鹅FM/一起追剧吧\n“成与败，都在自己的把握，成功与失败，都是自己的选择，不后悔，不抱怨”",
+        "englishTags": [
+            "penguin fm",
+            "interview"
+        ]
     }
 ]
