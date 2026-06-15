@@ -11275,6 +11275,40 @@
         ]
     },
     {
+        "id": 552,
+        "url": "https://assets.xz-studio-gallery.com/full/20190726_芭莎彩蛋_XZ-MISC-1.mp4",
+        "date": "2019-07-26",
+        "month": "July",
+        "year": "2019",
+        "tags": [
+            "芭莎彩蛋(未屏蔽⚠️)",
+            "陈情令",
+            "专刊"
+        ],
+        "groupName": "芭莎彩蛋_2019-07-26",
+        "duration": 286,
+        "weibo": "https://weibo.com/2646714407/HFhIc8JCr",
+        "source": [
+            "陈情令",
+            "访谈 / Interviews",
+            "时尚芭莎"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#时尚芭莎电子刊# #芭莎星榜样# 值 #陈情令芭莎专刊#销量突破35万本之际，芭姐特地加班赶制了35w福利特来献上！芭姐的专访彩蛋请各位查收！  http://t.cn/AijXpcZg ​​​",
+        "englishTags": [
+            "the untamed",
+            "bazaar",
+            "interview",
+            "magazine",
+            "photoshoot"
+        ]
+    },
+    {
         "id": 523,
         "url": "https://assets.xz-studio-gallery.com/full/20190725_精彩OK_XZ-MISC-1.mp4",
         "date": "2019-07-25",
@@ -12235,6 +12269,36 @@
             "the untamed",
             "wei wuxian",
             "drama still"
+        ]
+    },
+    {
+        "id": 553,
+        "url": "https://assets.xz-studio-gallery.com/full/20190715_戏客_XZ-MISC-1.mp4",
+        "date": "2019-07-15",
+        "month": "July",
+        "year": "2019",
+        "tags": [
+            "戏客",
+            "陈情令",
+            "专访"
+        ],
+        "groupName": "戏客_2019-07-15",
+        "quality": "1080p",
+        "duration": 423,
+        "weibo": "",
+        "source": [
+            "访谈 / Interviews",
+            "陈情令"
+        ],
+        "platform": [
+            "ua"
+        ],
+        "datePrecision": "day",
+        "postText": "【肖战采访】20190715 戏客 seeker \n一谈到角色就滔滔不绝的肖战",
+        "englishTags": [
+            "the untamed",
+            "interview",
+            "seeker"
         ]
     },
     {
