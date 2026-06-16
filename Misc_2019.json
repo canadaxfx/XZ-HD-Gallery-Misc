@@ -12946,6 +12946,37 @@
         ]
     },
     {
+        "id": 554,
+        "url": "https://assets.xz-studio-gallery.com/full/20190708_腾讯新闻星_XZ-MISC-1.mp4",
+        "date": "2019-07-08",
+        "month": "July",
+        "year": "2019",
+        "tags": [
+            "腾讯新闻星"
+        ],
+        "groupName": "腾讯新闻星_2019-07-08",
+        "quality": "1080p",
+        "duration": 20,
+        "weibo": "",
+        "source": [
+            "访谈 / Interviews",
+            "陈情令"
+        ],
+        "platform": [
+            "QQ"
+        ],
+        "datePrecision": "day",
+        "postText": "【肖战采访】20190708 腾讯新闻星推荐\n 回应吃花生",
+        "englishTags": [
+            "interview",
+            "the untamed",
+            "qq news"
+        ],
+        "platform_links": {
+            "QQ": "https://v.qq.com/x/cover/2ucx4yk5av7lv1a/v0031zzcwuw.html"
+        }
+    },
+    {
         "id": 365,
         "url": "https://assets.xz-studio-gallery.com/full/20190708_纪梵希_XZ-MISC-1.mp4",
         "date": "2019-07-08",
