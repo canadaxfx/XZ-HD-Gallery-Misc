@@ -1711,7 +1711,7 @@
         </div>
         <div class="mg-slot slot-P" data-slot="P"></div>
       </div>
-        <h1>Xiao Zhan <span class="title-highlight">HD Gallery Misc</span><br /><span class="title-zh">肖战高清图库 ❁ 影视&代言&活动</span></h1>
+        <h1>Xiao Zhan <span class="title-highlight">HD Gallery Misc</span><br /><span class="title-zh">肖战高清图库 <span id="secretTrigger" style="cursor:default;user-select:none">❁</span> 影视&代言&活动</span></h1>
         <div class="header-links-section">
           <span class="header-links-desc">
             <span class="desc-en">HD media of various sources (NOT including <a href="https://weibo.com/u/6643123988" target="_blank" rel="noopener">XZ Studio</a>)</span>
@@ -3129,6 +3129,9 @@ async function loadPhotoData() {
                 }
                 
                 allPhotos.sort((a, b) => new Date(b.date) - new Date(a.date));
+                if (!sessionStorage.getItem('xz_show_all')) {
+                    allPhotos = allPhotos.filter(p => !p.hidden);
+                }
                 allPhotos.forEach((photo, index) => { photo.id = index + 1; });
 
                 photoData = allPhotos;
@@ -4262,6 +4265,39 @@ function setupFooterToggle() {
       document.querySelectorAll('#mgLayoutBtns .mg-pbtn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       mgSetLayout(btn.dataset.mglayout);
+    });
+  });
+})();
+</script>
+
+<script>
+// Secret trigger: tap ❁ in title 5× within 3s to unlock hidden entries
+(function () {
+  var taps = 0, timer = null;
+  function showToast(msg) {
+    var t = document.createElement('div');
+    t.textContent = msg;
+    t.style.cssText = 'position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;z-index:99999;pointer-events:none;transition:opacity .5s';
+    document.body.appendChild(t);
+    setTimeout(function () { t.style.opacity = '0'; }, 1800);
+    setTimeout(function () { t.remove(); }, 2400);
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var el = document.getElementById('secretTrigger');
+    if (!el) return;
+    el.addEventListener('click', function () {
+      taps++;
+      clearTimeout(timer);
+      timer = setTimeout(function () { taps = 0; }, 3000);
+      if (taps >= 5) {
+        taps = 0;
+        clearTimeout(timer);
+        if (!sessionStorage.getItem('xz_show_all')) {
+          sessionStorage.setItem('xz_show_all', '1');
+          showToast('❁ 已解锁全部内容');
+          setTimeout(function () { loadPhotoData(); }, 400);
+        }
+      }
     });
   });
 })();
