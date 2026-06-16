@@ -3129,7 +3129,7 @@ async function loadPhotoData() {
                 }
                 
                 allPhotos.sort((a, b) => new Date(b.date) - new Date(a.date));
-                if (!sessionStorage.getItem('xz_show_all')) {
+                if (!window._xzShowAll) {
                     allPhotos = allPhotos.filter(p => !p.hidden);
                 }
                 allPhotos.forEach((photo, index) => { photo.id = index + 1; });
@@ -4292,8 +4292,8 @@ function setupFooterToggle() {
       if (taps >= 5) {
         taps = 0;
         clearTimeout(timer);
-        if (!sessionStorage.getItem('xz_show_all')) {
-          sessionStorage.setItem('xz_show_all', '1');
+        if (!window._xzShowAll) {
+          window._xzShowAll = true;
           showToast('❁ 已解锁全部内容');
           setTimeout(function () { loadPhotoData(); }, 400);
         }
