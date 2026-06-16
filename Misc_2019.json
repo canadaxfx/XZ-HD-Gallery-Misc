@@ -9100,7 +9100,8 @@
             "the untamed",
             "interview",
             "weibo video"
-        ]
+        ],
+        "hidden": true
     },
     {
         "id": 538,
@@ -9130,7 +9131,8 @@
             "youdao",
             "interview",
             "the untamed"
-        ]
+        ],
+        "hidden": true
     },
     {
         "id": 91,
@@ -9784,7 +9786,8 @@
             "interview",
             "wang yibo"
         ],
-        "url_hd": "https://assets.xz-studio-gallery.com/hd/20190807_澎湃有戏_XZ-1.mp4"
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20190807_澎湃有戏_XZ-1.mp4",
+        "hidden": true
     },
     {
         "id": 520,
@@ -11306,7 +11309,8 @@
             "interview",
             "magazine",
             "photoshoot"
-        ]
+        ],
+        "hidden": true
     },
     {
         "id": 61,
@@ -11766,7 +11770,8 @@
             "interview",
             "magazine",
             "photoshoot"
-        ]
+        ],
+        "hidden": true
     },
     {
         "id": 49,
@@ -11918,7 +11923,8 @@
             "photoshoot",
             "wang yibo"
         ],
-        "url_hd": "https://assets.xz-studio-gallery.com/hd/20190722_芭莎_XZ-MISC-1.mp4"
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20190722_芭莎_XZ-MISC-1.mp4",
+        "hidden": true
     },
     {
         "id": 48,
@@ -14100,7 +14106,8 @@
             "interview",
             "photoshoot"
         ],
-        "url_hd": "https://assets.xz-studio-gallery.com/hd/20190625_芭莎探班_XZ-MISC-1.mp4"
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20190625_芭莎探班_XZ-MISC-1.mp4",
+        "hidden": true
     },
     {
         "id": 490,
