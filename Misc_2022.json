@@ -2751,8 +2751,7 @@
         "month": "April",
         "year": "2022",
         "tags": [
-            "余生请多指教",
-            "入戏",
+            "入戏余生请多指教",
             "采访"
         ],
         "groupName": "余生请多指教_2022-04-03",
@@ -2769,6 +2768,10 @@
             "interview",
             "gu wei",
             "drama"
+        ],
+        "hidden": "",
+        "platform": [
+            "weibo"
         ]
     },
     {
@@ -2939,8 +2942,7 @@
         "month": "April",
         "year": "2022",
         "tags": [
-            "余生请多指教",
-            "入戏"
+            "入戏余生请多指教"
         ],
         "groupName": "余生请多指教_2022-04-01",
         "duration": 115,
@@ -2956,6 +2958,10 @@
             "interview",
             "drama",
             "gu wei"
+        ],
+        "hidden": "",
+        "platform": [
+            "weibo"
         ]
     },
     {
