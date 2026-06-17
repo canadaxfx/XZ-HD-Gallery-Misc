@@ -5815,6 +5815,37 @@
         ]
     },
     {
+        "id": 298,
+        "url": "https://assets.xz-studio-gallery.com/full/20210212_入戏斗罗大陆_XZ-MISC-1.mp4",
+        "date": "2021-02-12",
+        "month": "February",
+        "year": "2021",
+        "tags": [
+            "入戏",
+            "斗罗大陆",
+            "采访"
+        ],
+        "groupName": "入戏斗罗大陆_2021-02-12",
+        "duration": 118,
+        "weibo": "https://weibo.com/6224833345/K1z3pioFD",
+        "source": [
+            "访谈 / Interviews",
+            "斗罗大陆"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#我是唐三我依然是肖战#@X玖少年团肖战DAYTOY 接受入戏采访坦言自己被唐三的沉稳所吸引，尤其是他和周围小伙伴这一路的成长。现场夸赞导演，“他很懂运用演员情绪，让我把情绪保留到最后可以一遍过”。聊起演员这个职业，肖战表示“在我选择要当演员时，就意识到演员这个职业不只是表面的光鲜，有可能 ​​​",
+        "englishTags": [
+            "soul land",
+            "interview",
+            "tang san"
+        ]
+    },
+    {
         "id": 42,
         "url": "https://assets.xz-studio-gallery.com/full/20210212_斗罗大陆_XZ-MISC-3.jpg",
         "date": "2021-02-12",
@@ -5879,6 +5910,37 @@
             "tang san",
             "wu xuanyi",
             "drama"
+        ]
+    },
+    {
+        "id": 299,
+        "url": "https://assets.xz-studio-gallery.com/full/20210211_入戏斗罗大陆_XZ-MISC-1.mp4",
+        "date": "2021-02-11",
+        "month": "February",
+        "year": "2021",
+        "tags": [
+            "入戏",
+            "斗罗大陆",
+            "采访"
+        ],
+        "groupName": "入戏斗罗大陆_2021-02-11",
+        "duration": 26,
+        "weibo": "https://weibo.com/6224833345/K1pCvAThc",
+        "source": [
+            "斗罗大陆",
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战网络用语拷问#N久之前的网络用语大拷问，看看当时的@X玖少年团肖战DAYTOY  是几G网冲浪呢？上腾讯视频搜“入戏”并关注，更多精彩持续放送~#斗罗入戏12天更新企划#\nhttp://t.cn/A6twJ3uh ​​​",
+        "englishTags": [
+            "soul land",
+            "interview",
+            "variety show"
         ]
     },
     {
@@ -5949,6 +6011,37 @@
             "tang san",
             "drama",
             "promotional still"
+        ]
+    },
+    {
+        "id": 300,
+        "url": "https://assets.xz-studio-gallery.com/full/20210210_入戏斗罗大陆_XZ-MISC-1.mp4",
+        "date": "2021-02-10",
+        "month": "February",
+        "year": "2021",
+        "tags": [
+            "入戏",
+            "斗罗大陆",
+            "采访"
+        ],
+        "groupName": "入戏斗罗大陆_2021-02-10",
+        "duration": 30,
+        "weibo": "https://weibo.com/6224833345/K1ge3fpnA",
+        "source": [
+            "访谈 / Interviews",
+            "斗罗大陆"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战[超话]# @X玖少年团肖战DAYTOY 谈再次演古装戏的感受，开玩笑调侃“发际线真的撑不住了”？帅哥难道也有发际线危机吗？上腾讯视频搜“入戏”并关注，更多精彩持续放送~#斗罗入戏12天更新企划#\nhttp://t.cn/A6t75PZw ​​​",
+        "englishTags": [
+            "soul land",
+            "interview",
+            "costume drama"
         ]
     },
     {
@@ -6596,8 +6689,8 @@
         "month": "February",
         "year": "2021",
         "tags": [
-            "斗罗大陆",
             "入戏",
+            "斗罗大陆",
             "专访"
         ],
         "groupName": "斗罗大陆_2021-02-05",
@@ -6615,7 +6708,9 @@
             "drama",
             "behind the scenes"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "hidden": "",
+        "platform": []
     },
     {
         "id": 287,
