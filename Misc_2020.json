@@ -2128,6 +2128,37 @@
         ]
     },
     {
+        "id": 160,
+        "url": "https://assets.xz-studio-gallery.com/full/20200120_阅文_XZ-MISC-1.mp4",
+        "date": "2020-01-20",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "阅文盛典",
+            "采访",
+            "QQ阅读"
+        ],
+        "groupName": "阅文_2020-01-20",
+        "duration": 87,
+        "weibo": "https://weibo.com/5735501478/IqkOS8ats",
+        "source": [
+            "访谈 / Interviews",
+            "活动 / Events"
+        ],
+        "platform": [
+            "ua"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "QQ阅读 风云盛典后台@X玖少年团肖战DAYTOY 独家专访",
+        "englishTags": [
+            "tencent literature awards",
+            "interview",
+            "qq reading"
+        ]
+    },
+    {
         "id": 92,
         "url": "https://assets.xz-studio-gallery.com/full/20200119_阅文盛典_XZ-MISC-1.mp4",
         "date": "2020-01-19",
