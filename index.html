@@ -2091,7 +2091,7 @@
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260622-2'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260622-3'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
@@ -2540,7 +2540,7 @@ function updateModalContent() {
         downloadBtn.style.display = '';
         const _dlUrl = (isVideo && photo.url_4k) ? photo.url_4k
                      : (isVideo && photo.url_hd) ? photo.url_hd
-                     : photo.url;
+                     : photo.download_url || photo.url;
         dlSetBtn(downloadBtn, _dlUrl);
     }
     const badgeAlt = document.getElementById('badgeAlt');
