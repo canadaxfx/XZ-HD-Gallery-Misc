@@ -1890,6 +1890,10 @@
     <img id="modalPhoto" class="modal-photo" alt="Current photo">
     
     <video id="modalVideo" class="modal-photo hidden" playsinline></video>
+    <div id="modalAudioWrap" class="hidden" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;height:260px">
+        <div style="font-size:64px;opacity:0.5">🎵</div>
+        <audio id="modalAudio" controls style="width:min(360px,80vw);outline:none"></audio>
+    </div>
     <span id="badgeQuality" class="badge-quality hidden"></span>
     <a id="badgeYT" class="badge-youtube hidden" target="_blank" rel="noopener">YouTube ↗</a>
     <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
@@ -2478,8 +2482,9 @@ function updateModalContent() {
     const title = document.getElementById('groupTitle');
     const tagsContainer = document.getElementById('modalTags');
 
-    // --- 1. MEDIA TYPE CHECK (Support for mp4, mov, YouTube) ---
+    // --- 1. MEDIA TYPE CHECK (Support for mp4, mov, YouTube, mp3) ---
     const isVideo = /\.(mp4|mov|webm)$/i.test(photo.url);
+    const isAudio = isAudioUrl(photo.url);
     const isYT = isYouTubeUrl(photo.url);
 
     let ytFrame = document.getElementById('modalYouTube');
@@ -2507,11 +2512,23 @@ function updateModalContent() {
     } else if (isVideo) {
         imgElement.classList.add('hidden');
         videoElement.classList.remove('hidden');
+        document.getElementById('modalAudioWrap').classList.add('hidden');
+        const audioEl = document.getElementById('modalAudio');
+        audioEl.pause(); audioEl.src = '';
         videoElement.src = photo.url;
         videoElement.loop = !playlistMode;
         videoElement.onended = playlistMode ? () => navigatePhoto(1) : null;
         vcSetup(videoElement);
         videoElement.play().catch(e => console.log("Video autoplay prevented"));
+    } else if (isAudio) {
+        imgElement.classList.add('hidden');
+        videoElement.pause(); videoElement.src = ''; videoElement.classList.add('hidden');
+        const audioWrap = document.getElementById('modalAudioWrap');
+        const audioEl   = document.getElementById('modalAudio');
+        audioWrap.classList.remove('hidden');
+        audioWrap.style.display = 'flex';
+        audioEl.src = photo.url;
+        audioEl.play().catch(() => {});
     } else {
         if (videoElement) {
             videoElement.pause();
@@ -2519,6 +2536,9 @@ function updateModalContent() {
             videoElement.src = "";
             videoElement.classList.add('hidden');
         }
+        const audioEl = document.getElementById('modalAudio');
+        audioEl.pause(); audioEl.src = '';
+        document.getElementById('modalAudioWrap').classList.add('hidden');
         imgElement.classList.remove('hidden');
         imgElement.src = photo.url;
     }
@@ -2767,6 +2787,10 @@ function closeModal() {
         videoElement.onended = null;
         videoElement.src = "";
     }
+    const audioEl = document.getElementById('modalAudio');
+    if (audioEl) { audioEl.pause(); audioEl.src = ''; }
+    const audioWrap = document.getElementById('modalAudioWrap');
+    if (audioWrap) { audioWrap.classList.add('hidden'); audioWrap.style.display = ''; }
     const ytFrame = document.getElementById('modalYouTube');
     if (ytFrame) {
         ytFrame.src = '';
@@ -2913,6 +2937,7 @@ function closeModal() {
 
         /* ---------- Media & URL Helpers ---------- */
         function isVideoUrl(url) { return /\.mp4$/i.test(url); }
+        function isAudioUrl(url) { return /\.mp3$/i.test(url); }
         function isYouTubeUrl(url) { return /youtube\.com\/watch|youtu\.be\//.test(url); }
 
         // --- Download Lock ---
