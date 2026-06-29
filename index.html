@@ -775,6 +775,7 @@
             border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;
         }
         .preview-thumb:hover { transform: scale(1.1); border-color: rgba(255,255,255,0.6); }
+        .preview-thumb-audio { width:32px; height:32px; border-radius:6px; border:2px solid rgba(255,255,255,0.3); background:linear-gradient(135deg,#2a2218,#1a1510); display:inline-flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; }
         .preview-more {
             background: rgba(255,255,255,0.2); color: white; padding: 6px 10px;
             border-radius: 12px; font-size: 11px; font-weight: 600;
@@ -3248,10 +3249,10 @@ async function loadPhotoData() {
                 const previewPhotos = photos.slice(0, 4);
                 const previewHTML = `
                     <div class="year-preview">
-                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 'm')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${previewPhotos.map(p => isAudioUrl(p.url) ? `<span class="preview-thumb-audio">🎵</span>` : `<img src="${generateThumbnail(p.url, 'm')}" alt="Preview" class="preview-thumb">`).join('')}
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
-                
+
                 const yearVideos = photos.filter(p => isRealVideo(p));
                 return `
                     <div class="timeline-year" data-year="${year}">
@@ -3775,7 +3776,7 @@ function loadSourcesView() {
                 const previewPhotos = photos.slice(0, 4);
                 const previewHTML = `
                     <div class="year-preview">
-                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${previewPhotos.map(p => isAudioUrl(p.url) ? `<span class="preview-thumb-audio">🎵</span>` : `<img src="${generateThumbnail(p.url, 's')}" alt="Preview" class="preview-thumb">`).join('')}
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
                 const sourceVideos = photos.filter(p => isRealVideo(p));
