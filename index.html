@@ -810,6 +810,9 @@
         .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px #2563eb, 0 2px 8px rgba(0,0,0,0.1); }
         .timeline-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
        .timeline-photo:hover img { transform: scale(1.05); }
+        .audio-card-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; background:linear-gradient(135deg,#2a2218 0%,#1a1510 100%); }
+        .audio-card-placeholder .acp-note { font-size:44px; opacity:0.75; }
+        .audio-card-placeholder .acp-label { font-size:10px; font-weight:600; letter-spacing:0.08em; color:rgba(255,255,255,0.45); text-transform:uppercase; }
         .photo-overlay {
             position: absolute; bottom: 0; left: 0; right: 0;
             background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;
@@ -3313,7 +3316,9 @@ async function loadPhotoData() {
                     ${getMotionBadge(photo)}
                     ${isRealVideo(photo) ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})"><b>＋</b> Playlist</button>` : ''}
                     ${(Array.isArray(photo.source) && photo.source.length) ? `<div class="source-hover-tip">${photo.source.join(' · ')}</div>` : (photo.source ? `<div class="source-hover-tip">${photo.source}</div>` : '')}
-                    <img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">
+                    ${isAudioUrl(photo.url)
+                        ? `<div class="audio-card-placeholder"><span class="acp-note">🎵</span><span class="acp-label">Audio</span></div>`
+                        : `<img data-src="${generateThumbnail(photo.url, 'm')}" alt="Photo ${photo.id}" class="lazy-image">`}
                     <div class="photo-overlay">
                         <span class="photo-date">${displayDate}</span>
                         <span class="photo-tag">${(Array.isArray(photo.tags) && photo.tags[0]) || ''}</span>
