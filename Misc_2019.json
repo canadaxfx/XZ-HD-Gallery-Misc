@@ -10483,6 +10483,32 @@
         ]
     },
     {
+        "id": 596,
+        "url": "https://assets.xz-studio-gallery.com/full/20190806_企鹅FM_XZ-MISC-1.mp3",
+        "date": "2019-08-06",
+        "month": "August",
+        "year": "2019",
+        "tags": [
+            "企鹅FM",
+            "采访"
+        ],
+        "groupName": "企鹅FM_2019-08-06",
+        "weibo": "",
+        "source": [
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "ua"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "englishTags": [
+            "penguin fm",
+            "interview"
+        ]
+    },
+    {
         "id": 81,
         "url": "https://assets.xz-studio-gallery.com/full/20190805_陈情令_XZ-MISC-1.jpg",
         "date": "2019-08-05",
