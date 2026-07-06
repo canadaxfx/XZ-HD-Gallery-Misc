@@ -2123,7 +2123,7 @@
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260705-3'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260705-5'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
@@ -3541,19 +3541,21 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
                 img.classList.add('loading-placeholder');
                 if (imageObserver) imageObserver.observe(img);
             });
-            // IntersectionObserver fires asynchronously and can miss elements just made
-            // visible via display:none→block (e.g. expanding a year). getBoundingClientRect()
-            // forces a layout flush so we correctly detect already-visible images.
-            const vh = window.innerHeight;
-            imgs.forEach(img => {
-                if (img.getAttribute('src')) return;
-                const rect = img.getBoundingClientRect();
-                if (rect.width > 0 && rect.top < vh + 100 && rect.bottom > -100) {
-                    img.src = img.dataset.src;
-                    img.onload  = () => img.classList.remove('loading-placeholder');
-                    img.onerror = () => img.classList.remove('loading-placeholder');
-                    if (imageObserver) imageObserver.unobserve(img);
-                }
+            // Viewport force-load runs after requestAnimationFrame to ensure layout is
+            // computed — getBoundingClientRect() returns zero width when the DOM was just
+            // rebuilt, causing the IO to miss already-visible images intermittently.
+            requestAnimationFrame(() => {
+                const vh = window.innerHeight;
+                document.querySelectorAll(`#${containerId} .lazy-image[data-src]`).forEach(img => {
+                    if (img.getAttribute('src')) return;
+                    const rect = img.getBoundingClientRect();
+                    if (rect.width > 0 && rect.top < vh + 100 && rect.bottom > -100) {
+                        img.src = img.dataset.src;
+                        img.onload  = () => img.classList.remove('loading-placeholder');
+                        img.onerror = () => img.classList.remove('loading-placeholder');
+                        if (imageObserver) imageObserver.unobserve(img);
+                    }
+                });
             });
         }
 
