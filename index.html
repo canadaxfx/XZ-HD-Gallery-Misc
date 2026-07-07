@@ -3085,6 +3085,18 @@ function closeModal() {
                     return acc;
                 }, {});
                 createTimelineHTML(photosByYear);
+                if (currentSearchQuery) {
+                    // Auto-expand all result years + reset IO for clean lazy loading
+                    if (imageObserver) imageObserver.disconnect();
+                    setupIntersectionObserver();
+                    Object.keys(photosByYear).forEach(year => {
+                        expandedYears.add(year);
+                        const el = document.querySelector(`[data-year="${year}"]`);
+                        if (el) el.classList.add('expanded');
+                        if (!yearPaginationSettings[year]) yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
+                        renderYearPage(year);
+                    });
+                }
             } else {
                 const emptyMessage = currentSearchQuery ? 
                     `<h3>No items found</h3><p>No results for "${currentSearchQuery}".</p>` :
