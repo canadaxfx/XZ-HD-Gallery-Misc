@@ -1451,6 +1451,34 @@
         ]
     },
     {
+        "id": 179,
+        "url": "https://assets.xz-studio-gallery.com/full/20180919_X玖_XZ-MISC-1.mp4",
+        "date": "2018-09-19",
+        "month": "September",
+        "year": "2018",
+        "tags": [
+            "X玖",
+            "排练"
+        ],
+        "groupName": "X玖_2018-09-19",
+        "duration": 15,
+        "weibo": "https://m.weibo.cn/s/video/index?object_id=1042151%3A4286060570839686&segment_id=4286060570839686",
+        "source": [
+            "其他 / Other"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#X玖少年团[超话]# 今日份彩排来送上！你想我吗？让我知道～👬👬",
+        "englishTags": [
+            "x nine",
+            "rehearsal"
+        ]
+    },
+    {
         "id": 108,
         "url": "https://assets.xz-studio-gallery.com/full/20180816_狼殿下_XZ-MISC-1.jpg",
         "date": "2018-08-16",
@@ -3634,6 +3662,34 @@
             "beiyang moran",
             "drama",
             "promotional poster"
+        ]
+    },
+    {
+        "id": 180,
+        "url": "https://assets.xz-studio-gallery.com/full/20180429_队友_XZ-MISC-1.mp4",
+        "date": "2018-04-29",
+        "month": "April",
+        "year": "2018",
+        "tags": [
+            "队友",
+            "赵磊"
+        ],
+        "groupName": "队友_2018-04-29",
+        "duration": 15,
+        "weibo": "https://m.weibo.cn/s/video/index?object_id=1042151%3A23135424223478347457365&segment_id=4223478347457365",
+        "source": [
+            "其他 / Other"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "englishTags": [
+            "zhao lei",
+            "x nine",
+            "boy group"
         ]
     },
     {
