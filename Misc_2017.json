@@ -21,7 +21,8 @@
             "beiyang moran",
             "drama",
             "promotional poster"
-        ]
+        ],
+        "size_mb": 2.0
     },
     {
         "id": 16,
@@ -47,7 +48,8 @@
         "postText": "有拍摄工作吗？午安🤓",
         "englishTags": [
             "daily life"
-        ]
+        ],
+        "size_mb": 2.27
     },
     {
         "id": 12,
@@ -69,7 +71,8 @@
             "oh my emperor",
             "filming wrap",
             "historical drama"
-        ]
+        ],
+        "size_mb": 6.95
     },
     {
         "id": 13,
@@ -91,7 +94,8 @@
             "oh my emperor",
             "filming wrap",
             "historical drama"
-        ]
+        ],
+        "size_mb": 6.3
     },
     {
         "id": 11,
@@ -113,7 +117,8 @@
             "wolf",
             "drama",
             "birthday"
-        ]
+        ],
+        "size_mb": 0.6
     },
     {
         "id": 10,
@@ -137,7 +142,8 @@
             "ji chong",
             "drama",
             "filming wrap"
-        ]
+        ],
+        "size_mb": 0.63
     },
     {
         "id": 8,
@@ -160,7 +166,8 @@
             "wolf",
             "ji chong",
             "drama stills"
-        ]
+        ],
+        "size_mb": 1.63
     },
     {
         "id": 9,
@@ -183,7 +190,8 @@
             "wolf",
             "ji chong",
             "drama stills"
-        ]
+        ],
+        "size_mb": 1.76
     },
     {
         "id": 7,
@@ -206,7 +214,8 @@
             "wolf",
             "ji chong",
             "drama stills"
-        ]
+        ],
+        "size_mb": 2.0
     },
     {
         "id": 1,
@@ -231,7 +240,8 @@
             "filming ceremony",
             "li qin",
             "guo shuyao"
-        ]
+        ],
+        "size_mb": 0.68
     },
     {
         "id": 2,
@@ -256,7 +266,8 @@
             "filming ceremony",
             "li qin",
             "guo shuyao"
-        ]
+        ],
+        "size_mb": 0.52
     },
     {
         "id": 3,
@@ -281,7 +292,8 @@
             "filming ceremony",
             "li qin",
             "guo shuyao"
-        ]
+        ],
+        "size_mb": 0.51
     },
     {
         "id": 4,
@@ -306,7 +318,8 @@
             "filming ceremony",
             "li qin",
             "guo shuyao"
-        ]
+        ],
+        "size_mb": 0.35
     },
     {
         "id": 5,
@@ -331,7 +344,8 @@
             "filming ceremony",
             "li qin",
             "guo shuyao"
-        ]
+        ],
+        "size_mb": 0.49
     },
     {
         "id": 6,
@@ -356,7 +370,8 @@
             "filming ceremony",
             "li qin",
             "guo shuyao"
-        ]
+        ],
+        "size_mb": 0.44
     },
     {
         "id": 15,
@@ -384,6 +399,7 @@
         "englishTags": [
             "orange entertainment",
             "interview"
-        ]
+        ],
+        "size_mb": 36.02
     }
 ]
