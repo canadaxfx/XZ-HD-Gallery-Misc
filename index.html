@@ -1274,6 +1274,8 @@
         .badge-quality.is-2k { background: rgba(99, 102, 241, 0.85); }
         .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
         .badge-youtube { position: absolute; bottom: 0px; left: 10px; background: rgba(204, 0, 0, 0.85); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 11; letter-spacing: 0.05em; text-decoration: none; cursor: pointer; }
+        #badgesRow .badge-quality, #badgesRow .badge-youtube { position: static; bottom: auto; left: auto; z-index: auto; }
+        .badge-size { background: rgba(0,0,0,0.55); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; pointer-events: none; }
 	
 	#terms-content {
             background-color: rgba(255,255,255,0.1); border-radius: 10px; margin: 15px auto 0;
@@ -1898,8 +1900,11 @@
         <div style="font-size:64px;opacity:0.5">🎵</div>
         <audio id="modalAudio" controls style="width:min(360px,80vw);outline:none"></audio>
     </div>
-    <span id="badgeQuality" class="badge-quality hidden"></span>
-    <a id="badgeYT" class="badge-youtube hidden" target="_blank" rel="noopener">YouTube ↗</a>
+    <div id="badgesRow" style="position:absolute;bottom:0;left:10px;display:flex;gap:6px;align-items:center;z-index:11;">
+        <span id="badgeQuality" class="badge-quality hidden"></span>
+        <a id="badgeYT" class="badge-youtube hidden" target="_blank" rel="noopener">YouTube ↗</a>
+        <span id="badgeSize" class="badge-size hidden"></span>
+    </div>
     <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
     
     <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
@@ -2623,6 +2628,16 @@ function updateModalContent() {
             badgeQuality.classList.remove('is-4k', 'is-2k');
         }
     }
+    const badgeSize = document.getElementById('badgeSize');
+    if (badgeSize) {
+        if (photo.size_mb) {
+            const _sz = photo.size_mb >= 1 ? photo.size_mb.toFixed(1) + ' MB' : Math.round(photo.size_mb * 1024) + ' KB';
+            badgeSize.textContent = _sz;
+            badgeSize.classList.remove('hidden');
+        } else {
+            badgeSize.classList.add('hidden');
+        }
+    }
     const badgeYT = document.getElementById('badgeYT');
     if (badgeYT) { badgeYT.classList.toggle('hidden', !isYT); if (isYT) badgeYT.href = photo.url; }
     const _platformLink = photo.link || photo.weibo || (isYT ? photo.url : '');
@@ -3316,6 +3331,12 @@ async function loadPhotoData() {
             if ((!isVideoEntry(photo) && !isClip(photo) && !isAudioUrl(photo.url)) || !photo.duration) return '';
             return '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>';
         }
+        function getSizeBadge(photo) {
+            if (isVideoEntry(photo) || isClip(photo) || isAudioUrl(photo.url)) return '';
+            if (!photo.size_mb) return '';
+            const sz = photo.size_mb >= 1 ? photo.size_mb.toFixed(1) + 'M' : Math.round(photo.size_mb * 1024) + 'K';
+            return '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.55);color:white;border-radius:4px;padding:1px 3px;font-size:9px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + sz + '</div>';
+        }
 
         function generatePhotosHTML(photos) {
             return photos.map(photo => {
@@ -3323,7 +3344,7 @@ async function loadPhotoData() {
                 return `
                 <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
                     ${isVideoEntry(photo) ? getMediaIcon(photo.url) : isAudioUrl(photo.url) ? '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">♪</div>' : ''}
-                    ${getDurBadge(photo)}
+                    ${getDurBadge(photo)}${getSizeBadge(photo)}
                     ${getMotionBadge(photo)}
                     ${isRealVideo(photo) ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})"><b>＋</b> Playlist</button>` : ''}
                     ${(Array.isArray(photo.source) && photo.source.length) ? `<div class="source-hover-tip">${photo.source.join(' · ')}</div>` : (photo.source ? `<div class="source-hover-tip">${photo.source}</div>` : '')}
