@@ -24,6 +24,32 @@
         ]
     },
     {
+        "id": 16,
+        "url": "https://assets.xz-studio-gallery.com/full/20171117_肖战资讯站_XZ-MISC-1.mp4",
+        "date": "2017-11-17",
+        "month": "November",
+        "year": "2017",
+        "tags": [
+            "肖战资讯站"
+        ],
+        "groupName": "肖战资讯站_2017-11-17",
+        "duration": 9,
+        "weibo": "https://m.weibo.cn/s/video/index?object_id=1042151%3A5aec86c0efd1f97eb9978232c9da1b8b&segment_id=4175002700525256",
+        "source": [
+            "日常"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "有拍摄工作吗？午安🤓",
+        "englishTags": [
+            "daily life"
+        ]
+    },
+    {
         "id": 12,
         "url": "https://assets.xz-studio-gallery.com/full/20171107_哦我的皇帝陛下_XZ-MISC-1.jpg",
         "date": "2017-11-07",
