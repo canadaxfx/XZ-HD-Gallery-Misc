@@ -50,12 +50,13 @@
         "note": "",
         "description": "",
         "postText": "Lamett黑标家具・MONDE 系列，7月9日，正式开售\n\n和乐迈石晶品牌全球代言人@肖战 一起，走进乐迈黑标家具系列\n\n#Lamett乐迈石晶# #肖战代言乐迈石晶一周年# #肖战乐迈石晶品牌全球代言人# #Lamett黑标家具系列# #肖战携手乐迈石晶让家更健康# #肖战严选# Lamett乐迈石晶的微博视频",
-        "size_mb": 1.24,
+        "size_mb": 5.0,
         "englishTags": [
             "lamett",
             "endorsement",
             "furniture"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 655,
@@ -86,7 +87,8 @@
             "world cup",
             "vlog"
         ],
-        "size_mb": 1.32
+        "size_mb": 6.0,
+        "quality": "1080p"
     },
     {
         "id": 656,
@@ -117,7 +119,8 @@
             "daily fresh",
             "weibo video"
         ],
-        "size_mb": 1.51
+        "size_mb": 4.6,
+        "quality": "1080p"
     },
     {
         "id": 657,
@@ -297,7 +300,8 @@
             "drama",
             "weibo"
         ],
-        "size_mb": 0.28
+        "size_mb": 0.5,
+        "quality": "1080p"
     },
     {
         "id": 632,
@@ -393,7 +397,8 @@
             "endorsement",
             "daily fresh"
         ],
-        "size_mb": 1.06
+        "size_mb": 13.3,
+        "quality": "4k"
     },
     {
         "id": 650,
@@ -424,7 +429,8 @@
             "ambassador",
             "event"
         ],
-        "size_mb": 1.47
+        "size_mb": 3.8,
+        "quality": "1080p"
     },
     {
         "id": 618,
@@ -456,7 +462,8 @@
             "daily fresh",
             "football"
         ],
-        "size_mb": 4.25
+        "size_mb": 12.0,
+        "quality": "1080p"
     },
     {
         "id": 619,
@@ -1512,7 +1519,8 @@
             "red carpet",
             "cang haichuan"
         ],
-        "size_mb": 21.22
+        "size_mb": 69.1,
+        "quality": "1080p"
     },
     {
         "id": 617,
@@ -1544,7 +1552,8 @@
             "fifa",
             "brand ambassador"
         ],
-        "size_mb": 0.82
+        "size_mb": 2.6,
+        "quality": "1080p"
     },
     {
         "id": 620,
@@ -1849,7 +1858,8 @@
             "beverage"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20260618_青岛啤酒_XZ-MISC-1.mp4",
-        "size_mb": 46.73
+        "size_mb": 37.0,
+        "quality": "1080p"
     },
     {
         "id": 572,
@@ -1879,7 +1889,8 @@
             "qingdao light dry",
             "lager beer"
         ],
-        "size_mb": 0.85
+        "size_mb": 3.4,
+        "quality": "2k"
     },
     {
         "id": 573,
@@ -1908,7 +1919,8 @@
             "endorsement",
             "chinese lager"
         ],
-        "size_mb": 32.4
+        "size_mb": 96.3,
+        "quality": "1080p"
     },
     {
         "id": 574,
@@ -1938,7 +1950,8 @@
             "weibo",
             "brand ambassador"
         ],
-        "size_mb": 1.06
+        "size_mb": 4.9,
+        "quality": "2k"
     },
     {
         "id": 576,
@@ -2025,7 +2038,8 @@
             "endorsement",
             "behind the scenes"
         ],
-        "size_mb": 3.17
+        "size_mb": 14.3,
+        "quality": "2k"
     },
     {
         "id": 577,
@@ -2055,7 +2069,8 @@
             "behind the scenes",
             "photoshoot"
         ],
-        "size_mb": 2.1
+        "size_mb": 7.7,
+        "quality": "2k"
     },
     {
         "id": 563,
@@ -2714,7 +2729,7 @@
             "gaokao",
             "good luck message"
         ],
-        "size_mb": 0.68
+        "size_mb": 0.7
     },
     {
         "id": 518,
@@ -3084,7 +3099,7 @@
             "commercial",
             "618 festival"
         ],
-        "size_mb": 4.99
+        "size_mb": 5.0
     },
     {
         "id": 530,
@@ -3113,7 +3128,7 @@
             "phone",
             "campaign"
         ],
-        "size_mb": 38.18
+        "size_mb": 38.2
     },
     {
         "id": 531,
@@ -3221,7 +3236,7 @@
             "commercial",
             "behind the scenes"
         ],
-        "size_mb": 2.11
+        "size_mb": 2.1
     },
     {
         "id": 515,
@@ -3249,7 +3264,7 @@
             "shampoo",
             "advertisement"
         ],
-        "size_mb": 3.14
+        "size_mb": 3.1
     },
     {
         "id": 516,
@@ -3277,7 +3292,7 @@
             "endorsement",
             "618 festival"
         ],
-        "size_mb": 4.08
+        "size_mb": 4.1
     },
     {
         "id": 497,
@@ -3680,7 +3695,7 @@
         "platform_links": {
             "weibo": "https://weibo.com/1699432410/R1NR69kiS"
         },
-        "size_mb": 19.01
+        "size_mb": 17.3
     },
     {
         "id": 504,
@@ -4393,7 +4408,7 @@
             "endorsement",
             "skincare"
         ],
-        "size_mb": 3.18
+        "size_mb": 3.2
     },
     {
         "id": 400,
@@ -7426,7 +7441,7 @@
             "endorsement",
             "behind the scenes"
         ],
-        "size_mb": 6.51
+        "size_mb": 6.5
     },
     {
         "id": 324,
@@ -8364,7 +8379,7 @@
             "behind the scenes",
             "endorsement"
         ],
-        "size_mb": 7.93
+        "size_mb": 7.9
     },
     {
         "id": 296,
@@ -8856,7 +8871,8 @@
             "milk",
             "commercial"
         ],
-        "size_mb": 3.29
+        "size_mb": 9.4,
+        "quality": "1080p"
     },
     {
         "id": 614,
@@ -8887,7 +8903,8 @@
             "asmr",
             "milk"
         ],
-        "size_mb": 2.71
+        "size_mb": 7.7,
+        "quality": "1080p"
     },
     {
         "id": 278,
@@ -8945,7 +8962,8 @@
             "milk",
             "fifa world cup"
         ],
-        "size_mb": 2.96
+        "size_mb": 8.4,
+        "quality": "1080p"
     },
     {
         "id": 616,
@@ -8975,7 +8993,8 @@
             "milk",
             "fifa world cup"
         ],
-        "size_mb": 4.2
+        "size_mb": 12.8,
+        "quality": "1080p"
     },
     {
         "id": 276,
@@ -9486,7 +9505,7 @@
             "magazine"
         ],
         "quality": "2k",
-        "size_mb": 20.92
+        "size_mb": 20.9
     },
     {
         "id": 240,
@@ -11057,7 +11076,8 @@
             "award",
             "our song"
         ],
-        "size_mb": 62.22
+        "size_mb": 62.2,
+        "quality": "1080p"
     },
     {
         "id": 149,
@@ -11792,7 +11812,7 @@
             "michelle chen",
             "zhou qi"
         ],
-        "size_mb": 7.49
+        "size_mb": 7.5
     },
     {
         "id": 117,
@@ -12159,13 +12179,14 @@
         "description": "",
         "postText": "直击米兰大秀，循迹熠熠星光。众星魅力亮相艺术总监Demna为品牌呈现的首场时装秀#GucciPrimavera#，一同鉴赏古驰风格新篇。点击http://t.cn/AXciBvqM回顾秀场精彩瞬间。秀场同款甄选单品，点击http://t.cn/AXV7lLH0，探赏斐然风范。 http://t.cn/AXVAhzcS ​​​",
         "clip": true,
-        "duration": 4,
+        "duration": 39,
         "englishTags": [
             "gucci",
             "milan fashion week",
             "endorsement"
         ],
-        "size_mb": 0.27
+        "size_mb": 17.1,
+        "quality": "1080p"
     },
     {
         "id": 114,
@@ -12647,7 +12668,7 @@
             "米兰"
         ],
         "groupName": "GUCCI_2026-03-01",
-        "duration": 99,
+        "duration": 98,
         "weibo": "https://weibo.com/2155159645/Qu2zBqVuh",
         "source": [
             "GUCCI",
@@ -12666,7 +12687,8 @@
             "milan",
             "fashion week"
         ],
-        "size_mb": 6.91
+        "size_mb": 19.6,
+        "quality": "1080p"
     },
     {
         "id": 99,
@@ -12695,7 +12717,7 @@
             "fall winter",
             "endorsement"
         ],
-        "size_mb": 5.73
+        "size_mb": 5.7
     },
     {
         "id": 100,
@@ -12725,7 +12747,7 @@
             "robot",
             "endorsement"
         ],
-        "size_mb": 9.61
+        "size_mb": 9.6
     },
     {
         "id": 101,
@@ -12755,7 +12777,7 @@
             "fall winter",
             "endorsement"
         ],
-        "size_mb": 7.87
+        "size_mb": 7.9
     },
     {
         "id": 102,
@@ -13192,7 +13214,7 @@
             "endorsement",
             "magazine"
         ],
-        "size_mb": 15.09
+        "size_mb": 15.1
     },
     {
         "id": 245,
@@ -13224,7 +13246,7 @@
             "endorsement",
             "magazine"
         ],
-        "size_mb": 13.21
+        "size_mb": 13.2
     },
     {
         "id": 246,
@@ -13256,7 +13278,7 @@
             "endorsement",
             "magazine"
         ],
-        "size_mb": 15.48
+        "size_mb": 15.5
     },
     {
         "id": 247,
@@ -13288,7 +13310,7 @@
             "endorsement",
             "magazine"
         ],
-        "size_mb": 17.08
+        "size_mb": 17.1
     },
     {
         "id": 253,
@@ -14171,7 +14193,8 @@
             "stage performance",
             "sui sui nian nian"
         ],
-        "size_mb": 39.46
+        "size_mb": 39.5,
+        "quality": "1080p"
     },
     {
         "id": 131,
@@ -14423,7 +14446,7 @@
             "oriental tv",
             "new year wishes"
         ],
-        "size_mb": 3.45
+        "size_mb": 3.4
     },
     {
         "id": 134,
@@ -14901,7 +14924,7 @@
             "new year wishes",
             "stage performance"
         ],
-        "size_mb": 2.68
+        "size_mb": 2.7
     },
     {
         "id": 55,
@@ -15391,7 +15414,7 @@
             "china online audio-visual annual ceremony",
             "red carpet"
         ],
-        "size_mb": 0.84
+        "size_mb": 0.8
     },
     {
         "id": 250,
@@ -15446,7 +15469,7 @@
             "a dream of splendor",
             "stage performance"
         ],
-        "size_mb": 2.69
+        "size_mb": 2.7
     },
     {
         "id": 265,
@@ -15504,7 +15527,8 @@
             "behind the scenes",
             "olympics"
         ],
-        "size_mb": 2.52
+        "size_mb": 23.1,
+        "quality": "4k"
     },
     {
         "id": 51,
@@ -16590,7 +16614,8 @@
             "daily fresh",
             "weibo"
         ],
-        "size_mb": 4.82
+        "size_mb": 15.5,
+        "quality": "1080p"
     },
     {
         "id": 239,
@@ -17148,7 +17173,8 @@
             "weibo",
             "olympic global partner"
         ],
-        "size_mb": 1.65
+        "size_mb": 4.7,
+        "quality": "1080p"
     },
     {
         "id": 17,
@@ -17659,7 +17685,7 @@
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20260101_东方卫视跨年现在不跳舞要干嘛_XZ-STU-1.mp4",
         "duration": 233,
-        "size_mb": 70.97
+        "size_mb": 135.8
     },
     {
         "id": 511,
