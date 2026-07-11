@@ -330,7 +330,8 @@
             "stage performance",
             "oriental tv"
         ],
-        "size_mb": 34.54
+        "size_mb": 34.54,
+        "quality_hd": "1080p"
     },
     {
         "id": 340,
@@ -463,7 +464,8 @@
             "oriental tv",
             "song performance"
         ],
-        "size_mb": 57.19
+        "size_mb": 57.19,
+        "quality_hd": "1080p"
     },
     {
         "id": 337,
@@ -1088,7 +1090,8 @@
             "disco",
             "annoying autumn wind"
         ],
-        "size_mb": 51.14
+        "size_mb": 51.14,
+        "quality_hd": "1080p"
     },
     {
         "id": 333,
@@ -1522,7 +1525,8 @@
             "macau concert",
             "stage performance"
         ],
-        "size_mb": 38.75
+        "size_mb": 38.75,
+        "quality_hd": "1080p"
     },
     {
         "id": 355,
@@ -3368,7 +3372,8 @@
             "olympics",
             "weibo video"
         ],
-        "size_mb": 0.43
+        "size_mb": 1.3,
+        "quality": "1080p"
     },
     {
         "id": 279,
@@ -3731,7 +3736,8 @@
             "paris",
             "signed photo"
         ],
-        "size_mb": 0.79
+        "size_mb": 2.0,
+        "quality": "1080p"
     },
     {
         "id": 165,
@@ -6899,12 +6905,13 @@
         "note": "",
         "description": "",
         "postText": "既然你们都喜欢红色，那⬇️这 不就来了～ RoccoLiu刘冲的微博视频",
-        "size_mb": 2.45,
+        "size_mb": 2.3,
         "englishTags": [
             "gq",
             "rocco liu",
             "red suit"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 31,
