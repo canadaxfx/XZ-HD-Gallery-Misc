@@ -2137,7 +2137,7 @@
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260707-1'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260713-1'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
@@ -2609,11 +2609,11 @@ function updateModalContent() {
     if (badgeAlt) {
         if (isVideo && photo.url_4k) {
             badgeAlt.href = photo.url_4k;
-            badgeAlt.textContent = '点击下载 ↓ 4K版本';
+            badgeAlt.textContent = '点击下载 ↓ 4K版本' + (photo.size_4k ? ' (' + photo.size_4k + ' MB)' : '');
             badgeAlt.classList.remove('hidden');
         } else if (isVideo && photo.url_hd) {
             badgeAlt.href = photo.url_hd;
-            badgeAlt.textContent = '点击下载 ↓ ' + (photo.quality_hd || '1080p').toUpperCase() + '版本';
+            badgeAlt.textContent = '点击下载 ↓ ' + (photo.quality_hd || '1080p').toUpperCase() + '版本' + (photo.size_hd ? ' (' + photo.size_hd + ' MB)' : '');
             badgeAlt.classList.remove('hidden');
         } else {
             badgeAlt.classList.add('hidden');
