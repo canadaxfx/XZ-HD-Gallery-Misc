@@ -2678,7 +2678,8 @@
             "interview",
             "movie"
         ],
-        "size_mb": 35.78
+        "size_mb": 35.78,
+        "size_hd": 102.56
     },
     {
         "id": 557,
@@ -2912,7 +2913,8 @@
             "movie",
             "interview"
         ],
-        "size_mb": 58.92
+        "size_mb": 58.92,
+        "size_hd": 168.94
     },
     {
         "id": 556,
@@ -3016,7 +3018,8 @@
             "interview",
             "variety show"
         ],
-        "size_mb": 50.52
+        "size_mb": 50.52,
+        "size_4k": 250.06
     },
     {
         "id": 736,
@@ -4309,7 +4312,8 @@
             "w magazine",
             "brand ambassador"
         ],
-        "size_mb": 1.04
+        "size_mb": 2.6,
+        "quality": "1080p"
     },
     {
         "id": 528,
@@ -4503,7 +4507,8 @@
             "macau",
             "food"
         ],
-        "size_mb": 3.83
+        "size_mb": 10.4,
+        "quality": "1080p"
     },
     {
         "id": 524,
@@ -10202,7 +10207,8 @@
             "cctv",
             "interview"
         ],
-        "size_mb": 2.78
+        "size_mb": 8.1,
+        "quality": "1080p"
     },
     {
         "id": 750,
@@ -16462,7 +16468,8 @@
             "narration",
             "beijing tv"
         ],
-        "size_mb": 8.68
+        "size_mb": 8.68,
+        "size_4k": 128.93
     },
     {
         "id": 712,
@@ -17709,7 +17716,7 @@
             "w magazine"
         ],
         "hidden": "",
-        "size_mb": 4.89
+        "size_mb": 7.0
     },
     {
         "id": 137,
@@ -18223,7 +18230,8 @@
             "film",
             "interview"
         ],
-        "size_mb": 193.04
+        "size_mb": 193.04,
+        "size_hd": 356.44
     },
     {
         "id": 680,
@@ -19001,7 +19009,8 @@
             "interview",
             "wuxia"
         ],
-        "size_mb": 176.14
+        "size_mb": 176.14,
+        "size_hd": 324.96
     },
     {
         "id": 696,
@@ -19031,7 +19040,8 @@
             "interview",
             "film promotion"
         ],
-        "size_mb": 69.08
+        "size_mb": 69.08,
+        "size_hd": 228.77
     },
     {
         "id": 700,
@@ -19059,7 +19069,8 @@
             "lighthouse",
             "performance"
         ],
-        "size_mb": 59.28
+        "size_mb": 59.28,
+        "size_hd": 115.4
     },
     {
         "id": 97,
@@ -19226,7 +19237,8 @@
             "film",
             "xinhua news agency"
         ],
-        "size_mb": 41.22
+        "size_mb": 41.22,
+        "size_hd": 120.8
     },
     {
         "id": 760,
@@ -19423,7 +19435,8 @@
             "martial arts",
             "movie"
         ],
-        "size_mb": 80.97
+        "size_mb": 80.97,
+        "size_hd": 239.32
     },
     {
         "id": 756,
@@ -19450,7 +19463,8 @@
             "xu ke",
             "people's daily"
         ],
-        "size_mb": 65.23
+        "size_mb": 65.23,
+        "size_hd": 175.2
     },
     {
         "id": 80,
@@ -20917,7 +20931,8 @@
             "album",
             "actor"
         ],
-        "size_mb": 25.25
+        "size_mb": 25.25,
+        "size_hd": 158.69
     },
     {
         "id": 47,
@@ -21773,7 +21788,8 @@
             "interview",
             "magazine"
         ],
-        "size_mb": 39.99
+        "size_mb": 39.99,
+        "size_hd": 121.33
     },
     {
         "id": 2,
