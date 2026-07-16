@@ -1,5 +1,32 @@
 [
     {
+        "id": 661,
+        "url": "https://assets.xz-studio-gallery.com/full/20260714_青岛啤酒_XZ-MISC-1.jpg",
+        "date": "2026-07-14",
+        "month": "July",
+        "year": "2026",
+        "tags": [
+            "青岛啤酒"
+        ],
+        "groupName": "青岛啤酒_2026-07-14",
+        "weibo": "https://weibo.com/2311803083/R8Cc8mxdV",
+        "source": [
+            "Endorsement Misc"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "分享图片 ​​​",
+        "size_mb": 3.38,
+        "englishTags": [
+            "tsingtao beer",
+            "endorsement"
+        ]
+    },
+    {
         "id": 660,
         "url": "https://assets.xz-studio-gallery.com/full/20260710_尚界_XZ-MISC-1.jpg",
         "date": "2026-07-10",
@@ -3753,7 +3780,7 @@
         "platform_links": {
             "xiaohongshu": "https://www.xiaohongshu.com/explore/6a16728f000000003701d4fc?xsec_token=ABnVC2WWkqV54-MDQoUHl5TSieyNhc6u413tl105TOu5M=&xsec_source=pc_user"
         },
-        "size_mb": 10.6
+        "size_mb": 10.57
     },
     {
         "id": 477,
@@ -17718,6 +17745,6 @@
             "stage performance"
         ],
         "duration": 228,
-        "size_mb": 47.0
+        "size_mb": 47.01
     }
 ]
