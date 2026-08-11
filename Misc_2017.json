@@ -49,7 +49,8 @@
         "englishTags": [
             "daily life"
         ],
-        "size_mb": 2.27
+        "size_mb": 2.27,
+        "quality": "720p"
     },
     {
         "id": 12,
@@ -400,6 +401,7 @@
             "orange entertainment",
             "interview"
         ],
-        "size_mb": 36.02
+        "size_mb": 36.02,
+        "quality": "720p"
     }
 ]
