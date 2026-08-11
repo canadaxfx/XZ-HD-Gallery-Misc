@@ -417,7 +417,8 @@
             "official ambassador",
             "shanghai",
             "voiceover"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 726,
@@ -782,7 +783,8 @@
         "platform_links": {
             "Tencent": "https://v.qq.com/x/cover/mzc00200wn7xgbf/w4102cqvqhh.html"
         },
-        "hidden": ""
+        "hidden": "",
+        "quality": "480p"
     },
     {
         "id": 695,
@@ -1792,7 +1794,8 @@
         "englishTags": [
             "asian art film festival",
             "golden sea swallow awards"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 682,
@@ -3941,7 +3944,8 @@
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20260618_青岛啤酒_XZ-MISC-1.mp4",
         "size_mb": 37.02,
         "quality_hd": "1080p",
-        "size_hd": 139.47
+        "size_hd": 139.47,
+        "quality": "480p"
     },
     {
         "id": 572,
@@ -4839,7 +4843,8 @@
             "gaokao",
             "good luck message"
         ],
-        "size_mb": 0.68
+        "size_mb": 0.68,
+        "quality": "720p"
     },
     {
         "id": 518,
@@ -5806,7 +5811,8 @@
             "weibo": "https://weibo.com/1699432410/R1NR69kiS"
         },
         "size_mb": 17.3,
-        "size_4k": 183.64
+        "size_4k": 183.64,
+        "quality": "480p"
     },
     {
         "id": 504,
@@ -5862,7 +5868,8 @@
         "platform_links": {
             "xiaohongshu": "https://www.xiaohongshu.com/explore/6a16728f000000003701d4fc?xsec_token=ABnVC2WWkqV54-MDQoUHl5TSieyNhc6u413tl105TOu5M=&xsec_source=pc_user"
         },
-        "size_mb": 10.57
+        "size_mb": 10.57,
+        "quality": "720p"
     },
     {
         "id": 477,
@@ -8772,7 +8779,8 @@
             "endorsement",
             "capsule collection"
         ],
-        "size_mb": 0.16
+        "size_mb": 0.16,
+        "quality": "720p"
     },
     {
         "id": 360,
@@ -8799,7 +8807,8 @@
             "endorsement",
             "capsule collection"
         ],
-        "size_mb": 0.1
+        "size_mb": 0.1,
+        "quality": "720p"
     },
     {
         "id": 357,
@@ -10081,7 +10090,8 @@
             "red carpet",
             "host"
         ],
-        "size_mb": 0.29
+        "size_mb": 0.29,
+        "quality": "low"
     },
     {
         "id": 555,
@@ -11440,7 +11450,8 @@
             "filming start"
         ],
         "postText": "《十日终焉》今日开机！以十日为限，赴轮回之弈",
-        "size_mb": 1.92
+        "size_mb": 1.92,
+        "quality": "720p"
     },
     {
         "id": 435,
@@ -13308,7 +13319,8 @@
         ],
         "size_mb": 62.22,
         "quality_hd": "1080p",
-        "size_hd": 199.49
+        "size_hd": 199.49,
+        "quality": "480p"
     },
     {
         "id": 149,
@@ -13749,7 +13761,8 @@
             "red carpet",
             "interview"
         ],
-        "size_mb": 196.73
+        "size_mb": 196.73,
+        "quality": "720p"
     },
     {
         "id": 165,
@@ -16426,7 +16439,8 @@
         ],
         "size_mb": 39.46,
         "quality_hd": "1080p",
-        "size_hd": 116.02
+        "size_hd": 116.02,
+        "quality": "480p"
     },
     {
         "id": 131,
@@ -16709,7 +16723,8 @@
             "oriental tv",
             "new year wishes"
         ],
-        "size_mb": 3.45
+        "size_mb": 3.45,
+        "quality": "720p"
     },
     {
         "id": 134,
@@ -17677,7 +17692,8 @@
             "china online audio-visual annual ceremony",
             "red carpet"
         ],
-        "size_mb": 0.84
+        "size_mb": 0.84,
+        "quality": "720p"
     },
     {
         "id": 250,
@@ -18821,7 +18837,8 @@
             "red carpet",
             "speech"
         ],
-        "size_mb": 13.91
+        "size_mb": 13.91,
+        "quality": "720p"
     },
     {
         "id": 36,
@@ -19949,7 +19966,8 @@
         "duration": 233,
         "size_mb": 70.97,
         "quality_hd": "1080p",
-        "size_hd": 135.84
+        "size_hd": 135.84,
+        "quality": "720p"
     },
     {
         "id": 511,
