@@ -96,7 +96,8 @@
             "christmas",
             "weibo"
         ],
-        "size_mb": 0.28
+        "size_mb": 0.28,
+        "quality": "low"
     },
     {
         "id": 148,
@@ -127,7 +128,8 @@
             "white shirt",
             "suit"
         ],
-        "size_mb": 4.96
+        "size_mb": 4.96,
+        "quality": "720p"
     },
     {
         "id": 147,
@@ -158,7 +160,8 @@
             "interview",
             "chongqing dialect"
         ],
-        "size_mb": 5.89
+        "size_mb": 5.89,
+        "quality": "480p"
     },
     {
         "id": 118,
@@ -412,7 +415,8 @@
             "fashion gala",
             "dinner table"
         ],
-        "size_mb": 1.37
+        "size_mb": 1.37,
+        "quality": "720p"
     },
     {
         "id": 111,
@@ -1005,7 +1009,8 @@
             "interview",
             "variety show"
         ],
-        "size_mb": 10.37
+        "size_mb": 10.37,
+        "quality": "720p"
     },
     {
         "id": 139,
@@ -1328,7 +1333,8 @@
             "hangzhou",
             "stage performance"
         ],
-        "size_mb": 0.62
+        "size_mb": 0.62,
+        "quality": "720p"
     },
     {
         "id": 162,
@@ -1471,7 +1477,8 @@
             "interview",
             "2018"
         ],
-        "size_mb": 7.2
+        "size_mb": 7.2,
+        "quality": "480p"
     },
     {
         "id": 149,
@@ -1502,7 +1509,8 @@
             "battle through the heavens",
             "interview"
         ],
-        "size_mb": 22.04
+        "size_mb": 22.04,
+        "quality": "720p"
     },
     {
         "id": 179,
@@ -1531,7 +1539,8 @@
             "x nine",
             "rehearsal"
         ],
-        "size_mb": 1.88
+        "size_mb": 1.88,
+        "quality": "480p"
     },
     {
         "id": 190,
@@ -2045,7 +2054,8 @@
             "endorsement",
             "wechat"
         ],
-        "size_mb": 7.89
+        "size_mb": 7.89,
+        "quality": "720p"
     },
     {
         "id": 183,
@@ -2075,7 +2085,8 @@
             "endorsement",
             "video"
         ],
-        "size_mb": 1.73
+        "size_mb": 1.73,
+        "quality": "720p"
     },
     {
         "id": 184,
@@ -2486,7 +2497,8 @@
             "interview",
             "wang yibo"
         ],
-        "size_mb": 163.16
+        "size_mb": 163.16,
+        "quality": "720p"
     },
     {
         "id": 145,
@@ -2542,7 +2554,8 @@
             "reading",
             "app promotion"
         ],
-        "size_mb": 1.43
+        "size_mb": 1.43,
+        "quality": "low"
     },
     {
         "id": 107,
@@ -2969,7 +2982,9 @@
             "wang dalu",
             "x-nine"
         ],
-        "size_mb": 30.18
+        "size_mb": 30.18,
+        "size_hd": 168.75,
+        "quality": "480p"
     },
     {
         "id": 90,
@@ -4123,7 +4138,8 @@
             "x nine",
             "super star academy"
         ],
-        "size_mb": 31.4
+        "size_mb": 31.4,
+        "quality": "480p"
     },
     {
         "id": 46,
@@ -4590,7 +4606,8 @@
             "boy group"
         ],
         "hidden": "",
-        "size_mb": 2.25
+        "size_mb": 2.25,
+        "quality": "480p"
     },
     {
         "id": 181,
@@ -4620,7 +4637,8 @@
             "weibo",
             "teammate"
         ],
-        "size_mb": 2.42
+        "size_mb": 2.42,
+        "quality": "720p"
     },
     {
         "id": 27,
