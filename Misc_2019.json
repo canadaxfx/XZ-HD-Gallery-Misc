@@ -80,7 +80,8 @@
             "the untamed",
             "wei wuxian"
         ],
-        "size_mb": 19.32
+        "size_mb": 19.32,
+        "quality": "480p"
     },
     {
         "id": 626,
@@ -113,7 +114,8 @@
             "global citizen",
             "photoshoot"
         ],
-        "size_mb": 1.91
+        "size_mb": 1.91,
+        "quality": "720p"
     },
     {
         "id": 266,
@@ -141,7 +143,8 @@
             "drama",
             "oil field"
         ],
-        "size_mb": 2.06
+        "size_mb": 2.06,
+        "quality": "480p"
     },
     {
         "id": 300,
@@ -197,7 +200,8 @@
             "christmas",
             "vogueme"
         ],
-        "size_mb": 6.62
+        "size_mb": 6.62,
+        "quality": "720p"
     },
     {
         "id": 273,
@@ -226,7 +230,8 @@
             "interview",
             "vs sassoon"
         ],
-        "size_mb": 16.43
+        "size_mb": 16.43,
+        "quality": "720p"
     },
     {
         "id": 569,
@@ -293,7 +298,8 @@
             "magazine",
             "fashion show"
         ],
-        "size_mb": 12.16
+        "size_mb": 12.16,
+        "quality": "720p"
     },
     {
         "id": 613,
@@ -353,7 +359,8 @@
             "fashion show",
             "3.1 phillip lim"
         ],
-        "size_mb": 2.92
+        "size_mb": 2.92,
+        "quality": "720p"
     },
     {
         "id": 615,
@@ -383,7 +390,8 @@
             "fashion show",
             "tianmao club"
         ],
-        "size_mb": 1.19
+        "size_mb": 1.19,
+        "quality": "480p"
     },
     {
         "id": 627,
@@ -624,7 +632,8 @@
             "tianmao",
             "global citizen"
         ],
-        "size_mb": 1.96
+        "size_mb": 1.98,
+        "quality": "720p"
     },
     {
         "id": 624,
@@ -881,7 +890,8 @@
             "jade dynasty",
             "oh my emperor"
         ],
-        "size_mb": 1.16
+        "size_mb": 1.16,
+        "quality": "720p"
     },
     {
         "id": 430,
@@ -911,7 +921,8 @@
             "vlog",
             "soup for you"
         ],
-        "size_mb": 8.14
+        "size_mb": 8.14,
+        "quality": "720p"
     },
     {
         "id": 314,
@@ -971,7 +982,8 @@
             "endorsement",
             "photoshoot"
         ],
-        "size_mb": 8.64
+        "size_mb": 8.64,
+        "quality": "720p"
     },
     {
         "id": 271,
@@ -1030,7 +1042,8 @@
         "platform": [
             "ua"
         ],
-        "size_mb": 13.6
+        "size_mb": 27.5,
+        "quality": "720p"
     },
     {
         "id": 428,
@@ -1634,7 +1647,8 @@
             "magazine",
             "vogueme"
         ],
-        "size_mb": 1.83
+        "size_mb": 1.83,
+        "quality": "720p"
     },
     {
         "id": 315,
@@ -1829,7 +1843,8 @@
             "iqiyi scream night",
             "interview"
         ],
-        "size_mb": 7.0
+        "size_mb": 7.0,
+        "quality": "low"
     },
     {
         "id": 457,
@@ -2297,7 +2312,8 @@
             "interview",
             "toutiao entertainment"
         ],
-        "size_mb": 2.82
+        "size_mb": 2.82,
+        "quality": "720p"
     },
     {
         "id": 334,
@@ -2663,7 +2679,8 @@
             "magazine",
             "red carpet"
         ],
-        "size_mb": 0.5
+        "size_mb": 0.5,
+        "quality": "720p"
     },
     {
         "id": 466,
@@ -2739,7 +2756,9 @@
             "tencent"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20191107_我想和世界谈谈_XZ-MISC-1.mp4",
-        "size_mb": 68.0
+        "size_mb": 68.0,
+        "size_hd": 152.94,
+        "quality": "480p"
     },
     {
         "id": 243,
@@ -2898,7 +2917,8 @@
             "campus",
             "guitar"
         ],
-        "size_mb": 28.24
+        "size_mb": 28.24,
+        "quality": "720p"
     },
     {
         "id": 293,
@@ -3009,7 +3029,9 @@
             "tencent"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20191101_我想和世界谈谈_XZ-MISC-1.mp4",
-        "size_mb": 54.73
+        "size_mb": 54.73,
+        "size_hd": 129.55,
+        "quality": "480p"
     },
     {
         "id": 355,
@@ -3150,7 +3172,8 @@
             "trailer",
             "drama"
         ],
-        "size_mb": 4.3
+        "size_mb": 4.3,
+        "quality": "720p"
     },
     {
         "id": 477,
@@ -3181,7 +3204,8 @@
             "red carpet",
             "stage performance"
         ],
-        "size_mb": 2.81
+        "size_mb": 2.81,
+        "quality": "480p"
     },
     {
         "id": 496,
@@ -3268,7 +3292,8 @@
             "douyin wonderful night",
             "interview"
         ],
-        "size_mb": 1.24
+        "size_mb": 1.24,
+        "quality": "480p"
     },
     {
         "id": 476,
@@ -3298,7 +3323,8 @@
             "interview",
             "douyin wonderful night"
         ],
-        "size_mb": 1.51
+        "size_mb": 1.51,
+        "quality": "480p"
     },
     {
         "id": 239,
@@ -3377,7 +3403,8 @@
             "music",
             "songwriting"
         ],
-        "size_mb": 3.47
+        "size_mb": 3.47,
+        "quality": "480p"
     },
     {
         "id": 479,
@@ -3407,7 +3434,8 @@
             "interview",
             "variety show"
         ],
-        "size_mb": 2.19
+        "size_mb": 2.19,
+        "quality": "480p"
     },
     {
         "id": 416,
@@ -3604,7 +3632,8 @@
             "interview",
             "in_famous"
         ],
-        "size_mb": 6.15
+        "size_mb": 6.15,
+        "quality": "480p"
     },
     {
         "id": 417,
@@ -3657,7 +3686,8 @@
             "the oath of love",
             "behind the scenes"
         ],
-        "size_mb": 6.48
+        "size_mb": 6.48,
+        "quality": "720p"
     },
     {
         "id": 406,
@@ -3714,7 +3744,8 @@
             "photoshoot",
             "adventure"
         ],
-        "size_mb": 7.08
+        "size_mb": 7.08,
+        "quality": "720p"
     },
     {
         "id": 283,
@@ -3772,7 +3803,8 @@
             "stage performance",
             "live performance"
         ],
-        "size_mb": 5.36
+        "size_mb": 5.36,
+        "quality": "720p"
     },
     {
         "id": 407,
@@ -4035,7 +4067,8 @@
             "fanboy moment",
             "stefanie sun"
         ],
-        "size_mb": 0.98
+        "size_mb": 0.98,
+        "quality": "480p"
     },
     {
         "id": 473,
@@ -4063,7 +4096,8 @@
             "interview",
             "stage performance"
         ],
-        "size_mb": 1.44
+        "size_mb": 1.44,
+        "quality": "480p"
     },
     {
         "id": 228,
@@ -4245,7 +4279,8 @@
             "interview",
             "event"
         ],
-        "size_mb": 0.96
+        "size_mb": 0.96,
+        "quality": "480p"
     },
     {
         "id": 478,
@@ -4277,7 +4312,9 @@
             "you are the most beautiful scenery in my life"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20191019_你是此生最美的风景_XZ-MISC-1.mp4",
-        "size_mb": 41.46
+        "size_mb": 41.46,
+        "size_hd": 157.9,
+        "quality": "720p"
     },
     {
         "id": 515,
@@ -4395,7 +4432,8 @@
             "jade dynasty",
             "interview"
         ],
-        "size_mb": 1.69
+        "size_mb": 1.69,
+        "quality": "720p"
     },
     {
         "id": 618,
@@ -4754,7 +4792,8 @@
             "variety show",
             "travel"
         ],
-        "size_mb": 2.45
+        "size_mb": 2.45,
+        "quality": "720p"
     },
     {
         "id": 401,
@@ -4844,7 +4883,7 @@
             "interview",
             "concert"
         ],
-        "size_mb": 31.61
+        "size_mb": 31.62
     },
     {
         "id": 282,
@@ -4870,7 +4909,8 @@
             "magazine",
             "photoshoot"
         ],
-        "size_mb": 0.79
+        "size_mb": 0.79,
+        "quality": "720p"
     },
     {
         "id": 281,
@@ -4927,7 +4967,8 @@
             "birthday",
             "photoshoot"
         ],
-        "size_mb": 0.67
+        "size_mb": 0.67,
+        "quality": "720p"
     },
     {
         "id": 292,
@@ -4957,7 +4998,8 @@
             "gucci",
             "abu dhabi"
         ],
-        "size_mb": 1.12
+        "size_mb": 1.12,
+        "quality": "480p"
     },
     {
         "id": 303,
@@ -5122,7 +5164,8 @@
             "vlog",
             "adventure"
         ],
-        "size_mb": 1.09
+        "size_mb": 1.09,
+        "quality": "720p"
     },
     {
         "id": 324,
@@ -5334,7 +5377,8 @@
             "abu dhabi",
             "desert"
         ],
-        "size_mb": 3.56
+        "size_mb": 3.56,
+        "quality": "720p"
     },
     {
         "id": 203,
@@ -5859,7 +5903,8 @@
             "abu dhabi",
             "adventure"
         ],
-        "size_mb": 4.07
+        "size_mb": 4.07,
+        "quality": "720p"
     },
     {
         "id": 350,
@@ -6280,7 +6325,8 @@
             "interview",
             "plaid suit"
         ],
-        "size_mb": 4.86
+        "size_mb": 4.86,
+        "quality": "480p"
     },
     {
         "id": 495,
@@ -6312,7 +6358,8 @@
             "gucci",
             "interview"
         ],
-        "size_mb": 1.09
+        "size_mb": 1.09,
+        "quality": "480p"
     },
     {
         "id": 176,
@@ -7118,7 +7165,8 @@
             "jade dynasty"
         ],
         "platform": [],
-        "size_mb": 5.62
+        "size_mb": 5.62,
+        "quality": "720p"
     },
     {
         "id": 389,
@@ -7148,7 +7196,9 @@
         ],
         "hidden": "",
         "platform": [],
-        "size_mb": 27.31
+        "size_mb": 27.31,
+        "size_hd": 211.61,
+        "quality": "480p"
     },
     {
         "id": 392,
@@ -7300,7 +7350,9 @@
             "one media"
         ],
         "platform": [],
-        "size_mb": 38.92
+        "size_mb": 38.92,
+        "size_hd": 126.43,
+        "quality": "480p"
     },
     {
         "id": 396,
@@ -7480,7 +7532,8 @@
             "promotional",
             "weibo"
         ],
-        "size_mb": 1.54
+        "size_mb": 1.54,
+        "quality": "480p"
     },
     {
         "id": 501,
@@ -7781,7 +7834,9 @@
             "interview",
             "film promotion"
         ],
-        "size_mb": 38.6
+        "size_mb": 38.6,
+        "size_hd": 127.81,
+        "quality": "480p"
     },
     {
         "id": 497,
@@ -7814,7 +7869,8 @@
             "interview",
             "one magazine"
         ],
-        "size_mb": 4.76
+        "size_mb": 4.76,
+        "quality": "720p"
     },
     {
         "id": 161,
@@ -8022,7 +8078,8 @@
             "movie premiere",
             "interview"
         ],
-        "size_mb": 2.33
+        "size_mb": 2.33,
+        "quality": "low"
     },
     {
         "id": 423,
@@ -8393,7 +8450,8 @@
             "tencent video",
             "singing"
         ],
-        "size_mb": 0.7
+        "size_mb": 0.7,
+        "quality": "480p"
     },
     {
         "id": 151,
@@ -9425,7 +9483,8 @@
             "interview",
             "behind the scenes"
         ],
-        "size_mb": 1.9
+        "size_mb": 1.92,
+        "quality": "720p"
     },
     {
         "id": 519,
@@ -9454,7 +9513,8 @@
             "cat",
             "behind the scenes"
         ],
-        "size_mb": 2.69
+        "size_mb": 2.69,
+        "quality": "720p"
     },
     {
         "id": 589,
@@ -9778,7 +9838,8 @@
             "magazine",
             "body lotion"
         ],
-        "size_mb": 4.33
+        "size_mb": 4.33,
+        "quality": "480p"
     },
     {
         "id": 402,
@@ -9834,7 +9895,8 @@
             "the untamed",
             "behind the scenes"
         ],
-        "size_mb": 8.75
+        "size_mb": 8.75,
+        "quality": "720p"
     },
     {
         "id": 404,
@@ -9857,7 +9919,8 @@
         "datePrecision": "day",
         "postText": "肖战新闻当事人花絮 拍陈情令第一次有人在自己面前热晕倒，已经通过这个剧成长了",
         "englishTags": [],
-        "size_mb": 11.57
+        "size_mb": 11.57,
+        "quality": "720p"
     },
     {
         "id": 513,
@@ -9885,7 +9948,8 @@
             "interview",
             "future net"
         ],
-        "size_mb": 6.53
+        "size_mb": 6.53,
+        "quality": "720p"
     },
     {
         "id": 115,
@@ -10100,7 +10164,9 @@
             "ua"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20190816_人民网友聊_XZ-MISC-1.mp4",
-        "size_mb": 45.72
+        "size_mb": 45.72,
+        "size_hd": 182.56,
+        "quality": "480p"
     },
     {
         "id": 442,
@@ -10876,7 +10942,8 @@
             "weibo video"
         ],
         "hidden": true,
-        "size_mb": 20.02
+        "size_mb": 20.02,
+        "quality": "720p"
     },
     {
         "id": 538,
@@ -10940,7 +11007,8 @@
             "interview",
             "the untamed"
         ],
-        "size_mb": 15.83
+        "size_mb": 15.83,
+        "quality": "720p"
     },
     {
         "id": 91,
@@ -11061,7 +11129,9 @@
             "reading",
             "hachiko"
         ],
-        "size_mb": 20.63
+        "size_mb": 20.63,
+        "size_hd": 111.25,
+        "quality": "480p"
     },
     {
         "id": 89,
@@ -11275,7 +11345,9 @@
             "interview",
             "drama promotion"
         ],
-        "size_mb": 38.25
+        "size_mb": 38.25,
+        "size_hd": 110.84,
+        "quality": "480p"
     },
     {
         "id": 383,
@@ -11429,7 +11501,8 @@
             "lu zhixing",
             "monologue of the lighthouse keeper"
         ],
-        "size_mb": 8.53
+        "size_mb": 8.53,
+        "quality": "480p"
     },
     {
         "id": 348,
@@ -11457,7 +11530,8 @@
             "magazine",
             "interview"
         ],
-        "size_mb": 29.66
+        "size_mb": 29.66,
+        "quality": "720p"
     },
     {
         "id": 518,
@@ -11621,7 +11695,9 @@
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20190807_澎湃有戏_XZ-1.mp4",
         "hidden": true,
-        "size_mb": 43.45
+        "size_mb": 43.45,
+        "size_hd": 137.6,
+        "quality": "480p"
     },
     {
         "id": 520,
@@ -11650,7 +11726,8 @@
             "interview",
             "promotional"
         ],
-        "size_mb": 3.24
+        "size_mb": 3.24,
+        "quality": "720p"
     },
     {
         "id": 83,
@@ -11840,7 +11917,9 @@
             "walking material"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20190805_B站星访问_XZ-MISC-1.mp4",
-        "size_mb": 91.27
+        "size_mb": 91.27,
+        "size_hd": 172.01,
+        "quality": "480p"
     },
     {
         "id": 522,
@@ -13229,7 +13308,8 @@
             "photoshoot"
         ],
         "hidden": true,
-        "size_mb": 12.13
+        "size_mb": 12.13,
+        "quality": "low"
     },
     {
         "id": 61,
@@ -13450,7 +13530,8 @@
             "interview",
             "shanghai tv"
         ],
-        "size_mb": 1.29
+        "size_mb": 1.29,
+        "quality": "480p"
     },
     {
         "id": 544,
@@ -13740,7 +13821,8 @@
             "photoshoot"
         ],
         "hidden": true,
-        "size_mb": 19.41
+        "size_mb": 19.41,
+        "quality": "480p"
     },
     {
         "id": 559,
@@ -13772,7 +13854,8 @@
             "interview",
             "behind the scenes"
         ],
-        "size_mb": 0.42
+        "size_mb": 0.42,
+        "quality": "low"
     },
     {
         "id": 49,
@@ -13933,7 +14016,9 @@
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20190722_芭莎_XZ-MISC-1.mp4",
         "hidden": true,
-        "size_mb": 29.87
+        "size_mb": 29.87,
+        "size_hd": 141.08,
+        "quality": "480p"
     },
     {
         "id": 560,
@@ -13963,7 +14048,8 @@
             "wang yibo"
         ],
         "hidden": true,
-        "size_mb": 7.07
+        "size_mb": 7.07,
+        "quality": "720p"
     },
     {
         "id": 48,
@@ -14070,7 +14156,8 @@
             "cosmo",
             "photoshoot"
         ],
-        "size_mb": 0.63
+        "size_mb": 0.63,
+        "quality": "720p"
     },
     {
         "id": 561,
@@ -14161,7 +14248,8 @@
             "interview",
             "singing"
         ],
-        "size_mb": 4.06
+        "size_mb": 4.06,
+        "quality": "720p"
     },
     {
         "id": 326,
@@ -14219,7 +14307,8 @@
             "wang yibo"
         ],
         "download_url": "https://canadaxfx.synology.me:8443/20190718_陈情令(未屏蔽⚠️)_XZ-MISC-3.mp4",
-        "size_mb": 87.35
+        "size_mb": 87.35,
+        "quality": "480p"
     },
     {
         "id": 45,
@@ -14533,7 +14622,8 @@
             "interview",
             "behind the scenes"
         ],
-        "size_mb": 24.01
+        "size_mb": 24.01,
+        "quality": "720p"
     },
     {
         "id": 275,
@@ -14643,7 +14733,8 @@
             "endorsement",
             "interview"
         ],
-        "size_mb": 7.64
+        "size_mb": 7.64,
+        "quality": "720p"
     },
     {
         "id": 556,
@@ -14675,7 +14766,8 @@
             "the untamed",
             "weibo"
         ],
-        "size_mb": 1.38
+        "size_mb": 1.38,
+        "quality": "720p"
     },
     {
         "id": 38,
@@ -14760,7 +14852,9 @@
             "interview",
             "juzi yule"
         ],
-        "size_mb": 37.66
+        "size_mb": 37.66,
+        "size_hd": 120.79,
+        "quality": "480p"
     },
     {
         "id": 372,
@@ -14784,7 +14878,8 @@
             "interview",
             "fan interaction"
         ],
-        "size_mb": 8.51
+        "size_mb": 8.51,
+        "quality": "720p"
     },
     {
         "id": 557,
@@ -14814,7 +14909,8 @@
             "interview",
             "behind the scenes"
         ],
-        "size_mb": 1.05
+        "size_mb": 1.05,
+        "quality": "720p"
     },
     {
         "id": 577,
@@ -14845,7 +14941,8 @@
             "bag reveal",
             "leather pants"
         ],
-        "size_mb": 3.8
+        "size_mb": 3.8,
+        "quality": "480p"
     },
     {
         "id": 28,
@@ -15143,7 +15240,8 @@
             "wei wuxian",
             "drama special"
         ],
-        "size_mb": 21.13
+        "size_mb": 21.13,
+        "quality": "720p"
     },
     {
         "id": 26,
@@ -15218,7 +15316,8 @@
             "interview",
             "boiled beef"
         ],
-        "size_mb": 3.42
+        "size_mb": 3.42,
+        "quality": "480p"
     },
     {
         "id": 611,
@@ -15564,7 +15663,8 @@
             "interview",
             "behind the scenes"
         ],
-        "size_mb": 10.46
+        "size_mb": 10.46,
+        "quality": "720p"
     },
     {
         "id": 566,
@@ -15625,7 +15725,8 @@
         ],
         "hidden": "",
         "platform": [],
-        "size_mb": 15.07
+        "size_mb": 15.07,
+        "quality": "720p"
     },
     {
         "id": 360,
@@ -15684,7 +15785,8 @@
             "bts",
             "crying scene"
         ],
-        "size_mb": 1.07
+        "size_mb": 1.07,
+        "quality": "720p"
     },
     {
         "id": 562,
@@ -15715,7 +15817,8 @@
             "interview",
             "behind the scenes"
         ],
-        "size_mb": 1.29
+        "size_mb": 1.29,
+        "quality": "720p"
     },
     {
         "id": 573,
@@ -15746,7 +15849,9 @@
             "yu bin"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20190705_陈情令_XZ-MISC-2.mp4",
-        "size_mb": 43.63
+        "size_mb": 43.63,
+        "size_hd": 120.67,
+        "quality": "480p"
     },
     {
         "id": 576,
@@ -15776,7 +15881,8 @@
             "the untamed",
             "interview"
         ],
-        "size_mb": 29.54
+        "size_mb": 29.54,
+        "quality": "720p"
     },
     {
         "id": 296,
@@ -15882,7 +15988,8 @@
             "drama",
             "guangming daily"
         ],
-        "size_mb": 19.3
+        "size_mb": 19.3,
+        "quality": "720p"
     },
     {
         "id": 425,
@@ -15963,7 +16070,8 @@
             "endorsement",
             "interview"
         ],
-        "size_mb": 14.03
+        "size_mb": 14.03,
+        "quality": "720p"
     },
     {
         "id": 359,
@@ -15990,7 +16098,8 @@
             "interview",
             "white sneakers"
         ],
-        "size_mb": 24.31
+        "size_mb": 24.31,
+        "quality": "720p"
     },
     {
         "id": 16,
@@ -16094,7 +16203,8 @@
             "fashion",
             "long bangs"
         ],
-        "size_mb": 19.09
+        "size_mb": 19.09,
+        "quality": "720p"
     },
     {
         "id": 590,
@@ -16124,7 +16234,8 @@
             "the untamed",
             "wei wuxian"
         ],
-        "size_mb": 1.24
+        "size_mb": 1.24,
+        "quality": "480p"
     },
     {
         "id": 13,
@@ -16495,7 +16606,8 @@
             "magazine",
             "red carpet"
         ],
-        "size_mb": 1.8
+        "size_mb": 1.8,
+        "quality": "720p"
     },
     {
         "id": 10,
@@ -16611,7 +16723,9 @@
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20190625_芭莎探班_XZ-MISC-1.mp4",
         "hidden": true,
-        "size_mb": 54.01
+        "size_mb": 54.01,
+        "size_hd": 117.43,
+        "quality": "480p"
     },
     {
         "id": 490,
@@ -16644,7 +16758,8 @@
         "platform_links": {
             "weibo": "https://weibo.com/1518966617/HxbqpvMBk"
         },
-        "size_mb": 11.12
+        "size_mb": 11.12,
+        "quality": "720p"
     },
     {
         "id": 491,
@@ -16678,7 +16793,8 @@
             "skincare",
             "promotional video"
         ],
-        "size_mb": 8.18
+        "size_mb": 8.18,
+        "quality": "720p"
     },
     {
         "id": 3,
@@ -16851,7 +16967,8 @@
             "endorsement",
             "skincare"
         ],
-        "size_mb": 1.28
+        "size_mb": 1.28,
+        "quality": "480p"
     },
     {
         "id": 2,
