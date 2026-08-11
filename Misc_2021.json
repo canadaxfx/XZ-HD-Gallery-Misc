@@ -1607,7 +1607,8 @@
             "magazine",
             "photoshoot"
         ],
-        "size_mb": 2.65
+        "size_mb": 2.65,
+        "quality": "720p"
     },
     {
         "id": 203,
@@ -2348,7 +2349,8 @@
             "stage performance",
             "bamboo and rock"
         ],
-        "size_mb": 35.42
+        "size_mb": 35.42,
+        "quality": "480p"
     },
     {
         "id": 279,
@@ -2400,7 +2402,8 @@
             "interview",
             "variety show"
         ],
-        "size_mb": 4.6
+        "size_mb": 4.6,
+        "quality": "720p"
     },
     {
         "id": 175,
@@ -2614,7 +2617,8 @@
             "song",
             "performance"
         ],
-        "size_mb": 46.53
+        "size_mb": 46.53,
+        "quality": "720p"
     },
     {
         "id": 159,
@@ -3647,7 +3651,8 @@
             "behind the scenes",
             "song"
         ],
-        "size_mb": 8.88
+        "size_mb": 8.88,
+        "quality": "720p"
     },
     {
         "id": 134,
@@ -3857,7 +3862,9 @@
             "cctv"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20210304_星推荐斗罗大陆_XZ-MISC-1.mp4",
-        "size_mb": 40.67
+        "size_mb": 40.67,
+        "size_hd": 137.75,
+        "quality": "720p"
     },
     {
         "id": 129,
@@ -3911,7 +3918,9 @@
             "cctv",
             "interview"
         ],
-        "size_mb": 40.8
+        "size_mb": 40.8,
+        "size_hd": 139.08,
+        "quality": "720p"
     },
     {
         "id": 128,
@@ -3967,7 +3976,9 @@
             "cctv-8"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20210302_星推荐斗罗大陆_XZ-MISC-1.mp4",
-        "size_mb": 46.4
+        "size_mb": 46.4,
+        "size_hd": 147.64,
+        "quality": "720p"
     },
     {
         "id": 127,
@@ -4200,7 +4211,8 @@
             "drama",
             "weibo post"
         ],
-        "size_mb": 3.91
+        "size_mb": 3.91,
+        "quality": "720p"
     },
     {
         "id": 109,
@@ -4550,7 +4562,8 @@
             "interview",
             "weibo"
         ],
-        "size_mb": 18.06
+        "size_mb": 18.06,
+        "quality": "720p"
     },
     {
         "id": 91,
@@ -5470,7 +5483,8 @@
             "tencent weishi",
             "interview"
         ],
-        "size_mb": 7.28
+        "size_mb": 7.28,
+        "quality": "720p"
     },
     {
         "id": 67,
@@ -5841,7 +5855,8 @@
             "interview",
             "bts"
         ],
-        "size_mb": 3.3
+        "size_mb": 3.3,
+        "quality": "720p"
     },
     {
         "id": 48,
@@ -6186,7 +6201,8 @@
             "weishi",
             "drama promotion"
         ],
-        "size_mb": 3.44
+        "size_mb": 3.44,
+        "quality": "720p"
     },
     {
         "id": 308,
@@ -6218,7 +6234,8 @@
             "interview",
             "friendship"
         ],
-        "size_mb": 4.98
+        "size_mb": 4.98,
+        "quality": "720p"
     },
     {
         "id": 47,
@@ -6271,7 +6288,9 @@
             "interview",
             "drama promotion"
         ],
-        "size_mb": 39.22
+        "size_mb": 39.22,
+        "size_hd": 160.7,
+        "quality": "720p"
     },
     {
         "id": 307,
@@ -6304,7 +6323,8 @@
             "behind the scenes",
             "valentines day"
         ],
-        "size_mb": 2.43
+        "size_mb": 2.43,
+        "quality": "720p"
     },
     {
         "id": 43,
@@ -6505,7 +6525,8 @@
             "interview",
             "tang san"
         ],
-        "size_mb": 8.77
+        "size_mb": 8.77,
+        "quality": "720p"
     },
     {
         "id": 37,
@@ -6610,7 +6631,8 @@
             "interview",
             "variety show"
         ],
-        "size_mb": 1.49
+        "size_mb": 1.49,
+        "quality": "720p"
     },
     {
         "id": 32,
@@ -6771,7 +6793,8 @@
             "interview",
             "costume drama"
         ],
-        "size_mb": 2.95
+        "size_mb": 2.95,
+        "quality": "720p"
     },
     {
         "id": 30,
@@ -7483,7 +7506,8 @@
             "cctv",
             "tencent video"
         ],
-        "size_mb": 12.58
+        "size_mb": 12.58,
+        "quality": "720p"
     },
     {
         "id": 287,
@@ -7590,7 +7614,8 @@
             "event",
             "red carpet"
         ],
-        "size_mb": 1.93
+        "size_mb": 1.93,
+        "quality": "720p"
     },
     {
         "id": 289,
@@ -7619,7 +7644,8 @@
             "douyin star night",
             "interview"
         ],
-        "size_mb": 1.36
+        "size_mb": 1.36,
+        "quality": "720p"
     },
     {
         "id": 290,
@@ -7648,7 +7674,8 @@
             "douyin star night",
             "red carpet"
         ],
-        "size_mb": 2.54
+        "size_mb": 2.56,
+        "quality": "720p"
     },
     {
         "id": 291,
@@ -7678,7 +7705,8 @@
             "interview",
             "backstage"
         ],
-        "size_mb": 1.64
+        "size_mb": 1.64,
+        "quality": "720p"
     },
     {
         "id": 292,
@@ -7737,7 +7765,8 @@
             "red carpet",
             "suit"
         ],
-        "size_mb": 2.49
+        "size_mb": 2.49,
+        "quality": "720p"
     },
     {
         "id": 294,
@@ -7766,7 +7795,8 @@
             "awards",
             "red carpet"
         ],
-        "size_mb": 1.87
+        "size_mb": 1.93,
+        "quality": "720p"
     },
     {
         "id": 295,
@@ -7794,7 +7824,8 @@
             "douyin",
             "backstage interview"
         ],
-        "size_mb": 2.5
+        "size_mb": 2.5,
+        "quality": "720p"
     },
     {
         "id": 296,
@@ -7823,7 +7854,8 @@
             "douyin star night",
             "interview"
         ],
-        "size_mb": 1.65
+        "size_mb": 1.65,
+        "quality": "720p"
     },
     {
         "id": 297,
