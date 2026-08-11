@@ -84,7 +84,9 @@
             "beijing",
             "anniversary"
         ],
-        "size_mb": 71.31
+        "size_mb": 71.31,
+        "size_hd": 133.74,
+        "quality": "720p"
     },
     {
         "id": 317,
@@ -1428,7 +1430,8 @@
             "trailer",
             "ren min"
         ],
-        "size_mb": 12.27
+        "size_mb": 12.27,
+        "quality": "720p"
     },
     {
         "id": 289,
@@ -1456,7 +1459,8 @@
             "trailer",
             "li qin"
         ],
-        "size_mb": 4.76
+        "size_mb": 4.76,
+        "quality": "720p"
     },
     {
         "id": 244,
@@ -2656,7 +2660,8 @@
             "you are my glory",
             "a dream like a dream"
         ],
-        "size_mb": 53.43
+        "size_mb": 53.43,
+        "quality": "720p"
     },
     {
         "id": 314,
@@ -2795,7 +2800,8 @@
             "interview",
             "wei gu"
         ],
-        "size_mb": 15.37
+        "size_mb": 15.37,
+        "quality": "720p"
     },
     {
         "id": 186,
@@ -3275,7 +3281,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 4.53
+        "size_mb": 4.53,
+        "quality": "720p"
     },
     {
         "id": 175,
@@ -3473,7 +3480,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 4.87
+        "size_mb": 4.87,
+        "quality": "720p"
     },
     {
         "id": 161,
@@ -4087,7 +4095,8 @@
             "gu wei",
             "singing"
         ],
-        "size_mb": 16.03
+        "size_mb": 16.03,
+        "quality": "720p"
     },
     {
         "id": 129,
@@ -5015,7 +5024,8 @@
             "behind the scenes",
             "yang zi"
         ],
-        "size_mb": 5.83
+        "size_mb": 5.83,
+        "quality": "720p"
     },
     {
         "id": 106,
@@ -5258,7 +5268,8 @@
             "character interpretation",
             "gu wei"
         ],
-        "size_mb": 10.77
+        "size_mb": 10.77,
+        "quality": "720p"
     },
     {
         "id": 95,
@@ -5578,7 +5589,8 @@
             "behind the scenes",
             "birthday celebration"
         ],
-        "size_mb": 25.02
+        "size_mb": 25.02,
+        "quality": "720p"
     },
     {
         "id": 84,
@@ -5732,7 +5744,8 @@
             "yang zi",
             "behind the scenes"
         ],
-        "size_mb": 8.09
+        "size_mb": 8.09,
+        "quality": "720p"
     },
     {
         "id": 312,
@@ -5764,7 +5777,8 @@
             "bts"
         ],
         "hidden": "",
-        "size_mb": 14.31
+        "size_mb": 14.31,
+        "quality": "720p"
     },
     {
         "id": 80,
@@ -6572,7 +6586,8 @@
             "military drama",
             "southern theater command"
         ],
-        "size_mb": 5.56
+        "size_mb": 5.56,
+        "quality": "low"
     },
     {
         "id": 55,
