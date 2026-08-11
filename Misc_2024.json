@@ -177,7 +177,8 @@
             "dumplings",
             "cooking"
         ],
-        "size_mb": 8.24
+        "size_mb": 8.24,
+        "quality": "720p"
     },
     {
         "id": 343,
@@ -306,7 +307,8 @@
             "we are all dream chasers",
             "oriental tv"
         ],
-        "size_mb": 12.69
+        "size_mb": 12.69,
+        "quality": "low"
     },
     {
         "id": 341,
@@ -361,7 +363,8 @@
         ],
         "size_mb": 34.54,
         "quality_hd": "1080p",
-        "size_hd": 104.64
+        "size_hd": 104.64,
+        "quality": "480p"
     },
     {
         "id": 340,
@@ -496,7 +499,8 @@
         ],
         "size_mb": 57.19,
         "quality_hd": "1080p",
-        "size_hd": 168.64
+        "size_hd": 168.64,
+        "quality": "720p"
     },
     {
         "id": 337,
@@ -523,7 +527,8 @@
             "song",
             "yu nian"
         ],
-        "size_mb": 13.18
+        "size_mb": 13.18,
+        "quality": "low"
     },
     {
         "id": 269,
@@ -575,7 +580,8 @@
             "stage performance",
             "oriental tv"
         ],
-        "size_mb": 29.65
+        "size_mb": 29.65,
+        "quality": "720p"
     },
     {
         "id": 266,
@@ -990,7 +996,8 @@
             "magazine",
             "photoshoot"
         ],
-        "size_mb": 2.62
+        "size_mb": 2.62,
+        "quality": "720p"
     },
     {
         "id": 354,
@@ -1100,7 +1107,8 @@
             "endorsement",
             "australian sandalwood"
         ],
-        "size_mb": 7.0
+        "size_mb": 7.0,
+        "quality": "720p"
     },
     {
         "id": 250,
@@ -1153,7 +1161,8 @@
         ],
         "size_mb": 51.14,
         "quality_hd": "1080p",
-        "size_hd": 156.66
+        "size_hd": 156.66,
+        "quality": "480p"
     },
     {
         "id": 333,
@@ -1589,7 +1598,8 @@
         ],
         "size_mb": 38.75,
         "quality_hd": "1080p",
-        "size_hd": 126.89
+        "size_hd": 126.89,
+        "quality": "480p"
     },
     {
         "id": 355,
@@ -3022,7 +3032,8 @@
             "magazine",
             "photoshoot"
         ],
-        "size_mb": 0.86
+        "size_mb": 0.86,
+        "quality": "720p"
     },
     {
         "id": 175,
@@ -3802,7 +3813,8 @@
             "endorsement",
             "jewelry"
         ],
-        "size_mb": 1.8
+        "size_mb": 1.8,
+        "quality": "720p"
     },
     {
         "id": 169,
@@ -6422,7 +6434,8 @@
             "february issue",
             "photoshoot"
         ],
-        "size_mb": 2.02
+        "size_mb": 2.02,
+        "quality": "720p"
     },
     {
         "id": 319,
@@ -6483,7 +6496,8 @@
             "spring festival",
             "video"
         ],
-        "size_mb": 0.61
+        "size_mb": 0.61,
+        "quality": "720p"
     },
     {
         "id": 100,
@@ -6693,7 +6707,8 @@
             "endorsement",
             "spring summer collection"
         ],
-        "size_mb": 1.49
+        "size_mb": 1.49,
+        "quality": "720p"
     },
     {
         "id": 91,
@@ -6845,7 +6860,8 @@
             "creative video"
         ],
         "hidden": "",
-        "size_mb": 2.63
+        "size_mb": 2.63,
+        "quality": "720p"
     },
     {
         "id": 317,
@@ -8537,7 +8553,8 @@
             "magazine",
             "photoshoot"
         ],
-        "size_mb": 2.21
+        "size_mb": 2.21,
+        "quality": "720p"
     },
     {
         "id": 365,
@@ -8569,7 +8586,8 @@
             "magazine",
             "photoshoot"
         ],
-        "size_mb": 2.2
+        "size_mb": 2.2,
+        "quality": "720p"
     },
     {
         "id": 278,
