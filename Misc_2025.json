@@ -6836,8 +6836,8 @@
         "size_mb": 0.63
     },
     {
-        "id": 900,
-        "url": "https://assets.xz-studio-gallery.com/full/20251105_李宁_XZ-MISC-1.mp4",
+        "id": 946,
+        "url": "https://assets.xz-studio-gallery.com/full/20251105_李宁_XZ-STU-1.mp4",
         "date": "2025-11-05",
         "month": "November",
         "year": "2025",
@@ -6845,7 +6845,6 @@
             "李宁"
         ],
         "groupName": "李宁_2025-11-05",
-        "duration": 161,
         "weibo": "https://weibo.com/1716244511/Qcp3i99nF",
         "source": [
             "李宁"
@@ -6854,19 +6853,18 @@
             "weibo"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "#李宁航天动态保暖# 体验官集结完毕\n世界冠军@谌龙 #李宁品牌全球代言人肖战# @肖战  @航天王一\n直面峻寒挑战，体验航天级保暖守护\n\n11月8日-9日\n北京三里屯西区广场\n#李宁极地太空舱# 即将开放，现场Get限定礼品🎁\n💬 评论区留言「李宁极地太空舱来袭」，评论区随机揪一位伙伴Get肖战/谌龙签名照各1张\n开奖时间：2025年11月11日 17:00 http://t.cn/AXAQvMPh",
-        "size_mb": 17.19,
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251105_李宁_XZ-STU-1.mp4",
         "englishTags": [
             "lining",
             "brand ambassador",
-            "chen long",
-            "event promotion"
+            "event promotion",
+            "chen long"
         ],
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251105_李宁_XZ-MISC-1.mp4",
-        "size_4k": 140.51,
-        "quality": "720p"
+        "hidden": "",
+        "duration": 161,
+        "size_mb": 17.19,
+        "size_4k": 140.57
     },
     {
         "id": 860,
@@ -24440,6 +24438,156 @@
             "campaign"
         ],
         "size_mb": 23.8
+    },
+    {
+        "id": 945,
+        "url": "https://assets.xz-studio-gallery.com/full/20250101_李宁_XZ-MISC-5.jpg",
+        "date": "2025-01-01",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "李宁"
+        ],
+        "groupName": "李宁_2025-01-01",
+        "weibo": "https://weibo.com/5133232345/P7xDm3lcl",
+        "source": [
+            "李宁"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "东方“吉”锦，好运上身\n新年福气，从好运LOOK开始！\n李宁运动潮流产品全球代言人@X玖少年团肖战DAYTOY ，身着李宁故宫联名系列，演绎低调质感的新年好运穿搭！\n新的一年，练成好运体质，一切皆有可能。\n\n👔肖战同款 故宫联名休闲外套\n👟001 BTC 故宫联名限定款\n\n#肖战李宁运动潮流产品全球代言人#\n#李宁练成好运体质#\n#李宁日进斗金系列##李宁x故宫博物院合作发布#",
+        "size_mb": 5.89,
+        "englishTags": [
+            "lining",
+            "palace museum",
+            "new year",
+            "sportswear",
+            "campaign"
+        ]
+    },
+    {
+        "id": 944,
+        "url": "https://assets.xz-studio-gallery.com/full/20250101_李宁_XZ-MISC-4.jpg",
+        "date": "2025-01-01",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "李宁"
+        ],
+        "groupName": "李宁_2025-01-01",
+        "weibo": "https://weibo.com/5133232345/P7xDm3lcl",
+        "source": [
+            "李宁"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "东方“吉”锦，好运上身\n新年福气，从好运LOOK开始！\n李宁运动潮流产品全球代言人@X玖少年团肖战DAYTOY ，身着李宁故宫联名系列，演绎低调质感的新年好运穿搭！\n新的一年，练成好运体质，一切皆有可能。\n\n👔肖战同款 故宫联名休闲外套\n👟001 BTC 故宫联名限定款\n\n#肖战李宁运动潮流产品全球代言人#\n#李宁练成好运体质#\n#李宁日进斗金系列##李宁x故宫博物院合作发布#",
+        "size_mb": 5.09,
+        "englishTags": [
+            "lining",
+            "palace museum",
+            "new year",
+            "sportswear",
+            "campaign"
+        ]
+    },
+    {
+        "id": 943,
+        "url": "https://assets.xz-studio-gallery.com/full/20250101_李宁_XZ-MISC-3.jpg",
+        "date": "2025-01-01",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "李宁"
+        ],
+        "groupName": "李宁_2025-01-01",
+        "weibo": "https://weibo.com/5133232345/P7xDm3lcl",
+        "source": [
+            "李宁"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "东方“吉”锦，好运上身\n新年福气，从好运LOOK开始！\n李宁运动潮流产品全球代言人@X玖少年团肖战DAYTOY ，身着李宁故宫联名系列，演绎低调质感的新年好运穿搭！\n新的一年，练成好运体质，一切皆有可能。\n\n👔肖战同款 故宫联名休闲外套\n👟001 BTC 故宫联名限定款\n\n#肖战李宁运动潮流产品全球代言人#\n#李宁练成好运体质#\n#李宁日进斗金系列##李宁x故宫博物院合作发布#",
+        "size_mb": 5.01,
+        "englishTags": [
+            "lining",
+            "palace museum",
+            "new year",
+            "sportswear",
+            "campaign"
+        ]
+    },
+    {
+        "id": 942,
+        "url": "https://assets.xz-studio-gallery.com/full/20250101_李宁_XZ-MISC-2.jpg",
+        "date": "2025-01-01",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "李宁"
+        ],
+        "groupName": "李宁_2025-01-01",
+        "weibo": "https://weibo.com/5133232345/P7xDm3lcl",
+        "source": [
+            "李宁"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "东方“吉”锦，好运上身\n新年福气，从好运LOOK开始！\n李宁运动潮流产品全球代言人@X玖少年团肖战DAYTOY ，身着李宁故宫联名系列，演绎低调质感的新年好运穿搭！\n新的一年，练成好运体质，一切皆有可能。\n\n👔肖战同款 故宫联名休闲外套\n👟001 BTC 故宫联名限定款\n\n#肖战李宁运动潮流产品全球代言人#\n#李宁练成好运体质#\n#李宁日进斗金系列##李宁x故宫博物院合作发布#",
+        "size_mb": 5.69,
+        "englishTags": [
+            "lining",
+            "palace museum",
+            "new year",
+            "sportswear",
+            "campaign"
+        ]
+    },
+    {
+        "id": 941,
+        "url": "https://assets.xz-studio-gallery.com/full/20250101_李宁_XZ-MISC-1.jpg",
+        "date": "2025-01-01",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "李宁"
+        ],
+        "groupName": "李宁_2025-01-01",
+        "weibo": "https://weibo.com/5133232345/P7xDm3lcl",
+        "source": [
+            "李宁"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "东方“吉”锦，好运上身\n新年福气，从好运LOOK开始！\n李宁运动潮流产品全球代言人@X玖少年团肖战DAYTOY ，身着李宁故宫联名系列，演绎低调质感的新年好运穿搭！\n新的一年，练成好运体质，一切皆有可能。\n\n👔肖战同款 故宫联名休闲外套\n👟001 BTC 故宫联名限定款\n\n#肖战李宁运动潮流产品全球代言人#\n#李宁练成好运体质#\n#李宁日进斗金系列##李宁x故宫博物院合作发布#",
+        "size_mb": 6.37,
+        "englishTags": [
+            "lining",
+            "palace museum",
+            "new year",
+            "sportswear",
+            "campaign"
+        ]
     },
     {
         "id": 828,
