@@ -222,6 +222,17 @@
           linear-gradient(160deg, #ECEDF1 0%, #E6E7EC 40%, #E0E2E8 70%, #E4E6EB 100%);
       }
       body:has(#photoModal:not(.hidden)) #themeSwitcher { display: none; }
+      body:has(#photoModal:not(.hidden)) #gameBtn { display: none; }
+      #gameBtn {
+        position: fixed; top: 2px; left: 8px; z-index: 9000;
+        display: flex; align-items: center;
+        padding: 5px 10px; border-radius: 20px;
+        background: rgba(0,0,0,0.35); backdrop-filter: blur(8px);
+        border: 1px solid rgba(255,255,255,0.1);
+        text-decoration: none; transition: opacity .3s;
+      }
+      #gameBtn span { font-size:10px; color:rgba(255,255,255,.75); letter-spacing:.06em; white-space:nowrap; }
+      #gameBtn.ts-scrolled { opacity: 0; pointer-events: none; }
       #themeSwitcher {
         position: fixed; top: 2px; right: 8px; z-index: 9000;
         display: flex; gap: 6px; align-items: center;
@@ -1749,6 +1760,9 @@
     </style>
 </head>
 <body>
+<a id="gameBtn" href="game.html" target="_blank" rel="noopener">
+  <span>🎮 Time Game 时间游戏 ↗</span>
+</a>
 <div id="cf-migration-banner" style="display:none;background:#1d4ed8;color:#fff;text-align:center;padding:8px 40px 8px 16px;font-size:13px;position:relative;z-index:9999">
   🚀 此页面已迁移至更快的新地址 / This page has moved to a faster URL：<a href="https://xz-hd-gallery-misc.pages.dev/" style="color:#93c5fd;font-weight:600" target="_blank">xz-hd-gallery-misc.pages.dev</a> — 请更新书签 / Please update your bookmark
   <button onclick="document.getElementById('cf-migration-banner').style.display='none';localStorage.setItem('cfBannerDismissed','1')"
@@ -4203,7 +4217,12 @@ function setupFooterToggle() {
               if (!ts.classList.contains('ts-open')) { ts.classList.add('ts-open'); e.stopPropagation(); }
             });
             document.addEventListener('click', e => { if (!ts.contains(e.target)) ts.classList.remove('ts-open'); });
-            window.addEventListener('scroll', () => { ts.classList.toggle('ts-scrolled', window.scrollY > 80); }, { passive: true });
+            const gameBtn = document.getElementById('gameBtn');
+            window.addEventListener('scroll', () => {
+              const scrolled = window.scrollY > 80;
+              ts.classList.toggle('ts-scrolled', scrolled);
+              if (gameBtn) gameBtn.classList.toggle('ts-scrolled', scrolled);
+            }, { passive: true });
           });
         })();
 
