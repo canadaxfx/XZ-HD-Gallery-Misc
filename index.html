@@ -2770,7 +2770,13 @@ function generateThumbnail(originalUrl, size = 'm') {
         return `${thumbUrl}_${targetSize}.jpg`; 
     }
 
-    // 2. Handle Imgur Links (Keep existing logic)
+    // 2. Handle NAS links — thumbnail lives in R2 thumbs/
+    if (originalUrl.includes('canadaxfx.synology.me')) {
+        const filename = originalUrl.split('/').pop().replace(/\.[^.]+$/, '');
+        return `https://assets.xz-studio-gallery.com/thumbs/${filename}_m.jpg`;
+    }
+
+    // 3. Handle Imgur Links (Keep existing logic)
     const match = originalUrl.match(/https:\/\/i\.imgur\.com\/([^.]+)\.(\w+)/);
     if (match) {
         const [, imageId, extension] = match;
