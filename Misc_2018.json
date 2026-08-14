@@ -2530,6 +2530,33 @@
         "quality": "720p"
     },
     {
+        "id": 209,
+        "url": "https://assets.xz-studio-gallery.com/full/20180705_为你读诗_XZ-MISC-2.jpg",
+        "date": "2018-07-05",
+        "month": "July",
+        "year": "2018",
+        "tags": [
+            "为你读诗"
+        ],
+        "groupName": "为你读诗_2018-07-05",
+        "weibo": "https://weibo.com/2158708695/Gove5Air3",
+        "source": [
+            "媒体 / Ent. Hub"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战为你读诗# \n“雪白的云雀为我退避三舍\n只因为我胸间怀着一盏长明灯”http://t.cn/RdU3b5u ， @X玖少年团肖战DAYTOY 在为你读诗公众号（ID:thepoemforyou）为你读诗人维森特·维多夫罗的作品《⾬》，敬请期待[羞嗒嗒] ​​​",
+        "size_mb": 0.99,
+        "englishTags": [
+            "the poem for you",
+            "reading poetry"
+        ]
+    },
+    {
         "id": 130,
         "url": "https://assets.xz-studio-gallery.com/full/20180705_为你读诗_XZ-MISC-1.mp4",
         "date": "2018-07-05",
@@ -2546,8 +2573,6 @@
             "其他 / Other"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "#肖战为你读诗# “也许我是破碎的星辰或是一只萤火虫”今晚，@X玖少年团肖战DAYTOY 为你读诗人维森特·维多夫罗的作品《雨》。打开「为你读诗」APP，听完读诗后还可录制肖战同款诗歌哟为你读诗官方的秒拍视频",
         "englishTags": [
             "for you, a poem",
@@ -2556,7 +2581,12 @@
             "app promotion"
         ],
         "size_mb": 1.43,
-        "quality": "low"
+        "quality": "low",
+        "platform_links": {
+            "wechat": "https://mp.weixin.qq.com/s/QsYqo3v4HEvGKziVsW2eiQ"
+        },
+        "hidden": "",
+        "platform": []
     },
     {
         "id": 107,
