@@ -3487,7 +3487,8 @@
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20210821_李宁_XZ-MISC-1.mp4",
         "quality_hd": "1080p",
-        "size_hd": 155.92
+        "size_hd": 155.92,
+        "quality": "480p"
     },
     {
         "id": 349,
@@ -4771,7 +4772,8 @@
             "sportswear",
             "fashion show",
             "brand ambassador"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 310,
@@ -10184,6 +10186,39 @@
         "size_mb": 0.38
     },
     {
+        "id": 392,
+        "url": "https://assets.xz-studio-gallery.com/full/20210117_奇妙之城_XZ-MISC-1.mp4",
+        "date": "2021-01-17",
+        "month": "January",
+        "year": "2021",
+        "tags": [
+            "奇妙之城",
+            "特别篇"
+        ],
+        "groupName": "奇妙之城_2021-01-17",
+        "duration": 827,
+        "weibo": "https://weibo.com/7240680209/JDCYCyF42",
+        "source": [
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "postText": "【#奇妙之城#特别篇 肖战的城中小叙】重磅来袭！！！滚烫山城，直爽天性。来听重庆崽儿@X玖少年团肖战DAYTOY 回忆在这座城中的温馨故事，也与他一起走进这座美丽山城，探索#奇妙之城重庆篇# 的更多精彩~http://t.cn/A65wwto5 ​​​",
+        "size_mb": 46.39,
+        "englishTags": [
+            "a wonderful city",
+            "interview",
+            "chongqing"
+        ],
+        "platform_links": {
+            "youtube": "https://www.youtube.com/watch?v=9cTMOQJLaYw"
+        },
+        "hidden": "",
+        "quality": "720p"
+    },
+    {
         "id": 3,
         "url": "https://assets.xz-studio-gallery.com/full/20210113_狼殿下_XZ-MISC-1.jpg",
         "date": "2021-01-13",
@@ -10206,6 +10241,34 @@
             "drama stills"
         ],
         "size_mb": 3.45
+    },
+    {
+        "id": 391,
+        "url": "https://assets.xz-studio-gallery.com/full/20210113_奇妙之城_XZ-MISC-1.jpg",
+        "date": "2021-01-13",
+        "month": "January",
+        "year": "2021",
+        "tags": [
+            "奇妙之城"
+        ],
+        "groupName": "奇妙之城_2021-01-13",
+        "weibo": "https://weibo.com/7240680209/JCXJru21L",
+        "source": [
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#奇妙之城重庆篇# 一碗爽口的小面寄托着他对重庆的味蕾记忆，一条短短的长江索道勾连着他对故乡的浓浓乡愁。这片奇妙的土地不仅有魔幻般的8D城市景象，更封藏着他内心深处的满满回忆。不管何时，也无论身在何地，重庆永远是他的心灵归宿。跟随#奇妙之城# ，踏上@X玖少年团肖战DAYTOY 的重庆奇妙之旅！ ​​​",
+        "size_mb": 0.42,
+        "englishTags": [
+            "a wonderful city",
+            "chongqing",
+            "interview"
+        ]
     },
     {
         "id": 2,
@@ -10254,5 +10317,33 @@
             "drama stills"
         ],
         "size_mb": 9.65
+    },
+    {
+        "id": 390,
+        "url": "https://assets.xz-studio-gallery.com/full/20210103_奇妙之城_XZ-MISC-1.jpg",
+        "date": "2021-01-03",
+        "month": "January",
+        "year": "2021",
+        "tags": [
+            "奇妙之城"
+        ],
+        "groupName": "奇妙之城_2021-01-03",
+        "weibo": "https://weibo.com/7240680209/JBrEFaeHR",
+        "source": [
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#奇妙之城阵容# 他是演员、歌手，亦是直爽热情的重庆娃。回到家乡，重拾过往，更加成为他大步向前的动力。@X玖少年团肖战DAYTOY 加盟《奇妙之城》，期待与更多有趣的灵魂相遇。#奇妙之城##肖战加盟奇妙之城# ​​​",
+        "size_mb": 0.66,
+        "englishTags": [
+            "a wonderful city",
+            "interview",
+            "chongqing"
+        ]
     }
 ]
