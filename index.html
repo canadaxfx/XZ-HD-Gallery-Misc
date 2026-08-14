@@ -2565,15 +2565,21 @@ function updateModalContent() {
         ytFrame.src = `https://www.youtube.com/embed/${getYouTubeId(photo.url)}?autoplay=1&rel=0`;
     } else if (isVideo) {
         imgElement.classList.add('hidden');
-        videoElement.classList.remove('hidden');
         document.getElementById('modalAudioWrap').classList.add('hidden');
         const audioEl = document.getElementById('modalAudio');
         audioEl.pause(); audioEl.src = '';
-        videoElement.src = photo.url;
-        videoElement.loop = !playlistMode;
-        videoElement.onended = playlistMode ? () => navigatePhoto(1) : null;
-        vcSetup(videoElement);
-        videoElement.play().catch(e => console.log("Video autoplay prevented"));
+        if (dlIsLocked(photo.url) && !dlIsUnlocked()) {
+            videoElement.classList.add('hidden');
+            videoElement.pause(); videoElement.src = '';
+            nasLockShow(photo);
+        } else {
+            videoElement.classList.remove('hidden');
+            videoElement.src = photo.url;
+            videoElement.loop = !playlistMode;
+            videoElement.onended = playlistMode ? () => navigatePhoto(1) : null;
+            vcSetup(videoElement);
+            videoElement.play().catch(e => console.log("Video autoplay prevented"));
+        }
     } else if (isAudio) {
         imgElement.classList.add('hidden');
         videoElement.pause(); videoElement.src = ''; videoElement.classList.add('hidden');
@@ -2866,6 +2872,7 @@ function closeModal() {
         ytFrame.parentNode && ytFrame.parentNode.classList.remove('yt-active');
     }
     document.getElementById('photoModal').classList.add('hidden');
+    document.getElementById('nasVideoLockOverlay').style.display = 'none';
     document.removeEventListener('keydown', handleKeyboardNavigation);
     if (playlistMode) { playlistMode = false; plRender(); }
 }
@@ -3042,7 +3049,33 @@ function closeModal() {
         }
         document.addEventListener('keydown', e => {
             if (e.key === 'Enter' && document.getElementById('dlUnlockOverlay')?.style.display !== 'none') dlConfirm();
+            if (e.key === 'Enter' && document.getElementById('nasVideoLockOverlay')?.style.display !== 'none') nasLockConfirm();
         });
+        let _nasLockPhoto = null;
+        function nasLockShow(photo) {
+            _nasLockPhoto = photo;
+            document.getElementById('nasLockPwInput').value = '';
+            document.getElementById('nasLockPwError').textContent = '';
+            const srcLink = document.getElementById('nasLockSourceLink');
+            const srcUrl = photo.link || photo.weibo;
+            if (srcUrl) { srcLink.href = srcUrl; srcLink.style.display = ''; }
+            else { srcLink.style.display = 'none'; }
+            document.getElementById('nasVideoLockOverlay').style.display = 'flex';
+            setTimeout(() => document.getElementById('nasLockPwInput').focus(), 100);
+        }
+        function nasLockClose() {
+            document.getElementById('nasVideoLockOverlay').style.display = 'none';
+            _nasLockPhoto = null;
+        }
+        async function nasLockConfirm() {
+            const pw = document.getElementById('nasLockPwInput').value;
+            const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
+            const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+            if (hex !== DL_HASH) { document.getElementById('nasLockPwError').textContent = '密码错误 Wrong password'; return; }
+            localStorage.setItem(DL_KEY, Date.now().toString());
+            nasLockClose();
+            updateModalContent();
+        }
         function getYouTubeId(url) { const m = url.match(/[?&]v=([^&]+)/)||url.match(/youtu\.be\/([^?/]+)/); return m?m[1]:null; }
         function isMotionUrl(url) { return /\.(mov|gif)$/i.test(url); }
         function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
@@ -4262,6 +4295,25 @@ function setupFooterToggle() {
       <button onclick="dlConfirm()" style="background:#6366f1;color:white;border:none;padding:9px 22px;border-radius:7px;cursor:pointer;font-weight:600;font-size:14px;">确认</button>
       <button onclick="dlClose()" style="background:#f3f4f6;color:#374151;border:none;padding:9px 22px;border-radius:7px;cursor:pointer;font-size:14px;">取消</button>
     </div>
+  </div>
+</div>
+<div id="nasVideoLockOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:99999;align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:14px;padding:28px 24px;max-width:360px;width:90%;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.25);">
+    <div style="font-size:36px;margin-bottom:8px;">🔒</div>
+    <div style="font-weight:700;font-size:16px;margin-bottom:6px;">视频受保护 Video Protected</div>
+    <div style="font-size:13px;color:#6b7280;margin-bottom:18px;">输入密码在线播放，或前往原始来源观看<br>Enter password to play, or watch from original source</div>
+    <input type="password" id="nasLockPwInput" placeholder="输入密码 Enter password"
+      style="width:100%;padding:9px 12px;border:1px solid #d1d5db;border-radius:7px;font-size:14px;margin-bottom:8px;box-sizing:border-box;outline:none;"
+      onkeydown="if(event.key==='Enter')nasLockConfirm()" />
+    <div id="nasLockPwError" style="color:#dc2626;font-size:12px;min-height:18px;margin-bottom:10px;"></div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-bottom:16px;">
+      <button onclick="nasLockConfirm()" style="background:#6366f1;color:white;border:none;padding:9px 22px;border-radius:7px;cursor:pointer;font-weight:600;font-size:14px;">▶ 播放</button>
+      <button onclick="nasLockClose()" style="background:#f3f4f6;color:#374151;border:none;padding:9px 22px;border-radius:7px;cursor:pointer;font-size:14px;">取消</button>
+    </div>
+    <a id="nasLockSourceLink" href="#" target="_blank" rel="noopener"
+      style="font-size:13px;color:#6366f1;text-decoration:none;display:inline-flex;align-items:center;gap:4px;">
+      前往原始来源观看 Watch from original source ↗
+    </a>
   </div>
 </div>
 <div id="themeSwitcher">
