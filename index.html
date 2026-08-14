@@ -3619,7 +3619,7 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
             if (!yearPaginationSettings[year]) return;
             yearPaginationSettings[year].currentPage = parseInt(page, 10);
             renderYearPage(year);
-            document.getElementById(`photos-${year}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById(`pagination-nav-${year}`).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         function _validateAndJump(inputId, totalPages, gotoFn, key) {
