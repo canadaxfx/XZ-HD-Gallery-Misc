@@ -98,7 +98,8 @@
             "chinese valentine's day",
             "avenue of stars",
             "brand ambassador"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 773,
@@ -301,7 +302,8 @@
             "jessica magazine",
             "event",
             "k11 musea"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 779,
@@ -464,7 +466,8 @@
             "elle",
             "qixi festival",
             "event"
-        ]
+        ],
+        "quality": "2k"
     },
     {
         "id": 767,
@@ -497,7 +500,8 @@
             "vogue",
             "victoria harbour",
             "chinese valentine's day"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 768,
@@ -564,7 +568,8 @@
             "bazaar",
             "event",
             "hand cream"
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 771,
