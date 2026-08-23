@@ -995,13 +995,27 @@
         /* Modal Header */
         .modal-header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 2px;
             padding: 4px 10px;
             border-bottom: 1px solid #e0e0e0;
             background: #f8f9fa;
             border-radius: 15px 15px 0 0;
             flex-shrink: 0;
+        }
+        .modal-header-top {
+            display: flex;
+            align-items: center;
+        }
+        .modal-header-controls {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            flex: 1;
+            justify-content: center;
+            min-height: 22px;
         }
 
         .photo-counter {
@@ -1012,16 +1026,29 @@
         }
 
         .group-title {
-            font-weight: 600;
-            color: #333;
-            font-size: 13px;
-            flex: 1;
+            font-weight: 500;
+            color: #555;
+            font-size: 12px;
             text-align: center;
-            margin: 0 15px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            padding: 1px 0;
         }
+
+        .source-badge {
+            font-size: 11px;
+            padding: 3px 9px;
+            border-radius: 12px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            display: inline-block;
+            color: #fff;
+        }
+        .bg-weibo   { background: #B8860B; }
+        .bg-oasis   { background: #2CB353; }
+        .bg-ins     { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+        .bg-douyin  { background: #000; box-shadow: 0 0 0 1px rgba(255,255,255,0.35); }
+        .bg-rednote { background: #E60023; }
+        .bg-twitter { background: #1DA1F2; }
+        .bg-youtube { background: #FF0000; }
 
         .modal-header-actions {
             display: flex;
@@ -1920,16 +1947,19 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
     <div id="photoModal" class="modal hidden">
         <div class="modal-content">
             <!-- Modal Header -->
-            <div class="modal-header" style="flex-direction:column;align-items:stretch;gap:4px;">
-                <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div class="modal-header">
+                <div class="modal-header-top">
                     <div class="photo-counter" id="photoCounter">1 of 5</div>
-                    <div class="group-title" id="groupTitle">Photo Collection</div>
-                    <div class="modal-header-actions">
-                        <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文 ▼</button>
-                        <button class="close-modal" onclick="closeModal()" style="margin-right:-6px;">&times;</button>
+                    <div class="modal-header-controls">
+                        <span id="sourceBadge"></span>
                     </div>
+                    <button class="close-modal" onclick="closeModal()" style="margin-right:-6px;flex-shrink:0;">&times;</button>
                 </div>
-                <div id="modalTags" class="modal-tags-container"></div>
+                <div class="group-title" id="groupTitle"></div>
+                <div style="display:flex;align-items:center;gap:5px;overflow:hidden;">
+                    <div id="modalTags" class="modal-tags-container"></div>
+                    <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;margin-left:auto;flex-shrink:0;">📋 原文 ▼</button>
+                </div>
             </div>
             <div id="postTextPanel" style="display:none;">
                 <p id="postTextContent" style="margin:0;"></p>
@@ -2467,6 +2497,20 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
             document.addEventListener('keydown', handleKeyboardNavigation);
         }
 
+function getSourceMeta(platform) {
+    switch (String(platform).toLowerCase()) {
+        case 'oasis':        return { cssClass: 'bg-oasis',   badgeLabel: 'OASIS' };
+        case 'ins':
+        case 'instagram':    return { cssClass: 'bg-ins',     badgeLabel: 'INSTAGRAM' };
+        case 'douyin':       return { cssClass: 'bg-douyin',  badgeLabel: 'DOUYIN' };
+        case 'rednote':
+        case 'xiaohongshu':
+        case 'xhs':          return { cssClass: 'bg-rednote', badgeLabel: 'REDNOTE' };
+        case 'twitter':      return { cssClass: 'bg-twitter', badgeLabel: 'TWITTER' };
+        case 'youtube':      return { cssClass: 'bg-youtube', badgeLabel: 'YOUTUBE' };
+        default:             return { cssClass: 'bg-weibo',   badgeLabel: 'WEIBO' };
+    }
+}
 function _getPlatformPop() {
     let pop = document.getElementById('platformPopover');
     if (!pop) {
@@ -2695,6 +2739,26 @@ function updateModalContent() {
     const _platformLink = photo.link || photo.weibo || (isYT ? photo.url : '');
     const _platformTypes = (photo.platform && photo.platform.length) ? photo.platform : (isYT ? ['youtube'] : []);
     if (weiboBtn) setPlatformBtnBehavior(weiboBtn, _platformLink, photo.platform_links, _platformTypes);
+
+    // --- Platform badges ---
+    const sourceBadge = document.getElementById('sourceBadge');
+    if (sourceBadge) {
+        const _seen = new Set();
+        const _badges = [];
+        const _addBadge = p => {
+            if (!p) return;
+            const kl = String(p).toLowerCase();
+            if (_seen.has(kl)) return;
+            _seen.add(kl);
+            const { cssClass, badgeLabel } = getSourceMeta(kl);
+            _badges.push(`<span class="source-badge ${cssClass}">${badgeLabel}</span>`);
+        };
+        _platformTypes.forEach(_addBadge);
+        if (photo.platform_links && typeof photo.platform_links === 'object') Object.keys(photo.platform_links).forEach(_addBadge);
+        if ((photo.link || photo.weibo) && !_seen.has('weibo')) _addBadge('weibo');
+        sourceBadge.style.cssText = 'display:flex;align-items:center;gap:5px';
+        sourceBadge.innerHTML = _badges.join('');
+    }
 
     // --- 4. UPDATE TAGS ---
     if (tagsContainer) {
