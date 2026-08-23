@@ -1842,6 +1842,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
               <option value="all">Platform</option>
               <option value="weibo">Weibo</option>
               <option value="douyin">Douyin</option>
+              <option value="instagram">Instagram</option>
               <option value="rednote">RedNote</option>
               <option value="qq">QQ</option>
               <option value="wx">WX</option>
@@ -3506,6 +3507,9 @@ async function loadPhotoData() {
                 if (item.platform) {
                     const arr = Array.isArray(item.platform) ? item.platform : [item.platform];
                     arr.forEach(t => platforms.add(String(t).toLowerCase()));
+                }
+                if (item.platform_links && typeof item.platform_links === 'object') {
+                    Object.keys(item.platform_links).forEach(k => platforms.add(String(k).toLowerCase()));
                 }
                 if (!platforms.size) platforms.add('weibo');
                 if (platforms.has('xiaohongshu')) platforms.add('rednote');
