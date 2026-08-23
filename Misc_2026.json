@@ -31,7 +31,8 @@
             "stage performance",
             "guest appearance",
             "chun nuan hua kai"
-        ]
+        ],
+        "quality": "480p"
     },
     {
         "id": 780,
@@ -43,7 +44,8 @@
             "那英演唱会",
             "北京",
             "央视新闻",
-            "千年一声唱"
+            "千年一声唱",
+            "新华网"
         ],
         "groupName": "那英演唱会_2026-08-22",
         "quality": "1080p",
@@ -65,7 +67,10 @@
             "stage performance",
             "a thousand years of song"
         ],
-        "hidden": ""
+        "hidden": "",
+        "platform_links": {
+            "weibo": "https://weibo.com/2810373291/ReG4WqnLg"
+        }
     },
     {
         "id": 762,
