@@ -1048,7 +1048,10 @@
         .bg-douyin  { background: #000; box-shadow: 0 0 0 1px rgba(255,255,255,0.35); }
         .bg-rednote { background: #E60023; }
         .bg-twitter { background: #1DA1F2; }
-        .bg-youtube { background: #FF0000; }
+        .bg-youtube   { background: #FF0000; }
+        .bg-wechat    { background: #07C160; }
+        .bg-bilibili  { background: #00A1D6; }
+        .bg-platform  { background: #6b7280; }
 
         .modal-header-actions {
             display: flex;
@@ -2499,16 +2502,20 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 
 function getSourceMeta(platform) {
     switch (String(platform).toLowerCase()) {
-        case 'oasis':        return { cssClass: 'bg-oasis',   badgeLabel: 'OASIS' };
+        case 'weibo':        return { cssClass: 'bg-weibo',    badgeLabel: 'WEIBO' };
+        case 'oasis':        return { cssClass: 'bg-oasis',    badgeLabel: 'OASIS' };
         case 'ins':
-        case 'instagram':    return { cssClass: 'bg-ins',     badgeLabel: 'INSTAGRAM' };
-        case 'douyin':       return { cssClass: 'bg-douyin',  badgeLabel: 'DOUYIN' };
+        case 'instagram':    return { cssClass: 'bg-ins',      badgeLabel: 'INSTAGRAM' };
+        case 'douyin':       return { cssClass: 'bg-douyin',   badgeLabel: 'DOUYIN' };
         case 'rednote':
         case 'xiaohongshu':
-        case 'xhs':          return { cssClass: 'bg-rednote', badgeLabel: 'REDNOTE' };
-        case 'twitter':      return { cssClass: 'bg-twitter', badgeLabel: 'TWITTER' };
-        case 'youtube':      return { cssClass: 'bg-youtube', badgeLabel: 'YOUTUBE' };
-        default:             return { cssClass: 'bg-weibo',   badgeLabel: 'WEIBO' };
+        case 'xhs':          return { cssClass: 'bg-rednote',  badgeLabel: 'REDNOTE' };
+        case 'twitter':      return { cssClass: 'bg-twitter',  badgeLabel: 'TWITTER' };
+        case 'youtube':      return { cssClass: 'bg-youtube',  badgeLabel: 'YOUTUBE' };
+        case 'wechat':
+        case 'wx':           return { cssClass: 'bg-wechat',   badgeLabel: 'WECHAT' };
+        case 'bilibili':     return { cssClass: 'bg-bilibili', badgeLabel: 'BILIBILI' };
+        default:             return { cssClass: 'bg-platform', badgeLabel: String(platform).toUpperCase() };
     }
 }
 function _getPlatformPop() {
