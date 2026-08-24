@@ -2750,11 +2750,12 @@ function updateModalContent() {
     // --- Platform badges ---
     const sourceBadge = document.getElementById('sourceBadge');
     if (sourceBadge) {
+        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k; };
         const _seen = new Set();
         const _badges = [];
         const _addBadge = p => {
             if (!p) return;
-            const kl = String(p).toLowerCase();
+            const kl = _normPlat(p);
             if (_seen.has(kl)) return;
             _seen.add(kl);
             const { cssClass, badgeLabel } = getSourceMeta(kl);
@@ -2762,7 +2763,8 @@ function updateModalContent() {
         };
         _platformTypes.forEach(_addBadge);
         if (photo.platform_links && typeof photo.platform_links === 'object') Object.keys(photo.platform_links).forEach(_addBadge);
-        if ((photo.link || photo.weibo) && !_seen.has('weibo')) _addBadge('weibo');
+        // Only fall back to weibo from link/weibo field for legacy entries with no platform set
+        if (_platformTypes.length === 0 && (photo.link || photo.weibo) && !_seen.has('weibo')) _addBadge('weibo');
         sourceBadge.style.cssText = 'display:flex;align-items:center;gap:5px';
         sourceBadge.innerHTML = _badges.join('');
     }
