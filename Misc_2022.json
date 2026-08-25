@@ -1906,6 +1906,128 @@
         ]
     },
     {
+        "id": 402,
+        "url": "https://assets.xz-studio-gallery.com/full/20220923_GUCCI_XZ-MISC-1.mp4",
+        "date": "2022-09-23",
+        "month": "September",
+        "year": "2022",
+        "tags": [
+            "GUCCI",
+            "春夏秀预约"
+        ],
+        "groupName": "GUCCI_2022-09-23",
+        "quality": "1080p",
+        "duration": 25,
+        "weibo": "https://weibo.com/detail/4816514496595688",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "快来与@X玖少年团肖战DAYTO 🌹 一起探索经典与摩登之境！\nhttp://t.cn/A6SeMbPM",
+        "size_mb": 7.15,
+        "englishTags": [
+            "gucci",
+            "fashion show",
+            "spring summer",
+            "weibo"
+        ]
+    },
+    {
+        "id": 403,
+        "url": "https://assets.xz-studio-gallery.com/full/20220923_GUCCI_XZ-MISC-3.jpg",
+        "date": "2022-09-23",
+        "month": "September",
+        "year": "2022",
+        "tags": [
+            "GUCCI",
+            "大秀"
+        ],
+        "groupName": "GUCCI_2022-09-23",
+        "weibo": "",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "weibo",
+            "ua"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#古驰2023春夏系列大秀#即将开启！品牌代言人肖战@X玖少年团肖战DAYTOY 邀你共赏古驰2023春夏#GucciTwinsburg#时装秀，今晚8时30分，等你赴约。点击 http://t.cn/A6SewfWm 即刻预约看秀。    \n\n#记录博肖# 肖战#肖战gucci品牌代言人# ​​​",
+        "size_mb": 3.76,
+        "englishTags": [
+            "gucci",
+            "fashion show",
+            "brand ambassador",
+            "twinsburg"
+        ]
+    },
+    {
+        "id": 404,
+        "url": "https://assets.xz-studio-gallery.com/full/20220923_GUCCI_XZ-MISC-5.jpg",
+        "date": "2022-09-23",
+        "month": "September",
+        "year": "2022",
+        "tags": [
+            "GUCCI"
+        ],
+        "groupName": "GUCCI_2022-09-23",
+        "weibo": "",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "weibo",
+            "ua"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#古驰2023春夏系列大秀#品牌代言人肖战@X玖少年团肖战DAYTOY 邀你重温#GucciTwinsburg#大秀精彩时刻。点击 http://t.cn/A6SewfWm 回顾。 ​​​\n\n#记录博肖# 肖战#肖战gucci品牌代言人# ​​​",
+        "size_mb": 11.45,
+        "englishTags": [
+            "gucci",
+            "brand ambassador"
+        ]
+    },
+    {
+        "id": 405,
+        "url": "https://assets.xz-studio-gallery.com/full/20220923_GUCCI_XZ-MISC-2.mp4",
+        "date": "2022-09-23",
+        "month": "September",
+        "year": "2022",
+        "tags": [
+            "GUCCI"
+        ],
+        "groupName": "GUCCI_2022-09-23",
+        "quality": "2k",
+        "duration": 15,
+        "weibo": "",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "weibo",
+            "ua"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#古驰2023春夏系列大秀#\nhttp://t.cn/A6SDbNrN",
+        "size_mb": 6.59,
+        "englishTags": [
+            "gucci",
+            "fashion show",
+            "weibo"
+        ]
+    },
+    {
         "id": 263,
         "url": "https://assets.xz-studio-gallery.com/full/20220916_TODS_XZ-MISC-1.jpg",
         "date": "2022-09-16",
@@ -8547,7 +8669,9 @@
             "lining",
             "chinese new year",
             "commercial"
-        ]
+        ],
+        "duration": 101,
+        "size_mb": 19.44
     },
     {
         "id": 60,
