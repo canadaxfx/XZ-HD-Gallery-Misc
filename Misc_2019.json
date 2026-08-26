@@ -11936,7 +11936,7 @@
             "官方推广 / Official Promo"
         ],
         "platform": [
-            "ua"
+            "baidu"
         ],
         "datePrecision": "day",
         "postText": "【肖战采访】20190807 百度娱乐人物\n来听@肖战 讲花式情话啰",
@@ -11946,7 +11946,8 @@
             "promotional"
         ],
         "size_mb": 3.24,
-        "quality": "720p"
+        "quality": "720p",
+        "hidden": ""
     },
     {
         "id": 516,
