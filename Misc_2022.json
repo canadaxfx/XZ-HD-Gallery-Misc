@@ -1108,7 +1108,7 @@
             "event",
             "tods t club"
         ],
-        "size_mb": 8.0
+        "size_mb": 8
     },
     {
         "id": 282,
@@ -1953,8 +1953,7 @@
             "GUCCI"
         ],
         "platform": [
-            "weibo",
-            "ua"
+            "weibo"
         ],
         "datePrecision": "day",
         "note": "",
@@ -1983,8 +1982,7 @@
             "GUCCI"
         ],
         "platform": [
-            "weibo",
-            "ua"
+            "weibo"
         ],
         "datePrecision": "day",
         "note": "",
@@ -2013,8 +2011,7 @@
             "GUCCI"
         ],
         "platform": [
-            "weibo",
-            "ua"
+            "weibo"
         ],
         "datePrecision": "day",
         "note": "",
@@ -9399,7 +9396,7 @@
             "gu yiye",
             "drama still"
         ],
-        "size_mb": 5.0
+        "size_mb": 5
     },
     {
         "id": 315,
