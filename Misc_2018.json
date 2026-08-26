@@ -1030,8 +1030,7 @@
             "陈情令"
         ],
         "platform": [
-            "weibo",
-            "ua"
+            "weibo"
         ],
         "datePrecision": "day",
         "postText": "@X玖少年团肖战DAYTOY 战哥生日快乐[米奇比心]🎂🎊🎉🎈🎈",
@@ -2452,7 +2451,7 @@
             "the untamed",
             "neil barrett"
         ],
-        "size_mb": 1.0
+        "size_mb": 1
     },
     {
         "id": 109,
@@ -3267,7 +3266,7 @@
             "beiyang moran",
             "drama stills"
         ],
-        "size_mb": 10.0
+        "size_mb": 10
     },
     {
         "id": 88,
@@ -3605,7 +3604,7 @@
             "yun shen bu zhi chu",
             "drama"
         ],
-        "size_mb": 4.0
+        "size_mb": 4
     },
     {
         "id": 75,
