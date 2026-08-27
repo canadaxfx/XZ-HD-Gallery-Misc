@@ -1942,6 +1942,74 @@
         "size_mb": 0.14
     },
     {
+        "id": 175,
+        "url": "https://assets.xz-studio-gallery.com/full/20200130_恼人的秋风_XZ-MISC-1.mp4",
+        "date": "2020-01-30",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "恼人的秋风",
+            "我们的歌",
+            "那战队"
+        ],
+        "groupName": "恼人的秋风_2020-01-30",
+        "duration": 268,
+        "weibo": "https://weibo.com/3211455932/IrTSw22x0",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战那英恼人的秋风#「那战队」《恼人的秋风》再现80年代disco舞台！@那英 @X玖少年团肖战DAYTOY 会发光[心]#我们的歌#  http://t.cn/A6PSoH7W ​​​",
+        "size_mb": 35.76,
+        "englishTags": [
+            "our song",
+            "na team",
+            "stage performance",
+            "disco"
+        ],
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20200130_恼人的秋风_XZ-MISC-1.mp4",
+        "quality_hd": "1080p",
+        "size_hd": 200.48,
+        "quality": "480p"
+    },
+    {
+        "id": 177,
+        "url": "https://assets.xz-studio-gallery.com/full/20200128_我们的歌_XZ-MISC-1.mp4",
+        "date": "2020-01-28",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "我们的歌",
+            "两只老虎"
+        ],
+        "groupName": "我们的歌_2020-01-28",
+        "quality": "1080p",
+        "duration": 207,
+        "weibo": "https://weibo.com/3211455932/IrCUrD5LA",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战两只老虎#这道《两只老虎》的题目被@X玖少年团肖战DAYTOY 完美猜对，机智满分，然而数字数竟然变成最大难题[doge]还好有@那英 江湖救急伸出双手#我们的歌# http://t.cn/A6PJyyYO ​​​",
+        "size_mb": 93.97,
+        "englishTags": [
+            "our song",
+            "stage performance",
+            "two tigers",
+            "na ying"
+        ]
+    },
+    {
         "id": 166,
         "url": "https://assets.xz-studio-gallery.com/full/20200127_央视春晚_XZ-MISC-1.mp4",
         "date": "2020-01-27",
@@ -2554,6 +2622,75 @@
         "hidden": "",
         "size_mb": 3.49,
         "quality": "low"
+    },
+    {
+        "id": 176,
+        "url": "https://assets.xz-studio-gallery.com/full/20200120_心动_XZ-MISC-1.mp4",
+        "date": "2020-01-20",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "心动",
+            "我们的歌",
+            "那战队"
+        ],
+        "groupName": "心动_2020-01-20",
+        "duration": 342,
+        "weibo": "https://weibo.com/3211455932/Iqp5p8pZ7",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战那英合唱心动#默契惊人，情歌动人，@那英 @X玖少年团肖战DAYTOY 经过一次次舞台的磨合，完美演绎这首惊艳全场的《心动》，你为「那战队」心动了吗？#我们的歌#http://t.cn/A6vne95e ​​​",
+        "size_mb": 21.94,
+        "englishTags": [
+            "our song",
+            "na team",
+            "stage performance",
+            "duet"
+        ],
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20200120_心动_XZ-MISC-1.mp4",
+        "quality_hd": "1080p",
+        "size_hd": 134.4,
+        "quality": "480p"
+    },
+    {
+        "id": 178,
+        "url": "https://assets.xz-studio-gallery.com/full/20200120_军港之夜_XZ-MISC-1.mp4",
+        "date": "2020-01-20",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "军港之夜",
+            "我们的歌",
+            "那战队"
+        ],
+        "groupName": "军港之夜_2020-01-20",
+        "quality": "1080p",
+        "duration": 261,
+        "weibo": "https://weibo.com/3211455932/IqptL8cnU",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战那英军港之夜#昨晚@那英 @X玖少年团肖战DAYTOY 再唱《军港之夜》，重温经典舞台，悠悠扬扬，深入我心。#我们的歌# 完整版，值得拥有。http://t.cn/A6vnrfex ​​​",
+        "size_mb": 95.73,
+        "englishTags": [
+            "our song",
+            "na ying",
+            "stage performance",
+            "military port night"
+        ]
     },
     {
         "id": 92,
@@ -3820,6 +3957,39 @@
         "size_mb": 6.29
     },
     {
+        "id": 179,
+        "url": "https://assets.xz-studio-gallery.com/full/20200113_被风吹过的夏天_XZ-MISC-1.mp4",
+        "date": "2020-01-13",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "被风吹过的夏天",
+            "我们的歌",
+            "那战队"
+        ],
+        "groupName": "被风吹过的夏天_2020-01-13",
+        "quality": "1080p",
+        "duration": 240,
+        "weibo": "https://weibo.com/3211455932/IpkTKsnmJ",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战那英合唱##肖战那英被风吹过的夏天#@那英 @X玖少年团肖战DAYTOY 这一曲夏日情歌，高甜高糖！满屏幕飘着粉色泡泡，少女心爆棚！是初恋的感觉[憧憬]或许，有人送过你金鱼吗？#我们的歌#http://t.cn/A6vzqfpA ​​​",
+        "size_mb": 100.07,
+        "englishTags": [
+            "our song",
+            "na ying",
+            "stage performance",
+            "duet"
+        ]
+    },
+    {
         "id": 8,
         "url": "https://assets.xz-studio-gallery.com/full/20200112_时尚芭莎_XZ-MISC-1.jpg",
         "date": "2020-01-12",
@@ -4597,6 +4767,39 @@
         "quality": "low"
     },
     {
+        "id": 180,
+        "url": "https://assets.xz-studio-gallery.com/full/20200106_呐喊_XZ-MISC-1.mp4",
+        "date": "2020-01-06",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "呐喊",
+            "我们的歌"
+        ],
+        "groupName": "呐喊_2020-01-06",
+        "duration": 272,
+        "weibo": "https://weibo.com/3211455932/Ioh6sptSJ",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战张韶涵呐喊#对于歌手而言，最珍贵的莫过于一场“过瘾”的现场，将内心的情绪全部释放，将歌曲的内核完全表达，这一次#我们的歌#@张韶涵 @X玖少年团肖战DAYTOY 的《呐喊》做到了！http://t.cn/AisJQIdA ​​​",
+        "size_mb": 19.13,
+        "englishTags": [
+            "our song",
+            "angela chang",
+            "stage performance"
+        ],
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20200106_呐喊_XZ-MISC-1.mp4",
+        "quality_hd": "1080p",
+        "size_hd": 119.17
+    },
+    {
         "id": 164,
         "url": "https://assets.xz-studio-gallery.com/full/20200105_我们的歌_XZ-MISC-1.mp4",
         "date": "2020-01-05",
@@ -4743,6 +4946,7 @@
             "new year gala",
             "stage performance",
             "duet"
-        ]
+        ],
+        "quality": "low"
     }
 ]
