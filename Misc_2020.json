@@ -1978,6 +1978,37 @@
         "quality": "480p"
     },
     {
+        "id": 181,
+        "url": "https://assets.xz-studio-gallery.com/full/20200129_阳光下的星星_XZ-MISC-1.mp4",
+        "date": "2020-01-29",
+        "month": "January",
+        "year": "2020",
+        "tags": [
+            "阳光下的星星",
+            "我们的歌"
+        ],
+        "groupName": "阳光下的星星_2020-01-29",
+        "quality": "1080p",
+        "duration": 293,
+        "weibo": "https://weibo.com/3211455932/IrKmskP6l",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战阳光下的星星#温柔如水，干净少年，@X玖少年团肖战DAYTOY 《阳光下的星星》码一下完整版，我只听亿遍！#我们的歌# http://t.cn/A6P6Wjvl ​​​",
+        "size_mb": 91.45,
+        "englishTags": [
+            "our song",
+            "stage performance",
+            "sunshine stars"
+        ]
+    },
+    {
         "id": 177,
         "url": "https://assets.xz-studio-gallery.com/full/20200128_我们的歌_XZ-MISC-1.mp4",
         "date": "2020-01-28",
