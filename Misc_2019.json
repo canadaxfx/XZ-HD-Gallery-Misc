@@ -58,7 +58,9 @@
             "daily fresh"
         ],
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20191229_Faded_XZ-MISC-1.mp4",
-        "size_hd": 126.73
+        "size_hd": 126.73,
+        "quality": "480p",
+        "duration": 257
     },
     {
         "id": 265,
@@ -600,6 +602,68 @@
             "photoshoot"
         ],
         "size_mb": 0.17
+    },
+    {
+        "id": 659,
+        "url": "https://assets.xz-studio-gallery.com/full/20191222_花心_XZ-MISC-1.mp4",
+        "date": "2019-12-22",
+        "month": "December",
+        "year": "2019",
+        "tags": [
+            "花心",
+            "我们的歌"
+        ],
+        "groupName": "花心_2019-12-22",
+        "quality": "1080p",
+        "duration": 250,
+        "weibo": "",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "20191222【我们的歌《花心》】第8期\nhttp://t.cn/AikW1UL7 ​​",
+        "size_mb": 86.89,
+        "englishTags": [
+            "our song",
+            "stage performance",
+            "huaxin"
+        ]
+    },
+    {
+        "id": 660,
+        "url": "https://assets.xz-studio-gallery.com/full/20191222_问情_XZ-MISC-1.mp4",
+        "date": "2019-12-22",
+        "month": "December",
+        "year": "2019",
+        "tags": [
+            "问情",
+            "我们的歌"
+        ],
+        "groupName": "问情_2019-12-22",
+        "quality": "1080p",
+        "duration": 235,
+        "weibo": "",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "https://weibo.com/6519508247/QjxuYoL69",
+        "description": "",
+        "postText": "20191222【我们的歌《问情》】第8期\n完整版 http://t.cn/AikWl1Ew ​​​",
+        "size_mb": 65.54,
+        "englishTags": [
+            "our song",
+            "stage performance",
+            "ask the world"
+        ]
     },
     {
         "id": 570,
@@ -1305,6 +1369,39 @@
             "endorsement"
         ],
         "size_mb": 13.26
+    },
+    {
+        "id": 661,
+        "url": "https://assets.xz-studio-gallery.com/full/20191209_军港之夜_XZ-MISC-1.mp4",
+        "date": "2019-12-09",
+        "month": "December",
+        "year": "2019",
+        "tags": [
+            "军港之夜",
+            "我们的歌",
+            "那战队"
+        ],
+        "groupName": "军港之夜_2019-12-09",
+        "quality": "1080p",
+        "duration": 255,
+        "weibo": "https://weibo.com/3211455932/Ik14uCMgj",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战那英军港之夜#神仙舞台，“那战队”的《军港之夜》完全是不一样的感觉。太喜欢@X玖少年团肖战DAYTOY 的柔情少年音了。#我们的歌# http://t.cn/Aie8f2JO",
+        "size_mb": 80.64,
+        "englishTags": [
+            "our song",
+            "stage performance",
+            "duet",
+            "the harbor night"
+        ]
     },
     {
         "id": 427,
@@ -2437,6 +2534,70 @@
             "photoshoot"
         ],
         "size_mb": 1.59
+    },
+    {
+        "id": 663,
+        "url": "https://assets.xz-studio-gallery.com/full/20191125_爱上你等于爱上寂寞_XZ-MISC-1.mp4",
+        "date": "2019-11-25",
+        "month": "November",
+        "year": "2019",
+        "tags": [
+            "爱上你等于爱上寂寞",
+            "我们的歌",
+            "那战队"
+        ],
+        "groupName": "爱上你等于爱上寂寞_2019-11-25",
+        "duration": 299,
+        "weibo": "https://weibo.com/3211455932/IhSXqncZa",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战那英爱上你等于爱上寂寞#经典曲目《爱上你等于爱上寂寞》被@那英  @X玖少年团肖战DAYTOY 再度演绎，同一首歌，给你不同的听觉盛宴！东方卫视每日鲜语鲜牛奶#我们的歌#不见不散！ http://t.cn/AidkVqtX ​​​",
+        "size_mb": 82.68,
+        "englishTags": [
+            "our song",
+            "stage performance",
+            "na ying",
+            "duet"
+        ],
+        "quality": "1080p"
+    },
+    {
+        "id": 662,
+        "url": "https://assets.xz-studio-gallery.com/full/20191118_满足_XZ-MISC-1.mp4",
+        "date": "2019-11-18",
+        "month": "November",
+        "year": "2019",
+        "tags": [
+            "满足",
+            "我们的歌"
+        ],
+        "groupName": "满足_2019-11-18",
+        "quality": "1080p",
+        "duration": 115,
+        "weibo": "https://weibo.com/3211455932/IgPebdQgM",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战满足#“音乐仍然是梦想”战战@X玖少年团肖战DAYTOY 用自己的歌声来向大家展现自己诚恳的态度。这首意义非凡的歌曲，想必也给了每一位小飞侠一份心安和满足。每周日晚，来东方卫视每日鲜语鲜牛奶#我们的歌#，肖战哥哥唱给你听 http://t.cn/AidzTsRZ",
+        "size_mb": 27.12,
+        "englishTags": [
+            "our song",
+            "stage performance",
+            "man zu"
+        ]
     },
     {
         "id": 295,
