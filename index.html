@@ -2890,24 +2890,40 @@ function generateThumbnail(originalUrl, size = 'm') {
     // 1. Handle Cloudflare R2 Links
     if (originalUrl.includes('/full/')) {
         let thumbUrl = originalUrl.replace('/full/', '/thumbs/');
-        
+
         // Strip extension
         const lastDotIndex = thumbUrl.lastIndexOf('.');
+        const origExt = lastDotIndex !== -1 ? thumbUrl.substring(lastDotIndex).toLowerCase() : '';
         if (lastDotIndex !== -1) {
             thumbUrl = thumbUrl.substring(0, lastDotIndex);
         }
-        
-        // SMART LOGIC: If 's' is requested for R2, swap to 'm' 
+
+        // SMART LOGIC: If 's' is requested for R2, swap to 'm'
         // because we know we only generated 'm' thumbnails.
         let targetSize = size;
         if (size === 's') targetSize = 'm';
-        
-        return `${thumbUrl}_${targetSize}.jpg`; 
+
+        // Video thumbnails keep the source extension in the key
+        // (thumbs/{base}.mov_m.jpg) so a video and an image sharing the same
+        // date+index (e.g. a Live Photo saved as both a still .jpg and its
+        // .mov motion component) don't collide on the same thumbnail —
+        // must match autosync's thumb_key() (app.py). See autosync CLAUDE.md
+        // "Video/Image Thumbnail-Key Collision" (Aug 2026).
+        if (origExt === '.mp4' || origExt === '.mov') {
+            return `${thumbUrl}${origExt}_${targetSize}.jpg`;
+        }
+
+        return `${thumbUrl}_${targetSize}.jpg`;
     }
 
     // 2. Handle NAS links — thumbnail lives in R2 thumbs/
     if (originalUrl.includes('canadaxfx.synology.me')) {
-        const filename = originalUrl.split('/').pop().replace(/\.[^.]+$/, '');
+        const nasMatch = originalUrl.split('/').pop().match(/^(.*)(\.[^.]+)$/);
+        const filename = nasMatch ? nasMatch[1] : originalUrl.split('/').pop();
+        const nasExt = nasMatch ? nasMatch[2].toLowerCase() : '';
+        if (nasExt === '.mp4' || nasExt === '.mov') {
+            return `https://assets.xz-studio-gallery.com/thumbs/${filename}${nasExt}_m.jpg`;
+        }
         return `https://assets.xz-studio-gallery.com/thumbs/${filename}_m.jpg`;
     }
 
