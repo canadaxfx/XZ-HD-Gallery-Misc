@@ -2250,7 +2250,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260823-1'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260828-1'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
@@ -3299,7 +3299,7 @@ function closeModal() {
 
             // 5. Filter by search query (if one exists)
             if (currentSearchQuery) {
-                const query = currentSearchQuery;
+                const query = currentSearchQuery.toLowerCase();
                 filteredPhotos = filteredPhotos.filter(p => {
                     const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
                 
@@ -3728,7 +3728,7 @@ async function loadPhotoData() {
 
             // 4. Filter by search query
             if (currentSearchQuery) {
-                const query = currentSearchQuery;
+                const query = currentSearchQuery.toLowerCase();
                 yearPhotos = yearPhotos.filter(p => {
                     const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
                 
@@ -3955,7 +3955,7 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
 
             // 3. Filter by search query
             if (currentSearchQuery) {
-                const query = currentSearchQuery;
+                const query = currentSearchQuery.toLowerCase();
                 displayPhotos = displayPhotos.filter(p => {
                     const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
                 
