@@ -3298,21 +3298,28 @@ function closeModal() {
             }
 
             // 5. Filter by search query (if one exists)
+            // Multiple space-separated keywords are AND'd together (added Aug
+            // 2026) — "花絮 GUCCI" now matches an item where "花絮" appears
+            // anywhere (e.g. postText) AND "GUCCI" appears anywhere else
+            // (e.g. tags), rather than requiring that exact phrase-with-space
+            // as one literal substring, which almost never occurs since the
+            // two keywords are typically in different fields.
             if (currentSearchQuery) {
-                const query = currentSearchQuery.toLowerCase();
+                const tokens = currentSearchQuery.toLowerCase().split(/\s+/).filter(Boolean);
                 filteredPhotos = filteredPhotos.filter(p => {
                     const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
-                
-                    return String(p.year).includes(query) ||
-                           p.month.toLowerCase().includes(query) ||
-                           p.date.includes(query) ||
-	    		   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
-			   (p.note && p.note.toLowerCase().includes(query)) ||
-			   (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
-                           (tagsString.includes(query)) ||
-                           (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
-                           (p.description && p.description.toLowerCase().includes(query)) ||
-                           (p.postText && p.postText.toLowerCase().includes(query));
+                    return tokens.every(query =>
+                        String(p.year).includes(query) ||
+                        p.month.toLowerCase().includes(query) ||
+                        p.date.includes(query) ||
+                        (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
+                        (p.note && p.note.toLowerCase().includes(query)) ||
+                        (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
+                        (tagsString.includes(query)) ||
+                        (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
+                        (p.description && p.description.toLowerCase().includes(query)) ||
+                        (p.postText && p.postText.toLowerCase().includes(query))
+                    );
                 });
             }
 
