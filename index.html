@@ -1195,6 +1195,15 @@
         .vc-fs-wrap:-webkit-full-screen .thumbnail-strip {
             display: none;
         }
+        /* !important needed to beat the @media(max-height:600px/480px) short-screen rules
+           below, which force a tiny height!important on .modal-photo-container — those fire
+           on ANY short viewport including a landscape phone, which is exactly when fullscreen
+           is most likely to be used (fixed Aug 2026, caught via user report: fullscreen showed
+           only the top ~25vh of video with a big black gap below it). */
+        .vc-fs-wrap:fullscreen .modal-photo-container,
+        .vc-fs-wrap:-webkit-full-screen .modal-photo-container {
+            flex: 1 !important; height: auto !important; max-height: none !important; min-height: 0 !important;
+        }
         .vc-fs-wrap:fullscreen .pl-fs-controls,
         .vc-fs-wrap:-webkit-full-screen .pl-fs-controls {
             border-radius: 0;
