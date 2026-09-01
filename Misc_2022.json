@@ -10032,6 +10032,38 @@
         "quality": "720p"
     },
     {
+        "id": 426,
+        "url": "https://assets.xz-studio-gallery.com/full/20220113_王牌部队_XZ-MISC-3.mp4",
+        "date": "2022-01-13",
+        "month": "January",
+        "year": "2022",
+        "tags": [
+            "王牌部队",
+            "蝴蝶",
+            "花絮"
+        ],
+        "groupName": "王牌部队_2022-01-13",
+        "quality": "1080p",
+        "duration": 54,
+        "weibo": "https://weibo.com/2106814244/LayZ6rBZO",
+        "source": [
+            "王牌部队"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#王牌部队# 前方精彩花絮掉落~顾一野下午茶时间到！拍摄现场，顾一野红五星徽章上惊现小蝴蝶，无论是怎样移动，小蝴蝶都纹丝不动，今天是独得小蝴蝶恩宠的顾一野呀[羞嗒嗒]。 http://t.cn/A6JtmCYf ​​​",
+        "size_mb": 12.28,
+        "englishTags": [
+            "ace troops",
+            "behind the scenes",
+            "butterfly"
+        ]
+    },
+    {
         "id": 35,
         "url": "https://assets.xz-studio-gallery.com/full/20220112_王牌部队_XZ-MISC-1.jpg",
         "date": "2022-01-12",
