@@ -16992,6 +16992,40 @@
         "quality": "720p"
     },
     {
+        "id": 741,
+        "url": "https://assets.xz-studio-gallery.com/full/20230304_TODS_XZ-MISC-1.mp4",
+        "date": "2023-03-04",
+        "month": "March",
+        "year": "2023",
+        "tags": [
+            "TODS",
+            "李静",
+            "米兰",
+            "采访"
+        ],
+        "groupName": "TODS_2023-03-04",
+        "quality": "1080p",
+        "duration": 163,
+        "weibo": "https://weibo.com/1060603161/MvG7VA0gx",
+        "source": [
+            "TODS"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "米兰时装周是第二次采访战战，记得第一次直播时，还说有机会一定去米兰，结果短短几个月，说到做到，就来了！这次行程很丰富，除了看秀探店，战战还去了工厂，非常开心~ http://t.cn/A6CijIgi ​​​",
+        "size_mb": 25.51,
+        "englishTags": [
+            "tods",
+            "milan",
+            "interview",
+            "fashion week"
+        ]
+    },
+    {
         "id": 627,
         "url": "https://assets.xz-studio-gallery.com/full/20230303_TODS_XZ-MISC-1.mp4",
         "date": "2023-03-03",
