@@ -4719,6 +4719,39 @@
         "size_mb": 5.32
     },
     {
+        "id": 955,
+        "url": "https://assets.xz-studio-gallery.com/full/20251128_TODS_XZ-MISC-1.mp4",
+        "date": "2025-11-28",
+        "month": "November",
+        "year": "2025",
+        "tags": [
+            "TODS",
+            "李静",
+            "澳门",
+            "采访"
+        ],
+        "groupName": "TODS_2025-11-28",
+        "duration": 118,
+        "weibo": "https://weibo.com/1060603161/QfT9oB9hB",
+        "source": [
+            "TODS"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "关于昨日，你们想要的视频来啦!距离上一次采访肖战也快三年了，战战还是一如既往的谦逊、儒雅、专业。#肖战#  http://t.cn/AXLn7pIY ​​​",
+        "size_mb": 20.41,
+        "englishTags": [
+            "tods",
+            "interview",
+            "macau",
+            "li jing"
+        ]
+    },
+    {
         "id": 503,
         "url": "https://assets.xz-studio-gallery.com/full/20251127_TODS_XZ-1.jpg",
         "date": "2025-11-27",
@@ -18744,6 +18777,37 @@
             "fashion show"
         ],
         "size_mb": 2.83
+    },
+    {
+        "id": 954,
+        "url": "https://assets.xz-studio-gallery.com/full/20250301_TODS_XZ-MISC-2.jpg",
+        "date": "2025-03-01",
+        "month": "March",
+        "year": "2025",
+        "tags": [
+            "TODS",
+            "李静",
+            "合照"
+        ],
+        "groupName": "TODS_2025-03-01",
+        "weibo": "https://weibo.com/1060603161/PgyxJzhbf",
+        "source": [
+            "TODS"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "米兰的最后一站，当然是Tod’s,最熟悉的感觉，以及见到状态绝佳的战战[嘻嘻]。 \n#模登日记# #时装周# #肖战米兰时装周#  ​​​",
+        "size_mb": 4.73,
+        "englishTags": [
+            "tods",
+            "milan fashion week",
+            "li jing",
+            "group photo"
+        ]
     },
     {
         "id": 142,
