@@ -9352,6 +9352,35 @@
         "size_mb": 0.32
     },
     {
+        "id": 691,
+        "url": "https://assets.xz-studio-gallery.com/full/20190902_DY_抖音大明星_XZ-MISC-1.mp4",
+        "date": "2019-09-02",
+        "month": "September",
+        "year": "2019",
+        "tags": [
+            "抖音大明星"
+        ],
+        "groupName": "抖音大明星_2019-09-02",
+        "duration": 34,
+        "weibo": "https://www.douyin.com/video/6731941617319546126",
+        "source": [
+            "媒体 / Ent. Hub"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战 竟然认证自己是自拍楷模😂还不是因为你长得好看！🥰#抖音大明星",
+        "size_mb": 3.61,
+        "englishTags": [
+            "douyin",
+            "selfie",
+            "interview"
+        ]
+    },
+    {
         "id": 140,
         "url": "https://assets.xz-studio-gallery.com/full/20190830_诛仙_XZ-MISC-1.jpg",
         "date": "2019-08-30",
