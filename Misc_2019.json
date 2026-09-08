@@ -8113,7 +8113,8 @@
             "my people my country",
             "movie promo",
             "singing"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 354,
@@ -9491,7 +9492,8 @@
             "douyin",
             "selfie",
             "interview"
-        ]
+        ],
+        "quality": "480p"
     },
     {
         "id": 140,
