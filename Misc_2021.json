@@ -11196,9 +11196,12 @@
             "interview",
             "chongqing"
         ],
-        "platform_links": {
-            "youtube": "https://www.youtube.com/watch?v=9cTMOQJLaYw"
-        },
+        "platform_links": [
+            {
+                "platform": "youtube",
+                "url": "https://www.youtube.com/watch?v=9cTMOQJLaYw"
+            }
+        ],
         "hidden": "",
         "quality": "720p"
     },
