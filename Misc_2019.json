@@ -1833,9 +1833,12 @@
             "event",
             "sharing session"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/1896635132/Ikakst6A6"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/1896635132/Ikakst6A6"
+            }
+        ],
         "size_mb": 7.49
     },
     {
@@ -7018,9 +7021,12 @@
             "milan fashion week",
             "retro style"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/6357210927/I8gawByxq"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/6357210927/I8gawByxq"
+            }
+        ],
         "size_mb": 50.32
     },
     {
@@ -8325,9 +8331,12 @@
             "mid-autumn festival",
             "maoyan"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/6534198024/I6IDjl2wC"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/6534198024/I6IDjl2wC"
+            }
+        ],
         "size_mb": 4.83
     },
     {
@@ -12720,9 +12729,12 @@
         ],
         "size_mb": 8.53,
         "quality": "480p",
-        "platform_links": {
-            "wechat": "https://mp.weixin.qq.com/s/UYt9f1Z5brDaZlBDEM_BHg"
-        },
+        "platform_links": [
+            {
+                "platform": "wechat",
+                "url": "https://mp.weixin.qq.com/s/UYt9f1Z5brDaZlBDEM_BHg"
+            }
+        ],
         "hidden": "",
         "platform": []
     },
@@ -16919,9 +16931,12 @@
             "the untamed",
             "qq news"
         ],
-        "platform_links": {
-            "QQ": "https://v.qq.com/x/cover/2ucx4yk5av7lv1a/y0031q3s5yc.html"
-        },
+        "platform_links": [
+            {
+                "platform": "QQ",
+                "url": "https://v.qq.com/x/cover/2ucx4yk5av7lv1a/y0031q3s5yc.html"
+            }
+        ],
         "hidden": "",
         "size_mb": 2.42
     },
@@ -18317,9 +18332,12 @@
             "photoshoot",
             "the wind"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/1518966617/HxbqpvMBk"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/1518966617/HxbqpvMBk"
+            }
+        ],
         "size_mb": 11.12,
         "quality": "720p"
     },
