@@ -140,9 +140,12 @@
             "magazine",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7317854179102428468"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7317854179102428468"
+            }
+        ],
         "platform": [],
         "size_mb": 5.47
     },
@@ -170,9 +173,12 @@
             "photoshoot",
             "cover"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7317854971217644840"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7317854971217644840"
+            }
+        ],
         "platform": [],
         "size_mb": 5.33
     },
@@ -1703,9 +1709,12 @@
             "music video"
         ],
         "size_mb": 82.75,
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7290403548460797236"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7290403548460797236"
+            }
+        ],
         "hidden": "",
         "platform": []
     },
@@ -2514,9 +2523,12 @@
             "interview"
         ],
         "size_mb": 4.6,
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7278660458351955255"
-        }
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7278660458351955255"
+            }
+        ]
     },
     {
         "id": 652,
@@ -2548,9 +2560,12 @@
             "china movie channel"
         ],
         "size_mb": 3.24,
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7278662961961471292"
-        }
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7278662961961471292"
+            }
+        ]
     },
     {
         "id": 651,
@@ -16409,9 +16424,12 @@
             "photoshoot"
         ],
         "size_mb": 2.23,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 667,
@@ -16443,9 +16461,12 @@
             "photoshoot"
         ],
         "size_mb": 3.97,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 666,
@@ -16477,9 +16498,12 @@
             "photoshoot"
         ],
         "size_mb": 4.94,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 665,
@@ -16538,9 +16562,12 @@
         ],
         "size_mb": 5.88,
         "hidden": "",
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 663,
@@ -16572,9 +16599,12 @@
             "photoshoot"
         ],
         "size_mb": 4.9,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 662,
@@ -16606,9 +16636,12 @@
             "photoshoot"
         ],
         "size_mb": 5.07,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 661,
@@ -16640,9 +16673,12 @@
             "photoshoot"
         ],
         "size_mb": 4.61,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 660,
@@ -16674,9 +16710,12 @@
             "photoshoot"
         ],
         "size_mb": 4.05,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 659,
@@ -16708,9 +16747,12 @@
             "photoshoot"
         ],
         "size_mb": 4.98,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 658,
@@ -16742,9 +16784,12 @@
             "photoshoot"
         ],
         "size_mb": 3.96,
-        "platform_links": {
-            "weibo": "https://weibo.com/2311270550/MAgrbCfG5"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2311270550/MAgrbCfG5"
+            }
+        ]
     },
     {
         "id": 37,
@@ -17982,9 +18027,12 @@
             "wang guozhen",
             "poetry reading"
         ],
-        "platform_links": {
-            "baidu": "https://mbd.baidu.com/newspage/data/videolanding?nid=sv_17632211751451545576&sourceFrom=share"
-        },
+        "platform_links": [
+            {
+                "platform": "baidu",
+                "url": "https://mbd.baidu.com/newspage/data/videolanding?nid=sv_17632211751451545576&sourceFrom=share"
+            }
+        ],
         "hidden": "",
         "size_mb": 2.27,
         "quality": "720p"
