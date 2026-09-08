@@ -9240,9 +9240,20 @@
         ],
         "size_mb": 0.7,
         "quality": "480p",
-        "platform_links": {
-            "weibo": "https://weibo.com/1774835215/I5Syz4XLH"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/1261788454/I5Sjyxujk"
+            },
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2805627584/I5Sd457iu"
+            },
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/1774835215/I5Syz4XLH"
+            }
+        ],
         "platform": []
     },
     {
