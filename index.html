@@ -2430,7 +2430,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260828-3'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260908-1'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
@@ -2981,6 +2981,21 @@ function _getPlatformPop() {
     }
     return pop;
 }
+// platform_links may be the legacy {platform:url} object OR the current list
+// [{platform,url},…] — every link is independent, so the same platform can appear
+// more than once (e.g. two weibo cross-posts). Always read it through this.
+function normPlatformLinks(pl) {
+    if (Array.isArray(pl)) {
+        return pl.filter(x => x && x.platform && x.url)
+                 .map(x => ({ platform: String(x.platform).trim(), url: String(x.url).trim() }));
+    }
+    if (pl && typeof pl === 'object') {
+        return Object.entries(pl).filter(([, v]) => v)
+                 .map(([k, v]) => ({ platform: String(k).trim(), url: String(v).trim() }));
+    }
+    return [];
+}
+
 function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
     const existingPop = document.getElementById('platformPopover');
     if (existingPop) existingPop.style.display = 'none';
@@ -2991,9 +3006,9 @@ function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
         const firstPlatform = Array.isArray(platforms) && platforms[0] ? String(platforms[0]).toLowerCase() : 'weibo';
         links.push({label: lmap[firstPlatform] || firstPlatform, url: /^https?/i.test(w) ? w : 'https://' + w});
     }
-    if (extraLinks && typeof extraLinks === 'object') {
-        Object.entries(extraLinks).forEach(([k, v]) => { if (v) links.push({label: lmap[String(k).toLowerCase()] || k, url: String(v)}); });
-    }
+    normPlatformLinks(extraLinks).forEach(({ platform, url }) => {
+        links.push({ label: lmap[platform.toLowerCase()] || platform, url });
+    });
     if (!links.length) { btn.style.display = 'none'; return; }
     btn.style.display = 'inline-block';
     btn.onclick = null;
@@ -3217,7 +3232,7 @@ function updateModalContent() {
             _badges.push(`<span class="source-badge ${cssClass}">${badgeLabel}</span>`);
         };
         _platformTypes.forEach(_addBadge);
-        if (photo.platform_links && typeof photo.platform_links === 'object') Object.keys(photo.platform_links).forEach(_addBadge);
+        normPlatformLinks(photo.platform_links).forEach(x => _addBadge(x.platform));
         // Only fall back to weibo from link/weibo field for legacy entries with no platform set
         if (_platformTypes.length === 0 && (photo.link || photo.weibo) && !_seen.has('weibo')) _addBadge('weibo');
         sourceBadge.style.cssText = 'display:flex;align-items:center;gap:5px';
@@ -4122,9 +4137,7 @@ async function loadPhotoData() {
                     const arr = Array.isArray(item.platform) ? item.platform : [item.platform];
                     arr.forEach(t => platforms.add(String(t).toLowerCase()));
                 }
-                if (item.platform_links && typeof item.platform_links === 'object') {
-                    Object.keys(item.platform_links).forEach(k => platforms.add(String(k).toLowerCase()));
-                }
+                normPlatformLinks(item.platform_links).forEach(x => platforms.add(x.platform.toLowerCase()));
                 if (!platforms.size) platforms.add('weibo');
                 if (platforms.has('xiaohongshu')) platforms.add('rednote');
                 return platforms.has(_rSVal);
