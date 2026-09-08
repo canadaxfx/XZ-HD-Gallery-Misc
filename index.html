@@ -2088,10 +2088,13 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
               <option value="weibo">Weibo</option>
               <option value="douyin">Douyin</option>
               <option value="instagram">Instagram</option>
+              <option value="x">X / Twitter</option>
+              <option value="facebook">Facebook</option>
               <option value="rednote">RedNote</option>
               <option value="qq">QQ</option>
               <option value="wx">WX</option>
               <option value="mgtv">MGTV</option>
+              <option value="other">Others 其他</option>
               <option value="ua">U/A</option>
             </select>
             <select id="filterYear" onchange="applyDateFilter()">
@@ -2996,6 +2999,33 @@ function normPlatformLinks(pl) {
     return [];
 }
 
+// Platforms that have their own <option> in #filterSource (+ synonyms). The
+// "Others 其他" filter matches any entry whose platforms are ALL outside this set
+// — so a hand-entered platform (threads, lofter, …) with no dedicated option is
+// still reachable. Keep in sync with #filterSource.
+const _KNOWN_PLATFORMS = new Set(['weibo', 'douyin', 'instagram', 'ins', 'x', 'twitter',
+    'facebook', 'rednote', 'xiaohongshu', 'xhs', 'qq', 'wx', 'wechat', 'mgtv', 'ua']);
+
+// Best-guess platform key from a link's host — lets the PRIMARY link be labelled
+// from the URL itself instead of trusting a possibly-mismatched platform field
+// (e.g. an entry tagged platform:"douyin" whose citation link is a weibo.com URL).
+function platformFromUrl(u) {
+    let h = '';
+    try { h = new URL(/^https?:\/\//i.test(u) ? u : 'https://' + u).hostname.toLowerCase(); } catch (e) { return ''; }
+    if (h.indexOf('oasis.weibo') !== -1) return 'oasis';
+    if (/(^|\.)weibo\.(com|cn)$/.test(h) || h === 'weibo.video') return 'weibo';
+    if (h.indexOf('douyin.com') !== -1) return 'douyin';
+    if (h.indexOf('xiaohongshu.com') !== -1 || h === 'xhslink.com') return 'rednote';
+    if (/(^|\.)(x|twitter)\.com$/.test(h) || h === 't.co') return 'x';
+    if (h.indexOf('instagram.com') !== -1 || h === 'instagr.am') return 'instagram';
+    if (h.indexOf('youtube.com') !== -1 || h === 'youtu.be') return 'youtube';
+    if (h.indexOf('bilibili.com') !== -1 || h === 'b23.tv') return 'bilibili';
+    if (h.indexOf('facebook.com') !== -1 || h === 'fb.watch') return 'facebook';
+    if (h.indexOf('qq.com') !== -1) return 'qq';
+    if (h.indexOf('mgtv.com') !== -1) return 'mgtv';
+    return '';
+}
+
 function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
     const existingPop = document.getElementById('platformPopover');
     if (existingPop) existingPop.style.display = 'none';
@@ -3004,7 +3034,7 @@ function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
     const w = mainLink ? String(mainLink).trim() : '';
     if (w) {
         const firstPlatform = Array.isArray(platforms) && platforms[0] ? String(platforms[0]).toLowerCase() : 'weibo';
-        links.push({label: lmap[firstPlatform] || firstPlatform, url: /^https?/i.test(w) ? w : 'https://' + w});
+        links.push({label: lmap[platformFromUrl(w)] || lmap[firstPlatform] || firstPlatform, url: /^https?/i.test(w) ? w : 'https://' + w});
     }
     normPlatformLinks(extraLinks).forEach(({ platform, url }) => {
         links.push({ label: lmap[platform.toLowerCase()] || platform, url });
@@ -3709,8 +3739,12 @@ function closeModal() {
                         const arr = Array.isArray(item.platform) ? item.platform : [item.platform];
                         arr.forEach(t => platforms.add(String(t).toLowerCase()));
                     }
+                    normPlatformLinks(item.platform_links).forEach(x => platforms.add(x.platform.toLowerCase()));
                     if (!platforms.size) platforms.add('weibo');
                     if (platforms.has('xiaohongshu')) platforms.add('rednote');
+                    if (platforms.has('twitter')) platforms.add('x');
+                    if (platforms.has('x')) platforms.add('twitter');
+                    if (sVal === 'other') return ![...platforms].some(p => _KNOWN_PLATFORMS.has(p));
                     return platforms.has(sVal);
                 });
             }
@@ -4140,6 +4174,9 @@ async function loadPhotoData() {
                 normPlatformLinks(item.platform_links).forEach(x => platforms.add(x.platform.toLowerCase()));
                 if (!platforms.size) platforms.add('weibo');
                 if (platforms.has('xiaohongshu')) platforms.add('rednote');
+                if (platforms.has('twitter')) platforms.add('x');
+                if (platforms.has('x')) platforms.add('twitter');
+                if (_rSVal === 'other') return ![...platforms].some(p => _KNOWN_PLATFORMS.has(p));
                 return platforms.has(_rSVal);
             });
         }
