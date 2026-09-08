@@ -6050,9 +6050,12 @@
             "gucci 1955",
             "horsebit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7363107207589776691"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7363107207589776691"
+            }
+        ],
         "platform": [],
         "size_mb": 1.57
     },
@@ -6180,9 +6183,12 @@
             "milan",
             "coat"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7363106043804650779"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7363106043804650779"
+            }
+        ],
         "platform": [],
         "size_mb": 1.62
     },
@@ -7213,9 +7219,12 @@
             "endorsement",
             "magazine"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7339448196214656271"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7339448196214656271"
+            }
+        ],
         "platform": [],
         "size_mb": 56.37
     },
@@ -7873,9 +7882,12 @@
             "red carpet",
             "speech"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/7211561239/NFWwkbsdC"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/7211561239/NFWwkbsdC"
+            }
+        ]
     },
     {
         "id": 359,
