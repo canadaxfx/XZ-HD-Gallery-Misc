@@ -214,6 +214,38 @@
         "size_mb": 23.34
     },
     {
+        "id": 185,
+        "url": "https://assets.xz-studio-gallery.com/full/20201220_最幸运的幸运_XZ-MISC-1.mp4",
+        "date": "2020-12-20",
+        "month": "December",
+        "year": "2020",
+        "tags": [
+            "最幸运的幸运",
+            "星光大赏",
+            "红海"
+        ],
+        "groupName": "最幸运的幸运_2020-12-20",
+        "duration": 246,
+        "weibo": "https://v.qq.com/x/cover/mzc002005mxoxho/m00356dp0ct.html",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "腾讯视频：\n星光大赏：肖战《最幸运的幸运》温暖这个寒冬！​​",
+        "size_mb": 18.42,
+        "englishTags": [
+            "starlight awards",
+            "stage performance",
+            "the luckiest lucky",
+            "red ocean"
+        ]
+    },
+    {
         "id": 67,
         "url": "https://assets.xz-studio-gallery.com/full/20201216_狼殿下_XZ-MISC-1.jpg",
         "date": "2020-12-16",
