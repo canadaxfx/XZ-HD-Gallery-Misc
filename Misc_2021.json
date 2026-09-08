@@ -840,7 +840,9 @@
             "interview",
             "a dream like a dream",
             "beijing"
-        ]
+        ],
+        "duration": 33,
+        "quality": "720p"
     },
     {
         "id": 318,
@@ -5585,7 +5587,8 @@
             "stage play",
             "wuhan",
             "opening announcement"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 378,
