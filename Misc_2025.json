@@ -21744,9 +21744,12 @@
             "spring festival",
             "film promotion"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/6495544869/PaJENCPUQ"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/6495544869/PaJENCPUQ"
+            }
+        ],
         "size_mb": 21.21
     },
     {
