@@ -2977,9 +2977,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 3.27
     },
     {
@@ -3010,9 +3013,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 3.02
     },
     {
@@ -3043,9 +3049,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 3.56
     },
     {
@@ -3076,9 +3085,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 4.15
     },
     {
@@ -3109,9 +3121,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 3.37
     },
     {
@@ -3142,9 +3157,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 3.37
     },
     {
@@ -3175,9 +3193,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 4.44
     },
     {
@@ -3208,9 +3229,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 3.18
     },
     {
@@ -3242,9 +3266,12 @@
             "weibo",
             "WX"
         ],
-        "platform_links": {
-            "WX": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
-        },
+        "platform_links": [
+            {
+                "platform": "WX",
+                "url": "https://mp.weixin.qq.com/s/2Ui9g5cglXMzqCnxLQnldw"
+            }
+        ],
         "size_mb": 4.01
     },
     {
