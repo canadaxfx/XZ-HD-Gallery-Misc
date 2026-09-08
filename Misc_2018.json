@@ -2843,9 +2843,12 @@
         ],
         "size_mb": 1.43,
         "quality": "low",
-        "platform_links": {
-            "wechat": "https://mp.weixin.qq.com/s/QsYqo3v4HEvGKziVsW2eiQ"
-        },
+        "platform_links": [
+            {
+                "platform": "wechat",
+                "url": "https://mp.weixin.qq.com/s/QsYqo3v4HEvGKziVsW2eiQ"
+            }
+        ],
         "hidden": "",
         "platform": []
     },
