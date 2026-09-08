@@ -405,9 +405,12 @@
             "campaign",
             "photoshoot"
         ],
-        "platform_links": {
-            "ins": "https://www.instagram.com/p/Dc-o95ZgEA9/"
-        }
+        "platform_links": [
+            {
+                "platform": "ins",
+                "url": "https://www.instagram.com/p/Dc-o95ZgEA9/"
+            }
+        ]
     },
     {
         "id": 852,
@@ -852,9 +855,12 @@
             "michal chelbin",
             "portrait"
         ],
-        "platform_links": {
-            "X": "https://x.com/gucci/status/2092205551644246285/photo/1"
-        }
+        "platform_links": [
+            {
+                "platform": "X",
+                "url": "https://x.com/gucci/status/2092205551644246285/photo/1"
+            }
+        ]
     },
     {
         "id": 837,
@@ -881,10 +887,16 @@
             "michal chelbin",
             "portrait"
         ],
-        "platform_links": {
-            "X": "https://x.com/gucci/status/2093628958189481985/photo/1",
-            "facebook": "https://www.facebook.com/photo/?fbid=1554136390085005&set=pcb.1554136423418335"
-        }
+        "platform_links": [
+            {
+                "platform": "X",
+                "url": "https://x.com/gucci/status/2093628958189481985/photo/1"
+            },
+            {
+                "platform": "facebook",
+                "url": "https://www.facebook.com/photo/?fbid=1554136390085005&set=pcb.1554136423418335"
+            }
+        ]
     },
     {
         "id": 832,
@@ -2467,9 +2479,12 @@
             "a thousand years of song"
         ],
         "hidden": "",
-        "platform_links": {
-            "weibo": "https://weibo.com/2810373291/ReG4WqnLg"
-        }
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/2810373291/ReG4WqnLg"
+            }
+        ]
     },
     {
         "id": 762,
@@ -4036,9 +4051,12 @@
             "voiceover"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "weibo": "https://weibo.com/1402977920/ReHawDMEW"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/1402977920/ReHawDMEW"
+            }
+        ],
         "hidden": ""
     },
     {
@@ -4515,9 +4533,12 @@
             "drama",
             "filming wrap"
         ],
-        "platform_links": {
-            "qq": "https://v.qq.com/x/cover/mzc00200wn7xgbf/w4102cqvqhh.html"
-        },
+        "platform_links": [
+            {
+                "platform": "qq",
+                "url": "https://v.qq.com/x/cover/mzc00200wn7xgbf/w4102cqvqhh.html"
+            }
+        ],
         "hidden": "",
         "quality": "480p"
     },
@@ -7727,9 +7748,12 @@
             "drama",
             "trailer"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7654920218115919139"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7654920218115919139"
+            }
+        ],
         "hidden": "",
         "size_mb": 11.26
     },
@@ -7759,9 +7783,12 @@
             "drama",
             "tencent"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7654921805169282338"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7654921805169282338"
+            }
+        ],
         "hidden": "",
         "size_mb": 7.36
     },
@@ -8663,9 +8690,12 @@
             "brand ambassador",
             "behind the scenes"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7649953292239326527"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7649953292239326527"
+            }
+        ],
         "size_mb": 4.84
     },
     {
@@ -9687,9 +9717,12 @@
             "kong sheng"
         ],
         "url_4k": "https://assets.xz-studio-gallery.com/4k/20260530_得闲谨制_XZ-MISC-1.mp4",
-        "platform_links": {
-            "weibo": "https://weibo.com/1699432410/R1NR69kiS"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/1699432410/R1NR69kiS"
+            }
+        ],
         "size_mb": 17.3,
         "size_4k": 183.64,
         "quality": "480p"
@@ -10070,9 +10103,12 @@
             "macau",
             "londoner theatre"
         ],
-        "platform_links": {
-            "xiaohongshu": "https://www.xiaohongshu.com/explore/6a16728f000000003701d4fc?xsec_token=ABnVC2WWkqV54-MDQoUHl5TSieyNhc6u413tl105TOu5M=&xsec_source=pc_user"
-        },
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/explore/6a16728f000000003701d4fc?xsec_token=ABnVC2WWkqV54-MDQoUHl5TSieyNhc6u413tl105TOu5M=&xsec_source=pc_user"
+            }
+        ],
         "size_mb": 10.57,
         "quality": "720p"
     },
@@ -10102,9 +10138,12 @@
             "best actor",
             "award ceremony"
         ],
-        "platform_links": {
-            "xiaohongshu": "https://www.xiaohongshu.com/explore/6a155f4b000000003802089b?xsec_token=ABhV2nVDa1GXkiFr86sr8shDHhXZykCrHiphlPOXOWvjw=&xsec_source=pc_user"
-        },
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/explore/6a155f4b000000003802089b?xsec_token=ABhV2nVDa1GXkiFr86sr8shDHhXZykCrHiphlPOXOWvjw=&xsec_source=pc_user"
+            }
+        ],
         "size_mb": 32.47
     },
     {
@@ -15399,9 +15438,12 @@
             "tencent video"
         ],
         "duration": 32,
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7626983564587863339"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7626983564587863339"
+            }
+        ],
         "platform": [],
         "size_mb": 3.1
     },
@@ -18849,9 +18891,12 @@
             "magazine",
             "endorsement"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7611865806154564963"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7611865806154564963"
+            }
+        ],
         "platform": [],
         "size_mb": 11.42
     },
@@ -19150,9 +19195,12 @@
             "sunglasses",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7611538362894643429"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7611538362894643429"
+            }
+        ],
         "platform": [],
         "size_mb": 3.93
     },
