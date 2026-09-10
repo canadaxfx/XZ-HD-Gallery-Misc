@@ -1531,11 +1531,11 @@
         .action-btn.quark-btn:hover { background: var(--grad-red-h); }
 
         .action-btn.weibo-btn {
-            background: transparent;
-            color: #3a4356;
-            border: 1px solid #c7ccd6;
+            background: var(--grad-red);
+            color: white;
+            border: none;
         }
-        .action-btn.weibo-btn:hover { background: rgba(20,20,25,.05); }
+        .action-btn.weibo-btn:hover { background: var(--grad-red-h); }
 
         .badge-4k {
             position: absolute;
@@ -1720,7 +1720,7 @@
             }
             
             .photo-info-panel {
-                padding: 12px 15px;
+                padding: 12px 10px;
                 flex-shrink: 0;
                 max-height: none;
                 overflow-y: visible;
@@ -1739,7 +1739,6 @@
             .action-btn {
                 padding: 5px 8px;
                 font-size: 12px;
-                min-width: 170px;
             }
             
             .download-hint {
@@ -1835,7 +1834,7 @@
             }
             
             .photo-info-panel {
-                padding: 10px 12px;
+                padding: 10px;
                 flex-shrink: 0;
             }
             
@@ -2437,7 +2436,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260910-1'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260910-2'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
