@@ -67,6 +67,10 @@
             {
                 "platform": "weibo",
                 "url": "https://weibo.com/7331261632/Ri2moinTs"
+            },
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/3201529063/Ri2oFy30u"
             }
         ]
     },
@@ -242,6 +246,10 @@
             {
                 "platform": "weibo",
                 "url": "https://weibo.com/7331261632/Ri2CfiVCT"
+            },
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/3201529063/Ri2QQ7Vfj"
             }
         ]
     },
@@ -405,13 +413,17 @@
             "weibo"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "入座有玄机：\n———\n———\n———\n\n#荣耀Magic9##荣耀[超话]##肖战# ​​​",
         "size_mb": 5.33,
         "englishTags": [
             "honor",
             "magic9"
+        ],
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/3201529063/RhqGtCP5w"
+            }
         ]
     },
     {
