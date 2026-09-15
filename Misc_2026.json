@@ -71,7 +71,9 @@
         "note": "",
         "description": "",
         "postText": "看清每一个细节，拍出每一种情绪。 @荣耀手机 #荣耀Magic9# 系列，阿莱色彩科学，把生活随手拍出电影感。 http://t.cn/AXOGM9YT ​​​",
-        "englishTags": []
+        "englishTags": [],
+        "duration": 15,
+        "size_mb": 9.28
     },
     {
         "id": 873,
@@ -1180,7 +1182,8 @@
             "ralph lauren",
             "douyin",
             "fragrance"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 868,
@@ -1210,7 +1213,8 @@
             "ralph lauren",
             "douyin",
             "fragrance"
-        ]
+        ],
+        "quality": "720p"
     },
     {
         "id": 845,
