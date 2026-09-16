@@ -1142,13 +1142,6 @@
         .bg-bilibili  { background: #00A1D6; }
         .bg-platform  { background: #6b7280; }
 
-        .modal-header-actions {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-shrink: 0;
-        }
-
         .close-modal {
             background: rgba(0,0,0,0.06); border: none;
             cursor: pointer;
@@ -1511,6 +1504,13 @@
             line-height: 1.2;
         }
 
+        .action-btn:disabled {
+            background: #ccc !important;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
         /* Download and Action Buttons */
         .action-btn.download-btn {
             background: var(--grad-red);
@@ -1638,20 +1638,16 @@
             /* Top-align the photo modal on phones/tablets (matches Studio / Archive /
                Navigator). Centered leaves a tall portrait modal clipped at both edges
                since .modal-content is overflow-y:hidden. */
-            .modal { align-items: flex-start; padding-top: 20px; }
-        }
-        @media (max-width: 380px) {
-            .chip-en { font-size: 11px; }
-            .chip-zh { font-size: 9px; }
-            .source-chip { padding: 8px 3px; }
-             #floatBtnGroup { right: 8px; } .float-btn { width:50px; height:50px; font-size:18px; }
-            /* Mobile Modal Optimizations */
+            /* Mobile Modal Optimizations — moved up from 380px (Sept 2026) so Misc's
+               modal gets the same mobile tuning as Studio/Navigator/Archive at the same
+               768px breakpoint, instead of only kicking in below 380px (a gap that left
+               ordinary 390-428px phones rendering the desktop-sized modal). */
             .modal {
                 padding: 5px;
                 align-items: flex-start;
-                padding-top: 5px;
+                padding-top: 20px;
             }
-            
+
             .modal-content {
                 max-width: 95vw;
                 max-height: 98vh;
@@ -1659,22 +1655,22 @@
 		height: auto;
                 overflow-y: auto;
             }
-            
+
             .modal-header {
                 padding: 12px 15px;
                 flex-shrink: 0;
             }
-            
+
             .group-title {
                 font-size: 13px;
                 margin: 0 5px;
             }
-            
+
             .photo-counter {
                 font-size: 12px;
                 min-width: 50px;
             }
-            
+
             /* Key change: Limit photo container height on mobile */
             .modal-photo-container {
                 flex: none;
@@ -1683,45 +1679,45 @@
                 max-height: 300px;
                 flex-shrink: 0;
             }
-            
+
             .modal-photo {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
             }
-            
+
             .nav-arrow {
                 width: 40px;
                 height: 40px;
                 font-size: 16px;
             }
-            
+
             .nav-arrow.prev {
                 left: 10px;
             }
-            
+
             .nav-arrow.next {
                 right: 10px;
             }
-            
+
             .thumbnail-strip {
                 padding: 8px 10px;
                 min-height: 50px;
                 flex-shrink: 0;
             }
-            
+
             .thumbnail {
                 width: 40px;
                 height: 40px;
             }
-            
+
             .photo-info-panel {
-                padding: 12px 10px;
+                padding: 10px;
                 flex-shrink: 0;
                 max-height: none;
                 overflow-y: visible;
             }
-            
+
             .download-section {
                 padding: 0;
                 margin-top: 0px;
@@ -1731,35 +1727,41 @@
                 font-size: 14px;
                 margin-bottom: 10px;
             }
-            
+
             .action-btn {
                 padding: 5px 8px;
                 font-size: 12px;
             }
-            
+
             .download-hint {
                 font-size: 10px;
                 margin: 6px 0 8px;
             }
-            
+
             .weibo-section {
                 padding: 10px;
                 margin-top: 10px;
             }
-            
+
             .weibo-photo-info {
                 font-size: 11px;
                 margin-bottom: 6px;
             }
-            
+
             .weibo-link-btn {
                 padding: 8px 16px !important;
                 font-size: 12px !important;
             }
-            
+
             .close-modal {
                 width: 34px; height: 34px;
             }
+        }
+        @media (max-width: 380px) {
+            .chip-en { font-size: 11px; }
+            .chip-zh { font-size: 9px; }
+            .source-chip { padding: 8px 3px; }
+             #floatBtnGroup { right: 8px; } .float-btn { width:50px; height:50px; font-size:18px; }
         }
 
 
@@ -1779,7 +1781,6 @@
 
             .modal-content {
                 padding: 5px;
-                border-radius: 10px;
                 max-height: 95vh;
             }
             
@@ -2431,7 +2432,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260910-4'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260916-1'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
