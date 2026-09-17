@@ -1108,10 +1108,11 @@
         }
 
         .photo-counter {
-            font-weight: 600;
-            color: #5E9FD8;
+            font-weight: 700;
+            color: var(--gold);
             font-size: 12px;
-            min-width: 60px;
+            width: 50px;
+            flex-shrink: 0;
         }
 
         .group-title {
@@ -2422,7 +2423,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260916-4'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260916-5'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
