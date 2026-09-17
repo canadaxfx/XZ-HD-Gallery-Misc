@@ -1123,24 +1123,25 @@
         }
 
         .source-badge {
-            font-size: 11px;
-            padding: 3px 9px;
-            border-radius: 12px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
             display: inline-block;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 10px;
             color: #fff;
+            font-weight: bold;
+            vertical-align: middle;
+            white-space: nowrap;
         }
-        .bg-weibo   { background: #B8860B; }
+        .bg-weibo   { background-color: #f6b60d; border: 1px solid #ffe082; }
         .bg-oasis   { background: #2CB353; }
-        .bg-ins     { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
-        .bg-douyin  { background: #000; box-shadow: 0 0 0 1px rgba(255,255,255,0.35); }
-        .bg-rednote { background: #E60023; }
-        .bg-twitter { background: #1DA1F2; }
+        .bg-ins     { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+        .bg-douyin  { background: #000000; }
+        .bg-rednote { background-color: #ff2442; border: 1px solid #ff8fab; }
+        .bg-twitter { background: #1da1f2; }
         .bg-youtube   { background: #FF0000; }
         .bg-wechat    { background: #07C160; }
         .bg-bilibili  { background: #00A1D6; }
-        .bg-platform  { background: #6b7280; }
+        .bg-platform  { background-color: #999999; }
 
         .close-modal {
             background: rgba(0,0,0,0.06); border: none;
@@ -2421,7 +2422,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260916-3'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260916-4'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
