@@ -674,7 +674,7 @@
 .modal-tags-container {
     display: flex;
     flex-wrap: nowrap;
-    gap: 5px;
+    gap: 4px;
     justify-content: flex-start;
     padding: 0 2px;
     min-height: 0;
@@ -1656,11 +1656,6 @@
                 overflow-y: auto;
             }
 
-            .modal-header {
-                padding: 12px 15px;
-                flex-shrink: 0;
-            }
-
             .group-title {
                 font-size: 13px;
                 margin: 0 5px;
@@ -1773,7 +1768,10 @@
             .date-select-wrapper { padding: 0; gap: 0; flex: 1; min-width: 0; display: flex; justify-content: space-between; }
             .date-select-wrapper select { font-size: 12px; padding: 6px 0; letter-spacing: -0.5px; flex: 1; min-width: 0; max-width: 80px; background: transparent; }
             .reset-date-btn { width: 24px; height: 24px; font-size: 12px; flex-shrink: 0; margin-left: 2px; }
+        }
 
+        /* Extra small screens — modal (matches Studio/Navigator's 480px threshold) */
+        @media (max-width: 480px) {
             .modal {
                 padding: 2px;
                 padding-top: 20px;
@@ -1783,11 +1781,11 @@
                 padding: 5px;
                 max-height: 95vh;
             }
-            
+
             .download-section h4 {
                 font-size: 13px;
             }
-            
+
             .weibo-photo-info {
                 font-size: 10px;
             }
@@ -1813,11 +1811,6 @@
                 min-height: 150px !important;
                 max-height: 200px !important;
                 flex: none;
-            }
-            
-            .modal-header {
-                padding: 8px 12px;
-                flex-shrink: 0;
             }
             
             .thumbnail-strip {
@@ -1857,10 +1850,6 @@
                 height: 20vh !important;
                 min-height: 120px !important;
                 max-height: 150px !important;
-            }
-            
-            .modal-header {
-                padding: 6px 10px;
             }
             
             .group-title {
@@ -2432,7 +2421,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260916-2'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20260916-3'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
