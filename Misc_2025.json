@@ -24329,7 +24329,6 @@
             "GUCCI",
             "微博之夜"
         ],
-        "note": null,
         "tags": [
             "GUCCI",
             "微博之夜"
@@ -24344,7 +24343,14 @@
             "endorsement",
             "event"
         ],
-        "size_mb": 11.59
+        "size_mb": 11.59,
+        "platform_links": [
+            {
+                "platform": "facebook",
+                "url": "https://www.facebook.com/photo?fbid=1031607452337904&set=pcb.1031607552337894"
+            }
+        ],
+        "platform": []
     },
     {
         "id": 49,
@@ -24356,7 +24362,6 @@
             "GUCCI",
             "微博之夜"
         ],
-        "note": null,
         "tags": [
             "GUCCI",
             "微博之夜"
@@ -24370,7 +24375,14 @@
             "weibo night",
             "endorsement"
         ],
-        "size_mb": 11.6
+        "size_mb": 11.6,
+        "platform_links": [
+            {
+                "platform": "facebook",
+                "url": "https://www.facebook.com/photo?fbid=1031607415671241&set=pcb.1031607552337894"
+            }
+        ],
+        "platform": []
     },
     {
         "id": 50,
@@ -24382,7 +24394,6 @@
             "GUCCI",
             "微博之夜"
         ],
-        "note": null,
         "tags": [
             "GUCCI",
             "微博之夜"
@@ -24396,7 +24407,14 @@
             "weibo night",
             "endorsement"
         ],
-        "size_mb": 10.69
+        "size_mb": 10.69,
+        "platform_links": [
+            {
+                "platform": "facebook",
+                "url": "https://www.facebook.com/photo/?fbid=1031607425671240&set=pcb.1031607552337894"
+            }
+        ],
+        "platform": []
     },
     {
         "id": 51,
@@ -24408,7 +24426,6 @@
             "GUCCI",
             "微博之夜"
         ],
-        "note": null,
         "tags": [
             "GUCCI",
             "微博之夜"
@@ -24423,7 +24440,18 @@
             "endorsement",
             "event"
         ],
-        "size_mb": 10.97
+        "size_mb": 10.97,
+        "platform_links": [
+            {
+                "platform": "twitter",
+                "url": "https://x.com/gucci/status/1878774093480362150/photo/2"
+            },
+            {
+                "platform": "facebook",
+                "url": "https://www.facebook.com/photo/?fbid=1031607499004566&set=pcb.1031607552337894"
+            }
+        ],
+        "platform": []
     },
     {
         "id": 52,
@@ -24592,6 +24620,40 @@
             "movie",
             "behind the scenes",
             "wuxia"
+        ]
+    },
+    {
+        "id": 1008,
+        "url": "https://assets.xz-studio-gallery.com/full/20250113_GUCCI_XZ-MISC-7.jpg",
+        "date": "2025-01-13",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "GUCCI"
+        ],
+        "groupName": "GUCCI_2025-01-13",
+        "weibo": "https://x.com/gucci/status/1878774093480362150/photo/1",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "twitter"
+        ],
+        "datePrecision": "day",
+        "postText": "Before his arrival at #WeiboNight in Beijing, Global Brand Ambassador #XiaoZhan is photographed in his second #Gucci look for the evening, consisting of a #GucciRossoAncora suit featuring gradient sequins by Creative Director Sabato De Sarno.",
+        "size_mb": 3.45,
+        "englishTags": [
+            "gucci",
+            "weibo night",
+            "red carpet",
+            "suit",
+            "sequins"
+        ],
+        "platform_links": [
+            {
+                "platform": "facebook",
+                "url": "https://www.facebook.com/photo/?fbid=1031607519004564&set=pcb.1031607552337894"
+            }
         ]
     },
     {
@@ -26345,6 +26407,94 @@
             "campaign"
         ],
         "size_mb": 23.8
+    },
+    {
+        "id": 1009,
+        "url": "https://assets.xz-studio-gallery.com/full/20250102_GUCCI_XZ-MISC-1.jpg",
+        "date": "2025-01-02",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "GUCCI"
+        ],
+        "groupName": "GUCCI_2025-01-02",
+        "weibo": "https://www.gucci.com/us/en/st/stories/article/bonds-that-endure",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "GUCCI"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "BONDS THAT ENDURE\r\nGlobal Brand Ambassadors Xiao Zhan and Ni Ni embody the familial bonds formed through festive rituals as loved ones are drawn closer in a new campaign to celebrate the Year of the Snake.\r\nThrough the frame of a window that connects two families, Global Brand Ambassadors Xiao Zhan and Ni Ni share a fleeting glimpse—a moment that lingers as time flows. These cherished moments of togetherness honor the warmth of family traditions and the joy of connection, capturing the spirit of festive celebrations and the lasting ties they create, year after year.\r\n\r\nPresented in the special campaign, a curated selection envisioned by Creative Director Sabato De Sarno reflects the sinuous elegance of the serpent—a symbol of transformation and renewal that intertwines deeply with Gucci’s heritage. Silk Flora scarves, accessories, signature silhouettes, and more showcase the motif in designs that seamlessly blend tradition and contemporary sophistication, offering meaningful gifts for loved ones or personal treasures to mark moments to remember.\r\n\r\nCreative Director: Sabato De Sarno\r\nArtistic Director: Riccardo Zanola",
+        "size_mb": 2.55,
+        "englishTags": [
+            "gucci",
+            "ni ni",
+            "year of the snake",
+            "campaign",
+            "brand ambassador"
+        ]
+    },
+    {
+        "id": 1010,
+        "url": "https://assets.xz-studio-gallery.com/full/20250102_GUCCI_XZ-MISC-2.jpg",
+        "date": "2025-01-02",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "GUCCI"
+        ],
+        "groupName": "GUCCI_2025-01-02",
+        "weibo": "https://www.gucci.com/us/en/st/stories/article/bonds-that-endure",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "GUCCI"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "BONDS THAT ENDURE\r\nGlobal Brand Ambassadors Xiao Zhan and Ni Ni embody the familial bonds formed through festive rituals as loved ones are drawn closer in a new campaign to celebrate the Year of the Snake.\r\nThrough the frame of a window that connects two families, Global Brand Ambassadors Xiao Zhan and Ni Ni share a fleeting glimpse—a moment that lingers as time flows. These cherished moments of togetherness honor the warmth of family traditions and the joy of connection, capturing the spirit of festive celebrations and the lasting ties they create, year after year.\r\n\r\nPresented in the special campaign, a curated selection envisioned by Creative Director Sabato De Sarno reflects the sinuous elegance of the serpent—a symbol of transformation and renewal that intertwines deeply with Gucci’s heritage. Silk Flora scarves, accessories, signature silhouettes, and more showcase the motif in designs that seamlessly blend tradition and contemporary sophistication, offering meaningful gifts for loved ones or personal treasures to mark moments to remember.\r\n\r\nCreative Director: Sabato De Sarno\r\nArtistic Director: Riccardo Zanola",
+        "size_mb": 1.43,
+        "englishTags": [
+            "gucci",
+            "year of the snake",
+            "ni ni",
+            "campaign"
+        ]
+    },
+    {
+        "id": 1011,
+        "url": "https://assets.xz-studio-gallery.com/full/20250102_GUCCI_XZ-MISC-3.jpg",
+        "date": "2025-01-02",
+        "month": "January",
+        "year": "2025",
+        "tags": [
+            "GUCCI"
+        ],
+        "groupName": "GUCCI_2025-01-02",
+        "weibo": "https://www.gucci.com/us/en/st/stories/article/bonds-that-endure",
+        "source": [
+            "GUCCI"
+        ],
+        "platform": [
+            "GUCCI"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "BONDS THAT ENDURE\r\nGlobal Brand Ambassadors Xiao Zhan and Ni Ni embody the familial bonds formed through festive rituals as loved ones are drawn closer in a new campaign to celebrate the Year of the Snake.\r\nThrough the frame of a window that connects two families, Global Brand Ambassadors Xiao Zhan and Ni Ni share a fleeting glimpse—a moment that lingers as time flows. These cherished moments of togetherness honor the warmth of family traditions and the joy of connection, capturing the spirit of festive celebrations and the lasting ties they create, year after year.\r\n\r\nPresented in the special campaign, a curated selection envisioned by Creative Director Sabato De Sarno reflects the sinuous elegance of the serpent—a symbol of transformation and renewal that intertwines deeply with Gucci’s heritage. Silk Flora scarves, accessories, signature silhouettes, and more showcase the motif in designs that seamlessly blend tradition and contemporary sophistication, offering meaningful gifts for loved ones or personal treasures to mark moments to remember.\r\n\r\nCreative Director: Sabato De Sarno\r\nArtistic Director: Riccardo Zanola",
+        "size_mb": 1.42,
+        "englishTags": [
+            "gucci",
+            "year of the snake",
+            "ni ni",
+            "campaign"
+        ]
     },
     {
         "id": 828,
