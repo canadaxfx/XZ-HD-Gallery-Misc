@@ -12797,7 +12797,10 @@
             "interview"
         ],
         "size_mb": 29.66,
-        "quality": "720p"
+        "quality": "720p",
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20190808_南都娱乐_XZ-MISC-1.mp4",
+        "quality_hd": "1080p",
+        "size_hd": 158.17
     },
     {
         "id": 518,
@@ -14633,7 +14636,7 @@
             "interview",
             "magazine"
         ],
-        "size_mb": 25.01
+        "size_mb": 37.62
     },
     {
         "id": 655,
