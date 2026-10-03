@@ -8144,12 +8144,15 @@
         ],
         "groupName": "GQ_2024-02-02",
         "duration": 16,
-        "weibo": "https://www.xiaohongshu.com/explore/65bbc93a000000002c037478?xsec_token=ABAWdyF96zKuQKn3cUlP4vk2zcQEvtjj24wmSwZUcQlFw=&xsec_source=pc_share",
+        "weibo": "https://weibo.com/1667999147/NEEVm2zcQ",
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/explore/65bbc93a000000002c037478?xsec_token=ABAWdyF96zKuQKn3cUlP4vk2zcQEvtjj24wmSwZUcQlFw=&xsec_source=pc_share"
+            }
+        ],
         "source": [
             "GQ"
-        ],
-        "platform": [
-            "rednote"
         ],
         "datePrecision": "day",
         "note": "",
@@ -10345,8 +10348,8 @@
     },
     {
         "id": 363,
-        "url": "https://assets.xz-studio-gallery.com/full/20240201_智族GQ_XZ-MISC-2.mp4",
-        "date": "2024-02-01",
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-3.mp4",
+        "date": "2024-02-02",
         "month": "February",
         "year": "2024",
         "tags": [
@@ -10354,14 +10357,17 @@
             "二月刊封面",
             "梦境大片"
         ],
-        "groupName": "GQ_2024-02-01",
+        "groupName": "GQ_2024-02-02",
         "duration": 15,
-        "weibo": "https://www.xiaohongshu.com/explore/65bbc9ba000000002c0102e4?xsec_token=ABAWdyF96zKuQKn3cUlP4vk7f32w7cJwS9ANF1AfGh31g=&xsec_source=pc_share",
+        "weibo": "https://weibo.com/1667999147/NEF1shl9d",
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/explore/65bbc9ba000000002c0102e4?xsec_token=ABAWdyF96zKuQKn3cUlP4vk7f32w7cJwS9ANF1AfGh31g=&xsec_source=pc_share"
+            }
+        ],
         "source": [
             "GQ"
-        ],
-        "platform": [
-            "rednote"
         ],
         "datePrecision": "day",
         "note": "",
@@ -10373,13 +10379,13 @@
             "magazine",
             "photoshoot"
         ],
-        "size_mb": 2.21,
+        "size_mb": 0.98,
         "quality": "720p"
     },
     {
         "id": 365,
-        "url": "https://assets.xz-studio-gallery.com/full/20240201_智族GQ_XZ-MISC-3.mp4",
-        "date": "2024-02-01",
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-2.mp4",
+        "date": "2024-02-02",
         "month": "February",
         "year": "2024",
         "tags": [
@@ -10387,14 +10393,17 @@
             "二月刊封面",
             "梦境大片"
         ],
-        "groupName": "GQ_2024-02-01",
+        "groupName": "GQ_2024-02-02",
         "duration": 14,
-        "weibo": "https://www.xiaohongshu.com/explore/65bbc848000000002b03d6b5?xsec_token=ABAWdyF96zKuQKn3cUlP4vk3_A3tcIu3XOlbwMoWLxRjI=&xsec_source=pc_share",
+        "weibo": "https://weibo.com/1667999147/NEETkhq3D",
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/explore/65bbc848000000002b03d6b5?xsec_token=ABAWdyF96zKuQKn3cUlP4vk3_A3tcIu3XOlbwMoWLxRjI=&xsec_source=pc_share"
+            }
+        ],
         "source": [
             "GQ"
-        ],
-        "platform": [
-            "rednote"
         ],
         "datePrecision": "day",
         "note": "",
