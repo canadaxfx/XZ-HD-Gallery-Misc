@@ -3681,6 +3681,30 @@ function closeModal() {
             return m + ':' + String(s).padStart(2, '0');
         }
 
+	// Single source of truth for search matching — used by applyFilter(),
+        // renderYearPage() and updateStats(). They used to each carry their own
+        // copy; the Aug 2026 multi-keyword (AND'd tokens) change only reached
+        // applyFilter(), so a query like "chapter 03" (words in one field but
+        // not adjacent) counted 1 result in the year header but rendered an
+        // empty grid and "0 items" (Oct 2026). Keep all callers on this helper.
+        function _matchesSingleToken(p, query) {
+            const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
+            return String(p.year).includes(query) ||
+                p.month.toLowerCase().includes(query) ||
+                p.date.includes(query) ||
+                (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
+                (p.note && p.note.toLowerCase().includes(query)) ||
+                (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
+                (tagsString.includes(query)) ||
+                (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
+                (p.description && p.description.toLowerCase().includes(query)) ||
+                (p.postText && p.postText.toLowerCase().includes(query));
+        }
+        function matchesSearchText(p, query) {
+            const tokens = String(query).toLowerCase().split(/\s+/).filter(Boolean);
+            return tokens.every(token => _matchesSingleToken(p, token));
+        }
+
 	function applyFilter() {
             let filteredPhotos = [];
 
@@ -3754,22 +3778,7 @@ function closeModal() {
             // as one literal substring, which almost never occurs since the
             // two keywords are typically in different fields.
             if (currentSearchQuery) {
-                const tokens = currentSearchQuery.toLowerCase().split(/\s+/).filter(Boolean);
-                filteredPhotos = filteredPhotos.filter(p => {
-                    const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
-                    return tokens.every(query =>
-                        String(p.year).includes(query) ||
-                        p.month.toLowerCase().includes(query) ||
-                        p.date.includes(query) ||
-                        (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
-                        (p.note && p.note.toLowerCase().includes(query)) ||
-                        (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
-                        (tagsString.includes(query)) ||
-                        (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
-                        (p.description && p.description.toLowerCase().includes(query)) ||
-                        (p.postText && p.postText.toLowerCase().includes(query))
-                    );
-                });
+                filteredPhotos = filteredPhotos.filter(p => matchesSearchText(p, currentSearchQuery));
             }
 
             // Track filtered videos for playlist "add all"
@@ -4185,21 +4194,7 @@ async function loadPhotoData() {
 
             // 4. Filter by search query
             if (currentSearchQuery) {
-                const query = currentSearchQuery.toLowerCase();
-                yearPhotos = yearPhotos.filter(p => {
-                    const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
-                
-                    return String(p.year).includes(query) ||
-                           p.month.toLowerCase().includes(query) ||
-                           p.date.includes(query) ||
-			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
-			   (p.note && p.note.toLowerCase().includes(query)) ||
-			   (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
-                           (tagsString.includes(query)) ||
-                           (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
-                           (p.description && p.description.toLowerCase().includes(query)) ||
-                           (p.postText && p.postText.toLowerCase().includes(query));
-                });
+                yearPhotos = yearPhotos.filter(p => matchesSearchText(p, currentSearchQuery));
             }
             // Cached so jumpToMonth() reads the exact same fully-filtered list this
             // function just computed, instead of re-deriving (and risking drift from)
@@ -4504,20 +4499,7 @@ function createPaginationButtons(key, currentPage, totalPages, gotoFn, jumpFn, i
 
             // 3. Filter by search query
             if (currentSearchQuery) {
-                const query = currentSearchQuery.toLowerCase();
-                displayPhotos = displayPhotos.filter(p => {
-                    const tagsString = p.tags ? String(p.tags).toLowerCase() : '';
-                
-                    return String(p.year).includes(query) ||
-                           p.month.toLowerCase().includes(query) ||
-                           p.date.includes(query) ||
-			   (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
-			   (p.note && p.note.toLowerCase().includes(query)) ||
-			   (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
-                           (tagsString.includes(query)) ||
-                           (Array.isArray(p.englishTags) && p.englishTags.some(t => t.toLowerCase().includes(query))) ||
-                           (p.postText && p.postText.toLowerCase().includes(query));
-                });
+                displayPhotos = displayPhotos.filter(p => matchesSearchText(p, currentSearchQuery));
             }
 
             // 3. Now update the stats — plain one-line summary matching XZ
