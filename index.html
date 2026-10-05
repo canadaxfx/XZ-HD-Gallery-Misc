@@ -1138,7 +1138,7 @@
         .bg-ins     { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
         .bg-douyin  { background: #000000; }
         .bg-rednote { background-color: #ff2442; border: 1px solid #ff8fab; }
-        .bg-twitter { background: #1da1f2; }
+        .bg-twitter { background: #000000; } /* X (formerly Twitter) */
         .bg-youtube   { background: #FF0000; }
         .bg-wechat    { background: #07C160; }
         .bg-bilibili  { background: #00A1D6; }
@@ -2079,7 +2079,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
               <option value="weibo">Weibo</option>
               <option value="douyin">Douyin</option>
               <option value="instagram">Instagram</option>
-              <option value="x">X / Twitter</option>
+              <option value="x">X</option>
               <option value="facebook">Facebook</option>
               <option value="rednote">RedNote</option>
               <option value="qq">QQ</option>
@@ -2423,7 +2423,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20260928-1'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20261005-1'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
@@ -2955,7 +2955,8 @@ function getSourceMeta(platform) {
         case 'rednote':
         case 'xiaohongshu':
         case 'xhs':          return { cssClass: 'bg-rednote',  badgeLabel: 'REDNOTE' };
-        case 'twitter':      return { cssClass: 'bg-twitter',  badgeLabel: 'TWITTER' };
+        case 'twitter':
+        case 'x':            return { cssClass: 'bg-twitter',  badgeLabel: 'X' };
         case 'youtube':      return { cssClass: 'bg-youtube',  badgeLabel: 'YOUTUBE' };
         case 'wechat':
         case 'wx':           return { cssClass: 'bg-wechat',   badgeLabel: 'WECHAT' };
@@ -3019,7 +3020,7 @@ function platformFromUrl(u) {
 function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
     const existingPop = document.getElementById('platformPopover');
     if (existingPop) existingPop.style.display = 'none';
-    const lmap = {weibo:'Weibo 微博', oasis:'Oasis 绿洲', douyin:'Douyin 抖音', youtube:'YouTube', bilibili:'Bilibili', ins:'Instagram', xiaohongshu:'RedNote 小红书', xhs:'RedNote 小红书', rednote:'RedNote 小红书', twitter:'Twitter', x:'X', facebook:'Facebook', instagram:'Instagram', qq:'QQ 腾讯', wx:'WeChat 微信', wechat:'WeChat 微信', mgtv:'MGTV 芒果TV'};
+    const lmap = {weibo:'Weibo 微博', oasis:'Oasis 绿洲', douyin:'Douyin 抖音', youtube:'YouTube', bilibili:'Bilibili', ins:'Instagram', xiaohongshu:'RedNote 小红书', xhs:'RedNote 小红书', rednote:'RedNote 小红书', twitter:'X', x:'X', facebook:'Facebook', instagram:'Instagram', qq:'QQ 腾讯', wx:'WeChat 微信', wechat:'WeChat 微信', mgtv:'MGTV 芒果TV'};
     const links = [];
     const w = mainLink ? String(mainLink).trim() : '';
     if (w) {
@@ -3240,7 +3241,7 @@ function updateModalContent() {
     // --- Platform badges ---
     const sourceBadge = document.getElementById('sourceBadge');
     if (sourceBadge) {
-        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k; };
+        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k==='twitter' ? 'x' : k; };
         const _seen = new Set();
         const _badges = [];
         const _addBadge = p => {
