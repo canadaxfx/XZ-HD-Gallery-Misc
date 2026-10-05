@@ -1139,6 +1139,7 @@
         .bg-douyin  { background: #000000; }
         .bg-rednote { background-color: #ff2442; border: 1px solid #ff8fab; }
         .bg-twitter { background: #000000; } /* X (formerly Twitter) */
+        .bg-facebook { background: #0866FF; } /* Facebook brand blue */
         .bg-youtube   { background: #FF0000; }
         .bg-wechat    { background: #07C160; }
         .bg-bilibili  { background: #00A1D6; }
@@ -2423,7 +2424,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
 // ============================================================
 
         /* ---------- Core Variables ---------- */
-        const DATA_VER = '20261005-1'; // bump when pushing new JSON to GitHub
+        const DATA_VER = '20261005-2'; // bump when pushing new JSON to GitHub
         let photoData = [];
         let expandedYears = new Set();
         let currentFilter = 'all';
@@ -2957,6 +2958,7 @@ function getSourceMeta(platform) {
         case 'xhs':          return { cssClass: 'bg-rednote',  badgeLabel: 'REDNOTE' };
         case 'twitter':
         case 'x':            return { cssClass: 'bg-twitter',  badgeLabel: 'X' };
+        case 'facebook':     return { cssClass: 'bg-facebook', badgeLabel: 'FB' };
         case 'youtube':      return { cssClass: 'bg-youtube',  badgeLabel: 'YOUTUBE' };
         case 'wechat':
         case 'wx':           return { cssClass: 'bg-wechat',   badgeLabel: 'WECHAT' };
