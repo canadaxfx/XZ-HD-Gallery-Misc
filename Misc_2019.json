@@ -31,6 +31,38 @@
         ]
     },
     {
+        "id": 696,
+        "url": "https://assets.xz-studio-gallery.com/full/20191231_东方卫视跨年_XZ-MISC-1.mp4",
+        "date": "2019-12-31",
+        "month": "December",
+        "year": "2019",
+        "tags": [
+            "东方卫视跨年",
+            "神奇",
+            "舞台"
+        ],
+        "groupName": "东方卫视跨年_2019-12-31",
+        "duration": 266,
+        "weibo": "https://y.qq.com/n/ryqq_v2/mv/e0033w5pqqk?ADTAG=h5_share_mv&redirecttag=mn.redirect.custom&mnst=0.93",
+        "source": [
+            "舞台 / Stages"
+        ],
+        "platform": [
+            "qq"
+        ],
+        "datePrecision": "day",
+        "size_mb": 40.05,
+        "platform_links": [
+            {
+                "platform": "央视频",
+                "url": "https://www.yangshipin.cn/video/home?vid=k000022tb1d"
+            }
+        ],
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20191231_东方卫视跨年_XZ-MISC-1.mp4",
+        "quality_hd": "1080p",
+        "size_hd": 186.19
+    },
+    {
         "id": 323,
         "url": "https://assets.xz-studio-gallery.com/full/20191229_星光大赏余年_XZ-MISC-1.mp4",
         "date": "2019-12-29",
