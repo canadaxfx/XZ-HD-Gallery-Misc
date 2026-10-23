@@ -19,11 +19,15 @@
             "douyin"
         ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
         "postText": "不是冷血，只是把妈妈最后的心愿放在心上。#小城良方 #肖战 #刘铮亮 #姜妍 #史彭元",
-        "size_mb": 3.28,
-        "englishTags": []
+        "size_mb": 4.25,
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/8430373070/RnYo5DuYd"
+            }
+        ]
     },
     {
         "id": 1197,
