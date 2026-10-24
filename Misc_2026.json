@@ -1,5 +1,31 @@
 [
     {
+        "id": 1248,
+        "url": "https://assets.xz-studio-gallery.com/full/20261024_小城良方_XZ-MISC-8.mp4",
+        "date": "2026-10-24",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "小城良方"
+        ],
+        "groupName": "小城良方_2026-10-24",
+        "quality": "1080p",
+        "duration": 76,
+        "weibo": "https://weibo.com/8430373070/RobfGphvy",
+        "source": [
+            "小城良方"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "一句“更新医院宣传资料”将刘铮亮@肖战 骗去拍广告，要说损招还得是龙院长👍而蒙在鼓里的刘铮亮一抬头看到自己的巨幅广告，不仅收获了艾辰@姜妍二胖 的大笑，也得到了医院众人的热情招呼～\n\n#小城良方# 10月21日起，CCTV-8@CCTV电视剧 黄金强档每晚两集连播，@爱奇艺 VIP会员sinaweibo://video/vvs?mid=5357631286025504&author_mid=5357631286025504&object_id=1034%3A5357292078694462&spotlight_time=1170000&spotlight_type=2更新4集；10月22日起，VIP会员每日sinaweibo://video/vvs?mid=5357631286025504&author_mid=5357631286025504&object_id=1034%3A5357292078694462&spotlight_time=1170000&spotlight_type=2更新2集。 http://t.cn/AXjtsiY9",
+        "size_mb": 9.03,
+        "englishTags": []
+    },
+    {
         "id": 1247,
         "url": "https://assets.xz-studio-gallery.com/full/20261024_演唱会_XZ-MISC-2.mp4",
         "date": "2026-10-24",
@@ -22,7 +48,8 @@
         "postText": "#肖战演唱会30台投影史无前例##肖战为演唱会排练了一个月# 新浪娱乐《我的音乐你来听》@肖战 「出口·我们」巡回演唱会幕后特辑正片公开！从一句“出口”点亮创作方向，到历经多轮方案打磨，最终呈现出独具设计感的舞台；从国内首次采用四面3D Mapping投影技术、动用30台投影机，到灯光、音响与舞台空间的精密配合，「出口·我们」演唱会的每个细节都凝聚着幕后团队的探索与付出。制作人袁晶讲述主题背后的内涵，视觉设计负责人温佳男、舞美设计李斌分享舞台从图纸到落地的过程，灯光设计王季辰、音响总监张小年、硬体统筹王晓曦讲述藏在“白盒子”里的光与声，总导演聂文帅、音乐总监刘卓揭秘歌单编排与现场改编。为了这场首次巡演，肖战坚持长时间、高强度的全流程排练，主创团队也在一次次磨合与调整中追求更好的舞台呈现。走近「出口·我们」的台前幕后，聆听每一份用心与坚持。更多精彩，戳#我的音乐你来听#正片解锁👇http://t.cn/AXjtXujU",
         "size_mb": 67.5,
         "englishTags": [],
-        "download_url": "https://canadaxfx.synology.me:8443/20261024-演唱会制作特辑-XZ-MISC-1"
+        "download_url": "https://canadaxfx.synology.me:8443/20261024-演唱会制作特辑-XZ-MISC-1.mp4",
+        "size_download": 238.7
     },
     {
         "id": 1246,
@@ -402,7 +429,8 @@
         "postText": "#肖战为角色聊了8小时#【#央视新闻专访肖战#】#肖战说交给观众评价了# @肖战 在专访中介绍如何在纯粹的创作氛围里，一点点搭建人物根基。为了从内心理解刘铮亮这个角色，他曾经和导演聊了8个小时。对于自己做得怎么样，肖战说自己尽力了，评价要交给观众。“对于现实题材，我有一个底了。” http://t.cn/AXj5pj3W",
         "size_mb": 44.27,
         "englishTags": [],
-        "download_url": "https://canadaxfx.synology.me:8443/20261024-小城良方央视采访-XZ-MISC-1"
+        "download_url": "https://canadaxfx.synology.me:8443/20261024-小城良方央视采访-XZ-MISC-1.mp4",
+        "size_download": 236.6
     },
     {
         "id": 1244,
@@ -2919,14 +2947,15 @@
         ],
         "datePrecision": "day",
         "postText": "小城良方热唠局",
-        "download_url": "https://canadaxfx.synology.me:8443/20261020-小城良方热唠局-XZ-MISC-1",
+        "download_url": "https://canadaxfx.synology.me:8443/20261020-小城良方热唠局-XZ-MISC-1.mp4",
         "englishTags": [],
         "platform_links": [
             {
                 "platform": "爱奇艺",
                 "url": "https://www.iqiyi.com/v_28zjmce6utc.html"
             }
-        ]
+        ],
+        "size_download": 522.9
     },
     {
         "id": 1196,
@@ -19585,7 +19614,8 @@
             "brand ambassador",
             "event",
             "mobile phone"
-        ]
+        ],
+        "size_download": 3475.4
     },
     {
         "id": 488,
