@@ -1,5 +1,31 @@
 [
     {
+        "id": 1487,
+        "url": "https://assets.xz-studio-gallery.com/full/20261101_青岛啤酒_XZ-MISC-1.mp4",
+        "date": "2026-11-01",
+        "month": "November",
+        "year": "2026",
+        "tags": [
+            "青岛啤酒"
+        ],
+        "groupName": "青岛啤酒_2026-11-01",
+        "quality": "1080p",
+        "duration": 34,
+        "weibo": "https://weibo.com/1741649093/RpkSesYbt",
+        "source": [
+            "Endorsement Misc"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "“轻轻”放下一些新鲜出炉的幕后花絮😎捕捉代言人@肖战 在镜头之外的松弛另一面。时刻状态满分，0糖轻干很OK，轻启清爽好心情✨\n#肖战青岛啤酒品牌代言人##青岛轻干##轻干0糖轻负担##肖战说青岛轻干很OK# http://t.cn/AXjBc6PS ​​​",
+        "size_mb": 7.36,
+        "englishTags": []
+    },
+    {
         "id": 1427,
         "url": "https://assets.xz-studio-gallery.com/full/20261031_小城良方_XZ-MISC-1.jpg",
         "date": "2026-10-31",
@@ -711,6 +737,108 @@
         "description": "",
         "postText": "默默守候就是最好的安慰。#小城良方 #肖战 #刘铮亮 #姜妍 #艾辰",
         "size_mb": 5.16,
+        "englishTags": []
+    },
+    {
+        "id": 1484,
+        "url": "https://assets.xz-studio-gallery.com/full/20261031_青岛啤酒_XZ-MISC-1.jpg",
+        "date": "2026-10-31",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "青岛啤酒"
+        ],
+        "groupName": "青岛啤酒_2026-10-31",
+        "weibo": "https://weibo.com/1741649093/RpbrJyCd3",
+        "source": [
+            "Magazine Misc"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "青岛啤酒品牌代言人@肖战 专属壁纸清爽来袭，颜值暴击拉满💥！定格轻盈时刻，0糖轻干很OK~#肖战青岛啤酒品牌代言人##肖战说青岛轻干很OK##青岛轻干0糖轻负担# ​​​",
+        "size_mb": 1.55,
+        "englishTags": []
+    },
+    {
+        "id": 1485,
+        "url": "https://assets.xz-studio-gallery.com/full/20261031_青岛啤酒_XZ-MISC-2.jpg",
+        "date": "2026-10-31",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "青岛啤酒"
+        ],
+        "groupName": "青岛啤酒_2026-10-31",
+        "weibo": "https://weibo.com/1741649093/RpbrJyCd3",
+        "source": [
+            "Magazine Misc"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "青岛啤酒品牌代言人@肖战 专属壁纸清爽来袭，颜值暴击拉满💥！定格轻盈时刻，0糖轻干很OK~#肖战青岛啤酒品牌代言人##肖战说青岛轻干很OK##青岛轻干0糖轻负担# ​​​",
+        "size_mb": 1.31,
+        "englishTags": []
+    },
+    {
+        "id": 1488,
+        "url": "https://assets.xz-studio-gallery.com/full/20261031_青岛啤酒_XZ-MISC-5.jpg",
+        "date": "2026-10-31",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "青岛啤酒",
+            "小城良方"
+        ],
+        "groupName": "青岛啤酒_2026-10-31",
+        "weibo": "https://weibo.com/1741649093/RpeKI7gzi",
+        "source": [
+            "小城良方",
+            "Endorsement Misc"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "热乎饭菜摆上桌，闲话家常慢慢唠，说说笑笑之间，是满满的人情味儿和温暖惦记。一圈儿人齐聚热闹开整，追剧搭子青岛轻干申请加入群聊🙌0糖很OK，碰杯不抢戏，陪唠不冷场，一起沉浸式感受藏在一餐一饭里，属于小西门的烟火气❤️\n#小城良方##肖战青岛啤酒品牌代言人# ​​​",
+        "size_mb": 6.27,
+        "englishTags": []
+    },
+    {
+        "id": 1489,
+        "url": "https://assets.xz-studio-gallery.com/full/20261031_小城良方_XZ-MISC-18.mp4",
+        "date": "2026-10-31",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "小城良方",
+            "CCTV星推荐"
+        ],
+        "groupName": "小城良方_2026-10-31",
+        "quality": "1080p",
+        "duration": 280,
+        "weibo": "https://weibo.com/2030112487/5360013231001035",
+        "source": [
+            "小城良方",
+            "访谈 / Interviews"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "【#央视肖战小城良方专访#】#肖战决定出演刘铮亮仅看了五集剧本#“看完前五集剧本，就说一定要拿下这个角色，这样的角色是我非常想挑战和饰演的。”电视剧《小城良方》正在CCTV-8黄金强档热播，听@肖战 讲述幕后的创作故事。 http://t.cn/AXjnQeQK ​​​",
+        "size_mb": 44.98,
         "englishTags": []
     },
     {
@@ -6851,6 +6979,32 @@
         "description": "",
         "postText": "顾问解读小城良方脑外伤 #电视剧小城良方 #认真工作的医生 #问诊场景 #肖战#神经外科",
         "size_mb": 21.97,
+        "englishTags": []
+    },
+    {
+        "id": 1486,
+        "url": "https://assets.xz-studio-gallery.com/full/20261023_青岛啤酒_XZ-MISC-1.jpg",
+        "date": "2026-10-23",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "青岛啤酒",
+            "小城良方"
+        ],
+        "groupName": "青岛啤酒_2026-10-23",
+        "weibo": "https://weibo.com/1741649093/Ro18yzOL9",
+        "source": [
+            "小城良方",
+            "Endorsement Misc"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "滴✨追剧搭子轻干准时报道，小西门团建名场面打卡！圆桌围坐，烟火热乎气儿管够！为刘铮亮@肖战 攒的这场饭局，虽有小小波澜，却藏着小城朴实的人情暖意。\n#小城良方干饭嘎嘎回血局#热闹鲜活，剧内剧外，青岛轻干始终自在相伴🍻0糖很ok，边炫边聊刚刚好！\n#肖战青岛啤酒品牌代言人##小城良方# ​​​",
+        "size_mb": 4.85,
         "englishTags": []
     },
     {
