@@ -6507,7 +6507,7 @@
             "GUCCI"
         ],
         "platform": [
-            "GUCCI"
+            "gucci"
         ],
         "datePrecision": "day",
         "note": "",
@@ -6537,7 +6537,7 @@
             "GUCCI"
         ],
         "platform": [
-            "GUCCI"
+            "gucci"
         ],
         "datePrecision": "day",
         "note": "",
@@ -6567,7 +6567,7 @@
             "GUCCI"
         ],
         "platform": [
-            "GUCCI"
+            "gucci"
         ],
         "datePrecision": "day",
         "note": "",
@@ -6597,7 +6597,7 @@
             "GUCCI"
         ],
         "platform": [
-            "GUCCI"
+            "gucci"
         ],
         "datePrecision": "day",
         "note": "",
@@ -6627,7 +6627,7 @@
             "GUCCI"
         ],
         "platform": [
-            "GUCCI"
+            "gucci"
         ],
         "datePrecision": "day",
         "note": "",
@@ -6657,7 +6657,7 @@
             "GUCCI"
         ],
         "platform": [
-            "GUCCI"
+            "gucci"
         ],
         "datePrecision": "day",
         "note": "",
@@ -8132,42 +8132,6 @@
         "size_mb": 2.18
     },
     {
-        "id": 364,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-1.mp4",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "tags": [
-            "智族GQ",
-            "二月刊封面",
-            "梦境大片"
-        ],
-        "groupName": "GQ_2024-02-02",
-        "duration": 16,
-        "weibo": "https://weibo.com/1667999147/NEEVm2zcQ",
-        "platform_links": [
-            {
-                "platform": "xiaohongshu",
-                "url": "https://www.xiaohongshu.com/explore/65bbc93a000000002c037478?xsec_token=ABAWdyF96zKuQKn3cUlP4vk2zcQEvtjj24wmSwZUcQlFw=&xsec_source=pc_share"
-            }
-        ],
-        "source": [
-            "GQ"
-        ],
-        "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "「忆记」02Chapter\n。忆回入陷，票机旧陈张一现发然偶肖战客旅，夜雨外屋\n\t\n#智族GQ肖战二月刊封面[话题]#\n#智族GQ肖战梦境大片[话题]#\n#安可拉红[话题]#",
-        "englishTags": [
-            "gq",
-            "magazine",
-            "february issue",
-            "photoshoot"
-        ],
-        "size_mb": 2.02,
-        "quality": "720p"
-    },
-    {
         "id": 319,
         "url": "https://assets.xz-studio-gallery.com/full/20240216_北京卫视春晚如愿_XZ-MISC-2.mp4",
         "date": "2024-02-16",
@@ -8877,176 +8841,6 @@
             "mehndi brooch"
         ],
         "size_mb": 1.41
-    },
-    {
-        "id": 82,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_宝诗龙_XZ-MISC-1.jpg",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "source": [
-            "宝诗龙Boucheron"
-        ],
-        "note": null,
-        "tags": [
-            "宝诗龙",
-            "Boucheron",
-            "Quatre"
-        ],
-        "weibo": "https://weibo.com/2823454334/NEOtY6SdX",
-        "datePrecision": "day",
-        "groupName": "宝诗龙Boucheron_2024-02-01",
-        "postText": "#自由饰我# \n红，是风格，也是新运。#宝诗龙Quatre#流转绮丽华光，妙想间灵感涌现，与全球品牌代言人肖战@X玖少年团肖战DAYTOY 一同迎向盎然新岁。 ​​​",
-        "englishTags": [
-            "boucheron",
-            "quatre",
-            "endorsement",
-            "jewelry"
-        ],
-        "size_mb": 3.81
-    },
-    {
-        "id": 83,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_宝诗龙_XZ-MISC-2.jpg",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "source": [
-            "宝诗龙Boucheron"
-        ],
-        "note": null,
-        "tags": [
-            "宝诗龙",
-            "Boucheron",
-            "Quatre"
-        ],
-        "weibo": "https://weibo.com/2823454334/NEOtY6SdX",
-        "datePrecision": "day",
-        "groupName": "宝诗龙Boucheron_2024-02-01",
-        "postText": "#自由饰我# \n红，是风格，也是新运。#宝诗龙Quatre#流转绮丽华光，妙想间灵感涌现，与全球品牌代言人肖战@X玖少年团肖战DAYTOY 一同迎向盎然新岁。 ​​​",
-        "englishTags": [
-            "boucheron",
-            "quatre",
-            "endorsement"
-        ],
-        "size_mb": 3.55
-    },
-    {
-        "id": 84,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_拉夫劳伦_XZ.mp4",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "source": [
-            "拉夫劳伦香氛RalphLauren"
-        ],
-        "tags": [
-            "拉夫劳伦",
-            "香氛",
-            "RalphLauren",
-            "俱乐部香水"
-        ],
-        "groupName": "拉夫劳伦香氛RalphLauren_2024-02",
-        "datePrecision": "day",
-        "weibo": "https://weibo.com/7545734809/NEF3tfQcf",
-        "postText": "新年的第一份惊喜，来接收拉夫劳伦香氛全球代言人@肖战 的新年祝福。新的一年，愿福运“香”伴，与俱乐部小熊版香水，共同开启充满惊喜的摩登香氛之旅。\n#肖战拉夫劳伦香氛全球代言人##拉夫劳伦香氛##拉夫劳伦俱乐部香水# http://t.cn/A6jRC2WU  ​​​",
-        "quality": "1080p",
-        "duration": 15,
-        "englishTags": [
-            "ralph lauren",
-            "fragrance",
-            "endorsement",
-            "club perfume"
-        ],
-        "size_mb": 1.41
-    },
-    {
-        "id": 325,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_GQ_XZ-MISC-1.mp4",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "tags": [
-            "GQ",
-            "二月刊封面"
-        ],
-        "groupName": "GQ_2024-02-02",
-        "quality": "2k",
-        "duration": 131,
-        "weibo": "https://weibo.com/1667999147/NEFlJx1zM",
-        "source": [
-            "GQ"
-        ],
-        "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "「身分」08Chapter\n？身脱功成否能@X玖少年团肖战DAYTOY。近靠声无，店旅境梦在现出人衣黑\n\n#智族GQ肖战二月刊封面#\n#智族GQ肖战梦境大片# http://t.cn/A6jRlwl4 ​​​",
-        "englishTags": [
-            "gq",
-            "magazine",
-            "february issue",
-            "photoshoot"
-        ],
-        "size_mb": 17.97
-    },
-    {
-        "id": 353,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_百度娱乐_XZ-MISC-1.mp4",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "tags": [
-            "百度娱乐",
-            "新年祝福"
-        ],
-        "groupName": "百度娱乐_2024-02-02",
-        "quality": "1080p",
-        "duration": 18,
-        "weibo": "https://weibo.com/5909962605/NEGDt1wPI",
-        "source": [
-            "媒体 / Ent. Hub"
-        ],
-        "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "#肖战[超话]##星星向龙#  陪伴大家碎碎念念的人，一定要一起岁岁年年，@X玖少年团肖战DAYTOY 祝大家新的一年龙福齐天，稳稳当当，顺顺利利，新的一年一起欣欣向\"龙\"！ http://t.cn/A6jE5mxI ​​​",
-        "englishTags": [
-            "baidu entertainment",
-            "new year wishes",
-            "dragon new year"
-        ],
-        "size_mb": 3.1
-    },
-    {
-        "id": 368,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_GQ_XZ-MISC-2.mp4",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "tags": [
-            "GQ",
-            "刘冲"
-        ],
-        "groupName": "GQ_2024-02-02",
-        "duration": 17,
-        "weibo": "https://weibo.com/1266089165/NEFWKmNho",
-        "source": [
-            "GQ"
-        ],
-        "platform": [
-            "weibo"
-        ],
-        "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "既然你们都喜欢红色，那⬇️这 不就来了～ RoccoLiu刘冲的微博视频",
-        "size_mb": 2.33,
-        "englishTags": [
-            "gq",
-            "rocco liu",
-            "red suit"
-        ],
-        "quality": "1080p"
     },
     {
         "id": 31,
@@ -10184,6 +9978,284 @@
         "size_mb": 4.76
     },
     {
+        "id": 82,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_宝诗龙_XZ-MISC-1.jpg",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "source": [
+            "宝诗龙Boucheron"
+        ],
+        "note": null,
+        "tags": [
+            "宝诗龙",
+            "Boucheron",
+            "Quatre"
+        ],
+        "weibo": "https://weibo.com/2823454334/NEOtY6SdX",
+        "datePrecision": "day",
+        "groupName": "宝诗龙Boucheron_2024-02-01",
+        "postText": "#自由饰我# \n红，是风格，也是新运。#宝诗龙Quatre#流转绮丽华光，妙想间灵感涌现，与全球品牌代言人肖战@X玖少年团肖战DAYTOY 一同迎向盎然新岁。 ​​​",
+        "englishTags": [
+            "boucheron",
+            "quatre",
+            "endorsement",
+            "jewelry"
+        ],
+        "size_mb": 3.81
+    },
+    {
+        "id": 83,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_宝诗龙_XZ-MISC-2.jpg",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "source": [
+            "宝诗龙Boucheron"
+        ],
+        "note": null,
+        "tags": [
+            "宝诗龙",
+            "Boucheron",
+            "Quatre"
+        ],
+        "weibo": "https://weibo.com/2823454334/NEOtY6SdX",
+        "datePrecision": "day",
+        "groupName": "宝诗龙Boucheron_2024-02-01",
+        "postText": "#自由饰我# \n红，是风格，也是新运。#宝诗龙Quatre#流转绮丽华光，妙想间灵感涌现，与全球品牌代言人肖战@X玖少年团肖战DAYTOY 一同迎向盎然新岁。 ​​​",
+        "englishTags": [
+            "boucheron",
+            "quatre",
+            "endorsement"
+        ],
+        "size_mb": 3.55
+    },
+    {
+        "id": 84,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_拉夫劳伦_XZ.mp4",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "source": [
+            "拉夫劳伦香氛RalphLauren"
+        ],
+        "tags": [
+            "拉夫劳伦",
+            "香氛",
+            "RalphLauren",
+            "俱乐部香水"
+        ],
+        "groupName": "拉夫劳伦香氛RalphLauren_2024-02",
+        "datePrecision": "day",
+        "weibo": "https://weibo.com/7545734809/NEF3tfQcf",
+        "postText": "新年的第一份惊喜，来接收拉夫劳伦香氛全球代言人@肖战 的新年祝福。新的一年，愿福运“香”伴，与俱乐部小熊版香水，共同开启充满惊喜的摩登香氛之旅。\n#肖战拉夫劳伦香氛全球代言人##拉夫劳伦香氛##拉夫劳伦俱乐部香水# http://t.cn/A6jRC2WU  ​​​",
+        "quality": "1080p",
+        "duration": 15,
+        "englishTags": [
+            "ralph lauren",
+            "fragrance",
+            "endorsement",
+            "club perfume"
+        ],
+        "size_mb": 1.41
+    },
+    {
+        "id": 325,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_GQ_XZ-MISC-1.mp4",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "tags": [
+            "GQ",
+            "二月刊封面"
+        ],
+        "groupName": "GQ_2024-02-02",
+        "quality": "2k",
+        "duration": 131,
+        "weibo": "https://weibo.com/1667999147/NEFlJx1zM",
+        "source": [
+            "GQ"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "「身分」08Chapter\n？身脱功成否能@X玖少年团肖战DAYTOY。近靠声无，店旅境梦在现出人衣黑\n\n#智族GQ肖战二月刊封面#\n#智族GQ肖战梦境大片# http://t.cn/A6jRlwl4 ​​​",
+        "englishTags": [
+            "gq",
+            "magazine",
+            "february issue",
+            "photoshoot"
+        ],
+        "size_mb": 17.97
+    },
+    {
+        "id": 353,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_百度娱乐_XZ-MISC-1.mp4",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "tags": [
+            "百度娱乐",
+            "新年祝福"
+        ],
+        "groupName": "百度娱乐_2024-02-02",
+        "quality": "1080p",
+        "duration": 18,
+        "weibo": "https://weibo.com/5909962605/NEGDt1wPI",
+        "source": [
+            "媒体 / Ent. Hub"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "#肖战[超话]##星星向龙#  陪伴大家碎碎念念的人，一定要一起岁岁年年，@X玖少年团肖战DAYTOY 祝大家新的一年龙福齐天，稳稳当当，顺顺利利，新的一年一起欣欣向\"龙\"！ http://t.cn/A6jE5mxI ​​​",
+        "englishTags": [
+            "baidu entertainment",
+            "new year wishes",
+            "dragon new year"
+        ],
+        "size_mb": 3.1
+    },
+    {
+        "id": 363,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-3.mp4",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "tags": [
+            "智族GQ",
+            "二月刊封面",
+            "梦境大片"
+        ],
+        "groupName": "GQ_2024-02-02",
+        "duration": 15,
+        "weibo": "https://weibo.com/1667999147/NEF1shl9d",
+        "platform_links": [
+            {
+                "platform": "rednote",
+                "url": "https://www.xiaohongshu.com/explore/65bbc9ba000000002c0102e4?xsec_token=ABAWdyF96zKuQKn3cUlP4vk7f32w7cJwS9ANF1AfGh31g=&xsec_source=pc_share"
+            }
+        ],
+        "source": [
+            "GQ"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "「响声」03Chapter\n？近靠在谁是，觉警始开肖战客旅。鸣轰擎引，外店旅的生陌\n\t\n#智族GQ肖战二月刊封面[话题]#\n#智族GQ肖战梦境大片[话题]#",
+        "englishTags": [
+            "gq",
+            "february issue",
+            "magazine",
+            "photoshoot"
+        ],
+        "size_mb": 0.98,
+        "quality": "720p"
+    },
+    {
+        "id": 364,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-1.mp4",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "tags": [
+            "智族GQ",
+            "二月刊封面",
+            "梦境大片"
+        ],
+        "groupName": "GQ_2024-02-02",
+        "duration": 16,
+        "weibo": "https://weibo.com/1667999147/NEEVm2zcQ",
+        "platform_links": [
+            {
+                "platform": "rednote",
+                "url": "https://www.xiaohongshu.com/explore/65bbc93a000000002c037478?xsec_token=ABAWdyF96zKuQKn3cUlP4vk2zcQEvtjj24wmSwZUcQlFw=&xsec_source=pc_share"
+            }
+        ],
+        "source": [
+            "GQ"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "「忆记」02Chapter\n。忆回入陷，票机旧陈张一现发然偶肖战客旅，夜雨外屋\n\t\n#智族GQ肖战二月刊封面[话题]#\n#智族GQ肖战梦境大片[话题]#\n#安可拉红[话题]#",
+        "englishTags": [
+            "gq",
+            "magazine",
+            "february issue",
+            "photoshoot"
+        ],
+        "size_mb": 2.02,
+        "quality": "720p"
+    },
+    {
+        "id": 365,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-2.mp4",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "tags": [
+            "智族GQ",
+            "二月刊封面",
+            "梦境大片"
+        ],
+        "groupName": "GQ_2024-02-02",
+        "duration": 14,
+        "weibo": "https://weibo.com/1667999147/NEETkhq3D",
+        "platform_links": [
+            {
+                "platform": "rednote",
+                "url": "https://www.xiaohongshu.com/explore/65bbc848000000002b03d6b5?xsec_token=ABAWdyF96zKuQKn3cUlP4vk3_A3tcIu3XOlbwMoWLxRjI=&xsec_source=pc_share"
+            }
+        ],
+        "source": [
+            "GQ"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "「电来」01Chapter\n？电来的谁是这。起响声铃的肖战客旅，内店旅\n\t\n#智族GQ肖战二月刊封面[话题]#\n#智族GQ肖战梦境大片[话题]#",
+        "englishTags": [
+            "gq",
+            "february issue",
+            "magazine",
+            "photoshoot"
+        ],
+        "size_mb": 2.2,
+        "quality": "720p"
+    },
+    {
+        "id": 368,
+        "url": "https://assets.xz-studio-gallery.com/full/20240202_GQ_XZ-MISC-2.mp4",
+        "date": "2024-02-02",
+        "month": "February",
+        "year": "2024",
+        "tags": [
+            "GQ",
+            "刘冲"
+        ],
+        "groupName": "GQ_2024-02-02",
+        "duration": 17,
+        "weibo": "https://weibo.com/1266089165/NEFWKmNho",
+        "source": [
+            "GQ"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "datePrecision": "day",
+        "note": "",
+        "description": "",
+        "postText": "既然你们都喜欢红色，那⬇️这 不就来了～ RoccoLiu刘冲的微博视频",
+        "size_mb": 2.33,
+        "englishTags": [
+            "gq",
+            "rocco liu",
+            "red suit"
+        ],
+        "quality": "1080p"
+    },
+    {
         "id": 76,
         "url": "https://assets.xz-studio-gallery.com/full/20240201_中国电视剧年度盛典_XZ-MISC-1.jpg",
         "date": "2024-02-01",
@@ -10345,78 +10417,6 @@
             "endorsement"
         ],
         "size_mb": 4.0
-    },
-    {
-        "id": 363,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-3.mp4",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "tags": [
-            "智族GQ",
-            "二月刊封面",
-            "梦境大片"
-        ],
-        "groupName": "GQ_2024-02-02",
-        "duration": 15,
-        "weibo": "https://weibo.com/1667999147/NEF1shl9d",
-        "platform_links": [
-            {
-                "platform": "xiaohongshu",
-                "url": "https://www.xiaohongshu.com/explore/65bbc9ba000000002c0102e4?xsec_token=ABAWdyF96zKuQKn3cUlP4vk7f32w7cJwS9ANF1AfGh31g=&xsec_source=pc_share"
-            }
-        ],
-        "source": [
-            "GQ"
-        ],
-        "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "「响声」03Chapter\n？近靠在谁是，觉警始开肖战客旅。鸣轰擎引，外店旅的生陌\n\t\n#智族GQ肖战二月刊封面[话题]#\n#智族GQ肖战梦境大片[话题]#",
-        "englishTags": [
-            "gq",
-            "february issue",
-            "magazine",
-            "photoshoot"
-        ],
-        "size_mb": 0.98,
-        "quality": "720p"
-    },
-    {
-        "id": 365,
-        "url": "https://assets.xz-studio-gallery.com/full/20240202_智族GQ_XZ-MISC-2.mp4",
-        "date": "2024-02-02",
-        "month": "February",
-        "year": "2024",
-        "tags": [
-            "智族GQ",
-            "二月刊封面",
-            "梦境大片"
-        ],
-        "groupName": "GQ_2024-02-02",
-        "duration": 14,
-        "weibo": "https://weibo.com/1667999147/NEETkhq3D",
-        "platform_links": [
-            {
-                "platform": "xiaohongshu",
-                "url": "https://www.xiaohongshu.com/explore/65bbc848000000002b03d6b5?xsec_token=ABAWdyF96zKuQKn3cUlP4vk3_A3tcIu3XOlbwMoWLxRjI=&xsec_source=pc_share"
-            }
-        ],
-        "source": [
-            "GQ"
-        ],
-        "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "「电来」01Chapter\n？电来的谁是这。起响声铃的肖战客旅，内店旅\n\t\n#智族GQ肖战二月刊封面[话题]#\n#智族GQ肖战梦境大片[话题]#",
-        "englishTags": [
-            "gq",
-            "february issue",
-            "magazine",
-            "photoshoot"
-        ],
-        "size_mb": 2.2,
-        "quality": "720p"
     },
     {
         "id": 278,
