@@ -2996,7 +2996,7 @@ if (location.hostname.includes('github.io') && !localStorage.getItem('cfBannerDi
         }
 
 function getSourceMeta(platform) {
-    switch (String(platform).toLowerCase()) {
+    switch (platKey(platform)) {
         case 'weibo':        return { cssClass: 'bg-weibo',    badgeLabel: 'WEIBO' };
         case 'oasis':        return { cssClass: 'bg-oasis',    badgeLabel: 'OASIS' };
         case 'ins':
@@ -3012,7 +3012,7 @@ function getSourceMeta(platform) {
         case 'wechat':
         case 'wx':           return { cssClass: 'bg-wechat',   badgeLabel: 'WECHAT' };
         case 'bilibili':     return { cssClass: 'bg-bilibili', badgeLabel: 'BILIBILI' };
-        default:             return { cssClass: 'bg-platform', badgeLabel: String(platform).toUpperCase() };
+        default:             return { cssClass: 'bg-platform', badgeLabel: PLATFORM_BADGE_TEXT[platKey(platform)] || String(platform).toUpperCase() };
     }
 }
 function _getPlatformPop() {
@@ -3029,6 +3029,61 @@ function _getPlatformPop() {
 // platform_links may be the legacy {platform:url} object OR the current list
 // [{platform,url},…] — every link is independent, so the same platform can appear
 // more than once (e.g. two weibo cross-posts). Always read it through this.
+/* ---------- Platform names: ONE standard for Studio, Misc, Archive and Navigator (Nov 2026) ----------
+   Data stores a lowercase key; PLATFORM_LABELS gives what visitors see. PLATFORM_ALIASES maps the
+   old spellings (ins, wx, xiaohongshu, 爱奇艺, …) so anything saved before the clean-up still works.
+   Keep this block identical in all four sites. */
+const PLATFORM_ALIASES = {xiaohongshu:'rednote', xhs:'rednote', ins:'instagram', twitter:'x', wx:'wechat',
+  '爱奇艺':'iqiyi', '央视频':'yangshipin', '企鹅fm':'qq', '中新网视频':'chinanews', '中国军网':'81cn'};
+const PLATFORM_LABELS = {weibo:'Weibo 微博', douyin:'Douyin 抖音', rednote:'RedNote 小红书', instagram:'Instagram',
+  x:'X', facebook:'Facebook', oasis:'Oasis 绿洲', wechat:'WeChat 微信', qq:'QQ 腾讯', iqiyi:'iQIYI 爱奇艺',
+  youtube:'YouTube', bilibili:'Bilibili 哔哩哔哩', mgtv:'MGTV 芒果TV', yangshipin:'央视频', baidu:'Baidu 百度',
+  sohu:'Sohu 搜狐', ua:'U/A', gucci:'Gucci 官网', chinanews:'中新网 China News', '81cn':'中国军网'};
+const PLATFORM_BADGE_TEXT = {iqiyi:'IQIYI', qq:'QQ', mgtv:'MGTV', yangshipin:'央视频', baidu:'BAIDU', sohu:'SOHU',
+  ua:'U/A', gucci:'GUCCI', chinanews:'中新网', '81cn':'中国军网'};
+// Platforms with their own Platform-filter option (listed only when the gallery has entries for them);
+// every other platform is reachable through "Others 其他".
+const PLATFORM_FILTER_ORDER = ['weibo','douyin','rednote','instagram','x','facebook','oasis','wechat','qq',
+  'iqiyi','youtube','bilibili','mgtv','yangshipin','ua'];
+const PLATFORM_FILTER_LABELS = {weibo:'Weibo', douyin:'Douyin', rednote:'RedNote', instagram:'Instagram', x:'X',
+  facebook:'Facebook', oasis:'Oasis', wechat:'WeChat', qq:'QQ', iqiyi:'iQIYI', youtube:'YouTube',
+  bilibili:'Bilibili', mgtv:'MGTV', yangshipin:'央视频', ua:'U/A'};
+function platKey(p) { const s = String(p == null ? '' : p).trim(); const k = s.toLowerCase();
+  return PLATFORM_ALIASES[k] || PLATFORM_ALIASES[s] || k; }
+function platLabel(p) { return PLATFORM_LABELS[platKey(p)] || String(p); }
+// lmap[anySpelling] → label; undefined for unknown keys so each caller's own fallback still applies
+const PLATFORM_LMAP = new Proxy({}, { get: (_, k) => typeof k === 'string' ? PLATFORM_LABELS[platKey(k)] : undefined });
+function itemPlatKeys(item) {
+  const ks = new Set();
+  const v = item && item.platform;
+  (Array.isArray(v) ? v : (v ? [v] : [])).forEach(p => { if (p) ks.add(platKey(p)); });
+  normPlatformLinks(item && item.platform_links).forEach(x => ks.add(platKey(x.platform)));
+  if (!ks.size) ks.add('weibo');
+  return ks;
+}
+function matchesPlatformFilter(item, sVal) {
+  if (!sVal || sVal === 'all') return true;
+  const ks = itemPlatKeys(item);
+  if (sVal === 'other') return ![...ks].some(k => PLATFORM_FILTER_ORDER.includes(k));
+  return ks.has(platKey(sVal));
+}
+function buildPlatformFilter(items) {
+  const sel = document.getElementById('filterSource');
+  if (!sel) return;
+  const present = new Set(); let other = false;
+  (items || []).forEach(it => {
+    const ks = [...itemPlatKeys(it)];
+    ks.forEach(k => { if (PLATFORM_FILTER_ORDER.includes(k)) present.add(k); });
+    if (!ks.some(k => PLATFORM_FILTER_ORDER.includes(k))) other = true;   // same rule as matchesPlatformFilter('other')
+  });
+  const cur = sel.value;
+  sel.innerHTML = '<option value="all">Platform</option>'
+    + PLATFORM_FILTER_ORDER.filter(k => present.has(k)).map(k => `<option value="${k}">${PLATFORM_FILTER_LABELS[k]}</option>`).join('')
+    + (other ? '<option value="other">Others 其他</option>' : '');
+  sel.value = [...sel.options].some(o => o.value === cur) ? cur : 'all';
+  if (window.cselBuild) window.cselBuild('filterSource');
+}
+
 function normPlatformLinks(pl) {
     if (Array.isArray(pl)) {
         return pl.filter(x => x && x.platform && x.url)
@@ -3045,8 +3100,7 @@ function normPlatformLinks(pl) {
 // "Others 其他" filter matches any entry whose platforms are ALL outside this set
 // — so a hand-entered platform (threads, lofter, …) with no dedicated option is
 // still reachable. Keep in sync with #filterSource.
-const _KNOWN_PLATFORMS = new Set(['weibo', 'douyin', 'instagram', 'ins', 'x', 'twitter',
-    'facebook', 'rednote', 'xiaohongshu', 'xhs', 'qq', 'wx', 'wechat', 'mgtv', 'ua']);
+const _KNOWN_PLATFORMS = new Set(PLATFORM_FILTER_ORDER);
 
 // Best-guess platform key from a link's host — lets the PRIMARY link be labelled
 // from the URL itself instead of trusting a possibly-mismatched platform field
@@ -3071,7 +3125,7 @@ function platformFromUrl(u) {
 function setPlatformBtnBehavior(btn, mainLink, extraLinks, platforms) {
     const existingPop = document.getElementById('platformPopover');
     if (existingPop) existingPop.style.display = 'none';
-    const lmap = {weibo:'Weibo 微博', oasis:'Oasis 绿洲', douyin:'Douyin 抖音', youtube:'YouTube', bilibili:'Bilibili', ins:'Instagram', xiaohongshu:'RedNote 小红书', xhs:'RedNote 小红书', rednote:'RedNote 小红书', twitter:'X', x:'X', facebook:'Facebook', instagram:'Instagram', qq:'QQ 腾讯', wx:'WeChat 微信', wechat:'WeChat 微信', mgtv:'MGTV 芒果TV'};
+    const lmap = PLATFORM_LMAP;
     const links = [];
     const w = mainLink ? String(mainLink).trim() : '';
     if (w) {
@@ -3292,7 +3346,7 @@ function updateModalContent() {
     // --- Platform badges ---
     const sourceBadge = document.getElementById('sourceBadge');
     if (sourceBadge) {
-        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k==='twitter' ? 'x' : k; };
+        const _normPlat = p => platKey(p);
         const _seen = new Set();
         const _badges = [];
         const _addBadge = p => {
@@ -3802,18 +3856,7 @@ function closeModal() {
             // 3. Filter by platform
             if (sVal !== 'all') {
                 filteredPhotos = filteredPhotos.filter(item => {
-                    const platforms = new Set();
-                    if (item.platform) {
-                        const arr = Array.isArray(item.platform) ? item.platform : [item.platform];
-                        arr.forEach(t => platforms.add(String(t).toLowerCase()));
-                    }
-                    normPlatformLinks(item.platform_links).forEach(x => platforms.add(x.platform.toLowerCase()));
-                    if (!platforms.size) platforms.add('weibo');
-                    if (platforms.has('xiaohongshu')) platforms.add('rednote');
-                    if (platforms.has('twitter')) platforms.add('x');
-                    if (platforms.has('x')) platforms.add('twitter');
-                    if (sVal === 'other') return ![...platforms].some(p => _KNOWN_PLATFORMS.has(p));
-                    return platforms.has(sVal);
+                    return matchesPlatformFilter(item, sVal);
                 });
             }
 
@@ -3912,7 +3955,7 @@ function applyDeepLinkParams() {
     if (!q && !platform && !year && !month && !day && !media) return false;
 
     if (platform && elFilterSource && elFilterSource.querySelector(`option[value="${platform}"]`)) {
-        elFilterSource.value = platform;
+        elFilterSource.value = platKey(platform);
         if (window.cselBuild) window.cselBuild('filterSource');
     }
     if (year && elFilterYear && elFilterYear.querySelector(`option[value="${year}"]`)) {
@@ -4019,6 +4062,7 @@ async function loadPhotoData() {
                         opt.innerText = y;
                         yearSelect.appendChild(opt);
                     });
+                    buildPlatformFilter(photoData);
                     if (window.cselBuild) window.cselBuild('filterYear');
                 }
 
@@ -4219,18 +4263,7 @@ async function loadPhotoData() {
         const _rSVal = elFilterSource ? elFilterSource.value : 'all';
         if (_rSVal !== 'all') {
             yearPhotos = yearPhotos.filter(item => {
-                const platforms = new Set();
-                if (item.platform) {
-                    const arr = Array.isArray(item.platform) ? item.platform : [item.platform];
-                    arr.forEach(t => platforms.add(String(t).toLowerCase()));
-                }
-                normPlatformLinks(item.platform_links).forEach(x => platforms.add(x.platform.toLowerCase()));
-                if (!platforms.size) platforms.add('weibo');
-                if (platforms.has('xiaohongshu')) platforms.add('rednote');
-                if (platforms.has('twitter')) platforms.add('x');
-                if (platforms.has('x')) platforms.add('twitter');
-                if (_rSVal === 'other') return ![...platforms].some(p => _KNOWN_PLATFORMS.has(p));
-                return platforms.has(_rSVal);
+                return matchesPlatformFilter(item, _rSVal);
             });
         }
 
