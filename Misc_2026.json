@@ -11932,7 +11932,6 @@
             "小城良方"
         ],
         "groupName": "小城良方_2026-10-15",
-        "quality": "2k",
         "duration": 62,
         "weibo": "https://weibo.com/8430373070/5354320725017697",
         "source": [
@@ -11953,8 +11952,13 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7696556426870081498"
+            },
+            {
+                "platform": "iQIYI",
+                "url": "https://www.iqiyi.com/v_n1x9nkecd0.html"
             }
-        ]
+        ],
+        "quality": "1080p"
     },
     {
         "id": 1055,
@@ -12216,6 +12220,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7695997878812436850"
+            },
+            {
+                "platform": "iQIYI",
+                "url": "https://www.iqiyi.com/playShare.html?tvid=5209766372150300"
             }
         ]
     },
