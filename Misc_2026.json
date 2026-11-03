@@ -75,7 +75,8 @@
         "size_mb": 24.37,
         "englishTags": [],
         "download_url": "https://canadaxfx.synology.me:8443/20261103_小城良方新华社专访_XZ-MISC-1.mp4",
-        "size_download": 407.3
+        "size_download": 407.3,
+        "quality": "480p"
     },
     {
         "id": 1565,
@@ -2432,7 +2433,7 @@
     },
     {
         "id": 1571,
-        "url": "https://www.youtube.com/watch?v=Ds1Qa0uGpE4",
+        "url": "https://assets.xz-studio-gallery.com/full/20261031_小城良方_XZ-MISC-19.mp4",
         "date": "2026-10-31",
         "month": "October",
         "year": "2026",
@@ -2443,15 +2444,16 @@
         "groupName": "小城良方_2026-10-31",
         "quality": "1080p",
         "duration": 14,
-        "weibo": "",
+        "weibo": "https://www.youtube.com/watch?v=Ds1Qa0uGpE4",
         "source": [],
-        "platform": [],
+        "platform": [
+            "youtube"
+        ],
         "datePrecision": "day",
-        "note": "",
-        "description": "",
-        "postText": "Viu Singapore: \r\nWhat remedies will be found in the small town #XiaoZhan #肖战 is in? #SmallTownRemedy #小城良方 💉",
+        "postText": "Viu Singapore: \nWhat remedies will be found in the small town #XiaoZhan #肖战 is in? #SmallTownRemedy #小城良方 💉",
         "download_url": "https://assets.xz-studio-gallery.com/full/20261031_小城良方_XZ-MISC-19.mp4",
-        "englishTags": []
+        "englishTags": [],
+        "size_mb": 2.0
     },
     {
         "id": 1410,
